@@ -1,0 +1,12 @@
+- generic [ref=f14e2]:
+  - generic [ref=f14e3]:
+    - banner [ref=f14e4]:
+      - generic [ref=f14e5]: GlowDesk
+      - button "English" [ref=f14e6] [cursor=pointer]
+    - main [ref=f14e7]:
+      - generic [ref=f14e9]:
+        - status "جارٍ تحميل حسابك" [ref=f14e10]
+        - status "جارٍ تحميل حسابك" [ref=f14e12]
+  - generic:
+    - status
+    - alert
