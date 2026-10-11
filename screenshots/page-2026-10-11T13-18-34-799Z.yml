@@ -1,0 +1,336 @@
+- generic [ref=f9e3]:
+  - link "انتقل إلى المحتوى" [ref=f9e402] [cursor=pointer]:
+    - /url: "#main"
+  - button "English" [active] [ref=f9e403] [cursor=pointer]
+  - main [ref=f9e7]:
+    - generic [ref=f9e17]:
+      - heading "سبا كورنر" [level=1] [ref=f9e404]
+      - paragraph [ref=f9e19]: السالمية
+    - region "خدمتك" [ref=f9e405]:
+      - generic [ref=f9e78]:
+        - generic [ref=f9e79]:
+          - generic [ref=f9e80]: مساج سويدي
+          - generic [ref=f9e81]: 60 دقيقة
+        - generic [ref=f9e82]:
+          - generic [ref=f9e83]: ‏25.000 د.ك.‏
+          - link "تغيير الخدمة" [ref=f9e406] [cursor=pointer]:
+            - /url: /spacorner/salmiya?lang=ar
+    - group "الموظف" [ref=f9e407]:
+      - generic [ref=f9e87]:
+        - generic [ref=f9e88] [cursor=pointer]:
+          - radio "أي موظف متاح" [checked] [ref=f9e408]
+          - text: أي موظف متاح
+        - generic [ref=f9e90] [cursor=pointer]:
+          - radio "أَمَل الأحمد" [ref=f9e409]
+          - text: أَمَل الأحمد
+        - generic [ref=f9e92] [cursor=pointer]:
+          - radio "هدى" [ref=f9e410]
+          - text: هدى
+    - group "التاريخ" [ref=f9e411]:
+      - generic [ref=f9e96]:
+        - generic [ref=f9e97] [cursor=pointer]:
+          - radio "الأحد، 11 أكتوبر" [checked] [ref=f9e412]
+          - generic [ref=f9e99]: الأحد، 11 أكتوبر
+          - generic [aria-hidden] [ref=f9e100]: الأحد
+          - generic [aria-hidden] [ref=f9e101]: 11 أكتوبر
+        - generic [ref=f9e102] [cursor=pointer]:
+          - radio "الاثنين، 12 أكتوبر" [ref=f9e413]
+          - generic [ref=f9e104]: الاثنين، 12 أكتوبر
+          - generic [aria-hidden] [ref=f9e105]: الاثنين
+          - generic [aria-hidden] [ref=f9e106]: 12 أكتوبر
+        - generic [ref=f9e107] [cursor=pointer]:
+          - radio "الثلاثاء، 13 أكتوبر" [ref=f9e414]
+          - generic [ref=f9e109]: الثلاثاء، 13 أكتوبر
+          - generic [aria-hidden] [ref=f9e110]: الثلاثاء
+          - generic [aria-hidden] [ref=f9e111]: 13 أكتوبر
+        - generic [ref=f9e112] [cursor=pointer]:
+          - radio "الأربعاء، 14 أكتوبر" [ref=f9e415]
+          - generic [ref=f9e114]: الأربعاء، 14 أكتوبر
+          - generic [aria-hidden] [ref=f9e115]: الأربعاء
+          - generic [aria-hidden] [ref=f9e116]: 14 أكتوبر
+        - generic [ref=f9e117] [cursor=pointer]:
+          - radio "الخميس، 15 أكتوبر" [ref=f9e416]
+          - generic [ref=f9e119]: الخميس، 15 أكتوبر
+          - generic [aria-hidden] [ref=f9e120]: الخميس
+          - generic [aria-hidden] [ref=f9e121]: 15 أكتوبر
+        - generic [ref=f9e122] [cursor=pointer]:
+          - radio "الجمعة، 16 أكتوبر" [ref=f9e417]
+          - generic [ref=f9e124]: الجمعة، 16 أكتوبر
+          - generic [aria-hidden] [ref=f9e125]: الجمعة
+          - generic [aria-hidden] [ref=f9e126]: 16 أكتوبر
+        - generic [ref=f9e127] [cursor=pointer]:
+          - radio "السبت، 17 أكتوبر" [ref=f9e418]
+          - generic [ref=f9e129]: السبت، 17 أكتوبر
+          - generic [aria-hidden] [ref=f9e130]: السبت
+          - generic [aria-hidden] [ref=f9e131]: 17 أكتوبر
+        - generic [ref=f9e132] [cursor=pointer]:
+          - radio "الأحد، 18 أكتوبر" [ref=f9e419]
+          - generic [ref=f9e134]: الأحد، 18 أكتوبر
+          - generic [aria-hidden] [ref=f9e135]: الأحد
+          - generic [aria-hidden] [ref=f9e136]: 18 أكتوبر
+        - generic [ref=f9e137] [cursor=pointer]:
+          - radio "الاثنين، 19 أكتوبر" [ref=f9e420]
+          - generic [ref=f9e139]: الاثنين، 19 أكتوبر
+          - generic [aria-hidden] [ref=f9e140]: الاثنين
+          - generic [aria-hidden] [ref=f9e141]: 19 أكتوبر
+        - generic [ref=f9e142] [cursor=pointer]:
+          - radio "الثلاثاء، 20 أكتوبر" [ref=f9e421]
+          - generic [ref=f9e144]: الثلاثاء، 20 أكتوبر
+          - generic [aria-hidden] [ref=f9e145]: الثلاثاء
+          - generic [aria-hidden] [ref=f9e146]: 20 أكتوبر
+        - generic [ref=f9e147] [cursor=pointer]:
+          - radio "الأربعاء، 21 أكتوبر" [ref=f9e422]
+          - generic [ref=f9e149]: الأربعاء، 21 أكتوبر
+          - generic [aria-hidden] [ref=f9e150]: الأربعاء
+          - generic [aria-hidden] [ref=f9e151]: 21 أكتوبر
+        - generic [ref=f9e152] [cursor=pointer]:
+          - radio "الخميس، 22 أكتوبر" [ref=f9e423]
+          - generic [ref=f9e154]: الخميس، 22 أكتوبر
+          - generic [aria-hidden] [ref=f9e155]: الخميس
+          - generic [aria-hidden] [ref=f9e156]: 22 أكتوبر
+        - generic [ref=f9e157] [cursor=pointer]:
+          - radio "الجمعة، 23 أكتوبر" [ref=f9e424]
+          - generic [ref=f9e159]: الجمعة، 23 أكتوبر
+          - generic [aria-hidden] [ref=f9e160]: الجمعة
+          - generic [aria-hidden] [ref=f9e161]: 23 أكتوبر
+        - generic [ref=f9e162] [cursor=pointer]:
+          - radio "السبت، 24 أكتوبر" [ref=f9e425]
+          - generic [ref=f9e164]: السبت، 24 أكتوبر
+          - generic [aria-hidden] [ref=f9e165]: السبت
+          - generic [aria-hidden] [ref=f9e166]: 24 أكتوبر
+        - generic [ref=f9e167] [cursor=pointer]:
+          - radio "الأحد، 25 أكتوبر" [ref=f9e426]
+          - generic [ref=f9e169]: الأحد، 25 أكتوبر
+          - generic [aria-hidden] [ref=f9e170]: الأحد
+          - generic [aria-hidden] [ref=f9e171]: 25 أكتوبر
+        - generic [ref=f9e172] [cursor=pointer]:
+          - radio "الاثنين، 26 أكتوبر" [ref=f9e427]
+          - generic [ref=f9e174]: الاثنين، 26 أكتوبر
+          - generic [aria-hidden] [ref=f9e175]: الاثنين
+          - generic [aria-hidden] [ref=f9e176]: 26 أكتوبر
+        - generic [ref=f9e177] [cursor=pointer]:
+          - radio "الثلاثاء، 27 أكتوبر" [ref=f9e428]
+          - generic [ref=f9e179]: الثلاثاء، 27 أكتوبر
+          - generic [aria-hidden] [ref=f9e180]: الثلاثاء
+          - generic [aria-hidden] [ref=f9e181]: 27 أكتوبر
+        - generic [ref=f9e182] [cursor=pointer]:
+          - radio "الأربعاء، 28 أكتوبر" [ref=f9e429]
+          - generic [ref=f9e184]: الأربعاء، 28 أكتوبر
+          - generic [aria-hidden] [ref=f9e185]: الأربعاء
+          - generic [aria-hidden] [ref=f9e186]: 28 أكتوبر
+        - generic [ref=f9e187] [cursor=pointer]:
+          - radio "الخميس، 29 أكتوبر" [ref=f9e430]
+          - generic [ref=f9e189]: الخميس، 29 أكتوبر
+          - generic [aria-hidden] [ref=f9e190]: الخميس
+          - generic [aria-hidden] [ref=f9e191]: 29 أكتوبر
+        - generic [ref=f9e192] [cursor=pointer]:
+          - radio "الجمعة، 30 أكتوبر" [ref=f9e431]
+          - generic [ref=f9e194]: الجمعة، 30 أكتوبر
+          - generic [aria-hidden] [ref=f9e195]: الجمعة
+          - generic [aria-hidden] [ref=f9e196]: 30 أكتوبر
+        - generic [ref=f9e197] [cursor=pointer]:
+          - radio "السبت، 31 أكتوبر" [ref=f9e432]
+          - generic [ref=f9e199]: السبت، 31 أكتوبر
+          - generic [aria-hidden] [ref=f9e200]: السبت
+          - generic [aria-hidden] [ref=f9e201]: 31 أكتوبر
+        - generic [ref=f9e202] [cursor=pointer]:
+          - radio "الأحد، 1 نوفمبر" [ref=f9e433]
+          - generic [ref=f9e204]: الأحد، 1 نوفمبر
+          - generic [aria-hidden] [ref=f9e205]: الأحد
+          - generic [aria-hidden] [ref=f9e206]: 1 نوفمبر
+        - generic [ref=f9e207] [cursor=pointer]:
+          - radio "الاثنين، 2 نوفمبر" [ref=f9e434]
+          - generic [ref=f9e209]: الاثنين، 2 نوفمبر
+          - generic [aria-hidden] [ref=f9e210]: الاثنين
+          - generic [aria-hidden] [ref=f9e211]: 2 نوفمبر
+        - generic [ref=f9e212] [cursor=pointer]:
+          - radio "الثلاثاء، 3 نوفمبر" [ref=f9e435]
+          - generic [ref=f9e214]: الثلاثاء، 3 نوفمبر
+          - generic [aria-hidden] [ref=f9e215]: الثلاثاء
+          - generic [aria-hidden] [ref=f9e216]: 3 نوفمبر
+        - generic [ref=f9e217] [cursor=pointer]:
+          - radio "الأربعاء، 4 نوفمبر" [ref=f9e436]
+          - generic [ref=f9e219]: الأربعاء، 4 نوفمبر
+          - generic [aria-hidden] [ref=f9e220]: الأربعاء
+          - generic [aria-hidden] [ref=f9e221]: 4 نوفمبر
+        - generic [ref=f9e222] [cursor=pointer]:
+          - radio "الخميس، 5 نوفمبر" [ref=f9e437]
+          - generic [ref=f9e224]: الخميس، 5 نوفمبر
+          - generic [aria-hidden] [ref=f9e225]: الخميس
+          - generic [aria-hidden] [ref=f9e226]: 5 نوفمبر
+        - generic [ref=f9e227] [cursor=pointer]:
+          - radio "الجمعة، 6 نوفمبر" [ref=f9e438]
+          - generic [ref=f9e229]: الجمعة، 6 نوفمبر
+          - generic [aria-hidden] [ref=f9e230]: الجمعة
+          - generic [aria-hidden] [ref=f9e231]: 6 نوفمبر
+        - generic [ref=f9e232] [cursor=pointer]:
+          - radio "السبت، 7 نوفمبر" [ref=f9e439]
+          - generic [ref=f9e234]: السبت، 7 نوفمبر
+          - generic [aria-hidden] [ref=f9e235]: السبت
+          - generic [aria-hidden] [ref=f9e236]: 7 نوفمبر
+        - generic [ref=f9e237] [cursor=pointer]:
+          - radio "الأحد، 8 نوفمبر" [ref=f9e440]
+          - generic [ref=f9e239]: الأحد، 8 نوفمبر
+          - generic [aria-hidden] [ref=f9e240]: الأحد
+          - generic [aria-hidden] [ref=f9e241]: 8 نوفمبر
+        - generic [ref=f9e242] [cursor=pointer]:
+          - radio "الاثنين، 9 نوفمبر" [ref=f9e441]
+          - generic [ref=f9e244]: الاثنين، 9 نوفمبر
+          - generic [aria-hidden] [ref=f9e245]: الاثنين
+          - generic [aria-hidden] [ref=f9e246]: 9 نوفمبر
+        - generic [ref=f9e247] [cursor=pointer]:
+          - radio "الثلاثاء، 10 نوفمبر" [ref=f9e442]
+          - generic [ref=f9e249]: الثلاثاء، 10 نوفمبر
+          - generic [aria-hidden] [ref=f9e250]: الثلاثاء
+          - generic [aria-hidden] [ref=f9e251]: 10 نوفمبر
+        - generic [ref=f9e252] [cursor=pointer]:
+          - radio "الأربعاء، 11 نوفمبر" [ref=f9e443]
+          - generic [ref=f9e254]: الأربعاء، 11 نوفمبر
+          - generic [aria-hidden] [ref=f9e255]: الأربعاء
+          - generic [aria-hidden] [ref=f9e256]: 11 نوفمبر
+        - generic [ref=f9e257] [cursor=pointer]:
+          - radio "الخميس، 12 نوفمبر" [ref=f9e444]
+          - generic [ref=f9e259]: الخميس، 12 نوفمبر
+          - generic [aria-hidden] [ref=f9e260]: الخميس
+          - generic [aria-hidden] [ref=f9e261]: 12 نوفمبر
+        - generic [ref=f9e262] [cursor=pointer]:
+          - radio "الجمعة، 13 نوفمبر" [ref=f9e445]
+          - generic [ref=f9e264]: الجمعة، 13 نوفمبر
+          - generic [aria-hidden] [ref=f9e265]: الجمعة
+          - generic [aria-hidden] [ref=f9e266]: 13 نوفمبر
+        - generic [ref=f9e267] [cursor=pointer]:
+          - radio "السبت، 14 نوفمبر" [ref=f9e446]
+          - generic [ref=f9e269]: السبت، 14 نوفمبر
+          - generic [aria-hidden] [ref=f9e270]: السبت
+          - generic [aria-hidden] [ref=f9e271]: 14 نوفمبر
+        - generic [ref=f9e272] [cursor=pointer]:
+          - radio "الأحد، 15 نوفمبر" [ref=f9e447]
+          - generic [ref=f9e274]: الأحد، 15 نوفمبر
+          - generic [aria-hidden] [ref=f9e275]: الأحد
+          - generic [aria-hidden] [ref=f9e276]: 15 نوفمبر
+        - generic [ref=f9e277] [cursor=pointer]:
+          - radio "الاثنين، 16 نوفمبر" [ref=f9e448]
+          - generic [ref=f9e279]: الاثنين، 16 نوفمبر
+          - generic [aria-hidden] [ref=f9e280]: الاثنين
+          - generic [aria-hidden] [ref=f9e281]: 16 نوفمبر
+        - generic [ref=f9e282] [cursor=pointer]:
+          - radio "الثلاثاء، 17 نوفمبر" [ref=f9e449]
+          - generic [ref=f9e284]: الثلاثاء، 17 نوفمبر
+          - generic [aria-hidden] [ref=f9e285]: الثلاثاء
+          - generic [aria-hidden] [ref=f9e286]: 17 نوفمبر
+        - generic [ref=f9e287] [cursor=pointer]:
+          - radio "الأربعاء، 18 نوفمبر" [ref=f9e450]
+          - generic [ref=f9e289]: الأربعاء، 18 نوفمبر
+          - generic [aria-hidden] [ref=f9e290]: الأربعاء
+          - generic [aria-hidden] [ref=f9e291]: 18 نوفمبر
+        - generic [ref=f9e292] [cursor=pointer]:
+          - radio "الخميس، 19 نوفمبر" [ref=f9e451]
+          - generic [ref=f9e294]: الخميس، 19 نوفمبر
+          - generic [aria-hidden] [ref=f9e295]: الخميس
+          - generic [aria-hidden] [ref=f9e296]: 19 نوفمبر
+        - generic [ref=f9e297] [cursor=pointer]:
+          - radio "الجمعة، 20 نوفمبر" [ref=f9e452]
+          - generic [ref=f9e299]: الجمعة، 20 نوفمبر
+          - generic [aria-hidden] [ref=f9e300]: الجمعة
+          - generic [aria-hidden] [ref=f9e301]: 20 نوفمبر
+        - generic [ref=f9e302] [cursor=pointer]:
+          - radio "السبت، 21 نوفمبر" [ref=f9e453]
+          - generic [ref=f9e304]: السبت، 21 نوفمبر
+          - generic [aria-hidden] [ref=f9e305]: السبت
+          - generic [aria-hidden] [ref=f9e306]: 21 نوفمبر
+        - generic [ref=f9e307] [cursor=pointer]:
+          - radio "الأحد، 22 نوفمبر" [ref=f9e454]
+          - generic [ref=f9e309]: الأحد، 22 نوفمبر
+          - generic [aria-hidden] [ref=f9e310]: الأحد
+          - generic [aria-hidden] [ref=f9e311]: 22 نوفمبر
+        - generic [ref=f9e312] [cursor=pointer]:
+          - radio "الاثنين، 23 نوفمبر" [ref=f9e455]
+          - generic [ref=f9e314]: الاثنين، 23 نوفمبر
+          - generic [aria-hidden] [ref=f9e315]: الاثنين
+          - generic [aria-hidden] [ref=f9e316]: 23 نوفمبر
+        - generic [ref=f9e317] [cursor=pointer]:
+          - radio "الثلاثاء، 24 نوفمبر" [ref=f9e456]
+          - generic [ref=f9e319]: الثلاثاء، 24 نوفمبر
+          - generic [aria-hidden] [ref=f9e320]: الثلاثاء
+          - generic [aria-hidden] [ref=f9e321]: 24 نوفمبر
+        - generic [ref=f9e322] [cursor=pointer]:
+          - radio "الأربعاء، 25 نوفمبر" [ref=f9e457]
+          - generic [ref=f9e324]: الأربعاء، 25 نوفمبر
+          - generic [aria-hidden] [ref=f9e325]: الأربعاء
+          - generic [aria-hidden] [ref=f9e326]: 25 نوفمبر
+        - generic [ref=f9e327] [cursor=pointer]:
+          - radio "الخميس، 26 نوفمبر" [ref=f9e458]
+          - generic [ref=f9e329]: الخميس، 26 نوفمبر
+          - generic [aria-hidden] [ref=f9e330]: الخميس
+          - generic [aria-hidden] [ref=f9e331]: 26 نوفمبر
+        - generic [ref=f9e332] [cursor=pointer]:
+          - radio "الجمعة، 27 نوفمبر" [ref=f9e459]
+          - generic [ref=f9e334]: الجمعة، 27 نوفمبر
+          - generic [aria-hidden] [ref=f9e335]: الجمعة
+          - generic [aria-hidden] [ref=f9e336]: 27 نوفمبر
+        - generic [ref=f9e337] [cursor=pointer]:
+          - radio "السبت، 28 نوفمبر" [ref=f9e460]
+          - generic [ref=f9e339]: السبت، 28 نوفمبر
+          - generic [aria-hidden] [ref=f9e340]: السبت
+          - generic [aria-hidden] [ref=f9e341]: 28 نوفمبر
+        - generic [ref=f9e342] [cursor=pointer]:
+          - radio "الأحد، 29 نوفمبر" [ref=f9e461]
+          - generic [ref=f9e344]: الأحد، 29 نوفمبر
+          - generic [aria-hidden] [ref=f9e345]: الأحد
+          - generic [aria-hidden] [ref=f9e346]: 29 نوفمبر
+        - generic [ref=f9e347] [cursor=pointer]:
+          - radio "الاثنين، 30 نوفمبر" [ref=f9e462]
+          - generic [ref=f9e349]: الاثنين، 30 نوفمبر
+          - generic [aria-hidden] [ref=f9e350]: الاثنين
+          - generic [aria-hidden] [ref=f9e351]: 30 نوفمبر
+        - generic [ref=f9e352] [cursor=pointer]:
+          - radio "الثلاثاء، 1 ديسمبر" [ref=f9e463]
+          - generic [ref=f9e354]: الثلاثاء، 1 ديسمبر
+          - generic [aria-hidden] [ref=f9e355]: الثلاثاء
+          - generic [aria-hidden] [ref=f9e356]: 1 ديسمبر
+        - generic [ref=f9e357] [cursor=pointer]:
+          - radio "الأربعاء، 2 ديسمبر" [ref=f9e464]
+          - generic [ref=f9e359]: الأربعاء، 2 ديسمبر
+          - generic [aria-hidden] [ref=f9e360]: الأربعاء
+          - generic [aria-hidden] [ref=f9e361]: 2 ديسمبر
+        - generic [ref=f9e362] [cursor=pointer]:
+          - radio "الخميس، 3 ديسمبر" [ref=f9e465]
+          - generic [ref=f9e364]: الخميس، 3 ديسمبر
+          - generic [aria-hidden] [ref=f9e365]: الخميس
+          - generic [aria-hidden] [ref=f9e366]: 3 ديسمبر
+        - generic [ref=f9e367] [cursor=pointer]:
+          - radio "الجمعة، 4 ديسمبر" [ref=f9e466]
+          - generic [ref=f9e369]: الجمعة، 4 ديسمبر
+          - generic [aria-hidden] [ref=f9e370]: الجمعة
+          - generic [aria-hidden] [ref=f9e371]: 4 ديسمبر
+        - generic [ref=f9e372] [cursor=pointer]:
+          - radio "السبت، 5 ديسمبر" [ref=f9e467]
+          - generic [ref=f9e374]: السبت، 5 ديسمبر
+          - generic [aria-hidden] [ref=f9e375]: السبت
+          - generic [aria-hidden] [ref=f9e376]: 5 ديسمبر
+        - generic [ref=f9e377] [cursor=pointer]:
+          - radio "الأحد، 6 ديسمبر" [ref=f9e468]
+          - generic [ref=f9e379]: الأحد، 6 ديسمبر
+          - generic [aria-hidden] [ref=f9e380]: الأحد
+          - generic [aria-hidden] [ref=f9e381]: 6 ديسمبر
+        - generic [ref=f9e382] [cursor=pointer]:
+          - radio "الاثنين، 7 ديسمبر" [ref=f9e469]
+          - generic [ref=f9e384]: الاثنين، 7 ديسمبر
+          - generic [aria-hidden] [ref=f9e385]: الاثنين
+          - generic [aria-hidden] [ref=f9e386]: 7 ديسمبر
+        - generic [ref=f9e387] [cursor=pointer]:
+          - radio "الثلاثاء، 8 ديسمبر" [ref=f9e470]
+          - generic [ref=f9e389]: الثلاثاء، 8 ديسمبر
+          - generic [aria-hidden] [ref=f9e390]: الثلاثاء
+          - generic [aria-hidden] [ref=f9e391]: 8 ديسمبر
+        - generic [ref=f9e392] [cursor=pointer]:
+          - radio "الأربعاء، 9 ديسمبر" [ref=f9e471]
+          - generic [ref=f9e394]: الأربعاء، 9 ديسمبر
+          - generic [aria-hidden] [ref=f9e395]: الأربعاء
+          - generic [aria-hidden] [ref=f9e396]: 9 ديسمبر
+    - group "الوقت" [ref=f9e472]:
+      - generic [ref=f9e399]:
+        - paragraph [ref=f9e400]: لا توجد أوقات متاحة يوم الأحد، 11 أكتوبر
+        - paragraph [ref=f9e401]: لا توجد أوقات متاحة في الأيام القادمة. يرجى الاتصال بالفرع للحجز.
+    - link "طلب نسخة من بياناتك" [ref=f9e473] [cursor=pointer]:
+      - /url: /spacorner/salmiya/privacy?lang=ar

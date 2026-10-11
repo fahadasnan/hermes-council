@@ -1,0 +1,215 @@
+- generic [ref=f8e2]:
+  - generic [ref=f8e16]:
+    - link "الانتقال إلى المحتوى الرئيسي" [ref=f8e17] [cursor=pointer]:
+      - /url: "#main"
+    - complementary [ref=f8e18]:
+      - navigation "القائمة الرئيسية" [ref=f8e19]:
+        - list [ref=f8e20]:
+          - listitem [ref=f8e21]:
+            - link "الرئيسية" [ref=f8e22] [cursor=pointer]:
+              - /url: /?branch=00000000-0000-4000-a000-000000000002
+          - listitem [ref=f8e23]:
+            - link "يومي" [ref=f8e24] [cursor=pointer]:
+              - /url: /my-day?branch=00000000-0000-4000-a000-000000000002
+          - listitem [ref=f8e25]:
+            - link "التقويم" [ref=f8e26] [cursor=pointer]:
+              - /url: /calendar?branch=00000000-0000-4000-a000-000000000002
+          - listitem [ref=f8e27]:
+            - link "العملاء" [ref=f8e28] [cursor=pointer]:
+              - /url: /clients?branch=00000000-0000-4000-a000-000000000002
+          - listitem [ref=f8e29]:
+            - link "الفريق" [ref=f8e30] [cursor=pointer]:
+              - /url: /team?branch=00000000-0000-4000-a000-000000000002
+          - listitem [ref=f8e31]:
+            - link "قائمة الخدمات" [ref=f8e32] [cursor=pointer]:
+              - /url: /catalogue?branch=00000000-0000-4000-a000-000000000002
+          - listitem [ref=f8e33]:
+            - link "المبيعات" [ref=f8e34] [cursor=pointer]:
+              - /url: /sales?branch=00000000-0000-4000-a000-000000000002
+          - listitem [ref=f8e35]:
+            - link "التقارير" [ref=f8e36] [cursor=pointer]:
+              - /url: /reports?branch=00000000-0000-4000-a000-000000000002
+          - listitem [ref=f8e37]:
+            - link "الرسائل" [ref=f8e38] [cursor=pointer]:
+              - /url: /messages?branch=00000000-0000-4000-a000-000000000002
+          - listitem [ref=f8e39]:
+            - link "السجل" [ref=f8e40] [cursor=pointer]:
+              - /url: /audit?branch=00000000-0000-4000-a000-000000000002
+          - listitem [ref=f8e41]:
+            - link "الإعدادات" [ref=f8e42] [cursor=pointer]:
+              - /url: /settings?branch=00000000-0000-4000-a000-000000000002
+    - banner [ref=f8e43]:
+      - generic [ref=f8e44]:
+        - paragraph [ref=f8e45]: سبا كورنر
+        - generic [ref=f8e46]: المالك
+        - generic [ref=f8e47]:
+          - generic [ref=f8e48]: الفرع
+          - combobox "الفرع" [ref=f8e49] [cursor=pointer]:
+            - option "جميع الفروع"
+            - option "مدينة الكويت" [selected]
+            - option "السالمية"
+        - group "درج النقدية" [ref=f8e50]:
+          - generic [ref=f8e51]: الدرج مغلق
+          - button "فتح الدرج" [ref=f8e52] [cursor=pointer]
+      - generic [ref=f8e53]:
+        - button "البحث عن العملاء والمواعيد والمبيعات" [ref=f8e54] [cursor=pointer]:
+          - generic [ref=f8e58]: بحث
+          - generic [ref=f8e59]: ⌘K
+        - button "English" [ref=f8e60] [cursor=pointer]
+        - button "Sara Owner" [ref=f8e62] [cursor=pointer]:
+          - text: Sara Owner
+          - generic [aria-hidden] [ref=f8e63]: ▾
+    - main [ref=f8e64]:
+      - generic [ref=f8e65]:
+        - generic [ref=f8e66]:
+          - link "العودة إلى الفروع" [ref=f8e67] [cursor=pointer]:
+            - /url: /settings/branches?branch=00000000-0000-4000-a000-000000000002
+          - generic [ref=f8e68]:
+            - heading "السالمية" [level=1] [ref=f8e69]
+            - button "أرشفة الفرع" [ref=f8e70] [cursor=pointer]
+        - navigation "إعدادات الفرع" [ref=f8e71]:
+          - list [ref=f8e72]:
+            - listitem [ref=f8e73]:
+              - link "التفاصيل" [ref=f8e74] [cursor=pointer]:
+                - /url: /settings/branches/00000000-0000-4000-a000-000000000001/details?branch=00000000-0000-4000-a000-000000000002
+            - listitem [ref=f8e75]:
+              - link "ساعات العمل" [ref=f8e76] [cursor=pointer]:
+                - /url: /settings/branches/00000000-0000-4000-a000-000000000001/hours?branch=00000000-0000-4000-a000-000000000002
+            - listitem [ref=f8e77]:
+              - link "الإغلاقات" [ref=f8e78] [cursor=pointer]:
+                - /url: /settings/branches/00000000-0000-4000-a000-000000000001/closures?branch=00000000-0000-4000-a000-000000000002
+            - listitem [ref=f8e79]:
+              - link "الفواتير والإيصال" [ref=f8e80] [cursor=pointer]:
+                - /url: /settings/branches/00000000-0000-4000-a000-000000000001/invoicing?branch=00000000-0000-4000-a000-000000000002
+            - listitem [ref=f8e81]:
+              - link "البقشيش" [ref=f8e82] [cursor=pointer]:
+                - /url: /settings/branches/00000000-0000-4000-a000-000000000001/tips?branch=00000000-0000-4000-a000-000000000002
+            - listitem [ref=f8e83]:
+              - link "طرق الدفع" [ref=f8e84] [cursor=pointer]:
+                - /url: /settings/branches/00000000-0000-4000-a000-000000000001/methods?branch=00000000-0000-4000-a000-000000000002
+            - listitem [ref=f8e85]:
+              - link "الحجز الإلكتروني" [ref=f8e86] [cursor=pointer]:
+                - /url: /settings/branches/00000000-0000-4000-a000-000000000001/online?branch=00000000-0000-4000-a000-000000000002
+            - listitem [ref=f8e87]:
+              - link "الرسائل" [ref=f8e88] [cursor=pointer]:
+                - /url: /settings/branches/00000000-0000-4000-a000-000000000001/messages?branch=00000000-0000-4000-a000-000000000002
+        - generic [ref=f8e89]:
+          - generic [ref=f8e90]:
+            - heading "صفحة الحجز" [level=2] [ref=f8e91]
+            - generic [ref=f8e93]:
+              - generic [ref=f8e94]:
+                - checkbox "استقبال الحجوزات الإلكترونية" [checked] [ref=f8e95] [cursor=pointer]
+                - generic [ref=f8e96]:
+                  - generic [ref=f8e97] [cursor=pointer]: استقبال الحجوزات الإلكترونية
+                  - generic [ref=f8e98]: يحجز العملاء عبر رابط هذا الفرع أو رمز QR. عند إيقاف هذا الخيار، يعرض الرابط أن الصفحة غير متاحة.
+              - generic [ref=f8e99]:
+                - generic [ref=f8e100]: اسم الرابط
+                - textbox "اسم الرابط" [ref=f8e101]: salmiya
+                - generic [ref=f8e102]: الجزء الأخير من الرابط، مثل «salmiya». أحرف إنجليزية وأرقام وشرطات.
+              - generic [ref=f8e103]:
+                - generic [ref=f8e104]:
+                  - generic [ref=f8e105]: يمكن للعملاء الحجز مسبقًا حتى
+                  - combobox "يمكن للعملاء الحجز مسبقًا حتى" [ref=f8e106] [cursor=pointer]:
+                    - option "أسبوع واحد"
+                    - option "أسبوعان"
+                    - option "30 يومًا"
+                    - option "60 يومًا" [selected]
+                    - option "90 يومًا"
+                    - option "6 أشهر"
+                    - option "سنة واحدة"
+                - generic [ref=f8e107]:
+                  - generic [ref=f8e108]: أقل مدة قبل الموعد
+                  - combobox "أقل مدة قبل الموعد" [ref=f8e109] [cursor=pointer]:
+                    - option "بدون"
+                    - option "30 دقيقة"
+                    - option "ساعة واحدة"
+                    - option "ساعتان" [selected]
+                    - option "4 ساعات"
+                    - option "12 ساعة"
+                    - option "يوم واحد"
+                    - option "يومان"
+                    - option "7 أيام"
+                - generic [ref=f8e110]:
+                  - generic [ref=f8e111]: ينتهي الإلغاء الإلكتروني
+                  - combobox "ينتهي الإلغاء الإلكتروني" [ref=f8e112] [cursor=pointer]:
+                    - option "عند موعد البدء"
+                    - option "قبل ساعة واحدة"
+                    - option "قبل ساعتان"
+                    - option "قبل 4 ساعات"
+                    - option "قبل 12 ساعة"
+                    - option "قبل يوم واحد" [selected]
+                    - option "قبل يومان"
+                    - option "قبل 7 أيام"
+              - paragraph [ref=f8e113]: أقل مدة قبل الموعد هي أقصر وقت بين الحجز والزيارة. بعد انتهاء مهلة الإلغاء، يتصل العملاء بالفرع لإلغاء الموعد.
+              - generic [ref=f8e114]:
+                - checkbox "السماح للعملاء باختيار الموظف" [checked] [ref=f8e115] [cursor=pointer]
+                - generic [ref=f8e116]:
+                  - generic [ref=f8e117] [cursor=pointer]: السماح للعملاء باختيار الموظف
+                  - generic [ref=f8e118]: عند إيقاف هذا الخيار، يحجز العملاء مع أي موظف متاح.
+              - button "حفظ" [ref=f8e120] [cursor=pointer]
+          - generic [ref=f8e174]:
+            - heading "رابط الحجز ورمز QR" [level=2] [ref=f8e175]
+            - generic [ref=f8e176]:
+              - generic [ref=f8e177]:
+                - link "http://127.0.0.1:5174/spacorner/salmiya" [ref=f8e178] [cursor=pointer]:
+                  - /url: http://127.0.0.1:5174/spacorner/salmiya
+                - button "نسخ الرابط" [ref=f8e179] [cursor=pointer]
+              - generic [ref=f8e180]:
+                - img "رمز QR لرابط الحجز" [ref=f8e181]
+                - generic [ref=f8e184]:
+                  - paragraph [ref=f8e185]: يفتح رمز QR الصفحة نفسها، وتُميَّز الحجوزات التي تتم من خلاله كحجوزات عبر رمز QR، لتعرف كم منها يأتي من بطاقاتك المطبوعة.
+                  - generic [ref=f8e186]:
+                    - button "تنزيل SVG" [ref=f8e187] [cursor=pointer]
+                    - button "تنزيل PNG" [ref=f8e188] [cursor=pointer]
+                    - link "بطاقة للطباعة" [ref=f8e189] [cursor=pointer]:
+                      - /url: /settings/branches/00000000-0000-4000-a000-000000000001/online-card
+          - generic [ref=f8e121]:
+            - heading "المتاح للحجز الإلكتروني" [level=2] [ref=f8e122]
+            - generic [ref=f8e123]:
+              - group "الخدمات" [ref=f8e124]:
+                - generic [ref=f8e126]:
+                  - paragraph [ref=f8e127]: إعداد الحجز الإلكتروني للخدمة يسري في جميع الفروع.
+                  - list [ref=f8e128]:
+                    - listitem [ref=f8e129]:
+                      - generic [ref=f8e130]:
+                        - checkbox "مساج سويدي" [checked] [ref=f8e131] [cursor=pointer]
+                        - generic [ref=f8e132]: مساج سويدي
+                    - listitem [ref=f8e134]:
+                      - generic [ref=f8e135]:
+                        - checkbox "تنظيف بشرة مرطّب" [checked] [ref=f8e136] [cursor=pointer]
+                        - generic [ref=f8e137]: تنظيف بشرة مرطّب
+                    - listitem [ref=f8e139]:
+                      - generic [ref=f8e140]:
+                        - checkbox "مانيكير" [checked] [ref=f8e141] [cursor=pointer]
+                        - generic [ref=f8e142]: مانيكير
+                    - listitem [ref=f8e144]:
+                      - generic [ref=f8e145]:
+                        - checkbox "مساج الأنسجة العميقة" [checked] [ref=f8e146] [cursor=pointer]
+                        - generic [ref=f8e147]: مساج الأنسجة العميقة
+                    - listitem [ref=f8e149]:
+                      - generic [ref=f8e150]:
+                        - checkbox "باديكير" [checked] [ref=f8e151] [cursor=pointer]
+                        - generic [ref=f8e152]: باديكير
+              - group "الموظف" [ref=f8e154]:
+                - generic [ref=f8e156]:
+                  - paragraph [ref=f8e157]: لا يظهر الموظفون غير المفعّلين هنا في الحجز الإلكتروني، ولا يختارهم خيار «أي موظف متاح».
+                  - list [ref=f8e158]:
+                    - listitem [ref=f8e159]:
+                      - generic [ref=f8e160]:
+                        - checkbox "أَمَل الأحمد" [checked] [ref=f8e161] [cursor=pointer]
+                        - generic [ref=f8e162]: أَمَل الأحمد
+                    - listitem [ref=f8e164]:
+                      - generic [ref=f8e165]:
+                        - checkbox "هدى" [checked] [ref=f8e166] [cursor=pointer]
+                        - generic [ref=f8e167]: هدى
+                    - listitem [ref=f8e169]:
+                      - generic [ref=f8e170]:
+                        - checkbox "نورة" [checked] [ref=f8e171] [cursor=pointer]
+                        - generic [ref=f8e172]: نورة
+  - generic:
+    - status:
+      - generic [ref=f8e190]:
+        - generic [ref=f8e191]: تم حفظ إعدادات الحجز الإلكتروني.
+        - button "إغلاق" [ref=f8e192] [cursor=pointer]:
+          - generic [aria-hidden] [ref=f8e193]: ×
+    - alert

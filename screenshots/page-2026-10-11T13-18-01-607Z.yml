@@ -1,0 +1,336 @@
+- generic [ref=f9e3]:
+  - link "Skip to content" [ref=f9e4] [cursor=pointer]:
+    - /url: "#main"
+  - button "العربية" [ref=f9e6] [cursor=pointer]
+  - main [ref=f9e7]:
+    - generic [ref=f9e17]:
+      - heading "SpaCorner" [level=1] [ref=f9e18]
+      - paragraph [ref=f9e19]: Salmiya
+    - region "Your service" [ref=f9e77]:
+      - generic [ref=f9e78]:
+        - generic [ref=f9e79]:
+          - generic [ref=f9e80]: Swedish massage
+          - generic [ref=f9e81]: 60 min
+        - generic [ref=f9e82]:
+          - generic [ref=f9e83]: KWD 25.000
+          - link "Change service" [ref=f9e84] [cursor=pointer]:
+            - /url: /spacorner/salmiya
+    - group "Staff" [ref=f9e85]:
+      - generic [ref=f9e87]:
+        - generic [ref=f9e88] [cursor=pointer]:
+          - radio "Any staff member" [checked] [ref=f9e89]
+          - text: Any staff member
+        - generic [ref=f9e90] [cursor=pointer]:
+          - radio "Amal Al-Ahmad" [ref=f9e91]
+          - text: Amal Al-Ahmad
+        - generic [ref=f9e92] [cursor=pointer]:
+          - radio "Huda Staff" [ref=f9e93]
+          - text: Huda Staff
+    - group "Date" [ref=f9e94]:
+      - generic [ref=f9e96]:
+        - generic [ref=f9e97] [cursor=pointer]:
+          - radio "Sunday, October 11" [checked] [ref=f9e98]
+          - generic [ref=f9e99]: Sunday, October 11
+          - generic [aria-hidden] [ref=f9e100]: Sun
+          - generic [aria-hidden] [ref=f9e101]: Oct 11
+        - generic [ref=f9e102] [cursor=pointer]:
+          - radio "Monday, October 12" [ref=f9e103]
+          - generic [ref=f9e104]: Monday, October 12
+          - generic [aria-hidden] [ref=f9e105]: Mon
+          - generic [aria-hidden] [ref=f9e106]: Oct 12
+        - generic [ref=f9e107] [cursor=pointer]:
+          - radio "Tuesday, October 13" [ref=f9e108]
+          - generic [ref=f9e109]: Tuesday, October 13
+          - generic [aria-hidden] [ref=f9e110]: Tue
+          - generic [aria-hidden] [ref=f9e111]: Oct 13
+        - generic [ref=f9e112] [cursor=pointer]:
+          - radio "Wednesday, October 14" [ref=f9e113]
+          - generic [ref=f9e114]: Wednesday, October 14
+          - generic [aria-hidden] [ref=f9e115]: Wed
+          - generic [aria-hidden] [ref=f9e116]: Oct 14
+        - generic [ref=f9e117] [cursor=pointer]:
+          - radio "Thursday, October 15" [ref=f9e118]
+          - generic [ref=f9e119]: Thursday, October 15
+          - generic [aria-hidden] [ref=f9e120]: Thu
+          - generic [aria-hidden] [ref=f9e121]: Oct 15
+        - generic [ref=f9e122] [cursor=pointer]:
+          - radio "Friday, October 16" [ref=f9e123]
+          - generic [ref=f9e124]: Friday, October 16
+          - generic [aria-hidden] [ref=f9e125]: Fri
+          - generic [aria-hidden] [ref=f9e126]: Oct 16
+        - generic [ref=f9e127] [cursor=pointer]:
+          - radio "Saturday, October 17" [ref=f9e128]
+          - generic [ref=f9e129]: Saturday, October 17
+          - generic [aria-hidden] [ref=f9e130]: Sat
+          - generic [aria-hidden] [ref=f9e131]: Oct 17
+        - generic [ref=f9e132] [cursor=pointer]:
+          - radio "Sunday, October 18" [ref=f9e133]
+          - generic [ref=f9e134]: Sunday, October 18
+          - generic [aria-hidden] [ref=f9e135]: Sun
+          - generic [aria-hidden] [ref=f9e136]: Oct 18
+        - generic [ref=f9e137] [cursor=pointer]:
+          - radio "Monday, October 19" [ref=f9e138]
+          - generic [ref=f9e139]: Monday, October 19
+          - generic [aria-hidden] [ref=f9e140]: Mon
+          - generic [aria-hidden] [ref=f9e141]: Oct 19
+        - generic [ref=f9e142] [cursor=pointer]:
+          - radio "Tuesday, October 20" [ref=f9e143]
+          - generic [ref=f9e144]: Tuesday, October 20
+          - generic [aria-hidden] [ref=f9e145]: Tue
+          - generic [aria-hidden] [ref=f9e146]: Oct 20
+        - generic [ref=f9e147] [cursor=pointer]:
+          - radio "Wednesday, October 21" [ref=f9e148]
+          - generic [ref=f9e149]: Wednesday, October 21
+          - generic [aria-hidden] [ref=f9e150]: Wed
+          - generic [aria-hidden] [ref=f9e151]: Oct 21
+        - generic [ref=f9e152] [cursor=pointer]:
+          - radio "Thursday, October 22" [ref=f9e153]
+          - generic [ref=f9e154]: Thursday, October 22
+          - generic [aria-hidden] [ref=f9e155]: Thu
+          - generic [aria-hidden] [ref=f9e156]: Oct 22
+        - generic [ref=f9e157] [cursor=pointer]:
+          - radio "Friday, October 23" [ref=f9e158]
+          - generic [ref=f9e159]: Friday, October 23
+          - generic [aria-hidden] [ref=f9e160]: Fri
+          - generic [aria-hidden] [ref=f9e161]: Oct 23
+        - generic [ref=f9e162] [cursor=pointer]:
+          - radio "Saturday, October 24" [ref=f9e163]
+          - generic [ref=f9e164]: Saturday, October 24
+          - generic [aria-hidden] [ref=f9e165]: Sat
+          - generic [aria-hidden] [ref=f9e166]: Oct 24
+        - generic [ref=f9e167] [cursor=pointer]:
+          - radio "Sunday, October 25" [ref=f9e168]
+          - generic [ref=f9e169]: Sunday, October 25
+          - generic [aria-hidden] [ref=f9e170]: Sun
+          - generic [aria-hidden] [ref=f9e171]: Oct 25
+        - generic [ref=f9e172] [cursor=pointer]:
+          - radio "Monday, October 26" [ref=f9e173]
+          - generic [ref=f9e174]: Monday, October 26
+          - generic [aria-hidden] [ref=f9e175]: Mon
+          - generic [aria-hidden] [ref=f9e176]: Oct 26
+        - generic [ref=f9e177] [cursor=pointer]:
+          - radio "Tuesday, October 27" [ref=f9e178]
+          - generic [ref=f9e179]: Tuesday, October 27
+          - generic [aria-hidden] [ref=f9e180]: Tue
+          - generic [aria-hidden] [ref=f9e181]: Oct 27
+        - generic [ref=f9e182] [cursor=pointer]:
+          - radio "Wednesday, October 28" [ref=f9e183]
+          - generic [ref=f9e184]: Wednesday, October 28
+          - generic [aria-hidden] [ref=f9e185]: Wed
+          - generic [aria-hidden] [ref=f9e186]: Oct 28
+        - generic [ref=f9e187] [cursor=pointer]:
+          - radio "Thursday, October 29" [ref=f9e188]
+          - generic [ref=f9e189]: Thursday, October 29
+          - generic [aria-hidden] [ref=f9e190]: Thu
+          - generic [aria-hidden] [ref=f9e191]: Oct 29
+        - generic [ref=f9e192] [cursor=pointer]:
+          - radio "Friday, October 30" [ref=f9e193]
+          - generic [ref=f9e194]: Friday, October 30
+          - generic [aria-hidden] [ref=f9e195]: Fri
+          - generic [aria-hidden] [ref=f9e196]: Oct 30
+        - generic [ref=f9e197] [cursor=pointer]:
+          - radio "Saturday, October 31" [ref=f9e198]
+          - generic [ref=f9e199]: Saturday, October 31
+          - generic [aria-hidden] [ref=f9e200]: Sat
+          - generic [aria-hidden] [ref=f9e201]: Oct 31
+        - generic [ref=f9e202] [cursor=pointer]:
+          - radio "Sunday, November 1" [ref=f9e203]
+          - generic [ref=f9e204]: Sunday, November 1
+          - generic [aria-hidden] [ref=f9e205]: Sun
+          - generic [aria-hidden] [ref=f9e206]: Nov 1
+        - generic [ref=f9e207] [cursor=pointer]:
+          - radio "Monday, November 2" [ref=f9e208]
+          - generic [ref=f9e209]: Monday, November 2
+          - generic [aria-hidden] [ref=f9e210]: Mon
+          - generic [aria-hidden] [ref=f9e211]: Nov 2
+        - generic [ref=f9e212] [cursor=pointer]:
+          - radio "Tuesday, November 3" [ref=f9e213]
+          - generic [ref=f9e214]: Tuesday, November 3
+          - generic [aria-hidden] [ref=f9e215]: Tue
+          - generic [aria-hidden] [ref=f9e216]: Nov 3
+        - generic [ref=f9e217] [cursor=pointer]:
+          - radio "Wednesday, November 4" [ref=f9e218]
+          - generic [ref=f9e219]: Wednesday, November 4
+          - generic [aria-hidden] [ref=f9e220]: Wed
+          - generic [aria-hidden] [ref=f9e221]: Nov 4
+        - generic [ref=f9e222] [cursor=pointer]:
+          - radio "Thursday, November 5" [ref=f9e223]
+          - generic [ref=f9e224]: Thursday, November 5
+          - generic [aria-hidden] [ref=f9e225]: Thu
+          - generic [aria-hidden] [ref=f9e226]: Nov 5
+        - generic [ref=f9e227] [cursor=pointer]:
+          - radio "Friday, November 6" [ref=f9e228]
+          - generic [ref=f9e229]: Friday, November 6
+          - generic [aria-hidden] [ref=f9e230]: Fri
+          - generic [aria-hidden] [ref=f9e231]: Nov 6
+        - generic [ref=f9e232] [cursor=pointer]:
+          - radio "Saturday, November 7" [ref=f9e233]
+          - generic [ref=f9e234]: Saturday, November 7
+          - generic [aria-hidden] [ref=f9e235]: Sat
+          - generic [aria-hidden] [ref=f9e236]: Nov 7
+        - generic [ref=f9e237] [cursor=pointer]:
+          - radio "Sunday, November 8" [ref=f9e238]
+          - generic [ref=f9e239]: Sunday, November 8
+          - generic [aria-hidden] [ref=f9e240]: Sun
+          - generic [aria-hidden] [ref=f9e241]: Nov 8
+        - generic [ref=f9e242] [cursor=pointer]:
+          - radio "Monday, November 9" [ref=f9e243]
+          - generic [ref=f9e244]: Monday, November 9
+          - generic [aria-hidden] [ref=f9e245]: Mon
+          - generic [aria-hidden] [ref=f9e246]: Nov 9
+        - generic [ref=f9e247] [cursor=pointer]:
+          - radio "Tuesday, November 10" [ref=f9e248]
+          - generic [ref=f9e249]: Tuesday, November 10
+          - generic [aria-hidden] [ref=f9e250]: Tue
+          - generic [aria-hidden] [ref=f9e251]: Nov 10
+        - generic [ref=f9e252] [cursor=pointer]:
+          - radio "Wednesday, November 11" [ref=f9e253]
+          - generic [ref=f9e254]: Wednesday, November 11
+          - generic [aria-hidden] [ref=f9e255]: Wed
+          - generic [aria-hidden] [ref=f9e256]: Nov 11
+        - generic [ref=f9e257] [cursor=pointer]:
+          - radio "Thursday, November 12" [ref=f9e258]
+          - generic [ref=f9e259]: Thursday, November 12
+          - generic [aria-hidden] [ref=f9e260]: Thu
+          - generic [aria-hidden] [ref=f9e261]: Nov 12
+        - generic [ref=f9e262] [cursor=pointer]:
+          - radio "Friday, November 13" [ref=f9e263]
+          - generic [ref=f9e264]: Friday, November 13
+          - generic [aria-hidden] [ref=f9e265]: Fri
+          - generic [aria-hidden] [ref=f9e266]: Nov 13
+        - generic [ref=f9e267] [cursor=pointer]:
+          - radio "Saturday, November 14" [ref=f9e268]
+          - generic [ref=f9e269]: Saturday, November 14
+          - generic [aria-hidden] [ref=f9e270]: Sat
+          - generic [aria-hidden] [ref=f9e271]: Nov 14
+        - generic [ref=f9e272] [cursor=pointer]:
+          - radio "Sunday, November 15" [ref=f9e273]
+          - generic [ref=f9e274]: Sunday, November 15
+          - generic [aria-hidden] [ref=f9e275]: Sun
+          - generic [aria-hidden] [ref=f9e276]: Nov 15
+        - generic [ref=f9e277] [cursor=pointer]:
+          - radio "Monday, November 16" [ref=f9e278]
+          - generic [ref=f9e279]: Monday, November 16
+          - generic [aria-hidden] [ref=f9e280]: Mon
+          - generic [aria-hidden] [ref=f9e281]: Nov 16
+        - generic [ref=f9e282] [cursor=pointer]:
+          - radio "Tuesday, November 17" [ref=f9e283]
+          - generic [ref=f9e284]: Tuesday, November 17
+          - generic [aria-hidden] [ref=f9e285]: Tue
+          - generic [aria-hidden] [ref=f9e286]: Nov 17
+        - generic [ref=f9e287] [cursor=pointer]:
+          - radio "Wednesday, November 18" [ref=f9e288]
+          - generic [ref=f9e289]: Wednesday, November 18
+          - generic [aria-hidden] [ref=f9e290]: Wed
+          - generic [aria-hidden] [ref=f9e291]: Nov 18
+        - generic [ref=f9e292] [cursor=pointer]:
+          - radio "Thursday, November 19" [ref=f9e293]
+          - generic [ref=f9e294]: Thursday, November 19
+          - generic [aria-hidden] [ref=f9e295]: Thu
+          - generic [aria-hidden] [ref=f9e296]: Nov 19
+        - generic [ref=f9e297] [cursor=pointer]:
+          - radio "Friday, November 20" [ref=f9e298]
+          - generic [ref=f9e299]: Friday, November 20
+          - generic [aria-hidden] [ref=f9e300]: Fri
+          - generic [aria-hidden] [ref=f9e301]: Nov 20
+        - generic [ref=f9e302] [cursor=pointer]:
+          - radio "Saturday, November 21" [ref=f9e303]
+          - generic [ref=f9e304]: Saturday, November 21
+          - generic [aria-hidden] [ref=f9e305]: Sat
+          - generic [aria-hidden] [ref=f9e306]: Nov 21
+        - generic [ref=f9e307] [cursor=pointer]:
+          - radio "Sunday, November 22" [ref=f9e308]
+          - generic [ref=f9e309]: Sunday, November 22
+          - generic [aria-hidden] [ref=f9e310]: Sun
+          - generic [aria-hidden] [ref=f9e311]: Nov 22
+        - generic [ref=f9e312] [cursor=pointer]:
+          - radio "Monday, November 23" [ref=f9e313]
+          - generic [ref=f9e314]: Monday, November 23
+          - generic [aria-hidden] [ref=f9e315]: Mon
+          - generic [aria-hidden] [ref=f9e316]: Nov 23
+        - generic [ref=f9e317] [cursor=pointer]:
+          - radio "Tuesday, November 24" [ref=f9e318]
+          - generic [ref=f9e319]: Tuesday, November 24
+          - generic [aria-hidden] [ref=f9e320]: Tue
+          - generic [aria-hidden] [ref=f9e321]: Nov 24
+        - generic [ref=f9e322] [cursor=pointer]:
+          - radio "Wednesday, November 25" [ref=f9e323]
+          - generic [ref=f9e324]: Wednesday, November 25
+          - generic [aria-hidden] [ref=f9e325]: Wed
+          - generic [aria-hidden] [ref=f9e326]: Nov 25
+        - generic [ref=f9e327] [cursor=pointer]:
+          - radio "Thursday, November 26" [ref=f9e328]
+          - generic [ref=f9e329]: Thursday, November 26
+          - generic [aria-hidden] [ref=f9e330]: Thu
+          - generic [aria-hidden] [ref=f9e331]: Nov 26
+        - generic [ref=f9e332] [cursor=pointer]:
+          - radio "Friday, November 27" [ref=f9e333]
+          - generic [ref=f9e334]: Friday, November 27
+          - generic [aria-hidden] [ref=f9e335]: Fri
+          - generic [aria-hidden] [ref=f9e336]: Nov 27
+        - generic [ref=f9e337] [cursor=pointer]:
+          - radio "Saturday, November 28" [ref=f9e338]
+          - generic [ref=f9e339]: Saturday, November 28
+          - generic [aria-hidden] [ref=f9e340]: Sat
+          - generic [aria-hidden] [ref=f9e341]: Nov 28
+        - generic [ref=f9e342] [cursor=pointer]:
+          - radio "Sunday, November 29" [ref=f9e343]
+          - generic [ref=f9e344]: Sunday, November 29
+          - generic [aria-hidden] [ref=f9e345]: Sun
+          - generic [aria-hidden] [ref=f9e346]: Nov 29
+        - generic [ref=f9e347] [cursor=pointer]:
+          - radio "Monday, November 30" [ref=f9e348]
+          - generic [ref=f9e349]: Monday, November 30
+          - generic [aria-hidden] [ref=f9e350]: Mon
+          - generic [aria-hidden] [ref=f9e351]: Nov 30
+        - generic [ref=f9e352] [cursor=pointer]:
+          - radio "Tuesday, December 1" [ref=f9e353]
+          - generic [ref=f9e354]: Tuesday, December 1
+          - generic [aria-hidden] [ref=f9e355]: Tue
+          - generic [aria-hidden] [ref=f9e356]: Dec 1
+        - generic [ref=f9e357] [cursor=pointer]:
+          - radio "Wednesday, December 2" [ref=f9e358]
+          - generic [ref=f9e359]: Wednesday, December 2
+          - generic [aria-hidden] [ref=f9e360]: Wed
+          - generic [aria-hidden] [ref=f9e361]: Dec 2
+        - generic [ref=f9e362] [cursor=pointer]:
+          - radio "Thursday, December 3" [ref=f9e363]
+          - generic [ref=f9e364]: Thursday, December 3
+          - generic [aria-hidden] [ref=f9e365]: Thu
+          - generic [aria-hidden] [ref=f9e366]: Dec 3
+        - generic [ref=f9e367] [cursor=pointer]:
+          - radio "Friday, December 4" [ref=f9e368]
+          - generic [ref=f9e369]: Friday, December 4
+          - generic [aria-hidden] [ref=f9e370]: Fri
+          - generic [aria-hidden] [ref=f9e371]: Dec 4
+        - generic [ref=f9e372] [cursor=pointer]:
+          - radio "Saturday, December 5" [ref=f9e373]
+          - generic [ref=f9e374]: Saturday, December 5
+          - generic [aria-hidden] [ref=f9e375]: Sat
+          - generic [aria-hidden] [ref=f9e376]: Dec 5
+        - generic [ref=f9e377] [cursor=pointer]:
+          - radio "Sunday, December 6" [ref=f9e378]
+          - generic [ref=f9e379]: Sunday, December 6
+          - generic [aria-hidden] [ref=f9e380]: Sun
+          - generic [aria-hidden] [ref=f9e381]: Dec 6
+        - generic [ref=f9e382] [cursor=pointer]:
+          - radio "Monday, December 7" [ref=f9e383]
+          - generic [ref=f9e384]: Monday, December 7
+          - generic [aria-hidden] [ref=f9e385]: Mon
+          - generic [aria-hidden] [ref=f9e386]: Dec 7
+        - generic [ref=f9e387] [cursor=pointer]:
+          - radio "Tuesday, December 8" [ref=f9e388]
+          - generic [ref=f9e389]: Tuesday, December 8
+          - generic [aria-hidden] [ref=f9e390]: Tue
+          - generic [aria-hidden] [ref=f9e391]: Dec 8
+        - generic [ref=f9e392] [cursor=pointer]:
+          - radio "Wednesday, December 9" [ref=f9e393]
+          - generic [ref=f9e394]: Wednesday, December 9
+          - generic [aria-hidden] [ref=f9e395]: Wed
+          - generic [aria-hidden] [ref=f9e396]: Dec 9
+    - group "Time" [ref=f9e397]:
+      - generic [ref=f9e399]:
+        - paragraph [ref=f9e400]: No free times on Sunday, October 11
+        - paragraph [ref=f9e401]: There are no free times in the coming days. Please call the branch to book.
+    - link "Request a copy of your data" [ref=f9e76] [cursor=pointer]:
+      - /url: /spacorner/salmiya/privacy
