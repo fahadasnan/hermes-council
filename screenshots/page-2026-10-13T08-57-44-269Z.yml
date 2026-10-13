@@ -1,0 +1,8 @@
+- generic [ref=f14e3]:
+  - link "Skip to content" [ref=f14e4] [cursor=pointer]:
+    - /url: "#main"
+  - button "العربية" [ref=f14e6] [cursor=pointer]
+  - main [ref=f14e7]:
+    - generic [ref=f14e9]:
+      - heading "This link isn't valid" [level=1] [ref=f14e10]
+      - paragraph [ref=f14e11]: It may be mistyped or out of date. For help with an appointment, please contact the business.
