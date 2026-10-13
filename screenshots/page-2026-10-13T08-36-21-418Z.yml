@@ -1,0 +1,8 @@
+- generic [ref=e3]:
+  - link "Skip to content" [ref=e4] [cursor=pointer]:
+    - /url: "#main"
+  - button "العربية" [ref=e6] [cursor=pointer]
+  - main [ref=e7]:
+    - generic [ref=e8]:
+      - status "Loading" [ref=e10]
+      - status "Loading services" [ref=e12]

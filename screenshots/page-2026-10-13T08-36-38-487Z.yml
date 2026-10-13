@@ -1,0 +1,70 @@
+- generic [ref=e3]:
+  - link "Skip to content" [ref=e4] [cursor=pointer]:
+    - /url: "#main"
+  - button "العربية" [ref=e6] [cursor=pointer]
+  - main [ref=e7]:
+    - generic [ref=e17]:
+      - heading "SpaCorner" [level=1] [ref=e18]
+      - paragraph [ref=e19]: Salmiya
+    - generic [ref=e20]:
+      - navigation "Categories" [ref=e21]:
+        - list [ref=e22]:
+          - listitem [ref=e23]:
+            - link "Massage" [ref=e24] [cursor=pointer]:
+              - /url: "#category-00000000-0000-4000-8100-000000000001"
+          - listitem [ref=e25]:
+            - link "Facials" [ref=e26] [cursor=pointer]:
+              - /url: "#category-00000000-0000-4000-8100-000000000002"
+          - listitem [ref=e27]:
+            - link "Nails" [ref=e28] [cursor=pointer]:
+              - /url: "#category-00000000-0000-4000-8100-000000000003"
+      - region [ref=e29]:
+        - heading "Massage" [level=2] [ref=e30]
+        - list [ref=e31]:
+          - listitem [ref=e32]:
+            - link "Swedish massage Full-body relaxing massage. KWD 25.000 60 min" [ref=e33] [cursor=pointer]:
+              - /url: /spacorner/audit-page/book?lang=en&service=00000000-0000-4000-8200-000000000001
+              - generic [ref=e34]:
+                - generic [ref=e35]: Swedish massage
+                - generic [ref=e36]: Full-body relaxing massage.
+              - generic [ref=e37]:
+                - generic [ref=e38]: KWD 25.000
+                - generic [ref=e39]: 60 min
+          - listitem [ref=e40]:
+            - link "Deep tissue massage KWD 35.000 90 min" [ref=e41] [cursor=pointer]:
+              - /url: /spacorner/audit-page/book?lang=en&service=00000000-0000-4000-8200-000000000002
+              - generic [ref=e42]: Deep tissue massage
+              - generic [ref=e44]:
+                - generic [ref=e45]: KWD 35.000
+                - generic [ref=e46]: 90 min
+      - region [ref=e47]:
+        - heading "Facials" [level=2] [ref=e48]
+        - list [ref=e49]:
+          - listitem [ref=e50]:
+            - link "Hydrating facial Cleanse, mask and moisturise. KWD 18.500 45 min" [ref=e51] [cursor=pointer]:
+              - /url: /spacorner/audit-page/book?lang=en&service=00000000-0000-4000-8200-000000000003
+              - generic [ref=e52]:
+                - generic [ref=e53]: Hydrating facial
+                - generic [ref=e54]: Cleanse, mask and moisturise.
+              - generic [ref=e55]:
+                - generic [ref=e56]: KWD 18.500
+                - generic [ref=e57]: 45 min
+      - region [ref=e58]:
+        - heading "Nails" [level=2] [ref=e59]
+        - list [ref=e60]:
+          - listitem [ref=e61]:
+            - link "Manicure KWD 6.000 30 min" [ref=e62] [cursor=pointer]:
+              - /url: /spacorner/audit-page/book?lang=en&service=00000000-0000-4000-8200-000000000004
+              - generic [ref=e63]: Manicure
+              - generic [ref=e65]:
+                - generic [ref=e66]: KWD 6.000
+                - generic [ref=e67]: 30 min
+          - listitem [ref=e68]:
+            - link "Pedicure KWD 8.000 45 min" [ref=e69] [cursor=pointer]:
+              - /url: /spacorner/audit-page/book?lang=en&service=00000000-0000-4000-8200-000000000005
+              - generic [ref=e70]: Pedicure
+              - generic [ref=e72]:
+                - generic [ref=e73]: KWD 8.000
+                - generic [ref=e74]: 45 min
+    - link "Request a copy of your data" [ref=e76] [cursor=pointer]:
+      - /url: /spacorner/audit-page/privacy?lang=en
