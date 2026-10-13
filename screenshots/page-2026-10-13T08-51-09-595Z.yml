@@ -1,0 +1,12 @@
+- generic [ref=f10e2]:
+  - generic [ref=f10e3]:
+    - banner [ref=f10e4]:
+      - generic [ref=f10e5]: GlowDesk
+      - button "العربية" [ref=f10e6] [cursor=pointer]
+    - main [ref=f10e7]:
+      - generic [ref=f10e9]:
+        - status "Loading your account" [ref=f10e10]
+        - status "Loading your account" [ref=f10e12]
+  - generic:
+    - status
+    - alert

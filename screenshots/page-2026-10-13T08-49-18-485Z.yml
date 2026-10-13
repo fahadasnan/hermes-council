@@ -1,0 +1,13 @@
+- generic [ref=f8e2]:
+  - generic [ref=f8e37]:
+    - banner [ref=f8e38]:
+      - generic [ref=f8e39]: GlowDesk
+      - button "العربية" [ref=f8e40] [cursor=pointer]
+    - main [ref=f8e41]:
+      - generic [ref=f8e43]:
+        - heading "You don't have access yet" [level=1] [ref=f8e44]
+        - paragraph [ref=f8e45]: Your account nobody@spacorner.test isn't linked to a company. Ask the owner to invite you, then sign in again.
+        - button "Sign out" [ref=f8e47] [cursor=pointer]
+  - generic:
+    - status
+    - alert

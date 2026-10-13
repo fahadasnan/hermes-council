@@ -1,0 +1,103 @@
+- generic [ref=f9e2]:
+  - generic [ref=f9e46]:
+    - link "الانتقال إلى المحتوى الرئيسي" [ref=f9e47] [cursor=pointer]:
+      - /url: "#main"
+    - complementary [ref=f9e48]:
+      - navigation "القائمة الرئيسية" [ref=f9e49]:
+        - list [ref=f9e50]:
+          - listitem [ref=f9e51]:
+            - link "الرئيسية" [ref=f9e52] [cursor=pointer]:
+              - /url: /?branch=00000000-0000-4000-a000-000000000002
+          - listitem [ref=f9e53]:
+            - link "يومي" [ref=f9e54] [cursor=pointer]:
+              - /url: /my-day?branch=00000000-0000-4000-a000-000000000002
+          - listitem [ref=f9e55]:
+            - link "التقويم" [ref=f9e56] [cursor=pointer]:
+              - /url: /calendar?branch=00000000-0000-4000-a000-000000000002
+          - listitem [ref=f9e57]:
+            - link "العملاء" [ref=f9e58] [cursor=pointer]:
+              - /url: /clients?branch=00000000-0000-4000-a000-000000000002
+          - listitem [ref=f9e59]:
+            - link "الفريق" [ref=f9e60] [cursor=pointer]:
+              - /url: /team?branch=00000000-0000-4000-a000-000000000002
+          - listitem [ref=f9e61]:
+            - link "قائمة الخدمات" [ref=f9e62] [cursor=pointer]:
+              - /url: /catalogue?branch=00000000-0000-4000-a000-000000000002
+          - listitem [ref=f9e63]:
+            - link "المبيعات" [ref=f9e64] [cursor=pointer]:
+              - /url: /sales?branch=00000000-0000-4000-a000-000000000002
+          - listitem [ref=f9e65]:
+            - link "التقارير" [ref=f9e66] [cursor=pointer]:
+              - /url: /reports?branch=00000000-0000-4000-a000-000000000002
+          - listitem [ref=f9e67]:
+            - link "الرسائل" [ref=f9e68] [cursor=pointer]:
+              - /url: /messages?branch=00000000-0000-4000-a000-000000000002
+          - listitem [ref=f9e69]:
+            - link "السجل" [ref=f9e70] [cursor=pointer]:
+              - /url: /audit?branch=00000000-0000-4000-a000-000000000002
+          - listitem [ref=f9e71]:
+            - link "الإعدادات" [ref=f9e72] [cursor=pointer]:
+              - /url: /settings?branch=00000000-0000-4000-a000-000000000002
+    - banner [ref=f9e73]:
+      - generic [ref=f9e74]:
+        - paragraph [ref=f9e75]: سبا كورنر
+        - generic [ref=f9e76]: المالك
+        - generic [ref=f9e77]:
+          - generic [ref=f9e78]: الفرع
+          - combobox "الفرع" [ref=f9e79] [cursor=pointer]:
+            - option "جميع الفروع"
+            - option "مدينة الكويت" [selected]
+            - option "السالمية"
+        - group "درج النقدية" [ref=f9e80]:
+          - generic [ref=f9e81]: الدرج مغلق
+          - button "فتح الدرج" [ref=f9e82] [cursor=pointer]
+      - generic [ref=f9e83]:
+        - button "البحث عن العملاء والمواعيد والمبيعات" [ref=f9e84] [cursor=pointer]:
+          - generic [ref=f9e88]: بحث
+          - generic [ref=f9e89]: ⌘K
+        - button "English" [ref=f9e90] [cursor=pointer]
+        - button "Sara Owner" [ref=f9e92] [cursor=pointer]:
+          - text: Sara Owner
+          - generic [aria-hidden] [ref=f9e93]: ▾
+    - main [ref=f9e94]:
+      - generic [ref=f9e95]:
+        - generic [ref=f9e96]:
+          - heading "مرحبًا، Sara Owner" [level=1] [ref=f9e97]
+          - paragraph [ref=f9e98]: الثلاثاء، 13 أكتوبر
+        - generic [ref=f9e99]:
+          - heading "أكمل الإعداد" [level=2] [ref=f9e100]
+          - generic [ref=f9e101]:
+            - paragraph [ref=f9e102]: تم إنجاز 1 من 7
+            - paragraph [ref=f9e103]: "التالي: أضف تفاصيل الفرع"
+            - generic [ref=f9e104]:
+              - link "فتح قائمة الإعداد" [ref=f9e105] [cursor=pointer]:
+                - /url: /setup?branch=00000000-0000-4000-a000-000000000002
+              - button "إغلاق" [ref=f9e106] [cursor=pointer]
+        - generic [ref=f9e107]:
+          - region [ref=f9e109]:
+            - heading "اليوم" [level=2] [ref=f9e110]
+            - generic [ref=f9e111]:
+              - generic [ref=f9e112]:
+                - term [ref=f9e113]: المواعيد
+                - definition [ref=f9e114]: "0"
+              - generic [ref=f9e115]:
+                - term [ref=f9e116]: مكتمل
+                - definition [ref=f9e117]: "0"
+              - generic [ref=f9e118]:
+                - term [ref=f9e119]: لم يحضر
+                - definition [ref=f9e120]: "0"
+              - generic [ref=f9e121]:
+                - term [ref=f9e122]: ملغى
+                - definition [ref=f9e123]: "0"
+              - generic [ref=f9e124]:
+                - term [ref=f9e125]: المبيعات
+                - definition [ref=f9e126]: "0"
+              - generic [ref=f9e127]:
+                - term [ref=f9e128]: إجمالي المبيعات
+                - definition [ref=f9e129]: ‏0.000 د.ك.‏
+          - generic [ref=f9e130]:
+            - heading "القادم اليوم" [level=2] [ref=f9e131]
+            - paragraph [ref=f9e132]: لا توجد مواعيد أخرى اليوم.
+  - generic:
+    - status
+    - alert
