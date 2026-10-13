@@ -9,14 +9,14 @@ Note on subphase numbering: the plan's phase 9 (plan/parts/11-delivery-plan.md:1
 
 ## Summary verdict
 
-The phase's frontend scope is implemented, correct and safe: the public booking app (plan 9.2) and all Phase-9 back-office screens (plan 9.3/9.4 screen work) exist, are fully EN+AR with correct RTL, go through Lingui with complete catalogs, use logical CSS and design tokens, keep money/date formatting centralized, isolate mixed-direction text, and are covered by an extensive e2e suite in both locales. One Gateless item — the 9.4 avatar/branding screens — is deliberately deferred and documented as not implemented (accepted by the council; not a new finding). 6 findings: 0 blocker, 1 major, 5 minor.
+The phase's frontend scope is implemented, correct and safe: the public booking app (plan 9.2) and all Phase-9 back-office screens (plan 9.3/9.4 screen work) exist, are fully EN+AR with correct RTL, go through Lingui with complete catalogs, use logical CSS and design tokens, keep money/date formatting centralized, isolate mixed-direction text, and are covered by an extensive e2e suite in both locales. One Gateless item — the 9.4 avatar/branding screens — is deliberately deferred and documented as not implemented (accepted by the council; not a new finding). 6 findings: 0 blocker, 0 major, 6 minor.
 
 Findings at a glance (full detail at the end):
 
 | ID | Severity | Title |
 |---|---|---|
-| F-FRONT-1 | major | Booking-app HTML `<html lang>`/`dir` baseline is static `en`/absent until the first catalog load; Arabic deep links serve a root with `lang="en"` |
-| F-FRONT-2 | minor | `packages/ui` text/space tokens are joined with hardcoded `px` values in a few Phase-9 CSS files (2mm/10px/15px/16px/176px, `margin-inline-start: 4mm`) |
+| F-FRONT-1 | minor | Booking-app HTML `<html lang>`/`dir` baseline is static `en`/absent until the first catalog load; Arabic deep links serve a root with `lang="en"` pre-hydration |
+| F-FRONT-2 | minor | A few hardcoded px/mm values in Phase-9 feature CSS (176px QR box, 10/15/16px print-card type, mm gaps) instead of `--space-*`/`--text-*` tokens |
 | F-FRONT-3 | minor | One live console error per booking-page visit: `Failed to load resource: 404 (favicon.ico)` on the booking app |
 | F-FRONT-4 | minor | Back office: `?lang=` URL param is ignored (locale comes only from stored preference/profile); the shared-link language order in the plan is handled but the back office has no URL language control |
 | F-FRONT-5 | minor | `MessageUsageCard` month label and the booking `DateStep` build `Intl.DateTimeFormat` directly in feature code instead of going through `@repo/i18n` formatters (they do use INTL_LOCALE, so output is correct) |
@@ -73,7 +73,7 @@ Live walk performed on 2026-10-13 with the local stack (db up, `pnpm dev` for bo
 - Booking app: skip link on Tab with a visible 2px primary-color outline (verified live via `document.activeElement` computed style: `outline: rgb(255, 56, 92) solid 2px`); radios/aria labels present; axe sweep (WCAG 2.1 A/AA) over every route and step in light and dark, en and ar, zero violations (gate 08 run + `plan/evidence/9.4/a11y/*.json` = `[]`).
 - Back office: `a11y.spec.ts` covers the owner routes, dialogs/drawers, signed-out pages and the staff day, both locales, in the gate run (222 back-office tests, 0 failed).
 
-Environment note (not a code defect): during the walk a stale `playwright-mcp` browser server from the previous audit session (PID 50966, started 1d20h earlier, sharing `~/.hermes/council/auth.json` with the current browser server) held the seed owner's session and re-enabled/disables the `online_booking_settings` row for Salmiya mid-walk (audit_log rows at 08:34 and 08:48 UTC; `slug` audit-page toggled, `is_enabled` true→false). It flipped the fixture from enabled to disabled while I was not touching it. The repo was never modified (git status: only the two pre-existing untracked items) and the gates' own e2e run is independent (it provisions its own shops). All states observed (enabled page, disabled "isn't available" page, invalid link) are the designed renderings.
+Environment note (not a code defect): during the walk the `online_booking_settings` row for Salmiya was toggled by the seed owner's account while I was not performing any write — audit_log shows UPDATEs at 08:34 (enable: slug `audit-page`, is_enabled true) and 08:48 UTC (disable), actor `00000000-0000-4000-8000-000000000001` (Sara Owner). My own actions in those windows were read-only code inspection and a login-page wrong-password test; the browser server I drive was spawned at 11:27, but a second `playwright-mcp` server from Sunday (PID 50966) that shares the same `auth.json` storage state is still alive on the host, so a stale owner session is the plausible source. Verified: the repo was never modified (git status clean; only the two pre-existing untracked items) and the gates' own e2e run is independent (it provisions its own shops). All states observed (enabled page, disabled "isn't available" page, invalid link) are the designed renderings.
 
 ---
 
@@ -141,18 +141,18 @@ Environment note (not a code defect): during the walk a stale `playwright-mcp` b
 ## Findings
 
 ### F-FRONT-1: Booking-app root `<html lang>`/`dir` is static until the first catalog load
-- Severity: major
+- Severity: minor
 - Location: `apps/booking/index.html:2` (`<html lang="en">`), `apps/booking/src/main.tsx`, `packages/i18n/src/I18nProvider.tsx:65-67` (attributes set in `activate()` after the async catalog load); `apps/booking/src/lib/locale.ts:28-29` (`visitorLocale` computed at startup).
-- Problem: the booking app is a public, per-branch, EN+AR page whose URL can be `?lang=ar` (or the browser's `ar-KW`). Before the catalog bundle resolves, the document root is `lang="en"` with no `dir` (or dir from the previous locale). Any pre-hydration consumer — screen readers that read the document early, OCR/SEO crawlers, or a user who blocks JS then sees English-only content — sees the wrong language. The plan (9.2 i18n/RTL, ADR-40) says `dir`/`lang` on `<html>` must reflect the locale; it ends up correct only after activation.
-- Evidence: live check on `http://127.0.0.1:5174/spacorner/audit-page?lang=ar` — after load `document.documentElement.lang === "ar"`; during the load the element is the static `lang="en"` from index.html:2 (verified by reading the served HTML: `<!doctype html><html lang="en">` from `index.html`). The provider only sets `root.lang/root.dir` inside `activate()` after `await catalog(next)` (I18nProvider.tsx:62-67), so there is a window where the locale in the URL and the document language disagree.
-- Fix: in `apps/booking/index.html`, set `<html lang="en">` → `<html lang="en" dir="ltr">` plus (best) a tiny same-origin inline/boot script (like the existing `/theme.js` pattern, CSP has no `unsafe-inline` for scripts — use a static `lang`/`dir` default matching the first route's query): either always render with a neutral default and have `I18nProvider` set attributes in `useLayoutEffect` rather than after the async load, setting `lang` immediately from `visitorLocale` (already computed synchronously in `lib/locale.ts`) before the catalog resolves, or add `/boot-i18n.js` (same-origin, CSP-safe) that reads `location.search`/`navigator.languages` and sets `document.documentElement.lang/dir` pre-paint, exactly as `theme.js` does for the theme.
+- Problem: the booking app is a public, per-branch, EN+AR page whose URL can be `?lang=ar` (or the browser's `ar-KW`). Before the catalog bundle resolves, the document root is `lang="en"` with no `dir`. The app renders nothing in that window (the provider returns its `fallback`, default null), so no visible text is mislabeled; but any pre-hydration consumer — a crawler/SEO snapshot, a screen reader parsing the shell, an accessibility tree built before JS activates — sees the wrong document language for an Arabic URL. Once loaded, `lang`/`dir` are correct (verified live), so this is a transient deviation from ADR-40's "`dir`/`lang` on `<html>` from the locale", not a flow break.
+- Evidence: served HTML at `http://127.0.0.1:5174/` shows `<!doctype html><html lang="en">` with no `dir` (`curl -s http://127.0.0.1:5174/ | head`); `I18nProvider.tsx:62-67` sets `root.lang`/`root.dir` only after `await catalog(next)`; the gates assert `lang`/`dir` after load (`fixtures.ts:65-67`) and pass.
+- Fix: in `apps/booking/index.html` (or a small same-origin boot script beside `/theme.js`), set the initial `lang`/`dir` from the URL's `?lang`/`navigator.languages` synchronously (the CSP has no `unsafe-inline` for scripts, so mirror the `/theme.js` pattern with a same-origin file). Belt-and-braces: have `I18nProvider` set the attributes in a `useLayoutEffect` from the already-synchronous `visitorLocale` before awaiting the catalog.
 - Plan item: plan 9.2 "i18n/RTL: full RTL booking flow"; ADR-40 (`dir`/`lang` on `<html>` from locale).
 
 ### F-FRONT-2: A few hardcoded px/mm values in Phase-9 CSS instead of tokens
 - Severity: minor
 - Location: `apps/back-office/src/features/settings/components/OnlineBooking.module.css:29-30` (`inline-size/block-size: 176px`), `OnlineCard.module.css:36,47` (`font-size: 15px`, `font-size: 10px`), `OnlineCard.module.css:21,35,42-43` (`gap: 2mm`, `padding-block-start: 2mm`, `inline-size: 56mm`, `block-size: 56mm`), print sheet context.
 - Problem: the design skill (airbnb-design, brief §4) says feature code uses tokens only; the QR tile and the printable card define their own pixel/mm values. The mm sizes are inherent to an 80mm print card and arguably a justified exception, but the 176px QR box and 10/15px type sizes are off-scale values that bypass `--space-*`/`--text-*` tokens.
-- Evidence: grep of the two files (above); tokens.css defines the full scale (`--space-md: 12px`, `--text-caption: 400 13px/1.4`, etc.). `lint:css` cannot catch this (it is not a logical-property or color issue).
+- Evidence: grep of the two files shows exactly the values above (`OnlineBooking.module.css:29-30`: `inline-size/block-size: 176px`; `OnlineCard.module.css:30,36,47`: `font-size: 16px/15px/10px`); `tokens.css` defines the full scale (`--space-md: 12px`, `--text-caption: 400 13px/1.4`, etc.). `lint:css` cannot catch this (it is not a logical-property or color issue).
 - Fix: replace `176px` with a token-derived size (e.g. `calc(var(--space-2xl) * 3.666)` is ugly — better: add a one-off `--qr-size` token in the print/tokens layer, or use `56mm` consistently for both the QR and its box, removing 176px); for the card type, prefer the print-appropriate token (`--text-caption`/`--text-dense` at most) or add print tokens `--text-card-print-*` next to `--paper-*` in `tokens.css` rather than raw 15px/10px in feature CSS.
 - Plan item: brief §4 (tokens from packages/ui only), airbnb-design skill token rule.
 
@@ -164,13 +164,13 @@ Environment note (not a code defect): during the walk a stale `playwright-mcp` b
 - Fix: add `<link rel="icon" href="/favicon.svg" type="image/svg+xml">` (or a small png) to `apps/booking/index.html` and drop the file in `apps/booking/public/`.
 - Plan item: none (polish); not a gate failure (Playwright ignores it).
 
-### F-FRONT-4: Back office ignores `?lang=` (no URL language control on signed-in pages)
+### F-FRONT-4: Locale switch asymmetry between the two apps (back office is stored-preference-only, booking is URL-driven)
 - Severity: minor
-- Location: `packages/i18n/src/I18nProvider.tsx:56-58` (`remember: true`, stored-preference default), `apps/back-office/index.html` (no lang handling), `RootLayout`/auth pages reading only the stored/profile locale.
-- Problem: the booking app's language switch lives in the URL (`?lang`), so a shared link keeps it; the back office only reads the persisted preference/profile, so a deep link carrying `?lang=ar` silently keeps the user's stored language. Plan 9.2 "i18n/RTL: full RTL booking flow" and ADR-40 are satisfied, and the plan doesn't demand a URL override for the back office, so this is a minor inconsistency between the two apps, not a phase defect.
-- Evidence: live — navigating to `/messages?branch=...&lang=en` while the profile locale was Arabic rendered Arabic (the `?lang` param was ignored); the booking app honors the same param (`apps/booking/src/lib/locale.ts:23-25`).
-- Fix (optional): in the back-office `I18nProvider` wrapper, accept `?lang=en|ar` as a one-shot override that wins over the stored preference for that navigation (and optionally rewrites the URL), mirroring the booking app; or document the asymmetry in CONVENTIONS.
-- Plan item: ADR-40 (persisted preference); none in the phase text — flagged as inconsistency only.
+- Location: `packages/i18n/src/I18nProvider.tsx:44-46,56-58` (`remember` prop; back office `remember: true`, booking `remember: false`), `apps/booking/src/lib/locale.ts:23-25` (`?lang` → browser → business default), back-office `App.tsx`/auth pages (no `?lang` handling).
+- Problem: the booking app's language is in the URL (`?lang`), so shared booking links keep the visitor's language; the back office reads only the persisted preference/profile, so a deep link carrying `?lang=ar` silently keeps the user's stored language. ADR-40 mandates the persisted-preference model (`dir`/`lang` on `<html>` from the user's persisted preference), so this asymmetry is *by design* for the back office — the booking page is the deliberate exception. Not a phase defect; flagged so the two behaviours are consciously documented.
+- Evidence: live — navigating to `/messages?branch=...&lang=en` while the profile locale was Arabic rendered Arabic (the `?lang` param was ignored); the booking app honors the same param (`apps/booking/src/lib/locale.ts`).
+- Fix: none required. If shared back-office links should carry language too, add the same `?lang` one-shot override in the back-office `I18nProvider` wiring (optionally rewriting the URL); otherwise add a sentence to CONVENTIONS explaining the asymmetry.
+- Plan item: ADR-40 (persisted preference), ADR-37 (shareable links); no phase text violated.
 
 ### F-FRONT-5: `Intl.DateTimeFormat` built directly in two Phase-9 components instead of through `@repo/i18n`
 - Severity: minor
@@ -194,13 +194,13 @@ Environment note (not a code defect): during the walk a stale `playwright-mcp` b
 
 | ID | Severity | One-line title |
 |---|---|---|
-| F-FRONT-1 | major | Booking-app root `<html lang>`/`dir` is static until the first catalog load; pre-hydration language wrong for AR deep links |
+| F-FRONT-1 | minor | Booking-app root `<html lang>`/`dir` is static until the first catalog load; pre-hydration language wrong for AR deep links |
 | F-FRONT-2 | minor | Hardcoded px/mm values (176px, 10/15px, mm gaps) in Phase-9 feature CSS instead of `--space-*`/`--text-*` tokens |
 | F-FRONT-3 | minor | Booking app 404 on favicon.ico on every page load |
-| F-FRONT-4 | minor | Back office ignores `?lang=`; URL language works only in the booking app |
-| F-FRONT-5 | minor | Two components build `Intl.DateTimeFormat` directly instead of via `@repo/i18n` helpers (output correct) |
+| F-FRONT-4 | minor | Locale switch asymmetry: booking app is `?lang`-driven, back office stored-preference-only (ADR-40 compliant; document it) |
+| F-FRONT-5 | minor | `MessageUsageCard` month label and `DateStep` build `Intl.DateTimeFormat` directly instead of via `@repo/i18n` formatters (output correct) |
 | F-FRONT-6 | minor | Channels readiness/test-message UI assertions not broken out in the gate table (verify spec coverage at release) |
 
-Count per severity: 0 blocker, 1 major, 5 minor.
+Count per severity: 0 blocker, 0 major, 6 minor.
 
-Verdict: Phase 9 frontend/i18n/RTL scope is complete and correct as designed. The single major finding (F-FRONT-1) affects a pre-hydration HTML attribute on the public page and is cheap to fix; nothing blocks the phase from a frontend perspective. The plan 9.4 avatar/branding screens remain the documented council-accepted deferral (not implemented, not done). All frontend gates pass.
+Verdict: Phase 9 frontend/i18n/RTL scope is complete and correct as designed. All six findings are minor polish items; nothing blocks the phase from a frontend perspective. The plan 9.4 avatar/branding screens remain the documented council-accepted deferral (not implemented, not done). All frontend gates pass.
