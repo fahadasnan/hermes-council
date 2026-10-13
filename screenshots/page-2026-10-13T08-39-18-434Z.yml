@@ -1,0 +1,70 @@
+- generic [ref=f1e3]:
+  - link "انتقل إلى المحتوى" [ref=f1e4] [cursor=pointer]:
+    - /url: "#main"
+  - button "English" [ref=f1e6] [cursor=pointer]
+  - main [ref=f1e7]:
+    - generic [ref=f1e8]:
+      - heading "سبا كورنر" [level=1] [ref=f1e9]
+      - paragraph [ref=f1e10]: السالمية
+    - generic [ref=f1e11]:
+      - navigation "الفئات" [ref=f1e12]:
+        - list [ref=f1e13]:
+          - listitem [ref=f1e14]:
+            - link "مساج" [ref=f1e15] [cursor=pointer]:
+              - /url: "#category-00000000-0000-4000-8100-000000000001"
+          - listitem [ref=f1e16]:
+            - link "العناية بالبشرة" [ref=f1e17] [cursor=pointer]:
+              - /url: "#category-00000000-0000-4000-8100-000000000002"
+          - listitem [ref=f1e18]:
+            - link "الأظافر" [ref=f1e19] [cursor=pointer]:
+              - /url: "#category-00000000-0000-4000-8100-000000000003"
+      - region [ref=f1e20]:
+        - heading "مساج" [level=2] [ref=f1e21]
+        - list [ref=f1e22]:
+          - listitem [ref=f1e23]:
+            - link "مساج سويدي مساج استرخاء لكامل الجسم. ‏25.000 د.ك.‏ 60 دقيقة" [ref=f1e24] [cursor=pointer]:
+              - /url: /spacorner/audit-page/book?lang=ar&service=00000000-0000-4000-8200-000000000001
+              - generic [ref=f1e25]:
+                - generic [ref=f1e26]: مساج سويدي
+                - generic [ref=f1e27]: مساج استرخاء لكامل الجسم.
+              - generic [ref=f1e28]:
+                - generic [ref=f1e29]: ‏25.000 د.ك.‏
+                - generic [ref=f1e30]: 60 دقيقة
+          - listitem [ref=f1e31]:
+            - link "مساج الأنسجة العميقة ‏35.000 د.ك.‏ 90 دقيقة" [ref=f1e32] [cursor=pointer]:
+              - /url: /spacorner/audit-page/book?lang=ar&service=00000000-0000-4000-8200-000000000002
+              - generic [ref=f1e33]: مساج الأنسجة العميقة
+              - generic [ref=f1e35]:
+                - generic [ref=f1e36]: ‏35.000 د.ك.‏
+                - generic [ref=f1e37]: 90 دقيقة
+      - region [ref=f1e38]:
+        - heading "العناية بالبشرة" [level=2] [ref=f1e39]
+        - list [ref=f1e40]:
+          - listitem [ref=f1e41]:
+            - link "تنظيف بشرة مرطّب تنظيف وقناع وترطيب. ‏18.500 د.ك.‏ 45 دقيقة" [ref=f1e42] [cursor=pointer]:
+              - /url: /spacorner/audit-page/book?lang=ar&service=00000000-0000-4000-8200-000000000003
+              - generic [ref=f1e43]:
+                - generic [ref=f1e44]: تنظيف بشرة مرطّب
+                - generic [ref=f1e45]: تنظيف وقناع وترطيب.
+              - generic [ref=f1e46]:
+                - generic [ref=f1e47]: ‏18.500 د.ك.‏
+                - generic [ref=f1e48]: 45 دقيقة
+      - region [ref=f1e49]:
+        - heading "الأظافر" [level=2] [ref=f1e50]
+        - list [ref=f1e51]:
+          - listitem [ref=f1e52]:
+            - link "مانيكير ‏6.000 د.ك.‏ 30 دقيقة" [ref=f1e53] [cursor=pointer]:
+              - /url: /spacorner/audit-page/book?lang=ar&service=00000000-0000-4000-8200-000000000004
+              - generic [ref=f1e54]: مانيكير
+              - generic [ref=f1e56]:
+                - generic [ref=f1e57]: ‏6.000 د.ك.‏
+                - generic [ref=f1e58]: 30 دقيقة
+          - listitem [ref=f1e59]:
+            - link "باديكير ‏8.000 د.ك.‏ 45 دقيقة" [ref=f1e60] [cursor=pointer]:
+              - /url: /spacorner/audit-page/book?lang=ar&service=00000000-0000-4000-8200-000000000005
+              - generic [ref=f1e61]: باديكير
+              - generic [ref=f1e63]:
+                - generic [ref=f1e64]: ‏8.000 د.ك.‏
+                - generic [ref=f1e65]: 45 دقيقة
+    - link "طلب نسخة من بياناتك" [ref=f1e67] [cursor=pointer]:
+      - /url: /spacorner/audit-page/privacy?lang=ar

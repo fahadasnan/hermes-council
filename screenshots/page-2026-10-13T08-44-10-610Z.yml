@@ -1,0 +1,87 @@
+- generic [ref=f7e2]:
+  - generic [ref=f7e16]:
+    - link "الانتقال إلى المحتوى الرئيسي" [ref=f7e17] [cursor=pointer]:
+      - /url: "#main"
+    - complementary [ref=f7e18]:
+      - navigation "القائمة الرئيسية" [ref=f7e19]:
+        - list [ref=f7e20]:
+          - listitem [ref=f7e21]:
+            - link "الرئيسية" [ref=f7e22] [cursor=pointer]:
+              - /url: /?branch=00000000-0000-4000-a000-000000000001
+          - listitem [ref=f7e23]:
+            - link "يومي" [ref=f7e24] [cursor=pointer]:
+              - /url: /my-day?branch=00000000-0000-4000-a000-000000000001
+          - listitem [ref=f7e25]:
+            - link "التقويم" [ref=f7e26] [cursor=pointer]:
+              - /url: /calendar?branch=00000000-0000-4000-a000-000000000001
+          - listitem [ref=f7e27]:
+            - link "العملاء" [ref=f7e28] [cursor=pointer]:
+              - /url: /clients?branch=00000000-0000-4000-a000-000000000001
+          - listitem [ref=f7e29]:
+            - link "الفريق" [ref=f7e30] [cursor=pointer]:
+              - /url: /team?branch=00000000-0000-4000-a000-000000000001
+          - listitem [ref=f7e31]:
+            - link "قائمة الخدمات" [ref=f7e32] [cursor=pointer]:
+              - /url: /catalogue?branch=00000000-0000-4000-a000-000000000001
+          - listitem [ref=f7e33]:
+            - link "المبيعات" [ref=f7e34] [cursor=pointer]:
+              - /url: /sales?branch=00000000-0000-4000-a000-000000000001
+          - listitem [ref=f7e35]:
+            - link "التقارير" [ref=f7e36] [cursor=pointer]:
+              - /url: /reports?branch=00000000-0000-4000-a000-000000000001
+          - listitem [ref=f7e37]:
+            - link "الرسائل" [ref=f7e38] [cursor=pointer]:
+              - /url: /messages?branch=00000000-0000-4000-a000-000000000001
+          - listitem [ref=f7e39]:
+            - link "السجل" [ref=f7e40] [cursor=pointer]:
+              - /url: /audit?branch=00000000-0000-4000-a000-000000000001
+          - listitem [ref=f7e41]:
+            - link "الإعدادات" [ref=f7e42] [cursor=pointer]:
+              - /url: /settings?branch=00000000-0000-4000-a000-000000000001
+    - banner [ref=f7e43]:
+      - generic [ref=f7e44]:
+        - paragraph [ref=f7e45]: سبا كورنر
+        - generic [ref=f7e46]: المالك
+        - generic [ref=f7e47]:
+          - generic [ref=f7e48]: الفرع
+          - combobox "الفرع" [ref=f7e49] [cursor=pointer]:
+            - option "جميع الفروع"
+            - option "مدينة الكويت"
+            - option "السالمية" [selected]
+        - group "درج النقدية" [ref=f7e50]:
+          - generic [ref=f7e51]: الدرج مغلق
+          - button "فتح الدرج" [ref=f7e52] [cursor=pointer]
+      - generic [ref=f7e53]:
+        - button "البحث عن العملاء والمواعيد والمبيعات" [ref=f7e54] [cursor=pointer]:
+          - generic [ref=f7e58]: بحث
+          - generic [ref=f7e59]: ⌘K
+        - button "English" [ref=f7e60] [cursor=pointer]
+        - button "Sara Owner" [ref=f7e62] [cursor=pointer]:
+          - text: Sara Owner
+          - generic [aria-hidden] [ref=f7e63]: ▾
+    - main [ref=f7e64]:
+      - generic [ref=f7e65]:
+        - generic [ref=f7e66]:
+          - link "العودة إلى الإعدادات" [ref=f7e67] [cursor=pointer]:
+            - /url: /settings?branch=00000000-0000-4000-a000-000000000001
+          - heading "طلبات الاطلاع على البيانات" [level=1] [ref=f7e69]
+          - paragraph [ref=f7e70]: يمكن للعملاء طلب نسخة من بياناتهم المحفوظة لديك من صفحة الحجز. وافق على الطلب ليصلهم بالبريد الإلكتروني رابط تنزيل صالح لمدة 72 ساعة، أو ارفضه مع ذكر السبب لسجلاتك.
+        - table [ref=f7e73]:
+          - caption [ref=f7e74]: طلبات الاطلاع على البيانات
+          - rowgroup [ref=f7e75]:
+            - row [ref=f7e76]:
+              - columnheader "وقت الطلب" [ref=f7e77]
+              - columnheader "العميل" [ref=f7e78]
+              - columnheader "الفرع" [ref=f7e79]
+              - columnheader "اللغة" [ref=f7e80]
+              - columnheader "الحالة" [ref=f7e81]
+              - columnheader "الإجراءات" [ref=f7e82]
+          - rowgroup [ref=f7e84]:
+            - row [ref=f7e85]:
+              - cell [ref=f7e86]:
+                - generic [ref=f7e87]:
+                  - heading "لا توجد طلبات اطلاع على البيانات بعد" [level=2] [ref=f7e88]
+                  - paragraph [ref=f7e89]: حين يطلب عميل بياناته من صفحة الحجز، يظهر طلبه هنا.
+  - generic:
+    - status
+    - alert

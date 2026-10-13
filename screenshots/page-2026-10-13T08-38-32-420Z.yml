@@ -1,0 +1,52 @@
+- generic [ref=e3]:
+  - link "Skip to content" [ref=e4] [cursor=pointer]:
+    - /url: "#main"
+  - button "العربية" [ref=e6] [cursor=pointer]
+  - main [ref=e7]:
+    - generic [ref=e17]:
+      - heading "SpaCorner" [level=1] [ref=e18]
+      - paragraph [ref=e19]: Salmiya
+    - region "Your service" [ref=e310]:
+      - generic [ref=e311]:
+        - generic [ref=e312]:
+          - generic [ref=e313]: Swedish massage
+          - generic [ref=e314]: 60 min
+        - generic [ref=e315]:
+          - generic [ref=e316]: KWD 25.000
+          - link "Change service" [ref=e317] [cursor=pointer]:
+            - /url: /spacorner/audit-page?lang=en
+    - region [ref=e318]:
+      - heading "Your details" [level=2] [ref=e319]
+      - generic [ref=e320]:
+        - generic [ref=e321]:
+          - generic [ref=e322]: First name
+          - textbox "First name" [ref=e323]
+        - generic [ref=e324]:
+          - generic [ref=e325]: Last name (optional)
+          - textbox "Last name (optional)" [ref=e326]
+        - generic [ref=e327]:
+          - generic [ref=e328]: Mobile number
+          - textbox "Mobile number" [ref=e329]: "+965"
+          - generic [ref=e330]: Kuwait numbers can leave out +965.
+        - generic [ref=e331]:
+          - generic [ref=e332]: Email
+          - textbox "Email" [ref=e333]
+          - generic [ref=e334]: We'll email you a code to confirm it's you, then your booking.
+        - generic [ref=e335]:
+          - generic [ref=e336]: Language for messages
+          - combobox "Language for messages" [ref=e337] [cursor=pointer]:
+            - option "English" [selected]
+            - option "العربية"
+        - generic [ref=e338]:
+          - checkbox "Send me appointment reminders" [checked] [ref=e339] [cursor=pointer]
+          - generic [ref=e340]:
+            - generic [ref=e341] [cursor=pointer]: Send me appointment reminders
+            - generic [ref=e342]: By email, before your visit.
+        - generic [ref=e343]:
+          - checkbox "Send me offers and news from this business" [ref=e344] [cursor=pointer]
+          - generic [ref=e345]: Send me offers and news from this business
+        - button "Continue" [ref=e348] [cursor=pointer]
+    - alert [ref=e350]:
+      - generic [ref=e351]: The security check couldn't load. Check your connection, then reload the page.
+    - link "Request a copy of your data" [ref=e76] [cursor=pointer]:
+      - /url: /spacorner/audit-page/privacy?lang=en

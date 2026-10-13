@@ -1,0 +1,219 @@
+- generic [ref=f6e2]:
+  - generic [ref=f6e16]:
+    - link "الانتقال إلى المحتوى الرئيسي" [ref=f6e17] [cursor=pointer]:
+      - /url: "#main"
+    - complementary [ref=f6e18]:
+      - navigation "القائمة الرئيسية" [ref=f6e19]:
+        - list [ref=f6e20]:
+          - listitem [ref=f6e21]:
+            - link "الرئيسية" [ref=f6e22] [cursor=pointer]:
+              - /url: /?branch=00000000-0000-4000-a000-000000000001
+          - listitem [ref=f6e23]:
+            - link "يومي" [ref=f6e24] [cursor=pointer]:
+              - /url: /my-day?branch=00000000-0000-4000-a000-000000000001
+          - listitem [ref=f6e25]:
+            - link "التقويم" [ref=f6e26] [cursor=pointer]:
+              - /url: /calendar?branch=00000000-0000-4000-a000-000000000001
+          - listitem [ref=f6e27]:
+            - link "العملاء" [ref=f6e28] [cursor=pointer]:
+              - /url: /clients?branch=00000000-0000-4000-a000-000000000001
+          - listitem [ref=f6e29]:
+            - link "الفريق" [ref=f6e30] [cursor=pointer]:
+              - /url: /team?branch=00000000-0000-4000-a000-000000000001
+          - listitem [ref=f6e31]:
+            - link "قائمة الخدمات" [ref=f6e32] [cursor=pointer]:
+              - /url: /catalogue?branch=00000000-0000-4000-a000-000000000001
+          - listitem [ref=f6e33]:
+            - link "المبيعات" [ref=f6e34] [cursor=pointer]:
+              - /url: /sales?branch=00000000-0000-4000-a000-000000000001
+          - listitem [ref=f6e35]:
+            - link "التقارير" [ref=f6e36] [cursor=pointer]:
+              - /url: /reports?branch=00000000-0000-4000-a000-000000000001
+          - listitem [ref=f6e37]:
+            - link "الرسائل" [ref=f6e38] [cursor=pointer]:
+              - /url: /messages?branch=00000000-0000-4000-a000-000000000001
+          - listitem [ref=f6e39]:
+            - link "السجل" [ref=f6e40] [cursor=pointer]:
+              - /url: /audit?branch=00000000-0000-4000-a000-000000000001
+          - listitem [ref=f6e41]:
+            - link "الإعدادات" [ref=f6e42] [cursor=pointer]:
+              - /url: /settings?branch=00000000-0000-4000-a000-000000000001
+    - banner [ref=f6e43]:
+      - generic [ref=f6e44]:
+        - paragraph [ref=f6e45]: سبا كورنر
+        - generic [ref=f6e46]: المالك
+        - generic [ref=f6e47]:
+          - generic [ref=f6e48]: الفرع
+          - combobox "الفرع" [ref=f6e49] [cursor=pointer]:
+            - option "جميع الفروع"
+            - option "مدينة الكويت"
+            - option "السالمية" [selected]
+        - group "درج النقدية" [ref=f6e50]:
+          - generic [ref=f6e51]: الدرج مغلق
+          - button "فتح الدرج" [ref=f6e52] [cursor=pointer]
+      - generic [ref=f6e53]:
+        - button "البحث عن العملاء والمواعيد والمبيعات" [ref=f6e54] [cursor=pointer]:
+          - generic [ref=f6e58]: بحث
+          - generic [ref=f6e59]: ⌘K
+        - button "English" [ref=f6e60] [cursor=pointer]
+        - button "Sara Owner" [ref=f6e62] [cursor=pointer]:
+          - text: Sara Owner
+          - generic [aria-hidden] [ref=f6e63]: ▾
+    - main [ref=f6e64]:
+      - generic [ref=f6e65]:
+        - generic [ref=f6e66]:
+          - heading "سجل الرسائل" [level=1] [ref=f6e68]
+          - paragraph [ref=f6e69]: كل رسالة أرسلها النشاط أو حاول إرسالها، الأحدث أولاً. العناوين مخفية جزئياً.
+        - generic [ref=f6e70]:
+          - generic [ref=f6e71]:
+            - generic [ref=f6e72]:
+              - generic [ref=f6e73]: الفرع
+              - combobox "الفرع" [ref=f6e74] [cursor=pointer]:
+                - option "جميع الفروع"
+                - option "مدينة الكويت"
+                - option "السالمية" [selected]
+            - generic [ref=f6e75]:
+              - generic [ref=f6e76]: من
+              - textbox "من" [ref=f6e77]: 2026-10-07
+            - generic [ref=f6e78]:
+              - generic [ref=f6e79]: إلى
+              - textbox "إلى" [ref=f6e80]: 2026-10-13
+            - generic [ref=f6e81]:
+              - generic [ref=f6e82]: الحالة
+              - combobox "الحالة" [ref=f6e83] [cursor=pointer]:
+                - option "كل الحالات" [selected]
+                - option "لم تُرسل أو غير مؤكدة"
+                - option "أُرسلت"
+                - option "في الانتظار أو تُعاد المحاولة"
+                - option "تم التخطي"
+            - generic [ref=f6e84]:
+              - generic [ref=f6e85]: الرسالة
+              - combobox "الرسالة" [ref=f6e86] [cursor=pointer]:
+                - option "كل الرسائل" [selected]
+                - option "إلغاء الموعد"
+                - option "إيصال"
+                - option "استلام طلب الاطلاع على البيانات"
+                - option "تأكيد الموعد"
+                - option "تذكير"
+                - option "تغيير موعد الحجز"
+                - option "رابط تنزيل البيانات"
+                - option "رمز التحقق"
+          - paragraph [ref=f6e87]: التواريخ والأوقات بتوقيت Asia/Kuwait.
+        - table [ref=f6e90]:
+          - caption [ref=f6e91]: الرسائل
+          - rowgroup [ref=f6e92]:
+            - row [ref=f6e93]:
+              - columnheader "تمت الإضافة" [ref=f6e94]
+              - columnheader "الرسالة" [ref=f6e95]
+              - columnheader "أُرسلت إلى" [ref=f6e96]
+              - columnheader "الحالة" [ref=f6e97]
+              - columnheader "المحاولات" [ref=f6e98]
+              - columnheader "الإجراءات" [ref=f6e99]
+          - rowgroup [ref=f6e101]:
+            - row [ref=f6e102]:
+              - cell "13‏/10‏/2026، 11:37" [ref=f6e103]
+              - cell "إلغاء الموعد Audit Visitor" [ref=f6e104]:
+                - generic [ref=f6e105]:
+                  - generic [ref=f6e106]: إلغاء الموعد
+                  - link "Audit Visitor" [ref=f6e107] [cursor=pointer]:
+                    - /url: /clients/d027f9ab-8585-4f68-ac16-d199713a00fe?branch=00000000-0000-4000-a000-000000000001
+              - cell "البريد الإلكتروني · a***@example.test" [ref=f6e108]
+              - cell "أُرسلت أُرسلت 13‏/10‏/2026، 11:37" [ref=f6e110]:
+                - generic [ref=f6e111]:
+                  - generic [ref=f6e112]: أُرسلت
+                  - generic [ref=f6e115]: أُرسلت 13‏/10‏/2026، 11:37
+              - cell "1" [ref=f6e116]
+              - cell [ref=f6e117]
+            - row [ref=f6e118]:
+              - cell "13‏/10‏/2026، 11:37" [ref=f6e119]
+              - cell "تأكيد الموعد Audit Visitor" [ref=f6e120]:
+                - generic [ref=f6e121]:
+                  - generic [ref=f6e122]: تأكيد الموعد
+                  - link "Audit Visitor" [ref=f6e123] [cursor=pointer]:
+                    - /url: /clients/d027f9ab-8585-4f68-ac16-d199713a00fe?branch=00000000-0000-4000-a000-000000000001
+              - cell "البريد الإلكتروني" [ref=f6e124]
+              - cell "تم التخطي تغيّر الموعد" [ref=f6e125]:
+                - generic [ref=f6e126]:
+                  - generic [ref=f6e127]: تم التخطي
+                  - generic [ref=f6e130]: تغيّر الموعد
+              - cell "0" [ref=f6e131]
+              - cell [ref=f6e132]
+            - row [ref=f6e133]:
+              - cell "13‏/10‏/2026، 11:37" [ref=f6e134]
+              - cell "رمز التحقق" [ref=f6e135]
+              - cell "البريد الإلكتروني · a***@example.test" [ref=f6e138]
+              - cell "أُرسلت أُرسلت 13‏/10‏/2026، 11:37" [ref=f6e140]:
+                - generic [ref=f6e141]:
+                  - generic [ref=f6e142]: أُرسلت
+                  - generic [ref=f6e145]: أُرسلت 13‏/10‏/2026، 11:37
+              - cell "1" [ref=f6e146]
+              - cell [ref=f6e147]
+            - row [ref=f6e148]:
+              - cell "13‏/10‏/2026، 11:35" [ref=f6e149]
+              - cell "رمز التحقق" [ref=f6e150]
+              - cell "البريد الإلكتروني · a***@example.test" [ref=f6e153]
+              - cell "أُرسلت أُرسلت 13‏/10‏/2026، 11:35" [ref=f6e155]:
+                - generic [ref=f6e156]:
+                  - generic [ref=f6e157]: أُرسلت
+                  - generic [ref=f6e160]: أُرسلت 13‏/10‏/2026، 11:35
+              - cell "1" [ref=f6e161]
+              - cell [ref=f6e162]
+        - generic [ref=f6e163]:
+          - heading "استهلاك الرسائل" [level=2] [ref=f6e164]
+          - generic [ref=f6e165]:
+            - generic [ref=f6e166]:
+              - paragraph [ref=f6e167]: الرسائل حسب قناة الإرسال للنشاط كله، محسوبة في الشهر الذي أُنشئت فيه كل رسالة. الرسائل النصية وواتساب غير متاحة بعد.
+              - generic [ref=f6e168]:
+                - generic [ref=f6e169]: الشهر
+                - combobox "الشهر" [ref=f6e170] [cursor=pointer]:
+                  - option "أكتوبر 2026" [selected]
+                  - option "سبتمبر 2026"
+                  - option "أغسطس 2026"
+                  - option "يوليو 2026"
+                  - option "يونيو 2026"
+                  - option "مايو 2026"
+                  - option "أبريل 2026"
+                  - option "مارس 2026"
+                  - option "فبراير 2026"
+                  - option "يناير 2026"
+                  - option "ديسمبر 2025"
+                  - option "نوفمبر 2025"
+            - table [ref=f6e172]:
+              - caption [ref=f6e173]: استهلاك الرسائل لشهر أكتوبر 2026
+              - rowgroup [ref=f6e174]:
+                - row [ref=f6e175]:
+                  - columnheader "قناة الإرسال" [ref=f6e176]
+                  - columnheader "الرسائل" [ref=f6e177]
+                  - columnheader "أُرسلت" [ref=f6e178]
+                  - columnheader "لم تُرسل أو غير مؤكدة" [ref=f6e179]
+                  - columnheader "تم التخطي" [ref=f6e180]
+                  - columnheader "في الانتظار أو تُعاد المحاولة" [ref=f6e181]
+                  - columnheader "محاولات الإرسال" [ref=f6e182]
+              - rowgroup [ref=f6e183]:
+                - row [ref=f6e184]:
+                  - cell "البريد الإلكتروني" [ref=f6e185]
+                  - cell "4" [ref=f6e186]
+                  - cell "3" [ref=f6e187]
+                  - cell "0" [ref=f6e188]
+                  - cell "1" [ref=f6e189]
+                  - cell "0" [ref=f6e190]
+                  - cell "3" [ref=f6e191]
+                - row [ref=f6e192]:
+                  - cell "رسائل نصية" [ref=f6e193]
+                  - cell "0" [ref=f6e194]
+                  - cell "0" [ref=f6e195]
+                  - cell "0" [ref=f6e196]
+                  - cell "0" [ref=f6e197]
+                  - cell "0" [ref=f6e198]
+                  - cell "0" [ref=f6e199]
+                - row [ref=f6e200]:
+                  - cell "واتساب" [ref=f6e201]
+                  - cell "0" [ref=f6e202]
+                  - cell "0" [ref=f6e203]
+                  - cell "0" [ref=f6e204]
+                  - cell "0" [ref=f6e205]
+                  - cell "0" [ref=f6e206]
+                  - cell "0" [ref=f6e207]
+  - generic:
+    - status
+    - alert

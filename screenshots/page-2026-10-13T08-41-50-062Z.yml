@@ -1,0 +1,211 @@
+- generic [ref=f5e2]:
+  - generic [ref=f5e16]:
+    - link "Skip to main content" [ref=f5e17] [cursor=pointer]:
+      - /url: "#main"
+    - complementary [ref=f5e18]:
+      - navigation "Main" [ref=f5e19]:
+        - list [ref=f5e20]:
+          - listitem [ref=f5e21]:
+            - link "Home" [ref=f5e22] [cursor=pointer]:
+              - /url: /?branch=00000000-0000-4000-a000-000000000001
+          - listitem [ref=f5e23]:
+            - link "My day" [ref=f5e24] [cursor=pointer]:
+              - /url: /my-day?branch=00000000-0000-4000-a000-000000000001
+          - listitem [ref=f5e25]:
+            - link "Calendar" [ref=f5e26] [cursor=pointer]:
+              - /url: /calendar?branch=00000000-0000-4000-a000-000000000001
+          - listitem [ref=f5e27]:
+            - link "Clients" [ref=f5e28] [cursor=pointer]:
+              - /url: /clients?branch=00000000-0000-4000-a000-000000000001
+          - listitem [ref=f5e29]:
+            - link "Team" [ref=f5e30] [cursor=pointer]:
+              - /url: /team?branch=00000000-0000-4000-a000-000000000001
+          - listitem [ref=f5e31]:
+            - link "Catalogue" [ref=f5e32] [cursor=pointer]:
+              - /url: /catalogue?branch=00000000-0000-4000-a000-000000000001
+          - listitem [ref=f5e33]:
+            - link "Sales" [ref=f5e34] [cursor=pointer]:
+              - /url: /sales?branch=00000000-0000-4000-a000-000000000001
+          - listitem [ref=f5e35]:
+            - link "Reports" [ref=f5e36] [cursor=pointer]:
+              - /url: /reports?branch=00000000-0000-4000-a000-000000000001
+          - listitem [ref=f5e37]:
+            - link "Messages" [ref=f5e38] [cursor=pointer]:
+              - /url: /messages?branch=00000000-0000-4000-a000-000000000001
+          - listitem [ref=f5e39]:
+            - link "Activity" [ref=f5e40] [cursor=pointer]:
+              - /url: /audit?branch=00000000-0000-4000-a000-000000000001
+          - listitem [ref=f5e41]:
+            - link "Settings" [ref=f5e42] [cursor=pointer]:
+              - /url: /settings?branch=00000000-0000-4000-a000-000000000001
+    - banner [ref=f5e43]:
+      - generic [ref=f5e44]:
+        - paragraph [ref=f5e45]: SpaCorner
+        - generic [ref=f5e46]: Owner
+        - generic [ref=f5e47]:
+          - generic [ref=f5e48]: Branch
+          - combobox "Branch" [ref=f5e49] [cursor=pointer]:
+            - option "All branches"
+            - option "Kuwait City"
+            - option "Salmiya" [selected]
+        - group "Cash register" [ref=f5e50]:
+          - generic [ref=f5e51]: Register closed
+          - button "Open register" [ref=f5e52] [cursor=pointer]
+      - generic [ref=f5e53]:
+        - button "Search clients, appointments and sales" [ref=f5e54] [cursor=pointer]:
+          - generic [ref=f5e58]: Search
+          - generic [ref=f5e59]: ⌘K
+        - button "العربية" [ref=f5e60] [cursor=pointer]
+        - button "Sara Owner" [ref=f5e62] [cursor=pointer]:
+          - text: Sara Owner
+          - generic [aria-hidden] [ref=f5e63]: ▾
+    - main [ref=f5e64]:
+      - generic [ref=f5e65]:
+        - generic [ref=f5e66]:
+          - link "Back to branches" [ref=f5e67] [cursor=pointer]:
+            - /url: /settings/branches?branch=00000000-0000-4000-a000-000000000001
+          - generic [ref=f5e68]:
+            - heading "Salmiya" [level=1] [ref=f5e69]
+            - button "Archive branch" [ref=f5e70] [cursor=pointer]
+        - navigation "Branch settings" [ref=f5e71]:
+          - list [ref=f5e72]:
+            - listitem [ref=f5e73]:
+              - link "Details" [ref=f5e74] [cursor=pointer]:
+                - /url: /settings/branches/00000000-0000-4000-a000-000000000001/details?branch=00000000-0000-4000-a000-000000000001
+            - listitem [ref=f5e75]:
+              - link "Opening hours" [ref=f5e76] [cursor=pointer]:
+                - /url: /settings/branches/00000000-0000-4000-a000-000000000001/hours?branch=00000000-0000-4000-a000-000000000001
+            - listitem [ref=f5e77]:
+              - link "Closures" [ref=f5e78] [cursor=pointer]:
+                - /url: /settings/branches/00000000-0000-4000-a000-000000000001/closures?branch=00000000-0000-4000-a000-000000000001
+            - listitem [ref=f5e79]:
+              - link "Invoicing and receipt" [ref=f5e80] [cursor=pointer]:
+                - /url: /settings/branches/00000000-0000-4000-a000-000000000001/invoicing?branch=00000000-0000-4000-a000-000000000001
+            - listitem [ref=f5e81]:
+              - link "Tips" [ref=f5e82] [cursor=pointer]:
+                - /url: /settings/branches/00000000-0000-4000-a000-000000000001/tips?branch=00000000-0000-4000-a000-000000000001
+            - listitem [ref=f5e83]:
+              - link "Payment methods" [ref=f5e84] [cursor=pointer]:
+                - /url: /settings/branches/00000000-0000-4000-a000-000000000001/methods?branch=00000000-0000-4000-a000-000000000001
+            - listitem [ref=f5e85]:
+              - link "Online booking" [active] [ref=f5e86] [cursor=pointer]:
+                - /url: /settings/branches/00000000-0000-4000-a000-000000000001/online?branch=00000000-0000-4000-a000-000000000001
+            - listitem [ref=f5e87]:
+              - link "Messages" [ref=f5e88] [cursor=pointer]:
+                - /url: /settings/branches/00000000-0000-4000-a000-000000000001/messages?branch=00000000-0000-4000-a000-000000000001
+        - generic [ref=f5e120]:
+          - generic [ref=f5e121]:
+            - heading "Booking page" [level=2] [ref=f5e122]
+            - generic [ref=f5e124]:
+              - generic [ref=f5e125]:
+                - checkbox "Take bookings online" [checked] [ref=f5e126] [cursor=pointer]
+                - generic [ref=f5e127]:
+                  - generic [ref=f5e128] [cursor=pointer]: Take bookings online
+                  - generic [ref=f5e129]: Clients book through this branch's link or QR code. When this is off, the link says the page isn't available.
+              - generic [ref=f5e130]:
+                - generic [ref=f5e131]: Link name
+                - textbox "Link name" [ref=f5e132]: audit-page
+                - generic [ref=f5e133]: The last part of the link, for example "salmiya". Letters, digits and hyphens.
+              - generic [ref=f5e134]:
+                - generic [ref=f5e135]:
+                  - generic [ref=f5e136]: Clients can book up to
+                  - combobox "Clients can book up to" [ref=f5e137] [cursor=pointer]:
+                    - option "1 week"
+                    - option "2 weeks"
+                    - option "30 days" [selected]
+                    - option "60 days"
+                    - option "90 days"
+                    - option "6 months"
+                    - option "1 year"
+                - generic [ref=f5e138]:
+                  - generic [ref=f5e139]: Minimum notice
+                  - combobox "Minimum notice" [ref=f5e140] [cursor=pointer]:
+                    - option "None"
+                    - option "30 minutes"
+                    - option "1 hour" [selected]
+                    - option "2 hours"
+                    - option "4 hours"
+                    - option "12 hours"
+                    - option "1 day"
+                    - option "2 days"
+                    - option "7 days"
+                - generic [ref=f5e141]:
+                  - generic [ref=f5e142]: Online cancellation closes
+                  - combobox "Online cancellation closes" [ref=f5e143] [cursor=pointer]:
+                    - option "At the start time"
+                    - option "1 hour before"
+                    - option "2 hours before"
+                    - option "4 hours before" [selected]
+                    - option "12 hours before"
+                    - option "1 day before"
+                    - option "2 days before"
+                    - option "7 days before"
+              - paragraph [ref=f5e144]: Minimum notice is the shortest time between booking and the visit. After cancellation closes, clients call the branch to cancel.
+              - generic [ref=f5e145]:
+                - checkbox "Let clients choose a staff member" [checked] [ref=f5e146] [cursor=pointer]
+                - generic [ref=f5e147]:
+                  - generic [ref=f5e148] [cursor=pointer]: Let clients choose a staff member
+                  - generic [ref=f5e149]: When this is off, clients book any available staff member.
+              - button "Save" [ref=f5e151] [cursor=pointer]
+          - generic [ref=f5e152]:
+            - heading "Booking link and QR code" [level=2] [ref=f5e153]
+            - generic [ref=f5e154]:
+              - generic [ref=f5e155]:
+                - link "http://127.0.0.1:5174/spacorner/audit-page" [ref=f5e156] [cursor=pointer]:
+                  - /url: http://127.0.0.1:5174/spacorner/audit-page
+                - button "Copy link" [ref=f5e157] [cursor=pointer]
+              - generic [ref=f5e158]:
+                - img "QR code for the booking link" [ref=f5e159]
+                - generic [ref=f5e162]:
+                  - paragraph [ref=f5e163]: The QR code opens the same page. Bookings made from it are marked as QR bookings, so you can see how many come from your printed cards.
+                  - generic [ref=f5e164]:
+                    - button "Download SVG" [ref=f5e165] [cursor=pointer]
+                    - button "Download PNG" [ref=f5e166] [cursor=pointer]
+                    - link "Printable card" [ref=f5e167] [cursor=pointer]:
+                      - /url: /settings/branches/00000000-0000-4000-a000-000000000001/online-card
+          - generic [ref=f5e168]:
+            - heading "Offered online" [level=2] [ref=f5e169]
+            - generic [ref=f5e170]:
+              - group "Services" [ref=f5e171]:
+                - generic [ref=f5e173]:
+                  - paragraph [ref=f5e174]: A service's online setting applies in every branch.
+                  - list [ref=f5e175]:
+                    - listitem [ref=f5e176]:
+                      - generic [ref=f5e177]:
+                        - checkbox "Swedish massage" [checked] [ref=f5e178] [cursor=pointer]
+                        - generic [ref=f5e179]: Swedish massage
+                    - listitem [ref=f5e181]:
+                      - generic [ref=f5e182]:
+                        - checkbox "Hydrating facial" [checked] [ref=f5e183] [cursor=pointer]
+                        - generic [ref=f5e184]: Hydrating facial
+                    - listitem [ref=f5e186]:
+                      - generic [ref=f5e187]:
+                        - checkbox "Manicure" [checked] [ref=f5e188] [cursor=pointer]
+                        - generic [ref=f5e189]: Manicure
+                    - listitem [ref=f5e191]:
+                      - generic [ref=f5e192]:
+                        - checkbox "Deep tissue massage" [checked] [ref=f5e193] [cursor=pointer]
+                        - generic [ref=f5e194]: Deep tissue massage
+                    - listitem [ref=f5e196]:
+                      - generic [ref=f5e197]:
+                        - checkbox "Pedicure" [checked] [ref=f5e198] [cursor=pointer]
+                        - generic [ref=f5e199]: Pedicure
+              - group "Staff" [ref=f5e201]:
+                - generic [ref=f5e203]:
+                  - paragraph [ref=f5e204]: Staff who are off here aren't offered online, and "any staff member" never picks them.
+                  - list [ref=f5e205]:
+                    - listitem [ref=f5e206]:
+                      - generic [ref=f5e207]:
+                        - checkbox "Amal Al-Ahmad" [checked] [ref=f5e208] [cursor=pointer]
+                        - generic [ref=f5e209]: Amal Al-Ahmad
+                    - listitem [ref=f5e211]:
+                      - generic [ref=f5e212]:
+                        - checkbox "Huda Staff" [checked] [ref=f5e213] [cursor=pointer]
+                        - generic [ref=f5e214]: Huda Staff
+                    - listitem [ref=f5e216]:
+                      - generic [ref=f5e217]:
+                        - checkbox "Noura Nails" [checked] [ref=f5e218] [cursor=pointer]
+                        - generic [ref=f5e219]: Noura Nails
+  - generic:
+    - status
+    - alert

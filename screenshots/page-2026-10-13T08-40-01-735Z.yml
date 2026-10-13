@@ -1,0 +1,8 @@
+- generic [ref=f3e3]:
+  - link "انتقل إلى المحتوى" [ref=f3e4] [cursor=pointer]:
+    - /url: "#main"
+  - button "English" [ref=f3e6] [cursor=pointer]
+  - main [ref=f3e7]:
+    - generic [ref=f3e8]:
+      - status "جارٍ التحميل" [ref=f3e10]
+      - status "جارٍ تحميل الخدمات" [ref=f3e12]

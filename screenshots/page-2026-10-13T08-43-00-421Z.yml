@@ -1,0 +1,166 @@
+- generic [ref=f5e2]:
+  - generic [ref=f5e16]:
+    - link "الانتقال إلى المحتوى الرئيسي" [ref=f5e221] [cursor=pointer]:
+      - /url: "#main"
+    - complementary [ref=f5e18]:
+      - navigation "القائمة الرئيسية" [ref=f5e222]:
+        - list [ref=f5e20]:
+          - listitem [ref=f5e21]:
+            - link "الرئيسية" [ref=f5e223] [cursor=pointer]:
+              - /url: /?branch=00000000-0000-4000-a000-000000000001
+          - listitem [ref=f5e23]:
+            - link "يومي" [ref=f5e224] [cursor=pointer]:
+              - /url: /my-day?branch=00000000-0000-4000-a000-000000000001
+          - listitem [ref=f5e25]:
+            - link "التقويم" [ref=f5e225] [cursor=pointer]:
+              - /url: /calendar?branch=00000000-0000-4000-a000-000000000001
+          - listitem [ref=f5e27]:
+            - link "العملاء" [ref=f5e226] [cursor=pointer]:
+              - /url: /clients?branch=00000000-0000-4000-a000-000000000001
+          - listitem [ref=f5e29]:
+            - link "الفريق" [ref=f5e227] [cursor=pointer]:
+              - /url: /team?branch=00000000-0000-4000-a000-000000000001
+          - listitem [ref=f5e31]:
+            - link "قائمة الخدمات" [ref=f5e228] [cursor=pointer]:
+              - /url: /catalogue?branch=00000000-0000-4000-a000-000000000001
+          - listitem [ref=f5e33]:
+            - link "المبيعات" [ref=f5e229] [cursor=pointer]:
+              - /url: /sales?branch=00000000-0000-4000-a000-000000000001
+          - listitem [ref=f5e35]:
+            - link "التقارير" [ref=f5e230] [cursor=pointer]:
+              - /url: /reports?branch=00000000-0000-4000-a000-000000000001
+          - listitem [ref=f5e37]:
+            - link "الرسائل" [ref=f5e231] [cursor=pointer]:
+              - /url: /messages?branch=00000000-0000-4000-a000-000000000001
+          - listitem [ref=f5e39]:
+            - link "السجل" [ref=f5e232] [cursor=pointer]:
+              - /url: /audit?branch=00000000-0000-4000-a000-000000000001
+          - listitem [ref=f5e41]:
+            - link "الإعدادات" [ref=f5e233] [cursor=pointer]:
+              - /url: /settings?branch=00000000-0000-4000-a000-000000000001
+    - banner [ref=f5e43]:
+      - generic [ref=f5e44]:
+        - paragraph [ref=f5e45]: سبا كورنر
+        - generic [ref=f5e46]: المالك
+        - generic [ref=f5e47]:
+          - generic [ref=f5e48]: الفرع
+          - combobox "الفرع" [ref=f5e234] [cursor=pointer]:
+            - option "جميع الفروع"
+            - option "مدينة الكويت"
+            - option "السالمية" [selected]
+        - group "درج النقدية" [ref=f5e235]:
+          - generic [ref=f5e51]: الدرج مغلق
+          - button "فتح الدرج" [ref=f5e236] [cursor=pointer]
+      - generic [ref=f5e53]:
+        - button "البحث عن العملاء والمواعيد والمبيعات" [ref=f5e237] [cursor=pointer]:
+          - generic [ref=f5e58]: بحث
+          - generic [ref=f5e59]: ⌘K
+        - button "English" [ref=f5e238] [cursor=pointer]
+        - button "Sara Owner" [ref=f5e62] [cursor=pointer]:
+          - text: Sara Owner
+          - generic [aria-hidden] [ref=f5e63]: ▾
+    - main [ref=f5e64]:
+      - generic [ref=f5e65]:
+        - generic [ref=f5e66]:
+          - link "العودة إلى الفروع" [ref=f5e239] [cursor=pointer]:
+            - /url: /settings/branches?branch=00000000-0000-4000-a000-000000000001
+          - generic [ref=f5e68]:
+            - heading "السالمية" [level=1] [ref=f5e240]
+            - button "أرشفة الفرع" [ref=f5e241] [cursor=pointer]
+        - navigation "إعدادات الفرع" [ref=f5e242]:
+          - list [ref=f5e72]:
+            - listitem [ref=f5e73]:
+              - link "التفاصيل" [ref=f5e243] [cursor=pointer]:
+                - /url: /settings/branches/00000000-0000-4000-a000-000000000001/details?branch=00000000-0000-4000-a000-000000000001
+            - listitem [ref=f5e75]:
+              - link "ساعات العمل" [ref=f5e244] [cursor=pointer]:
+                - /url: /settings/branches/00000000-0000-4000-a000-000000000001/hours?branch=00000000-0000-4000-a000-000000000001
+            - listitem [ref=f5e77]:
+              - link "الإغلاقات" [ref=f5e245] [cursor=pointer]:
+                - /url: /settings/branches/00000000-0000-4000-a000-000000000001/closures?branch=00000000-0000-4000-a000-000000000001
+            - listitem [ref=f5e79]:
+              - link "الفواتير والإيصال" [ref=f5e246] [cursor=pointer]:
+                - /url: /settings/branches/00000000-0000-4000-a000-000000000001/invoicing?branch=00000000-0000-4000-a000-000000000001
+            - listitem [ref=f5e81]:
+              - link "البقشيش" [ref=f5e247] [cursor=pointer]:
+                - /url: /settings/branches/00000000-0000-4000-a000-000000000001/tips?branch=00000000-0000-4000-a000-000000000001
+            - listitem [ref=f5e83]:
+              - link "طرق الدفع" [ref=f5e248] [cursor=pointer]:
+                - /url: /settings/branches/00000000-0000-4000-a000-000000000001/methods?branch=00000000-0000-4000-a000-000000000001
+            - listitem [ref=f5e85]:
+              - link "الحجز الإلكتروني" [ref=f5e249] [cursor=pointer]:
+                - /url: /settings/branches/00000000-0000-4000-a000-000000000001/online?branch=00000000-0000-4000-a000-000000000001
+            - listitem [ref=f5e87]:
+              - link "الرسائل" [active] [ref=f5e250] [cursor=pointer]:
+                - /url: /settings/branches/00000000-0000-4000-a000-000000000001/messages?branch=00000000-0000-4000-a000-000000000001
+        - generic [ref=f5e277]:
+          - generic [ref=f5e278]:
+            - heading "التذكيرات" [level=2] [ref=f5e279]
+            - generic [ref=f5e280]:
+              - generic [ref=f5e281]:
+                - checkbox "إرسال تذكيرات بالمواعيد" [checked] [ref=f5e282] [cursor=pointer]
+                - generic [ref=f5e283]:
+                  - generic [ref=f5e284] [cursor=pointer]: إرسال تذكيرات بالمواعيد
+                  - generic [ref=f5e285]: يتلقى العملاء رسالة بالبريد الإلكتروني قبل زيارتهم، ويمكنهم إيقاف التذكيرات من الرابط الموجود فيها.
+              - group "متى تُرسل" [ref=f5e286]:
+                - generic [ref=f5e288]:
+                  - paragraph [ref=f5e289]: اختر وقتاً أو وقتين. التذكير الذي يقع بين 22:00 و08:00 يُرسل الساعة 21:45 في المساء السابق.
+                  - list [ref=f5e290]:
+                    - listitem [ref=f5e291]:
+                      - generic [ref=f5e292]:
+                        - checkbox "قبل يومين" [disabled] [ref=f5e293]
+                        - generic [ref=f5e294]: قبل يومين
+                    - listitem [ref=f5e296]:
+                      - generic [ref=f5e297]:
+                        - checkbox "قبل يوم" [checked] [ref=f5e298] [cursor=pointer]
+                        - generic [ref=f5e299]: قبل يوم
+                    - listitem [ref=f5e301]:
+                      - generic [ref=f5e302]:
+                        - checkbox "قبل 4 ساعات" [disabled] [ref=f5e303]
+                        - generic [ref=f5e304]: قبل 4 ساعات
+                    - listitem [ref=f5e306]:
+                      - generic [ref=f5e307]:
+                        - checkbox "قبل ساعتين" [checked] [ref=f5e308] [cursor=pointer]
+                        - generic [ref=f5e309]: قبل ساعتين
+                    - listitem [ref=f5e311]:
+                      - generic [ref=f5e312]:
+                        - checkbox "قبل ساعة" [disabled] [ref=f5e313]
+                        - generic [ref=f5e314]: قبل ساعة
+          - generic [ref=f5e316]:
+            - heading "رسائل الحجز" [level=2] [ref=f5e317]
+            - generic [ref=f5e319]:
+              - checkbox "مراسلة العملاء بالبريد الإلكتروني عند حجز موعد أو نقله أو إلغائه من الاستقبال" [checked] [ref=f5e320] [cursor=pointer]
+              - generic [ref=f5e321]:
+                - generic [ref=f5e322] [cursor=pointer]: مراسلة العملاء بالبريد الإلكتروني عند حجز موعد أو نقله أو إلغائه من الاستقبال
+                - generic [ref=f5e323]: الحجوزات الإلكترونية تصلها هذه الرسائل دائماً. الإيصالات وطلبات البيانات تُرسل في كل الأحوال.
+          - region "القنوات" [ref=f5e324]:
+            - heading "القنوات" [level=2] [ref=f5e325]
+            - generic [ref=f5e326]:
+              - list [ref=f5e327]:
+                - listitem [ref=f5e328]:
+                  - generic [ref=f5e329]:
+                    - checkbox "البريد الإلكتروني" [checked] [ref=f5e330] [cursor=pointer]
+                    - generic [ref=f5e331]:
+                      - generic [ref=f5e332] [cursor=pointer]: البريد الإلكتروني
+                      - generic [ref=f5e333]: يُرسل من n***@glowdesk.local
+                  - generic [ref=f5e334]: جاهز
+                - listitem [ref=f5e336]:
+                  - generic [ref=f5e337]:
+                    - checkbox "رسائل نصية" [ref=f5e338] [cursor=pointer]
+                    - generic [ref=f5e339]:
+                      - generic [ref=f5e340] [cursor=pointer]: رسائل نصية
+                      - generic [ref=f5e341]: يُرسل من fake
+                  - generic [ref=f5e342]: جاهز
+                - listitem [ref=f5e344]:
+                  - generic [ref=f5e345]:
+                    - checkbox "واتساب" [disabled] [ref=f5e346]
+                    - generic [ref=f5e347]:
+                      - generic [ref=f5e348]: واتساب
+                      - generic [ref=f5e349]: ما زالت تحتاج إلى حساب Twilio ورقم مرسل على واتساب وقالب واتساب معتمد.
+                  - generic [ref=f5e350]: غير مُعدّة
+              - paragraph [ref=f5e352]: تُرسل التذكيرات ورسائل الحجز بالبريد الإلكتروني، وتتوقف ما دام البريد الإلكتروني غير مفعّل. يمكن تفعيل الرسائل النصية وواتساب عندما تصبح جاهزة، وستبدأ رسائل العملاء باستخدامها في إصدار لاحق.
+              - button "إرسال رسالة تجريبية" [ref=f5e354] [cursor=pointer]
+          - button "حفظ" [ref=f5e356] [cursor=pointer]
+  - generic:
+    - status
+    - alert
