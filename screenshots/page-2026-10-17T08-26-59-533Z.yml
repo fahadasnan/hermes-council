@@ -1,0 +1,214 @@
+- generic [ref=e1044]:
+  - text: 
+  - list [ref=e1046]:
+    - listitem [ref=e1047]:
+      - generic: 
+    - listitem [ref=e1048]:
+      - generic: 
+    - listitem [ref=e1049]:
+      - generic: 
+    - listitem [ref=e1050]:
+      - generic: 
+    - listitem [ref=e1051]:
+      - generic [ref=e1052] [cursor=pointer]: 
+  - navigation [ref=e1054]:
+    - alert [ref=e1055]:
+      - paragraph [ref=e1056]:
+        - generic [aria-hidden] [ref=e1057]: 
+        - text: You haven't verified your email address. Resend verification email.
+    - generic [ref=e1058]:
+      - img [ref=e1060] [cursor=pointer]
+      - list [ref=e1061]:
+        - listitem [ref=e1062]:
+          - generic [ref=e1063]: 15 days left on trial
+          - link "Upgrade Now" [ref=e1064] [cursor=pointer]:
+            - /url: /settings
+        - listitem [ref=e1065]:
+          - generic [ref=e1066]: "In view: COUNCIL TEST"
+        - listitem [ref=e1067]:
+          - link [ref=e1068] [cursor=pointer]:
+            - /url: /manage-my-cards
+            - generic [aria-hidden] [ref=e1069]: 
+        - listitem [ref=e1070]:
+          - link [ref=e1071] [cursor=pointer]:
+            - /url: http://docs.loopyloyalty.com/
+            - generic [aria-hidden] [ref=e1072]: 
+        - listitem [ref=e1073]:
+          - link "" [ref=e1075] [cursor=pointer]:
+            - /url: ""
+  - generic [ref=e1079]:
+    - navigation [ref=e1080]:
+      - generic [ref=e1081]:
+        - list [ref=e1082]:
+          - listitem [ref=e1083]:
+            - generic [ref=e1084] [cursor=pointer]:
+              - generic [ref=e1085]: 
+              - text: Design
+          - listitem [ref=e1086]:
+            - generic [ref=e1087] [cursor=pointer]:
+              - generic [ref=e1088]: 
+              - text: Details
+          - listitem [ref=e1089]:
+            - generic [ref=e1090] [cursor=pointer]:
+              - generic [ref=e1091]: 
+              - text: Locations
+          - listitem [ref=e1092]:
+            - generic [ref=e1093] [cursor=pointer]:
+              - generic [ref=e1094]: 
+              - text: Support
+          - listitem [ref=e1095]:
+            - generic [ref=e1096] [cursor=pointer]:
+              - generic [ref=e1097]: 
+              - text: Data
+          - listitem [ref=e1098]:
+            - generic [ref=e1099] [cursor=pointer]:
+              - generic [ref=e1100]: 
+              - text: Custom
+              - generic [ref=e1101]: 
+        - list [ref=e1102]:
+          - listitem [ref=e1103]:
+            - button "Save" [ref=e1104] [cursor=pointer]
+          - listitem [ref=e1105]:
+            - button "Save & Preview" [ref=e1106] [cursor=pointer]
+          - listitem [ref=e1107]:
+            - button "Activate" [ref=e1108] [cursor=pointer]
+        - text:          
+    - generic [ref=e1110]:
+      - generic [ref=e1111]:
+        - generic [ref=e1114]:
+          - heading "Add Custom Fields" [level=2] [ref=e1115]
+          - paragraph [ref=e1116]:
+            - link "Personalize your customers' cards by adding custom fields." [ref=e1117] [cursor=pointer]:
+              - /url: http://docs.loopyloyalty.com/creating-digital-stamp-cards/changing-the-default-fields-on-your-digital-stamp-cards
+          - table [ref=e1118]:
+            - rowgroup [ref=e1119]:
+              - row [ref=e1120]:
+                - columnheader [ref=e1121]:
+                  - text: Label
+                  - generic [aria-hidden] [ref=e1123]: 
+                - columnheader [ref=e1124]:
+                  - text: Field to Display
+                  - generic [aria-hidden] [ref=e1126]: 
+            - rowgroup [ref=e1127]:
+              - row [ref=e1128]:
+                - cell [ref=e1129]:
+                  - textbox [ref=e1131]: STAMPS REQUIRED UNTIL NEXT REWARD
+                - cell [ref=e1132]:
+                  - combobox [ref=e1134]:
+                    - option "Stamps required until next reward" [selected]
+                    - option "Number of total stamps collected (all-time)"
+                    - option "First Name"
+                    - option "Email Address"
+                    - option "Mobile Number"
+                - cell [ref=e1135]:
+                  - generic [aria-hidden] [ref=e1137] [cursor=pointer]: 
+          - button [ref=e1138] [cursor=pointer]:
+            - generic [aria-hidden] [ref=e1139]: 
+        - generic [ref=e1142]:
+          - heading [level=2] [ref=e1143]:
+            - text: Card Labels
+            - generic [aria-hidden] [ref=e1145] [cursor=pointer]: 
+          - paragraph [ref=e1146]:
+            - link "How to change card label text" [ref=e1147] [cursor=pointer]:
+              - /url: http://docs.loopyloyalty.com/creating-digital-stamp-cards/adding-more-customisations-to-your-stamp-card/changing-the-label-text-on-your-digital-stamp-cards
+          - table [ref=e1148]:
+            - rowgroup [ref=e1149]:
+              - row [ref=e1150]:
+                - columnheader [ref=e1151]:
+                  - text: Original Label Text
+                  - generic [aria-hidden] [ref=e1153]: 
+                - columnheader [ref=e1154]:
+                  - text: New Label Text
+                  - generic [aria-hidden] [ref=e1156]: 
+            - rowgroup [ref=e1157]:
+              - row [ref=e1158]:
+                - cell "STAMPS REQUIRED UNTIL NEXT REWARD" [ref=e1159]
+                - cell [ref=e1160]:
+                  - textbox [ref=e1162]
+              - row [ref=e1163]:
+                - cell "LATEST UPDATES" [ref=e1164]
+                - cell [ref=e1165]:
+                  - textbox [ref=e1167]
+              - row [ref=e1168]:
+                - cell "HOW TO COLLECT STAMPS" [ref=e1169]
+                - cell [ref=e1170]:
+                  - textbox [ref=e1172]
+              - row [ref=e1173]:
+                - cell "REWARD DETAILS" [ref=e1174]
+                - cell [ref=e1175]:
+                  - textbox [ref=e1177]
+              - row [ref=e1178]:
+                - cell "REWARDS EARNED" [ref=e1179]
+                - cell [ref=e1180]:
+                  - textbox [ref=e1182]
+              - row [ref=e1183]:
+                - cell "USEFUL LINKS" [ref=e1184]
+                - cell [ref=e1185]:
+                  - textbox [ref=e1187]
+              - row [ref=e1188]:
+                - cell "TERMS & CONDITIONS" [ref=e1189]
+                - cell [ref=e1190]:
+                  - textbox [ref=e1192]
+              - row [ref=e1193]:
+                - cell "Read detailed terms and conditions" [ref=e1194]
+                - cell [ref=e1195]:
+                  - textbox [ref=e1197]
+              - row [ref=e1198]:
+                - cell "QUESTIONS ABOUT THIS CARD? CONTACT" [ref=e1199]
+                - cell [ref=e1200]:
+                  - textbox [ref=e1202]
+              - row [ref=e1203]:
+                - cell "Tap ⋯ for details" [ref=e1204]
+                - cell [ref=e1205]:
+                  - textbox [ref=e1207]
+              - row [ref=e1208]:
+                - cell "Please enter your details" [ref=e1209]
+                - cell [ref=e1210]:
+                  - textbox [ref=e1212]
+              - row [ref=e1213]:
+                - cell "I have read and agree to the terms and conditions" [ref=e1214]
+                - cell [ref=e1215]:
+                  - textbox [ref=e1217]
+              - row [ref=e1218]:
+                - cell "Join Now!" [ref=e1219]
+                - cell [ref=e1220]:
+                  - textbox [ref=e1222]
+              - row [ref=e1223]:
+                - cell "We are busy generating your personal stamp card. Please be patient..." [ref=e1224]
+                - cell [ref=e1225]:
+                  - textbox [ref=e1227]
+              - row [ref=e1228]:
+                - cell "You must agree to our terms and conditions to proceed." [ref=e1229]
+                - cell [ref=e1230]:
+                  - textbox [ref=e1232]
+              - row [ref=e1233]:
+                - cell "Thank you for enrolling..." [ref=e1234]
+                - cell [ref=e1235]:
+                  - textbox [ref=e1237]
+              - row [ref=e1238]:
+                - cell "View your card in your Wallet" [ref=e1239]
+                - cell [ref=e1240]:
+                  - textbox [ref=e1242]
+              - row [ref=e1243]:
+                - cell "Didn't see your card?" [ref=e1244]
+                - cell [ref=e1245]:
+                  - textbox [ref=e1247]
+              - row [ref=e1248]:
+                - cell "Tap to add it again" [ref=e1249]
+                - cell [ref=e1250]:
+                  - textbox [ref=e1252]
+      - generic [ref=e1254]:
+        - paragraph [ref=e1255]: Your Customers' View
+        - generic [ref=e1257]:
+          - generic:
+            - generic [ref=e1260]: STAMPS REQUIRED UNTIL NEXT REWARD
+            - generic [ref=e1264]: "8"
+          - generic [ref=e1267]:
+            - img "PDF 417 Code" [ref=e1268]
+            - text: Tap ⋯ for details
+        - text:  
+        - generic [ref=e1269]:
+          - button "" [ref=e1270] [cursor=pointer]
+          - button "" [ref=e1272] [cursor=pointer]
+          - button "" [ref=e1274] [cursor=pointer]
+  - text:     

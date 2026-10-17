@@ -1,0 +1,173 @@
+- generic [ref=e517]:
+  - text: 
+  - list [ref=e519]:
+    - listitem [ref=e520]:
+      - generic: 
+    - listitem [ref=e521]:
+      - generic: 
+    - listitem [ref=e522]:
+      - generic: 
+    - listitem [ref=e523]:
+      - generic: 
+    - listitem [ref=e524]:
+      - generic [ref=e525] [cursor=pointer]: 
+  - navigation [ref=e527]:
+    - alert [ref=e528]:
+      - paragraph [ref=e529]:
+        - generic [aria-hidden] [ref=e530]: 
+        - text: You haven't verified your email address. Resend verification email.
+    - generic [ref=e531]:
+      - img [ref=e533] [cursor=pointer]
+      - list [ref=e534]:
+        - listitem [ref=e535]:
+          - generic [ref=e536]: 15 days left on trial
+          - link "Upgrade Now" [ref=e537] [cursor=pointer]:
+            - /url: /settings
+        - listitem [ref=e538]:
+          - generic [ref=e539]: "In view: COUNCIL TEST"
+        - listitem [ref=e540]:
+          - link [ref=e541] [cursor=pointer]:
+            - /url: /manage-my-cards
+            - generic [aria-hidden] [ref=e542]: 
+        - listitem [ref=e543]:
+          - link [ref=e544] [cursor=pointer]:
+            - /url: http://docs.loopyloyalty.com/
+            - generic [aria-hidden] [ref=e545]: 
+        - listitem [ref=e546]:
+          - link "" [ref=e548] [cursor=pointer]:
+            - /url: ""
+  - generic [ref=e552]:
+    - navigation [ref=e553]:
+      - generic [ref=e554]:
+        - list [ref=e555]:
+          - listitem [ref=e556]:
+            - generic [ref=e557] [cursor=pointer]:
+              - generic [ref=e558]: 
+              - text: Design
+          - listitem [ref=e559]:
+            - generic [ref=e560] [cursor=pointer]:
+              - generic [ref=e561]: 
+              - text: Details
+          - listitem [ref=e562]:
+            - generic [ref=e563] [cursor=pointer]:
+              - generic [ref=e564]: 
+              - text: Locations
+          - listitem [ref=e565]:
+            - generic [ref=e566] [cursor=pointer]:
+              - generic [ref=e567]: 
+              - text: Support
+          - listitem [ref=e568]:
+            - generic [ref=e569] [cursor=pointer]:
+              - generic [ref=e570]: 
+              - text: Data
+          - listitem [ref=e571]:
+            - generic [ref=e572] [cursor=pointer]:
+              - generic [ref=e573]: 
+              - text: Custom
+              - generic [ref=e574]: 
+        - list [ref=e575]:
+          - listitem [ref=e576]:
+            - button "Save" [ref=e577] [cursor=pointer]
+          - listitem [ref=e578]:
+            - button "Save & Preview" [ref=e579] [cursor=pointer]
+          - listitem [ref=e580]:
+            - button "Activate" [ref=e581] [cursor=pointer]
+        - text:          
+    - generic [ref=e583]:
+      - generic [ref=e585]:
+        - generic [ref=e587]:
+          - heading [level=3] [ref=e588]:
+            - text: Locations
+            - generic [aria-hidden] [ref=e590]: 
+          - paragraph [ref=e591]:
+            - text: Let your customers know where your card be used. You can also trigger
+            - link "lock screen messages" [ref=e592] [cursor=pointer]:
+              - /url: http://docs.loopyloyalty.com/creating-digital-stamp-cards/location-based-messages
+            - text: when your customers are near your location(s).
+          - table [ref=e593]:
+            - rowgroup [ref=e594]:
+              - row [ref=e595]:
+                - columnheader [ref=e596]:
+                  - text: Location
+                  - generic [aria-hidden] [ref=e598]: 
+                - columnheader [ref=e599]:
+                  - text: Address on Card
+                  - generic [aria-hidden] [ref=e601]: 
+                - columnheader [ref=e602]:
+                  - text: Display
+                  - generic [aria-hidden] [ref=e604]: 
+                - columnheader [ref=e605]:
+                  - text: Message
+                  - generic [aria-hidden] [ref=e607]: 
+            - rowgroup [ref=e608]:
+              - row [ref=e609]:
+                - cell "No locations added. Please select from the list below." [ref=e610]
+          - button [ref=e611] [cursor=pointer]:
+            - generic [aria-hidden] [ref=e612]: 
+        - table [ref=e615]:
+          - rowgroup [ref=e616]:
+            - row [ref=e617]:
+              - columnheader [ref=e618]:
+                - text: My Locations
+                - generic [aria-hidden] [ref=e620]: 
+          - rowgroup [ref=e621]:
+            - row
+            - row [ref=e622]:
+              - cell [ref=e623]:
+                - generic [aria-hidden] [ref=e625] [cursor=pointer]: 
+              - cell [ref=e626]:
+                - link [ref=e627] [cursor=pointer]:
+                  - /url: http://maps.google.com/?q=22.287614,114.148313
+                  - text: COUNCIL TEST Location
+                  - emphasis [ref=e628]: (221B Baker Street, London)
+        - generic [ref=e630]:
+          - heading [level=3] [ref=e631]:
+            - text: Beacons
+            - generic [aria-hidden] [ref=e633]: 
+          - paragraph [ref=e634]:
+            - text: Display beacon based messages when customers are near your beacon(s).
+            - link "Learn more about beacon based messages." [ref=e635] [cursor=pointer]:
+              - /url: http://docs.loopyloyalty.com/creating-digital-stamp-cards/location-based-messages
+          - table [ref=e636]:
+            - rowgroup [ref=e637]:
+              - row [ref=e638]:
+                - columnheader [ref=e639]:
+                  - text: Beacon
+                  - generic [aria-hidden] [ref=e641]: 
+                - columnheader [ref=e642]:
+                  - text: Message
+                  - generic [aria-hidden] [ref=e644]: 
+            - rowgroup [ref=e645]:
+              - row [ref=e646]:
+                - cell "No beacons added. Please select from the list below." [ref=e647]
+          - button [ref=e648] [cursor=pointer]:
+            - generic [aria-hidden] [ref=e649]: 
+        - table [ref=e652]:
+          - rowgroup [ref=e653]:
+            - row [ref=e654]:
+              - columnheader [ref=e655]:
+                - text: My Beacons
+                - generic [aria-hidden] [ref=e657]: 
+          - rowgroup [ref=e658]:
+            - row
+            - row [ref=e659]:
+              - cell [ref=e660]:
+                - generic [aria-hidden] [ref=e662] [cursor=pointer]: 
+              - cell [ref=e663]:
+                - text: COUNCIL TEST Beacon
+                - emphasis [ref=e664]: "(UUID: F7826DA6-4FA2-4E98-8024-BC5B71E0893E, Major: 1, Minor: 1)"
+      - generic [ref=e666]:
+        - paragraph [ref=e667]: Your Customers' View
+        - generic [ref=e669]:
+          - generic:
+            - generic [ref=e672]: STAMPS REQUIRED UNTIL NEXT REWARD
+            - generic [ref=e676]: "8"
+          - generic [ref=e679]:
+            - img "PDF 417 Code" [ref=e680]
+            - text: Tap ⋯ for details
+        - text:  
+        - generic [ref=e681]:
+          - button "" [ref=e682] [cursor=pointer]
+          - button "" [ref=e684] [cursor=pointer]
+          - button "" [ref=e686] [cursor=pointer]
+  - text:     

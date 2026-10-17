@@ -1,0 +1,206 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e1276]:
+    - text: 
+    - list [ref=e1278]:
+      - listitem [ref=e1279]:
+        - generic: 
+      - listitem [ref=e1280]:
+        - generic: 
+      - listitem [ref=e1281]:
+        - generic: 
+      - listitem [ref=e1282]:
+        - generic: 
+      - listitem [ref=e1283]:
+        - generic [ref=e1284] [cursor=pointer]: 
+    - navigation [ref=e1286]:
+      - alert [ref=e1287]:
+        - paragraph [ref=e1288]:
+          - generic [aria-hidden] [ref=e1289]: 
+          - text: You haven't verified your email address. Resend verification email.
+      - generic [ref=e1290]:
+        - img [ref=e1292] [cursor=pointer]
+        - list [ref=e1293]:
+          - listitem [ref=e1294]:
+            - generic [ref=e1295]: 15 days left on trial
+            - link "Upgrade Now" [ref=e1296] [cursor=pointer]:
+              - /url: /settings
+          - listitem [ref=e1297]:
+            - generic [ref=e1298]: "In view: COUNCIL TEST"
+          - listitem [ref=e1299]:
+            - link [ref=e1300] [cursor=pointer]:
+              - /url: /manage-my-cards
+              - generic [aria-hidden] [ref=e1301]: 
+          - listitem [ref=e1302]:
+            - link [ref=e1303] [cursor=pointer]:
+              - /url: http://docs.loopyloyalty.com/
+              - generic [aria-hidden] [ref=e1304]: 
+          - listitem [ref=e1305]:
+            - link "" [ref=e1307] [cursor=pointer]:
+              - /url: ""
+    - generic [ref=e1311]:
+      - navigation [ref=e1312]:
+        - generic [ref=e1313]:
+          - list [ref=e1314]:
+            - listitem [ref=e1315]:
+              - generic [ref=e1316] [cursor=pointer]:
+                - generic [ref=e1317]: 
+                - text: Design
+            - listitem [ref=e1318]:
+              - generic [ref=e1319] [cursor=pointer]:
+                - generic [ref=e1320]: 
+                - text: Details
+            - listitem [ref=e1321]:
+              - generic [ref=e1322] [cursor=pointer]:
+                - generic [ref=e1323]: 
+                - text: Locations
+            - listitem [ref=e1324]:
+              - generic [ref=e1325] [cursor=pointer]:
+                - generic [ref=e1326]: 
+                - text: Support
+            - listitem [ref=e1327]:
+              - generic [ref=e1328] [cursor=pointer]:
+                - generic [ref=e1329]: 
+                - text: Data
+            - listitem [ref=e1330]:
+              - generic [ref=e1331] [cursor=pointer]:
+                - generic [ref=e1332]: 
+                - text: Custom
+                - generic [ref=e1333]: 
+          - list [ref=e1334]:
+            - listitem [ref=e1335]:
+              - button "Save" [ref=e1336] [cursor=pointer]
+            - listitem [ref=e1337]:
+              - button "Save & Preview" [ref=e1338] [cursor=pointer]
+            - listitem [ref=e1339]:
+              - button "Activate" [ref=e1340] [cursor=pointer]
+          - text:          
+      - generic [ref=e1342]:
+        - generic [ref=e1343]:
+          - generic [ref=e1344] [cursor=pointer]:
+            - generic [ref=e1345]: 
+            - text: "Watch video tutorial: Adding Details"
+          - generic [ref=e1346]:
+            - generic [ref=e1348]:
+              - generic [ref=e1349]:
+                - generic [ref=e1350]: Card description
+                - generic [aria-hidden] [ref=e1352]: 
+                - textbox "e.g. Collect stamps for cool rewards!" [ref=e1353]: COUNCIL-TEST card - edited 2026-10-17
+              - generic [ref=e1354]:
+                - generic [ref=e1355]: How your customers earn 1 stamp
+                - generic [aria-hidden] [ref=e1357]: 
+                - textbox "e.g. Get 1 stamp for every $5 spent; You will receive 1 chop for every coffee purchased." [ref=e1358]: "COUNCIL-TEST: get 1 stamp per visit"
+              - generic [ref=e1359]:
+                - generic [ref=e1360]: Business Name
+                - generic [aria-hidden] [ref=e1362]: 
+                - textbox "ibefehdi" [ref=e1363]: COUNCIL-TEST Business
+            - generic [ref=e1365]:
+              - heading "Reward Details" [level=3] [ref=e1366]
+              - generic [ref=e1367]:
+                - generic [ref=e1368]: Reward Name
+                - generic [aria-hidden] [ref=e1370]: 
+                - textbox "e.g. Free box of donuts" [ref=e1371]: COUNCIL-TEST reward
+              - generic [ref=e1372]:
+                - generic [ref=e1373]: Description
+                - generic [aria-hidden] [ref=e1375]: 
+                - textbox "e.g. You will receive a free box of donuts after collecting 8 stamps; Get 1 free lunch set after collecting all punches; Collect 10 stamps and be rewarded with a free bottle of red wine." [ref=e1376]: "COUNCIL-TEST: free item after 8 stamps"
+              - generic [ref=e1377]:
+                - generic [ref=e1378]: Stamp success message
+                - generic [aria-hidden] [ref=e1380]: 
+                - 'textbox "e.g. Only {#} more stamps until your reward!" [ref=e1381]': "Only {#} more stamps until your reward!"
+                - paragraph [ref=e1382]: "You must include {#} in your stamp success message. '{#}' is a placeholder for the number of stamps."
+              - generic [ref=e1383]:
+                - generic [ref=e1384]: Reward success message
+                - generic [aria-hidden] [ref=e1386]: 
+                - textbox "e.g. Come and get your free coffee today!" [ref=e1387]: Come get your COUNCIL-TEST reward!
+            - generic [ref=e1390]:
+              - heading [level=3] [ref=e1391]:
+                - text: Expiry
+                - generic [aria-hidden] [ref=e1393]: 
+              - generic [ref=e1395] [cursor=pointer]:
+                - radio "None" [checked] [ref=e1396]
+                - text: None
+              - generic [ref=e1398] [cursor=pointer]:
+                - radio "Fixed date" [ref=e1399]
+                - text: Fixed date
+              - generic [ref=e1401] [cursor=pointer]:
+                - radio "Fixed period after signup" [ref=e1402]
+                - text: Fixed period after signup
+            - generic [ref=e1404]:
+              - heading [level=3] [ref=e1405]:
+                - text: Useful Links
+                - generic [aria-hidden] [ref=e1407]: 
+              - paragraph [ref=e1408]:
+                - text: "Tip: add a"
+                - link "link to your address" [ref=e1409] [cursor=pointer]:
+                  - /url: http://docs.loopyloyalty.com/creating-digital-stamp-cards/adding-more-customisations-to-your-stamp-card/how-to-link-your-address-on-your-stamp-card
+                - text: and make it easy for customers to find your business.
+              - table [ref=e1410]:
+                - rowgroup [ref=e1411]:
+                  - row [ref=e1412]:
+                    - columnheader [ref=e1413]:
+                      - text: Text
+                      - generic [aria-hidden] [ref=e1415]: 
+                    - columnheader [ref=e1416]:
+                      - text: Link
+                      - generic [aria-hidden] [ref=e1418]: 
+                    - columnheader [ref=e1419]:
+                      - text: Type
+                      - generic [aria-hidden] [ref=e1421]: 
+                - rowgroup [ref=e1422]:
+                  - row [ref=e1482]:
+                    - cell [ref=e1483]:
+                      - textbox [ref=e1485]: Visit our website
+                    - cell [ref=e1486]:
+                      - textbox [ref=e1488]: https://loopyloyalty.com
+                    - cell [ref=e1489]:
+                      - combobox [ref=e1491]:
+                        - option "Url" [selected]
+                        - option "Phone"
+                        - option "Email"
+                        - option "Address"
+                    - cell [ref=e1492]:
+                      - generic [aria-hidden] [ref=e1494] [cursor=pointer]: 
+              - button [ref=e1436] [cursor=pointer]:
+                - generic [aria-hidden] [ref=e1437]: 
+        - generic [ref=e1441]:
+          - paragraph [ref=e1442]: Your Customers' View
+          - generic [ref=e1444]:
+            - paragraph [ref=e1447]: COUNCIL-TEST card - edited 2026-10-...
+            - img "Pass back" [ref=e1448]
+            - generic [ref=e1449]:
+              - paragraph [ref=e1450]: LATEST UPDATES
+              - paragraph [ref=e1451]: Any messages you send will be displayed here.
+            - generic [ref=e1452]:
+              - paragraph [ref=e1453]: HOW TO COLLECT STAMPS
+              - paragraph [ref=e1454]: "COUNCIL-TEST: get 1 stamp per visit"
+            - generic [ref=e1455]:
+              - paragraph [ref=e1456]: REWARD DETAILS
+              - paragraph [ref=e1495]: "COUNCIL-TEST: free item after 8 stamps"
+            - generic [ref=e1458]:
+              - paragraph [ref=e1459]: STAMPS UNTIL NEXT REWARD
+              - paragraph [ref=e1460]: "8"
+            - generic [ref=e1461]:
+              - paragraph [ref=e1462]: REWARDS EARNED
+              - paragraph [ref=e1496]: "0: COUNCIL-TEST reward"
+            - generic [ref=e1464]:
+              - paragraph [ref=e1465]: USEFUL LINKS
+              - paragraph [ref=e1497]:
+                - link "Visit our website" [ref=e1498] [cursor=pointer]:
+                  - /url: https://loopyloyalty.com
+            - generic [ref=e1468]:
+              - paragraph [ref=e1469]: TERMS & CONDITIONS
+              - paragraph [ref=e1470]: 1. Earn 1 stamp for every _______________ purchased. 2. Collect __ stamps to receive a _______________ upon your next visit. 3. This card, stamps, and rewards are valid until_______________. 4. This card can only be used at _______________ (and _______________). 5. Stamps and rewards cannot be exchanged, refunded, replaced or redeemed for cash. 6. Cards are non-transferrable and cannot be combined with other cards. 7. The Company reserve the right of final decisions in case of any disputes.
+            - generic [ref=e1471]:
+              - paragraph [ref=e1472]: QUESTIONS ABOUT THIS CARD? CONTACT
+              - paragraph [ref=e1473]: ibefehdi
+              - paragraph [ref=e1474]: ibefehdi@gmail.com
+              - paragraph
+          - text:  
+          - generic [ref=e1475]:
+            - button "" [ref=e1476] [cursor=pointer]
+            - button "" [ref=e1478] [cursor=pointer]
+            - button "" [ref=e1480] [cursor=pointer]
+    - text:     
+  - generic [ref=e1499]:
+    - button "×" [ref=e1500] [cursor=pointer]
+    - generic [ref=e1501]: Card successfully saved.
