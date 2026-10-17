@@ -1,0 +1,1185 @@
+[
+  {
+    "label": "edit-design",
+    "url": "https://app.loopyloyalty.com/edit/new/design",
+    "title": "Loopy Loyalty",
+    "headings": [],
+    "interactive": [
+      {
+        "tag": "A",
+        "text": "Overview",
+        "href": "",
+        "uiSref": "",
+        "ngClick": "cc.navigateToState(obj.state)"
+      },
+      {
+        "tag": "A",
+        "text": "Insights",
+        "href": "",
+        "uiSref": "",
+        "ngClick": "cc.navigateToState(obj.state)"
+      },
+      {
+        "tag": "A",
+        "text": "Messages",
+        "href": "",
+        "uiSref": "",
+        "ngClick": "cc.navigateToState(obj.state)"
+      },
+      {
+        "tag": "A",
+        "text": "Customers",
+        "href": "",
+        "uiSref": "",
+        "ngClick": "cc.navigateToState(obj.state)"
+      },
+      {
+        "tag": "A",
+        "text": "Edit",
+        "href": "",
+        "uiSref": "",
+        "ngClick": "cc.navigateToState(obj.state)"
+      },
+      {
+        "tag": "A",
+        "text": "Resend verification email",
+        "href": "",
+        "uiSref": "",
+        "ngClick": "cc.resend()"
+      },
+      {
+        "tag": "A",
+        "text": "Upgrade Now",
+        "href": "https://app.loopyloyalty.com/settings",
+        "uiSref": "container.settings",
+        "ngClick": ""
+      },
+      {
+        "tag": "BUTTON",
+        "text": "×",
+        "href": "",
+        "uiSref": "",
+        "ngClick": ""
+      }
+    ],
+    "tables": [],
+    "bodyText": "   You haven't verified your email address. Resend verification email.\n\n15 days left on trial UPGRADE NOW\n×\n[ll2 Error] Cannot read properties of undefined (reading 'backgroundColor')"
+  },
+  {
+    "label": "edit-details",
+    "url": "https://app.loopyloyalty.com/edit/new/details",
+    "title": "Loopy Loyalty",
+    "headings": [
+      {
+        "level": "H3",
+        "text": "Reward Details"
+      }
+    ],
+    "interactive": [
+      {
+        "tag": "A",
+        "text": "Overview",
+        "href": "",
+        "uiSref": "",
+        "ngClick": "cc.navigateToState(obj.state)"
+      },
+      {
+        "tag": "A",
+        "text": "Insights",
+        "href": "",
+        "uiSref": "",
+        "ngClick": "cc.navigateToState(obj.state)"
+      },
+      {
+        "tag": "A",
+        "text": "Messages",
+        "href": "",
+        "uiSref": "",
+        "ngClick": "cc.navigateToState(obj.state)"
+      },
+      {
+        "tag": "A",
+        "text": "Customers",
+        "href": "",
+        "uiSref": "",
+        "ngClick": "cc.navigateToState(obj.state)"
+      },
+      {
+        "tag": "A",
+        "text": "Edit",
+        "href": "",
+        "uiSref": "",
+        "ngClick": "cc.navigateToState(obj.state)"
+      },
+      {
+        "tag": "A",
+        "text": "Resend verification email",
+        "href": "",
+        "uiSref": "",
+        "ngClick": "cc.resend()"
+      },
+      {
+        "tag": "A",
+        "text": "Upgrade Now",
+        "href": "https://app.loopyloyalty.com/settings",
+        "uiSref": "container.settings",
+        "ngClick": ""
+      },
+      {
+        "tag": "A",
+        "text": "Design",
+        "href": "",
+        "uiSref": "",
+        "ngClick": "vm.validateAndSaveForm(cardDetailsForm, 'container.edit-design')"
+      },
+      {
+        "tag": "A",
+        "text": "Details",
+        "href": "",
+        "uiSref": "",
+        "ngClick": "vm.validateAndSaveForm(cardDetailsForm, 'container.edit-details')"
+      },
+      {
+        "tag": "A",
+        "text": "Locations",
+        "href": "",
+        "uiSref": "",
+        "ngClick": "vm.validateAndSaveForm(cardDetailsForm, 'container.edit-locations')"
+      },
+      {
+        "tag": "A",
+        "text": "Support",
+        "href": "",
+        "uiSref": "",
+        "ngClick": "vm.validateAndSaveForm(cardDetailsForm, 'container.edit-support')"
+      },
+      {
+        "tag": "A",
+        "text": "Data",
+        "href": "",
+        "uiSref": "",
+        "ngClick": "vm.validateAndSaveForm(cardDetailsForm, 'container.edit-data')"
+      },
+      {
+        "tag": "A",
+        "text": "Custom",
+        "href": "",
+        "uiSref": "",
+        "ngClick": "vm.validateAndSaveForm(cardDetailsForm, 'container.edit-labels')"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Save",
+        "href": "",
+        "uiSref": "",
+        "ngClick": "vm.validateAndSaveForm(cardDetailsForm, null)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Save & Preview",
+        "href": "",
+        "uiSref": "",
+        "ngClick": "vm.previewCard(cardDetailsForm)"
+      },
+      {
+        "tag": "A",
+        "text": "Watch video tutorial: Adding Details",
+        "href": "",
+        "uiSref": "",
+        "ngClick": "vm.showInstructionVideo()"
+      },
+      {
+        "tag": "A",
+        "text": "Visit our website",
+        "href": "https://loopyloyalty.com/",
+        "uiSref": "",
+        "ngClick": ""
+      }
+    ],
+    "tables": [],
+    "bodyText": "   You haven't verified your email address. Resend verification email.\n\n15 days left on trial UPGRADE NOW\n Design\n Details\n Locations\n Support\n Data\n Custom \nSave\nSave & Preview\n Watch video tutorial: Adding Details\nCard description \nHow your customers earn 1 stamp \nBusiness Name \nReward Details\nReward Name \nDescription \nStamp success message \n\nYou must include {#} in your stamp success message. '{#}' is a placeholder for the number of stamps.\n\nReward success message \nExpiry \nNone\nFixed date\nFixed period after signup\nUseful Links \n\nTip: add a link to your address and make it easy for customers to find your business.\n\nText \tLink \tType \n\n\t\n\t\nUrl\nPhone\nEmail\nAddress\n\t\n\nYour Customers' View\n\nCollect stamps for cool rewards!\n\nLATEST UPDATES\n\nAny messages you send will be displayed here.\n\nHOW TO COLLECT STAMPS\n\nSpend $5 to get 1 stamp.\n\nREWARD DETAILS\n\nYou will get a free coffee after collecting 8 stamps.\n\nSTAMPS UNTIL NEXT REWARD\n\n8\n\nREWARDS EARNED\n\n0: Free coffee\n\nUSEFUL LINKS\n\nVisit our website\n\nTERMS & CONDITIONS\n\n1. Earn 1 stamp for every _______________ purchased.\n2. Collect __ stamps to receive a _______________ upon your next visit.\n3. This card, stamps, and rewards are valid until_______________.\n4. This card can only be used at _______________ (and _______________).\n5. Stamps and rewards cannot be exchanged, refunded, replaced or redeemed for cash.\n6. Cards are non-transferrable and cannot be combined with other cards.\n7. The Company reserve the right of final decisions in case of any disputes.\n\nQUESTIONS ABOUT THIS CARD? CONTACT\n\nibefehdi\n\nibefehdi@gmail.com"
+  },
+  {
+    "label": "edit-locations",
+    "url": "https://app.loopyloyalty.com/edit/new/locations",
+    "title": "Loopy Loyalty",
+    "headings": [
+      {
+        "level": "H3",
+        "text": "Locations"
+      },
+      {
+        "level": "H3",
+        "text": "Beacons"
+      }
+    ],
+    "interactive": [
+      {
+        "tag": "A",
+        "text": "Overview",
+        "href": "",
+        "uiSref": "",
+        "ngClick": "cc.navigateToState(obj.state)"
+      },
+      {
+        "tag": "A",
+        "text": "Insights",
+        "href": "",
+        "uiSref": "",
+        "ngClick": "cc.navigateToState(obj.state)"
+      },
+      {
+        "tag": "A",
+        "text": "Messages",
+        "href": "",
+        "uiSref": "",
+        "ngClick": "cc.navigateToState(obj.state)"
+      },
+      {
+        "tag": "A",
+        "text": "Customers",
+        "href": "",
+        "uiSref": "",
+        "ngClick": "cc.navigateToState(obj.state)"
+      },
+      {
+        "tag": "A",
+        "text": "Edit",
+        "href": "",
+        "uiSref": "",
+        "ngClick": "cc.navigateToState(obj.state)"
+      },
+      {
+        "tag": "A",
+        "text": "Resend verification email",
+        "href": "",
+        "uiSref": "",
+        "ngClick": "cc.resend()"
+      },
+      {
+        "tag": "A",
+        "text": "Upgrade Now",
+        "href": "https://app.loopyloyalty.com/settings",
+        "uiSref": "container.settings",
+        "ngClick": ""
+      },
+      {
+        "tag": "A",
+        "text": "Design",
+        "href": "",
+        "uiSref": "",
+        "ngClick": "vm.validateAndSaveForm(cardLocationsForm, 'container.edit-design')"
+      },
+      {
+        "tag": "A",
+        "text": "Details",
+        "href": "",
+        "uiSref": "",
+        "ngClick": "vm.validateAndSaveForm(cardLocationsForm, 'container.edit-details')"
+      },
+      {
+        "tag": "A",
+        "text": "Locations",
+        "href": "",
+        "uiSref": "",
+        "ngClick": "vm.validateAndSaveForm(cardLocationsForm, 'container.edit-locations')"
+      },
+      {
+        "tag": "A",
+        "text": "Support",
+        "href": "",
+        "uiSref": "",
+        "ngClick": "vm.validateAndSaveForm(cardLocationsForm, 'container.edit-support')"
+      },
+      {
+        "tag": "A",
+        "text": "Data",
+        "href": "",
+        "uiSref": "",
+        "ngClick": "vm.validateAndSaveForm(cardLocationsForm, 'container.edit-data')"
+      },
+      {
+        "tag": "A",
+        "text": "Custom",
+        "href": "",
+        "uiSref": "",
+        "ngClick": "vm.validateAndSaveForm(cardLocationsForm, 'container.edit-labels')"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Save",
+        "href": "",
+        "uiSref": "",
+        "ngClick": "vm.validateAndSaveForm(cardLocationsForm, null)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Save & Preview",
+        "href": "",
+        "uiSref": "",
+        "ngClick": "vm.previewCard(cardLocationsForm)"
+      },
+      {
+        "tag": "A",
+        "text": "lock screen messages",
+        "href": "http://docs.loopyloyalty.com/creating-digital-stamp-cards/location-based-messages",
+        "uiSref": "",
+        "ngClick": ""
+      },
+      {
+        "tag": "A",
+        "text": "Learn more about beacon based messages.",
+        "href": "http://docs.loopyloyalty.com/creating-digital-stamp-cards/location-based-messages",
+        "uiSref": "",
+        "ngClick": ""
+      }
+    ],
+    "tables": [
+      {
+        "headers": [
+          "Location",
+          "Address on Card",
+          "Display",
+          "Message"
+        ],
+        "rows": 1
+      },
+      {
+        "headers": [
+          "Beacon",
+          "Message"
+        ],
+        "rows": 1
+      }
+    ],
+    "bodyText": "   You haven't verified your email address. Resend verification email.\n\n15 days left on trial UPGRADE NOW\n Design\n Details\n Locations\n Support\n Data\n Custom \nSave\nSave & Preview\nLocations \n\nLet your customers know where your card be used. You can also trigger lock screen messages when your customers are near your location(s).\n\nLocation \tAddress on Card \tDisplay \tMessage \nNo locations added. Please select from the list below.\nBeacons \n\nDisplay beacon based messages when customers are near your beacon(s). Learn more about beacon based messages.\n\nBeacon \tMessage \nNo beacons added. Please select from the list below.\n\nYour Customers' View\n\nSTAMPS REQUIRED UNTIL NEXT REWARD\n\t\n8\n Tap ⋯ for details"
+  },
+  {
+    "label": "edit-data",
+    "url": "https://app.loopyloyalty.com/edit/new/data",
+    "title": "Loopy Loyalty",
+    "headings": [
+      {
+        "level": "H3",
+        "text": "Data Collection"
+      }
+    ],
+    "interactive": [
+      {
+        "tag": "A",
+        "text": "Overview",
+        "href": "",
+        "uiSref": "",
+        "ngClick": "cc.navigateToState(obj.state)"
+      },
+      {
+        "tag": "A",
+        "text": "Insights",
+        "href": "",
+        "uiSref": "",
+        "ngClick": "cc.navigateToState(obj.state)"
+      },
+      {
+        "tag": "A",
+        "text": "Messages",
+        "href": "",
+        "uiSref": "",
+        "ngClick": "cc.navigateToState(obj.state)"
+      },
+      {
+        "tag": "A",
+        "text": "Customers",
+        "href": "",
+        "uiSref": "",
+        "ngClick": "cc.navigateToState(obj.state)"
+      },
+      {
+        "tag": "A",
+        "text": "Edit",
+        "href": "",
+        "uiSref": "",
+        "ngClick": "cc.navigateToState(obj.state)"
+      },
+      {
+        "tag": "A",
+        "text": "Resend verification email",
+        "href": "",
+        "uiSref": "",
+        "ngClick": "cc.resend()"
+      },
+      {
+        "tag": "A",
+        "text": "Upgrade Now",
+        "href": "https://app.loopyloyalty.com/settings",
+        "uiSref": "container.settings",
+        "ngClick": ""
+      },
+      {
+        "tag": "A",
+        "text": "Design",
+        "href": "",
+        "uiSref": "",
+        "ngClick": "vm.validateAndSaveForm(cardDataForm, 'container.edit-design')"
+      },
+      {
+        "tag": "A",
+        "text": "Details",
+        "href": "",
+        "uiSref": "",
+        "ngClick": "vm.validateAndSaveForm(cardDataForm, 'container.edit-details')"
+      },
+      {
+        "tag": "A",
+        "text": "Locations",
+        "href": "",
+        "uiSref": "",
+        "ngClick": "vm.validateAndSaveForm(cardDataForm, 'container.edit-locations')"
+      },
+      {
+        "tag": "A",
+        "text": "Support",
+        "href": "",
+        "uiSref": "",
+        "ngClick": "vm.validateAndSaveForm(cardDataForm, 'container.edit-support')"
+      },
+      {
+        "tag": "A",
+        "text": "Data",
+        "href": "",
+        "uiSref": "",
+        "ngClick": "vm.validateAndSaveForm(cardDataForm, 'container.edit-data')"
+      },
+      {
+        "tag": "A",
+        "text": "Custom",
+        "href": "",
+        "uiSref": "",
+        "ngClick": "vm.validateAndSaveForm(cardDataForm, 'container.edit-labels')"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Save",
+        "href": "",
+        "uiSref": "",
+        "ngClick": "vm.validateAndSaveForm(cardDataForm, null)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Save & Preview",
+        "href": "",
+        "uiSref": "",
+        "ngClick": "vm.previewCard(cardDataForm)"
+      },
+      {
+        "tag": "A",
+        "text": "Watch video tutorial: More Customisations",
+        "href": "",
+        "uiSref": "",
+        "ngClick": "vm.showInstructionVideo()"
+      },
+      {
+        "tag": "A",
+        "text": "Why collect data and what data should I collect?",
+        "href": "http://docs.loopyloyalty.com/creating-digital-stamp-cards/collecting-customer-information/what-information-should-i-collect",
+        "uiSref": "",
+        "ngClick": ""
+      }
+    ],
+    "tables": [
+      {
+        "headers": [
+          "Description",
+          "Format",
+          "Mandatory",
+          ""
+        ],
+        "rows": 3
+      }
+    ],
+    "bodyText": "   You haven't verified your email address. Resend verification email.\n\n15 days left on trial UPGRADE NOW\n Design\n Details\n Locations\n Support\n Data\n Custom \nSave\nSave & Preview\n Watch video tutorial: More Customisations\nData Collection \n\nAsk your customers to enter their details before installing your card. The fields you select below will appear on your enrollment page.\n\nWhy collect data and what data should I collect?\n\nDescription \tFormat \tMandatory \t\n\n\t\nText\nNumber\nDate\nEmail\nURL\nMobile/telephone number\n\t\n\t\n\n\t\nText\nNumber\nDate\nEmail\nURL\nMobile/telephone number\n\t\n\t\n\n\t\nText\nNumber\nDate\nEmail\nURL\nMobile/telephone number\n\t\n\t\n\nSelect a default country for phone number field(s)\n\nAfghanistan\nÅland Islands\nAlbania\nAlgeria\nAmerican Samoa\nAndorra\nAngola\nAnguilla\nAntarctica\nAntigua and Barbuda\nArgentina\nArmenia\nAruba\nAustralia\nAustria\nAzerbaijan\nBahamas (the)\nBahrain\nBangladesh\nBarbados\nBelarus\nBelgium\nBelize\nBenin\nBermuda\nBhutan\nBolivia (Plurinational State of)\nBonaire, Sint Eustatius and Saba\nBosnia and Herzegovina\nBotswana\nBouvet Island\nBrazil\nBritish Indian Ocean Territory (the)\nBrunei Darussalam\nBulgaria\nBurkina Faso\nBurundi\nCabo Verde\nCambodia\nCameroon\nCanada\nCayman Islands (the)\nCentral African Republic (the)\nChad\nChile\nChina\nChristmas Island\nCocos (Keeling) Islands (the)\nColombia\nComoros (the)\nCongo (the)\nCongo (the Democratic Republic of the)\nCook Islands (the)\nCosta Rica\nCôte d'Ivoire\nCroatia\nCuba\nCuraçao\nCyprus\nCzech Republic (the)\nDenmark\nDjibouti\nDominica\nDominican Republic (the)\nEcuador\nEgypt\nEl Salvador\nEquatorial Guinea\nEritrea\nEstonia\nEthiopia\nFalkland Islands (the) [Malvinas]\nFaroe Islands (the)\nFiji\nFinland\nFrance\nFrench Guiana\nFrench Polynesia\nFrench Southern Territories (the)\nGabon\nGambia (the)\nGeorgia\nGermany\nGhana\nGibraltar\nGreece\nGreenland\nGrenada\nGuadeloupe\nGuam\nGuatemala\nGuernsey\nGuinea\nGuinea-Bissau\nGuyana\nHaiti\nHeard Island and McDonald Islands\nHoly See (the)\nHonduras\nHong Kong\nHungary\nIceland\nIndia\nIndonesia\nIran (Islamic Republic of)\nIraq\nIreland\nIsle of Man\nIsrael\nItaly\nJamaica\nJapan\nJersey\nJordan\nKazakhstan\nKenya\nKiribati\nKorea (the Democratic People's Republic of)\nKorea (the Republic of)\nKuwait\nKyrgyzstan\nLao People's Democratic Republic (the)\nLatvia\nLebanon\nLesotho\nLiberia\nLibya\nLiechtenstein\nLithuania\nLuxembourg\nMacao\nMacedonia (the former Yugoslav Republic of)\nMadagascar\nMalawi\nMalaysia\nMaldives\nMali\nMalta\nMarshall Islands (the)\nMartinique\nMauritania\nMauritius\nMayotte\nMexico\nMicronesia (Federated States of)\nMoldova (the Republic of)\nMonaco\nMongolia\nMontenegro\nMontserrat\nMorocco\nMozambique\nMyanmar\nNamibia\nNauru\nNepal\nNetherlands (the)\nNew Caledonia\nNew Zealand\nNicaragua\nNiger (the)\nNigeria\nNiue\nNorfolk Island\nNorthern Mariana Islands (the)\nNorway\nOman\nPakistan\nPalau\nPalestine, State of\nPanama\nPapua New Guinea\nParaguay\nPeru\nPhilippines (the)\nPitcairn\nPoland\nPortugal\nPuerto Rico\nQatar\nRéunion\nRomania\nRussian Federation (the)\nRwanda\nSaint Barthélemy\nSaint Helena, Ascension and Tristan da Cunha\nSaint Kitts and Nevis\nSaint Lucia\nSaint Martin (French part)\nSaint Pierre and Miquelon\nSaint Vincent and the Grenadines\nSamoa\nSan Marino\nSao Tome and Principe\nSaudi Arabia\nSenegal\nSerbia\nSeychelles\nSierra Leone\nSingapore\nSint Maarten (Dutch part)\nSlovakia\nSlovenia\nSolomon Islands\nSomalia\nSouth Africa\nSouth Georgia and the South Sandwich Islands\nSouth Sudan\nSpain\nSri Lanka\nSudan (the)\nSuriname\nSvalbard and Jan Mayen\nSwaziland\nSweden\nSwitzerland\nSyrian Arab Republic\nTaiwan (Province of China)\nTajikistan\nTanzania, United Republic of\nThailand\nTimor-Leste\nTogo\nTokelau\nTonga\nTrinidad and Tobago\nTunisia\nTurkey\nTurkmenistan\nTurks and Caicos Islands (the)\nTuvalu\nUganda\nUkraine\nUnited Arab Emirates (the)\nUnited Kingdom of Great Britain and Northern Ireland (the)\nUnited States Minor Outlying Islands (the)\nUnited States of America (the)\nUruguay\nUzbekistan\nVanuatu\nVenezuela (Bolivarian Republic of)\nVietnam\nVirgin Islands (British)\nVirgin Islands (U.S.)\nWallis and Futuna\nWestern Sahara\nYemen\nZambia\nZimbabwe\nUnique Customer Enrollments \nEnable automatic checks against unique customer field(s) to prevent the same customer from enrolling more than once. You can select a maximum of 3 unique fields.\nData Consent\n\nAsk your customers to agree that their personal data may be used for direct marketing purposes.\n\nWhy ask your customers to agree to sharing their personal data?\n\nData Consent Landing Page Text \nDisabled  \n\nHave the data consent checkbox on the landing page checked by default.\n\nYour Customers' View\n\nCollect stamps for cool rewards!\n\nPlease enter your details\n\nFirst Name*\n\nEmail Address*\n\nMobile Number*\n\nTerms & Conditions\n\n1. Earn 1 stamp for every _______________ purchased.\n2. Collect __ stamps to receive a _______________ upon your next visit.\n3. This card, stamps, and rewards are valid until_______________.\n4. This card can only be used at _______________ (and _______________).\n5. Stamps and rewards cannot be exchanged, refunded, replaced or redeemed for cash.\n6. Cards are non-transferrable and cannot be combined with other cards.\n7. The Company reserve the right of final decisions in case of any disputes.\n\n I have read and agree to the terms and conditions.\nJoin Now!"
+  },
+  {
+    "label": "edit-labels",
+    "url": "https://app.loopyloyalty.com/edit/new/labels",
+    "title": "Loopy Loyalty",
+    "headings": [
+      {
+        "level": "H2",
+        "text": "Add Custom Fields"
+      },
+      {
+        "level": "H2",
+        "text": "Card Labels"
+      }
+    ],
+    "interactive": [
+      {
+        "tag": "A",
+        "text": "Overview",
+        "href": "",
+        "uiSref": "",
+        "ngClick": "cc.navigateToState(obj.state)"
+      },
+      {
+        "tag": "A",
+        "text": "Insights",
+        "href": "",
+        "uiSref": "",
+        "ngClick": "cc.navigateToState(obj.state)"
+      },
+      {
+        "tag": "A",
+        "text": "Messages",
+        "href": "",
+        "uiSref": "",
+        "ngClick": "cc.navigateToState(obj.state)"
+      },
+      {
+        "tag": "A",
+        "text": "Customers",
+        "href": "",
+        "uiSref": "",
+        "ngClick": "cc.navigateToState(obj.state)"
+      },
+      {
+        "tag": "A",
+        "text": "Edit",
+        "href": "",
+        "uiSref": "",
+        "ngClick": "cc.navigateToState(obj.state)"
+      },
+      {
+        "tag": "A",
+        "text": "Resend verification email",
+        "href": "",
+        "uiSref": "",
+        "ngClick": "cc.resend()"
+      },
+      {
+        "tag": "A",
+        "text": "Upgrade Now",
+        "href": "https://app.loopyloyalty.com/settings",
+        "uiSref": "container.settings",
+        "ngClick": ""
+      },
+      {
+        "tag": "A",
+        "text": "Design",
+        "href": "",
+        "uiSref": "",
+        "ngClick": "vm.validateAndSaveForm('container.edit-design')"
+      },
+      {
+        "tag": "A",
+        "text": "Details",
+        "href": "",
+        "uiSref": "",
+        "ngClick": "vm.validateAndSaveForm('container.edit-details')"
+      },
+      {
+        "tag": "A",
+        "text": "Locations",
+        "href": "",
+        "uiSref": "",
+        "ngClick": "vm.validateAndSaveForm('container.edit-locations')"
+      },
+      {
+        "tag": "A",
+        "text": "Support",
+        "href": "",
+        "uiSref": "",
+        "ngClick": "vm.validateAndSaveForm('container.edit-support')"
+      },
+      {
+        "tag": "A",
+        "text": "Data",
+        "href": "",
+        "uiSref": "",
+        "ngClick": "vm.validateAndSaveForm('container.edit-data')"
+      },
+      {
+        "tag": "A",
+        "text": "Custom",
+        "href": "",
+        "uiSref": "",
+        "ngClick": "vm.validateAndSaveForm('container.edit-labels')"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Save",
+        "href": "",
+        "uiSref": "",
+        "ngClick": "vm.validateAndSaveForm(null)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Save & Preview",
+        "href": "",
+        "uiSref": "",
+        "ngClick": "vm.previewCard(labelForm)"
+      },
+      {
+        "tag": "A",
+        "text": "Personalize your customers' cards by adding custom fields.",
+        "href": "http://docs.loopyloyalty.com/creating-digital-stamp-cards/changing-the-default-fields-on-your-digital-stamp-cards",
+        "uiSref": "",
+        "ngClick": ""
+      },
+      {
+        "tag": "A",
+        "text": "How to change card label text",
+        "href": "http://docs.loopyloyalty.com/creating-digital-stamp-cards/adding-more-customisations-to-your-stamp-card/changing-the-label-text-on-your-digital-stamp-cards",
+        "uiSref": "",
+        "ngClick": ""
+      }
+    ],
+    "tables": [
+      {
+        "headers": [
+          "Label",
+          "Field to Display"
+        ],
+        "rows": 1
+      },
+      {
+        "headers": [
+          "Original Label Text",
+          "New Label Text"
+        ],
+        "rows": 19
+      }
+    ],
+    "bodyText": "   You haven't verified your email address. Resend verification email.\n\n15 days left on trial UPGRADE NOW\n Design\n Details\n Locations\n Support\n Data\n Custom \nSave\nSave & Preview\nAdd Custom Fields\n\nPersonalize your customers' cards by adding custom fields.\n\nLabel \tField to Display \n\n\t\nStamps required until next reward\nNumber of total stamps collected (all-time)\nFirst Name\nEmail Address\nMobile Number\n\t\nCard Labels \n\nHow to change card label text\n\nOriginal Label Text \tNew Label Text \nSTAMPS REQUIRED UNTIL NEXT REWARD\t\n\nLATEST UPDATES\t\n\nHOW TO COLLECT STAMPS\t\n\nREWARD DETAILS\t\n\nREWARDS EARNED\t\n\nUSEFUL LINKS\t\n\nTERMS & CONDITIONS\t\n\nRead detailed terms and conditions\t\n\nQUESTIONS ABOUT THIS CARD? CONTACT\t\n\nTap ⋯ for details\t\n\nPlease enter your details\t\n\nI have read and agree to the terms and conditions\t\n\nJoin Now!\t\n\nWe are busy generating your personal stamp card. Please be patient...\t\n\nYou must agree to our terms and conditions to proceed.\t\n\nThank you for enrolling...\t\n\nView your card in your Wallet\t\n\nDidn't see your card?\t\n\nTap to add it again\t\n\nYour Customers' View\n\nSTAMPS REQUIRED UNTIL NEXT REWARD\n\t\n8\n Tap ⋯ for details"
+  },
+  {
+    "label": "edit-support",
+    "url": "https://app.loopyloyalty.com/edit/new/support",
+    "title": "Loopy Loyalty",
+    "headings": [
+      {
+        "level": "H3",
+        "text": "Card Issuer Details"
+      }
+    ],
+    "interactive": [
+      {
+        "tag": "A",
+        "text": "Overview",
+        "href": "",
+        "uiSref": "",
+        "ngClick": "cc.navigateToState(obj.state)"
+      },
+      {
+        "tag": "A",
+        "text": "Insights",
+        "href": "",
+        "uiSref": "",
+        "ngClick": "cc.navigateToState(obj.state)"
+      },
+      {
+        "tag": "A",
+        "text": "Messages",
+        "href": "",
+        "uiSref": "",
+        "ngClick": "cc.navigateToState(obj.state)"
+      },
+      {
+        "tag": "A",
+        "text": "Customers",
+        "href": "",
+        "uiSref": "",
+        "ngClick": "cc.navigateToState(obj.state)"
+      },
+      {
+        "tag": "A",
+        "text": "Edit",
+        "href": "",
+        "uiSref": "",
+        "ngClick": "cc.navigateToState(obj.state)"
+      },
+      {
+        "tag": "A",
+        "text": "Resend verification email",
+        "href": "",
+        "uiSref": "",
+        "ngClick": "cc.resend()"
+      },
+      {
+        "tag": "A",
+        "text": "Upgrade Now",
+        "href": "https://app.loopyloyalty.com/settings",
+        "uiSref": "container.settings",
+        "ngClick": ""
+      },
+      {
+        "tag": "A",
+        "text": "Design",
+        "href": "",
+        "uiSref": "",
+        "ngClick": "vm.validateAndSaveForm(cardSupportForm, 'container.edit-design')"
+      },
+      {
+        "tag": "A",
+        "text": "Details",
+        "href": "",
+        "uiSref": "",
+        "ngClick": "vm.validateAndSaveForm(cardSupportForm, 'container.edit-details')"
+      },
+      {
+        "tag": "A",
+        "text": "Locations",
+        "href": "",
+        "uiSref": "",
+        "ngClick": "vm.validateAndSaveForm(cardSupportForm, 'container.edit-locations')"
+      },
+      {
+        "tag": "A",
+        "text": "Support",
+        "href": "",
+        "uiSref": "",
+        "ngClick": "vm.validateAndSaveForm(cardSupportForm, 'container.edit-support')"
+      },
+      {
+        "tag": "A",
+        "text": "Data",
+        "href": "",
+        "uiSref": "",
+        "ngClick": "vm.validateAndSaveForm(cardSupportForm, 'container.edit-data')"
+      },
+      {
+        "tag": "A",
+        "text": "Custom",
+        "href": "",
+        "uiSref": "",
+        "ngClick": "vm.validateAndSaveForm(cardSupportForm, 'container.edit-labels')"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Save",
+        "href": "",
+        "uiSref": "",
+        "ngClick": "vm.validateAndSaveForm(cardSupportForm, null)"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Save & Preview",
+        "href": "",
+        "uiSref": "",
+        "ngClick": "vm.previewCard(cardSupportForm)"
+      },
+      {
+        "tag": "A",
+        "text": "Visit our website",
+        "href": "https://loopyloyalty.com/",
+        "uiSref": "",
+        "ngClick": ""
+      }
+    ],
+    "tables": [],
+    "bodyText": "   You haven't verified your email address. Resend verification email.\n\n15 days left on trial UPGRADE NOW\n Design\n Details\n Locations\n Support\n Data\n Custom \nSave\nSave & Preview\nTerms & Conditions \nEnabled  \nLink to full terms and conditions (optional) \nCard Issuer Details\n\nPlease provide contact information for customers who have queries, complaints, or claims with respect to your digital stamp card.\n\nBusiness Name \nEmail \nPhone \n\nYour Customers' View\n\nCollect stamps for cool rewards!\n\nLATEST UPDATES\n\nAny messages you send will be displayed here.\n\nHOW TO COLLECT STAMPS\n\nSpend $5 to get 1 stamp.\n\nREWARD DETAILS\n\nYou will get a free coffee after collecting 8 stamps.\n\nSTAMPS UNTIL NEXT REWARD\n\n8\n\nREWARDS EARNED\n\n0: Free coffee\n\nUSEFUL LINKS\n\nVisit our website\n\nTERMS & CONDITIONS\n\n1. Earn 1 stamp for every _______________ purchased.\n2. Collect __ stamps to receive a _______________ upon your next visit.\n3. This card, stamps, and rewards are valid until_______________.\n4. This card can only be used at _______________ (and _______________).\n5. Stamps and rewards cannot be exchanged, refunded, replaced or redeemed for cash.\n6. Cards are non-transferrable and cannot be combined with other cards.\n7. The Company reserve the right of final decisions in case of any disputes.\n\nQUESTIONS ABOUT THIS CARD? CONTACT\n\nibefehdi\n\nibefehdi@gmail.com"
+  },
+  {
+    "label": "overview",
+    "url": "https://app.loopyloyalty.com/overview/new",
+    "title": "Loopy Loyalty",
+    "headings": [
+      {
+        "level": "H2",
+        "text": "Latest Transactions"
+      },
+      {
+        "level": "H2",
+        "text": "Push Message History:"
+      },
+      {
+        "level": "H1",
+        "text": "Your Card URL:"
+      }
+    ],
+    "interactive": [
+      {
+        "tag": "A",
+        "text": "Overview",
+        "href": "",
+        "uiSref": "",
+        "ngClick": "cc.navigateToState(obj.state)"
+      },
+      {
+        "tag": "A",
+        "text": "Insights",
+        "href": "",
+        "uiSref": "",
+        "ngClick": "cc.navigateToState(obj.state)"
+      },
+      {
+        "tag": "A",
+        "text": "Messages",
+        "href": "",
+        "uiSref": "",
+        "ngClick": "cc.navigateToState(obj.state)"
+      },
+      {
+        "tag": "A",
+        "text": "Customers",
+        "href": "",
+        "uiSref": "",
+        "ngClick": "cc.navigateToState(obj.state)"
+      },
+      {
+        "tag": "A",
+        "text": "Edit",
+        "href": "",
+        "uiSref": "",
+        "ngClick": "cc.navigateToState(obj.state)"
+      },
+      {
+        "tag": "A",
+        "text": "Resend verification email",
+        "href": "",
+        "uiSref": "",
+        "ngClick": "cc.resend()"
+      },
+      {
+        "tag": "A",
+        "text": "Upgrade Now",
+        "href": "https://app.loopyloyalty.com/settings",
+        "uiSref": "container.settings",
+        "ngClick": ""
+      },
+      {
+        "tag": "A",
+        "text": "First",
+        "href": "",
+        "uiSref": "",
+        "ngClick": ""
+      },
+      {
+        "tag": "A",
+        "text": "Previous",
+        "href": "",
+        "uiSref": "",
+        "ngClick": ""
+      },
+      {
+        "tag": "A",
+        "text": "Next",
+        "href": "",
+        "uiSref": "",
+        "ngClick": ""
+      },
+      {
+        "tag": "A",
+        "text": "Last",
+        "href": "",
+        "uiSref": "",
+        "ngClick": ""
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Copy link",
+        "href": "",
+        "uiSref": "",
+        "ngClick": "vm.callLoggerInfo('Link successfully copied to clipboard.')"
+      },
+      {
+        "tag": "A",
+        "text": "How to save your card in your smartphone",
+        "href": "http://docs.loopyloyalty.com/promoting-your-digital-stamp-cards/how-to-add-stamp-cards-to-apple-wallet-android-pay",
+        "uiSref": "",
+        "ngClick": ""
+      },
+      {
+        "tag": "A",
+        "text": "How to stamp your customers' cards",
+        "href": "http://docs.loopyloyalty.com/issuing-stamps-and-redeeming-rewards",
+        "uiSref": "",
+        "ngClick": ""
+      },
+      {
+        "tag": "A",
+        "text": "How to promote your card",
+        "href": "http://docs.loopyloyalty.com/promoting-your-digital-stamp-cards/how-to-promote-your-stamp-card",
+        "uiSref": "",
+        "ngClick": ""
+      },
+      {
+        "tag": "BUTTON",
+        "text": "×",
+        "href": "",
+        "uiSref": "",
+        "ngClick": ""
+      }
+    ],
+    "tables": [
+      {
+        "headers": [
+          "Date and Time",
+          "Customer",
+          "Event",
+          "User"
+        ],
+        "rows": 1
+      },
+      {
+        "headers": [
+          "Date",
+          "Message",
+          "Segment",
+          "Reach"
+        ],
+        "rows": 1
+      }
+    ],
+    "bodyText": "   You haven't verified your email address. Resend verification email.\n\n15 days left on trial UPGRADE NOW\n\n0\n\nCustomers Signed Up\n\n0\n\nStamps Issued\n\n0\n\nRewards Issued\n\n0\n\nRewards Redeemed\n\nLatest Transactions \nShow \n10\n25\n50\n100\n entries\nSearch:\nDate and Time\tCustomer\tEvent\tUser\nNo data available in table\nShowing 0 to 0 of 0 entries\nFirstPreviousNextLast\nPush Message History:\nShow \n10\n25\n50\n100\n entries\nSearch:\nDate\tMessage\tSegment\tReach\nNo data available in table\nShowing 0 to 0 of 0 entries\nPreviousNext\nYour Card URL:\nCopy link\n\n\n\nTip: do not use the Apple Wallet barcode scanner to scan this QR code.\n\n How to save your card in your smartphone\n\n How to stamp your customers' cards\n\n How to promote your card\n\n×\nCould not load campaign."
+  },
+  {
+    "label": "customers",
+    "url": "https://app.loopyloyalty.com/customers/new",
+    "title": "Loopy Loyalty",
+    "headings": [
+      {
+        "level": "H1",
+        "text": "Customers"
+      }
+    ],
+    "interactive": [
+      {
+        "tag": "A",
+        "text": "Overview",
+        "href": "",
+        "uiSref": "",
+        "ngClick": "cc.navigateToState(obj.state)"
+      },
+      {
+        "tag": "A",
+        "text": "Insights",
+        "href": "",
+        "uiSref": "",
+        "ngClick": "cc.navigateToState(obj.state)"
+      },
+      {
+        "tag": "A",
+        "text": "Messages",
+        "href": "",
+        "uiSref": "",
+        "ngClick": "cc.navigateToState(obj.state)"
+      },
+      {
+        "tag": "A",
+        "text": "Customers",
+        "href": "",
+        "uiSref": "",
+        "ngClick": "cc.navigateToState(obj.state)"
+      },
+      {
+        "tag": "A",
+        "text": "Edit",
+        "href": "",
+        "uiSref": "",
+        "ngClick": "cc.navigateToState(obj.state)"
+      },
+      {
+        "tag": "A",
+        "text": "Resend verification email",
+        "href": "",
+        "uiSref": "",
+        "ngClick": "cc.resend()"
+      },
+      {
+        "tag": "A",
+        "text": "Upgrade Now",
+        "href": "https://app.loopyloyalty.com/settings",
+        "uiSref": "container.settings",
+        "ngClick": ""
+      },
+      {
+        "tag": "BUTTON",
+        "text": "×",
+        "href": "",
+        "uiSref": "",
+        "ngClick": ""
+      }
+    ],
+    "tables": [],
+    "bodyText": "   You haven't verified your email address. Resend verification email.\n\n15 days left on trial UPGRADE NOW\n \nCustomers\n×\nCould not load campaign."
+  },
+  {
+    "label": "insights",
+    "url": "https://app.loopyloyalty.com/insights/new",
+    "title": "Loopy Loyalty",
+    "headings": [
+      {
+        "level": "H1",
+        "text": "Insights"
+      },
+      {
+        "level": "H2",
+        "text": "All time stats"
+      },
+      {
+        "level": "H2",
+        "text": "Activity DayMonthGroup by:"
+      },
+      {
+        "level": "H2",
+        "text": "Stamp Count Histogram"
+      }
+    ],
+    "interactive": [
+      {
+        "tag": "A",
+        "text": "Overview",
+        "href": "",
+        "uiSref": "",
+        "ngClick": "cc.navigateToState(obj.state)"
+      },
+      {
+        "tag": "A",
+        "text": "Insights",
+        "href": "",
+        "uiSref": "",
+        "ngClick": "cc.navigateToState(obj.state)"
+      },
+      {
+        "tag": "A",
+        "text": "Messages",
+        "href": "",
+        "uiSref": "",
+        "ngClick": "cc.navigateToState(obj.state)"
+      },
+      {
+        "tag": "A",
+        "text": "Customers",
+        "href": "",
+        "uiSref": "",
+        "ngClick": "cc.navigateToState(obj.state)"
+      },
+      {
+        "tag": "A",
+        "text": "Edit",
+        "href": "",
+        "uiSref": "",
+        "ngClick": "cc.navigateToState(obj.state)"
+      },
+      {
+        "tag": "A",
+        "text": "Resend verification email",
+        "href": "",
+        "uiSref": "",
+        "ngClick": "cc.resend()"
+      },
+      {
+        "tag": "A",
+        "text": "Upgrade Now",
+        "href": "https://app.loopyloyalty.com/settings",
+        "uiSref": "container.settings",
+        "ngClick": ""
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Submit",
+        "href": "",
+        "uiSref": "",
+        "ngClick": "vm.submitCurrencyStampRewardValues()"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "×",
+        "href": "",
+        "uiSref": "",
+        "ngClick": ""
+      }
+    ],
+    "tables": [],
+    "bodyText": "   You haven't verified your email address. Resend verification email.\n\n15 days left on trial UPGRADE NOW\nInsights\n\nTrack sales you've generated from your digital stamp cards.\n\nYour program has driven   $0.00   in revenue and cost   $0.00*   in rewards. You have broken even.\n\n*$0.00 worth of rewards have already been claimed, with $0.00 outstanding\n\nAll time stats\n\n0\n\nCustomers Signed Up\n\n0\n\nStamps Issued\n\n0\n\nRewards Issued\n\n0\n\nRewards Redeemed\n\nCurrency \nUS Dollar: USD\nCanadian Dollar: CAD\nEuro: EUR\nUnited Arab Emirates Dirham: AED\nAfghan Afghani: AFN\nAlbanian Lek: ALL\nArmenian Dram: AMD\nArgentine Peso: ARS\nAustralian Dollar: AUD\nAzerbaijani Manat: AZN\nBosnia-Herzegovina Convertible Mark: BAM\nBangladeshi Taka: BDT\nBulgarian Lev: BGN\nBahraini Dinar: BHD\nBurundian Franc: BIF\nBrunei Dollar: BND\nBolivian Boliviano: BOB\nBrazilian Real: BRL\nBotswanan Pula: BWP\nBelarusian Ruble: BYR\nBelize Dollar: BZD\nCongolese Franc: CDF\nSwiss Franc: CHF\nChilean Peso: CLP\nChinese Yuan: CNY\nColombian Peso: COP\nCosta Rican Colón: CRC\nCape Verdean Escudo: CVE\nCzech Republic Koruna: CZK\nDjiboutian Franc: DJF\nDanish Krone: DKK\nDominican Peso: DOP\nAlgerian Dinar: DZD\nEstonian Kroon: EEK\nEgyptian Pound: EGP\nEritrean Nakfa: ERN\nEthiopian Birr: ETB\nBritish Pound Sterling: GBP\nGeorgian Lari: GEL\nGhanaian Cedi: GHS\nGuinean Franc: GNF\nGuatemalan Quetzal: GTQ\nHong Kong Dollar: HKD\nHonduran Lempira: HNL\nCroatian Kuna: HRK\nHungarian Forint: HUF\nIndonesian Rupiah: IDR\nIsraeli New Sheqel: ILS\nIndian Rupee: INR\nIraqi Dinar: IQD\nIranian Rial: IRR\nIcelandic Króna: ISK\nJamaican Dollar: JMD\nJordanian Dinar: JOD\nJapanese Yen: JPY\nKenyan Shilling: KES\nCambodian Riel: KHR\nComorian Franc: KMF\nSouth Korean Won: KRW\nKuwaiti Dinar: KWD\nKazakhstani Tenge: KZT\nLebanese Pound: LBP\nSri Lankan Rupee: LKR\nLithuanian Litas: LTL\nLatvian Lats: LVL\nLibyan Dinar: LYD\nMoroccan Dirham: MAD\nMoldovan Leu: MDL\nMalagasy Ariary: MGA\nMacedonian Denar: MKD\nMyanma Kyat: MMK\nMacanese Pataca: MOP\nMauritian Rupee: MUR\nMexican Peso: MXN\nMalaysian Ringgit: MYR\nMozambican Metical: MZN\nNamibian Dollar: NAD\nNigerian Naira: NGN\nNicaraguan Córdoba: NIO\nNorwegian Krone: NOK\nNepalese Rupee: NPR\nNew Zealand Dollar: NZD\nOmani Rial: OMR\nPanamanian Balboa: PAB\nPeruvian Nuevo Sol: PEN\nPhilippine Peso: PHP\nPakistani Rupee: PKR\nPolish Zloty: PLN\nParaguayan Guarani: PYG\nQatari Rial: QAR\nRomanian Leu: RON\nSerbian Dinar: RSD\nRussian Ruble: RUB\nRwandan Franc: RWF\nSaudi Riyal: SAR\nSudanese Pound: SDG\nSwedish Krona: SEK\nSingapore Dollar: SGD\nSomali Shilling: SOS\nSyrian Pound: SYP\nThai Baht: THB\nTunisian Dinar: TND\nTongan Paʻanga: TOP\nTurkish Lira: TRY\nTrinidad and Tobago Dollar: TTD\nNew Taiwan Dollar: TWD\nTanzanian Shilling: TZS\nUkrainian Hryvnia: UAH\nUgandan Shilling: UGX\nUruguayan Peso: UYU\nUzbekistan Som: UZS\nVenezuelan Bolívar: VEF\nVietnamese Dong: VND\nCFA Franc BEAC: XAF\nCFA Franc BCEAO: XOF\nYemeni Rial: YER\nSouth African Rand: ZAR\nZambian Kwacha: ZMK\nStamp Value   \n\t\nReward Cost   \nSubmit\nActivity \nDay\nMonth\nGroup by:\nStamp Count Histogram \nTransactions \nShow \n10\n25\n50\n100\n entries\nSearch:\nDate and Time\tCustomer\tEvent\tUser\nNo data available in table\nShowing 0 to 0 of 0 entries\nFirstPreviousNextLast\n×\nCould not load campaign."
+  },
+  {
+    "label": "messages",
+    "url": "https://app.loopyloyalty.com/messages/new",
+    "title": "Loopy Loyalty",
+    "headings": [
+      {
+        "level": "H1",
+        "text": "Send Messages to Customers"
+      },
+      {
+        "level": "H2",
+        "text": "Push Message History:"
+      }
+    ],
+    "interactive": [
+      {
+        "tag": "A",
+        "text": "Overview",
+        "href": "",
+        "uiSref": "",
+        "ngClick": "cc.navigateToState(obj.state)"
+      },
+      {
+        "tag": "A",
+        "text": "Insights",
+        "href": "",
+        "uiSref": "",
+        "ngClick": "cc.navigateToState(obj.state)"
+      },
+      {
+        "tag": "A",
+        "text": "Messages",
+        "href": "",
+        "uiSref": "",
+        "ngClick": "cc.navigateToState(obj.state)"
+      },
+      {
+        "tag": "A",
+        "text": "Customers",
+        "href": "",
+        "uiSref": "",
+        "ngClick": "cc.navigateToState(obj.state)"
+      },
+      {
+        "tag": "A",
+        "text": "Edit",
+        "href": "",
+        "uiSref": "",
+        "ngClick": "cc.navigateToState(obj.state)"
+      },
+      {
+        "tag": "A",
+        "text": "Resend verification email",
+        "href": "",
+        "uiSref": "",
+        "ngClick": "cc.resend()"
+      },
+      {
+        "tag": "A",
+        "text": "Upgrade Now",
+        "href": "https://app.loopyloyalty.com/settings",
+        "uiSref": "container.settings",
+        "ngClick": ""
+      },
+      {
+        "tag": "A",
+        "text": "Learn more about messages here",
+        "href": "http://docs.loopyloyalty.com/engaging-with-customers/sending-messages-to-customers",
+        "uiSref": "",
+        "ngClick": ""
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Send Message",
+        "href": "",
+        "uiSref": "",
+        "ngClick": "vm.sendPush()"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "×",
+        "href": "",
+        "uiSref": "",
+        "ngClick": ""
+      }
+    ],
+    "tables": [],
+    "bodyText": "   You haven't verified your email address. Resend verification email.\n\n15 days left on trial UPGRADE NOW\nSend Messages to Customers\n\nThese messages will appear on the lock screen and under 'Latest Updates' on your customers' digital stamp card. Learn more about messages here.\n\nWho?\nAll of my customers\nA segment of my customers\nMessage\n\nBest practice: Keep your message short and sweet (~ 90 characters).\n\nIdeas:\n\nIt's Taco Tuesday! Drop by for all you can eat tacos and beer from 7-10pm.\nStart your weekend right with an upbeat jazz set performed by the one and only Jazz Funk.\nFree flow champagne starts at 7pm tonight!. First come, first serve.\nWe haven't seen you in a while! Stop by before 5pm to get a free hair wash.\nSend Message\nPush Message History:\nShow \n10\n25\n50\n100\n entries\nSearch:\nDate\tMessage\tSegment\tReach\nNo data available in table\nShowing 0 to 0 of 0 entries\nPreviousNext\n\nUnlock for more\n\n×\nCould not load campaign."
+  }
+]

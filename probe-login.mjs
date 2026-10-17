@@ -1,0 +1,27 @@
+import { chromium } from 'playwright';
+import { readFileSync } from 'node:fs';
+const env = Object.fromEntries(readFileSync('/Users/fahad/council/.env', 'utf8').split('\n').filter(l => l.includes('=')).map(l => { const i = l.indexOf('='); return [l.slice(0, i).trim(), l.slice(i + 1).trim()]; }));
+const browser = await chromium.launch();
+const context = await browser.newContext();
+const page = await context.newPage();
+page.on('response', r => { const u = r.url(); if (u.includes('loopy') && !/\.(js|css|png|svg|woff|ico)/.test(u)) console.log('RESP', r.status(), r.request().method(), u.slice(0, 140)); });
+await page.goto(env.DASHBOARD_LOGIN_URL || env.DASHBOARD_URL, { waitUntil: 'domcontentloaded' });
+const user = page.locator('input[type="email"], input[name*="email" i], input[name*="user" i]').first();
+await user.waitFor({ state: 'visible', timeout: 20000 });
+await user.fill(env.DASHBOARD_USER);
+const pass = page.locator('input[type="password"]').first();
+await pass.fill(env.DASHBOARD_PASS);
+await pass.press('Enter');
+await page.waitForTimeout(8000);
+console.log('AFTER LOGIN URL:', page.url());
+const cookies = await context.cookies();
+console.log('cookie names:', cookies.map(c => `${c.name}(${c.domain})`).join(', '));
+console.log('localStorage keys:', await page.evaluate(() => Object.keys(localStorage)));
+console.log('sessionStorage keys:', await page.evaluate(() => Object.keys(sessionStorage)));
+console.log('indexedDB dbs:', await page.evaluate(() => indexedDB.databases().then(d => d.map(x => x.name).join(', '))).catch(e => 'n/a'));
+// now try a fresh navigation to the dashboard root in the SAME context
+await page.goto(env.DASHBOARD_URL, { waitUntil: 'domcontentloaded' });
+await page.waitForTimeout(4000);
+console.log('REVISIT URL:', page.url());
+console.log('has password field:', await page.locator('input[type="password"]').count());
+await browser.close();

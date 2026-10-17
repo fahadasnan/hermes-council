@@ -1,0 +1,11 @@
+import { chromium } from 'playwright';
+const browser = await chromium.launch({ headless: true });
+const page = await browser.newPage();
+await page.goto('https://app.loopyloyalty.com/auth/login', { waitUntil: 'domcontentloaded', timeout: 20000 });
+await page.waitForTimeout(2000);
+const body = await page.evaluate(() => document.body?.innerText?.substring(0, 2000));
+console.log('URL:', page.url());
+console.log('Body:', body);
+const inputs = await page.evaluate(() => Array.from(document.querySelectorAll('input')).map(i => ({type:i.type,name:i.name,placeholder:i.placeholder,id:i.id,autocomplete:i.autocomplete})));
+console.log('Inputs:', JSON.stringify(inputs, null, 2));
+await browser.close();

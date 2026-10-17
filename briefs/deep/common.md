@@ -3,7 +3,7 @@
 You are part of a second, deeper pass over the dashboard. A first survey already exists and is your baseline:
 
 - {{COUNCIL_DIR}}/output/FINAL_REPORT.md (product-level map)
-- {{COUNCIL_DIR}}/output/pages.json and pages.md (41-page inventory)
+- {{COUNCIL_DIR}}/output/pages.json and pages.md (the survey's page inventory)
 - {{COUNCIL_DIR}}/output/links.md (feature links)
 - {{COUNCIL_DIR}}/output/review.md (verifier verdicts, incl. UNVERIFIED and WRONG items)
 

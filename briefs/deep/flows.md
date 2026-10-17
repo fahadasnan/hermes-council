@@ -2,26 +2,26 @@
 
 Output: {{COUNCIL_DIR}}/output/technical/flows.md
 
-Exercise the main create/edit flows end to end with COUNCIL-TEST data, capture the exact API sequence, and prove where each record propagates.
+Exercise the main create/edit flows end to end with COUNCIL-TEST data, capture the exact API sequence, and prove where each record propagates. Read the survey first and follow the flows it actually found. The list below is the expected loyalty shape; if a flow does not exist, say so and document the closest one. Skip anything that changes billing, sends a real push or email to customers, or deletes the account.
 
 Flows (in this order, since later ones reuse earlier records):
 
-1. Client: create (fake contact details), edit, add a note; inspect every profile tab.
-2. Service: create a COUNCIL-TEST service (category, duration, price, team assignment), edit price.
-3. Product and stock: create a COUNCIL-TEST supplier and product, adjust stock, create a stock order (do not send it to a real supplier email).
-4. Team member: create a COUNCIL-TEST team member with services and a shift. If the UI says this changes billing or subscription cost, stop and document instead.
-5. Appointment: book the COUNCIL-TEST client for the COUNCIL-TEST service with a team member; edit time/service; reschedule by drag or edit; add a note; then check out with a cash/other manual payment type (never a card terminal or payment link). The checkout is REQUIRED: a manual cash payment on this test account is explicitly allowed by the safety rules, and the propagation checks depend on it. Also create a second appointment and cancel it with a reason; mark a third as no-show if available.
-6. Sale without appointment: quick sale of the COUNCIL-TEST product, manual payment.
-7. Promotion: create a COUNCIL-TEST deal/discount; create a blast campaign DRAFT only (never send/schedule); inspect automations without enabling sending.
+1. Program or card: create a COUNCIL-TEST stamp card (or the primary card type the UI offers), set a reward threshold, edit it.
+2. Location: create a COUNCIL-TEST location if the UI allows it without a paid upgrade.
+3. Customer: enroll or create a COUNCIL-TEST customer with a fake email (council-test+<n>@example.com). Do not use a real phone number. Inspect the profile and its tabs.
+4. Earn: add stamps or points to that customer. Do it twice with the same action if the UI allows, and record whether the second one was rejected or applied.
+5. Redeem: redeem the reward if the balance is high enough; if reaching the threshold would take too many clicks, document the redeem dialog with one real redemption only when it is cheap to reach, otherwise open the dialog and record the validation.
+6. Staff user: create a COUNCIL-TEST stamper if the UI allows it. If the UI says this changes billing or subscription cost, stop and document instead.
+7. Campaign or message: open the composer and save a DRAFT only if that is possible. Never send or schedule.
 
 For each flow:
 
 - Steps and every form field (label, type, required, validation). Submit once with required fields empty to capture validation messages.
 - The API calls in order (method, path/operation, request field names, response field names, status).
-- Resulting state and where the record now appears (calendar, client history, sales list, payments, daily sales, stock levels, reports, dashboard widgets). Check each place and record yes/no with evidence.
+- Resulting state and where the record now appears (customer profile, program stats, activity list, analytics). Check each place and record yes/no with evidence.
 - A sequenceDiagram (actor -> UI -> API endpoints) per flow.
 
-Also produce stateDiagram-v2 lifecycles for: appointment (booked, confirmed, arrived, started, completed, cancelled, no-show, ...), sale/invoice and payment, stock order. Only include states you observed or the UI exposes.
+Also produce stateDiagram-v2 lifecycles for the entities whose states the UI exposes (program published/paused, pass active/void, reward locked/available/redeemed). Only include states you observed or the UI exposes.
 
 Log every record in test-records.md as you create it.
 

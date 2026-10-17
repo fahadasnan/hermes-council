@@ -1,0 +1,282 @@
+{
+  "baseUrl": "https://app.loopyloyalty.com",
+  "landedOn": "https://app.loopyloyalty.com/manage-my-cards",
+  "sessionInfo": {
+    "expiryDate": "2026-11-01T06:04:26.067644776Z",
+    "trialExp": "0",
+    "email": "ibefehdi@gmail.com",
+    "pkadmin": "false",
+    "username": "ibefehdi",
+    "plan": "trial",
+    "jwt": "eyJhbGciOiJIUzI1NiIs...",
+    "uid": "6jhXelWqeUcUHqzDWYIx6R",
+    "status": "setup",
+    "business": "ibefehdi",
+    "trialDuration": "15",
+    "ihash": "7652cd35bbd3c2e4222c5235246792a13e7c987e605c68f26e994261671f6255",
+    "limit": "1",
+    "dateJoined": "2026-10-17T06:04:42.929934815Z",
+    "_cltk": "h0u66"
+  },
+  "navDestinations": {
+    "/settings": {
+      "href": "https://app.loopyloyalty.com/settings",
+      "text": "Upgrade Now",
+      "from": "https://app.loopyloyalty.com/manage-my-cards"
+    }
+  },
+  "allPages": [
+    {
+      "label": "dashboard-home",
+      "url": "https://app.loopyloyalty.com/manage-my-cards",
+      "title": "Loopy Loyalty",
+      "headings": [],
+      "elementCount": 20,
+      "keyElements": [
+        {
+          "tag": "A",
+          "text": "Upgrade Now",
+          "href": "https://app.loopyloyalty.com/settings",
+          "className": "a-upgrade-now",
+          "id": "",
+          "role": "",
+          "ariaLabel": ""
+        }
+      ],
+      "bodyPreview": " \n\n   You haven't verified your email address. Resend verification email.\n\n15 days left on trial UPGRADE NOW"
+    },
+    {
+      "label": "/settings",
+      "url": "https://app.loopyloyalty.com/settings",
+      "title": "Loopy Loyalty",
+      "headings": [
+        {
+          "level": "H1",
+          "text": "Settings"
+        },
+        {
+          "level": "H2",
+          "text": "My Account"
+        },
+        {
+          "level": "H2",
+          "text": "Billing"
+        },
+        {
+          "level": "H2",
+          "text": "Locations"
+        },
+        {
+          "level": "H2",
+          "text": "Beacons"
+        },
+        {
+          "level": "H2",
+          "text": "Zapier"
+        }
+      ],
+      "elementCount": 45,
+      "keyElements": [
+        {
+          "tag": "A",
+          "text": "Upgrade Now",
+          "href": "https://app.loopyloyalty.com/settings",
+          "className": "a-upgrade-now",
+          "id": "",
+          "role": "",
+          "ariaLabel": ""
+        },
+        {
+          "tag": "A",
+          "text": "General",
+          "href": "https://app.loopyloyalty.com/",
+          "className": "nav-link ng-binding",
+          "id": "",
+          "role": "",
+          "ariaLabel": ""
+        },
+        {
+          "tag": "A",
+          "text": "Business",
+          "href": "https://app.loopyloyalty.com/",
+          "className": "nav-link ng-binding",
+          "id": "",
+          "role": "",
+          "ariaLabel": ""
+        },
+        {
+          "tag": "A",
+          "text": "Privacy",
+          "href": "https://app.loopyloyalty.com/",
+          "className": "nav-link ng-binding",
+          "id": "",
+          "role": "",
+          "ariaLabel": ""
+        },
+        {
+          "tag": "A",
+          "text": "Password",
+          "href": "https://app.loopyloyalty.com/",
+          "className": "nav-link ng-binding",
+          "id": "",
+          "role": "",
+          "ariaLabel": ""
+        },
+        {
+          "tag": "A",
+          "text": "Developer Tools",
+          "href": "https://app.loopyloyalty.com/",
+          "className": "nav-link ng-binding",
+          "id": "",
+          "role": "",
+          "ariaLabel": ""
+        },
+        {
+          "tag": "A",
+          "text": "Delete",
+          "href": "https://app.loopyloyalty.com/",
+          "className": "nav-link ng-binding",
+          "id": "",
+          "role": "",
+          "ariaLabel": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Update",
+          "href": "",
+          "className": "btn btn-custom btn-lg ng-scope",
+          "id": "",
+          "role": "",
+          "ariaLabel": ""
+        },
+        {
+          "tag": "A",
+          "text": "Plan",
+          "href": "https://app.loopyloyalty.com/",
+          "className": "nav-link ng-binding",
+          "id": "",
+          "role": "",
+          "ariaLabel": ""
+        },
+        {
+          "tag": "A",
+          "text": "Credit Card",
+          "href": "https://app.loopyloyalty.com/",
+          "className": "nav-link ng-binding",
+          "id": "",
+          "role": "",
+          "ariaLabel": ""
+        },
+        {
+          "tag": "A",
+          "text": "Invoices",
+          "href": "https://app.loopyloyalty.com/",
+          "className": "nav-link ng-binding",
+          "id": "",
+          "role": "",
+          "ariaLabel": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Subscribe to Starter Monthly",
+          "href": "",
+          "className": "btn btn-custom btn-start-plan ng-scope",
+          "id": "",
+          "role": "",
+          "ariaLabel": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Subscribe to Growth Monthly",
+          "href": "",
+          "className": "btn btn-custom btn-start-plan ng-scope",
+          "id": "",
+          "role": "",
+          "ariaLabel": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Subscribe to Ultimate Monthly",
+          "href": "",
+          "className": "btn btn-custom btn-start-plan ng-scope",
+          "id": "",
+          "role": "",
+          "ariaLabel": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Add Location",
+          "href": "",
+          "className": "btn btn-custom btn-lg pull-right ng-scope",
+          "id": "",
+          "role": "",
+          "ariaLabel": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Add Beacon",
+          "href": "",
+          "className": "btn btn-custom btn-lg pull-right ng-scope",
+          "id": "",
+          "role": "",
+          "ariaLabel": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "×",
+          "href": "",
+          "className": "toast-close-button",
+          "id": "",
+          "role": "button",
+          "ariaLabel": ""
+        }
+      ],
+      "bodyPreview": " \n\n   You haven't verified your email address. Resend verification email.\n\n15 days left on trial UPGRADE NOW\nSettings\nMy Account\nGeneral\nBusiness\nPrivacy\nPassword\nDeveloper Tools\nDelete\nUsername (cannot be changed)\nFirst Name*\nLast Name*\nEmail*\nUpdate\nBilling\nPlan\nCredit Card\nInvoices\n\nTRY OUT ANY PLAN. NO COMMITMENT. CANCEL ANYTIME.\n\nUS$ 25 /month\n \n\nSTARTER\n\nMonth-to-Month\nBilled Annually\nSubscribe to Starter Monthly\n\nIncludes :\n\n1 card design\n\n1 location\n\n1 beacon\n\n3 Subusers\n\nLabel text customisation\n\nUnique customer enrollments\n\nData Export\n\nUS$ 69 /month\n \n\nGROWTH\n\nMonth-to-Month\nBilled Annually\nSubscribe to Growth Monthly\n\nIncludes :\n\n3 card designs\n\n3 locations\n\n3 beacons\n\n10 subusers\n\nLabel text customisation\n\nUnique customer enrollments\n\nData Export\n\nUS$ 95 /month\n \n\nULTIMATE\n\nMonth-to-Month\nBilled Annually\nSubscribe to Ultimate Monthly\n\nIncludes :\n\n10 card designs\n\n10 locations\n\n10 beacons\n\n50 subusers\n\nLabel text customisation\n\nUnique customer enrollments\n\nData Export\n\nPlease note that unless you are in your free trial, clicking on Subscribe for any plan will immediately charge your credit card for the monthly or annual plan you have selected.\n\nLocations\n\nDisplay lock screen messages when customers are near your location(s).\n\nAdd Location\nBeacons\n\nDisplay lock screen messages when your customers are in proximity to your bluetooth beacon(s). Learn more.\n\nAdd Beacon\nZapier\n×\n[ll2 Error] Cannot set property isOpen of [object Object] which has only a getter"
+    }
+  ],
+  "edges": [
+    {
+      "from": "dashboard",
+      "to": "/settings",
+      "type": "navigates-to",
+      "evidence": "Clicked nav link \"Upgrade Now\""
+    },
+    {
+      "from": "/settings",
+      "to": "/",
+      "type": "navigates-to",
+      "evidence": "Action button \"Credit Card\" -> /"
+    }
+  ],
+  "apiEndpoints": [
+    "GET /styles/lib-209e5ef7af.css",
+    "GET /styles/app-5f614fac94.css",
+    "GET /config/environment.js",
+    "GET /js/lib-2353771e22.js",
+    "GET /js/app-21db9b2f00.js",
+    "GET /images/iphone-background.png",
+    "GET /images/quick-start-guide.png",
+    "GET /images/tutorials-and-support.png",
+    "GET /images/stamper-app.png"
+  ],
+  "apiGroups": {
+    "styles": [
+      "GET /styles/lib-209e5ef7af.css",
+      "GET /styles/app-5f614fac94.css"
+    ],
+    "config": [
+      "GET /config/environment.js"
+    ],
+    "js": [
+      "GET /js/lib-2353771e22.js",
+      "GET /js/app-21db9b2f00.js"
+    ],
+    "images": [
+      "GET /images/iphone-background.png",
+      "GET /images/quick-start-guide.png",
+      "GET /images/tutorials-and-support.png",
+      "GET /images/stamper-app.png"
+    ]
+  },
+  "rawNetworkCount": 130
+}

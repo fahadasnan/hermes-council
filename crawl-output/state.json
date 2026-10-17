@@ -1,0 +1,473 @@
+{
+  "url": "https://app.loopyloyalty.com/manage-my-cards",
+  "title": "Loopy Loyalty",
+  "headings": [],
+  "textNodes": [
+    {
+      "text": "<iframe src=\"https://www.googletagmanager.com/ns.html?id=GTM-MLR2SL5\"\n  height=\"0\" width=\"0\" style=\"display:none;visibility:hidden\"></iframe>",
+      "tag": "NOSCRIPT",
+      "class": "",
+      "href": "",
+      "id": "",
+      "visible": false,
+      "top": 0
+    },
+    {
+      "text": "You haven't verified your email address.",
+      "tag": "P",
+      "class": "",
+      "href": "",
+      "id": "",
+      "visible": false,
+      "top": 0
+    },
+    {
+      "text": "Toggle navigation",
+      "tag": "SPAN",
+      "class": "sr-only",
+      "href": "",
+      "id": "",
+      "visible": false,
+      "top": 0
+    },
+    {
+      "text": "15 days left on trial",
+      "tag": "SPAN",
+      "class": "ng-binding",
+      "href": "",
+      "id": "",
+      "visible": false,
+      "top": 0
+    },
+    {
+      "text": "Upgrade Now",
+      "tag": "A",
+      "class": "a-upgrade-now",
+      "href": "https://app.loopyloyalty.com/settings",
+      "id": "",
+      "visible": false,
+      "top": 0
+    },
+    {
+      "text": "In view:",
+      "tag": "SPAN",
+      "class": "label label-default ng-binding",
+      "href": "",
+      "id": "",
+      "visible": false,
+      "top": 0
+    },
+    {
+      "text": "Your Cards:",
+      "tag": "LI",
+      "class": "dropdown-header",
+      "href": "",
+      "id": "",
+      "visible": false,
+      "top": 0
+    },
+    {
+      "text": "Create New Card",
+      "tag": "A",
+      "class": "ng-scope",
+      "href": "",
+      "id": "",
+      "visible": false,
+      "top": 0
+    },
+    {
+      "text": "Dashboard",
+      "tag": "A",
+      "class": "",
+      "href": "https://app.loopyloyalty.com/dash",
+      "id": "",
+      "visible": false,
+      "top": 0
+    },
+    {
+      "text": "Help",
+      "tag": "A",
+      "class": "",
+      "href": "http://docs.loopyloyalty.com/",
+      "id": "",
+      "visible": false,
+      "top": 0
+    },
+    {
+      "text": "Settings",
+      "tag": "A",
+      "class": "ng-scope",
+      "href": "https://app.loopyloyalty.com/settings",
+      "id": "",
+      "visible": false,
+      "top": 0
+    },
+    {
+      "text": "Logout",
+      "tag": "A",
+      "class": "ng-scope",
+      "href": "",
+      "id": "",
+      "visible": false,
+      "top": 0
+    },
+    {
+      "text": "My Cards",
+      "tag": "SPAN",
+      "class": "ng-binding ng-hide",
+      "href": "",
+      "id": "",
+      "visible": false,
+      "top": 0
+    },
+    {
+      "text": "Subusers",
+      "tag": "SPAN",
+      "class": "ng-binding ng-hide",
+      "href": "",
+      "id": "",
+      "visible": false,
+      "top": 0
+    },
+    {
+      "text": "Start",
+      "tag": "SPAN",
+      "class": "ng-binding ng-hide",
+      "href": "",
+      "id": "",
+      "visible": false,
+      "top": 0
+    },
+    {
+      "text": "Settings",
+      "tag": "SPAN",
+      "class": "ng-binding ng-hide",
+      "href": "",
+      "id": "",
+      "visible": false,
+      "top": 0
+    },
+    {
+      "text": "You haven't verified your email address.",
+      "tag": "P",
+      "class": "",
+      "href": "",
+      "id": "",
+      "visible": true,
+      "top": 11
+    },
+    {
+      "text": "Resend verification email",
+      "tag": "A",
+      "class": "",
+      "href": "",
+      "id": "",
+      "visible": true,
+      "top": 12
+    },
+    {
+      "text": "Toggle navigation",
+      "tag": "SPAN",
+      "class": "sr-only ng-scope",
+      "href": "",
+      "id": "",
+      "visible": false,
+      "top": 0
+    },
+    {
+      "text": "15 days left on trial",
+      "tag": "SPAN",
+      "class": "ng-binding",
+      "href": "",
+      "id": "",
+      "visible": true,
+      "top": 60
+    },
+    {
+      "text": "Upgrade Now",
+      "tag": "A",
+      "class": "a-upgrade-now",
+      "href": "https://app.loopyloyalty.com/settings",
+      "id": "",
+      "visible": true,
+      "top": 46
+    },
+    {
+      "text": "In view:",
+      "tag": "SPAN",
+      "class": "label label-default ng-binding",
+      "href": "",
+      "id": "",
+      "visible": false,
+      "top": 0
+    },
+    {
+      "text": "Your Cards:",
+      "tag": "LI",
+      "class": "dropdown-header",
+      "href": "",
+      "id": "",
+      "visible": false,
+      "top": 0
+    },
+    {
+      "text": "Create New Card",
+      "tag": "A",
+      "class": "ng-scope",
+      "href": "",
+      "id": "",
+      "visible": false,
+      "top": 0
+    },
+    {
+      "text": "Dashboard",
+      "tag": "A",
+      "class": "ng-scope",
+      "href": "https://app.loopyloyalty.com/dash",
+      "id": "",
+      "visible": false,
+      "top": 0
+    },
+    {
+      "text": "Settings",
+      "tag": "A",
+      "class": "ng-scope",
+      "href": "https://app.loopyloyalty.com/settings",
+      "id": "",
+      "visible": false,
+      "top": 0
+    },
+    {
+      "text": "Logout",
+      "tag": "A",
+      "class": "ng-scope",
+      "href": "",
+      "id": "",
+      "visible": false,
+      "top": 0
+    },
+    {
+      "text": "My Cards",
+      "tag": "SPAN",
+      "class": "ng-binding ng-hide",
+      "href": "",
+      "id": "",
+      "visible": false,
+      "top": 0
+    },
+    {
+      "text": "Subusers",
+      "tag": "SPAN",
+      "class": "ng-binding ng-hide",
+      "href": "",
+      "id": "",
+      "visible": false,
+      "top": 0
+    },
+    {
+      "text": "Start",
+      "tag": "SPAN",
+      "class": "ng-binding ng-hide",
+      "href": "",
+      "id": "",
+      "visible": false,
+      "top": 0
+    },
+    {
+      "text": "Settings",
+      "tag": "SPAN",
+      "class": "ng-binding ng-hide",
+      "href": "",
+      "id": "",
+      "visible": false,
+      "top": 0
+    },
+    {
+      "text": "!function(e,a,t,n,o,g,l){e.GoogleAnalyticsObject=o,e.ga=e.ga||function(){(e.ga.q=e.ga.q||[]).push(arguments)},e.ga.l=1*new Date,g=a.createElement(t),l=a.getElementsByTagName(t)[0],g.async=1,g.src=\"htt",
+      "tag": "SCRIPT",
+      "class": "",
+      "href": "",
+      "id": "",
+      "visible": false,
+      "top": 0
+    },
+    {
+      "text": "(function(){var w=window;var ic=w.Intercom;if(typeof ic===\"function\"){ic('reattach_activator');ic('update',intercomSettings);}else{var d=document;var i=function(){i.c(arguments)};i.q=[];i.c=function(a",
+      "tag": "SCRIPT",
+      "class": "",
+      "href": "",
+      "id": "",
+      "visible": false,
+      "top": 0
+    },
+    {
+      "text": "!function(t,a,e){t.TapfiliateObject=a,t[a]=t[a]||function(){(t[a].q=t[a].q||[]).push(arguments)}}(window,\"tap\"),tap(\"create\",\"9555-8b73d4\"),tap(\"detect\");",
+      "tag": "SCRIPT",
+      "class": "",
+      "href": "",
+      "id": "",
+      "visible": false,
+      "top": 0
+    },
+    {
+      "text": "!function(e,t,n,c,o,a,f){e.fbq||(o=e.fbq=function(){o.callMethod?o.callMethod.apply(o,arguments):o.queue.push(arguments)},e._fbq||(e._fbq=o),o.push=o,o.loaded=!0,o.version=\"2.0\",o.queue=[],(a=t.create",
+      "tag": "SCRIPT",
+      "class": "",
+      "href": "",
+      "id": "",
+      "visible": false,
+      "top": 0
+    },
+    {
+      "text": "<img height=\"1\" width=\"1\" style=\"display:none\" src=\"https://www.facebook.com/tr?id=908685596241622&ev=PageView&noscript=1\"/>",
+      "tag": "NOSCRIPT",
+      "class": "",
+      "href": "",
+      "id": "",
+      "visible": false,
+      "top": 0
+    },
+    {
+      "text": "(function(i,s,o,g,r,a,m){i[o]=i[o]||function(){(i[o].q=i[o].q||[]).push(arguments)};\n    a=s.createElement(g);m=s.getElementsByTagName(g)[0];a.async=1;a.src=r+'?auth='+\n      s.getElementById(o+'-js')",
+      "tag": "SCRIPT",
+      "class": "",
+      "href": "",
+      "id": "profitwell-js",
+      "visible": false,
+      "top": 0
+    },
+    {
+      "text": "(function(a,e,b,f,g,c,d){a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)};c=e.createElement(f);c.async=1;c.src=\"https://www.clarity.ms/tag/\"+g+\"?ref\\x3dgtm2\";d=e.getElementsByTagName(f)[0];d",
+      "tag": "SCRIPT",
+      "class": "",
+      "href": "",
+      "id": "",
+      "visible": false,
+      "top": 0
+    }
+  ],
+  "ngClicks": [
+    {
+      "text": "Toggle navigation",
+      "ngClick": "cc.mobileMenuCollapsed = !cc.mobileMenuCollapsed",
+      "tag": "BUTTON"
+    },
+    {
+      "text": "Create New Card",
+      "ngClick": "cc.createNewCampaign()",
+      "tag": "A"
+    },
+    {
+      "text": "Logout",
+      "ngClick": "cc.logout()",
+      "tag": "A"
+    },
+    {
+      "text": "My Cards",
+      "ngClick": "cc.navigateToState(obj.state)",
+      "tag": "A"
+    },
+    {
+      "text": "Subusers",
+      "ngClick": "cc.navigateToState(obj.state)",
+      "tag": "A"
+    },
+    {
+      "text": "Start",
+      "ngClick": "cc.navigateToState(obj.state)",
+      "tag": "A"
+    },
+    {
+      "text": "Settings",
+      "ngClick": "cc.navigateToState(obj.state)",
+      "tag": "A"
+    },
+    {
+      "text": "Resend verification email",
+      "ngClick": "cc.resend()",
+      "tag": "A"
+    },
+    {
+      "text": "Create New Card",
+      "ngClick": "cc.createNewCampaign()",
+      "tag": "A"
+    },
+    {
+      "text": "Logout",
+      "ngClick": "cc.logout()",
+      "tag": "A"
+    },
+    {
+      "text": "",
+      "ngClick": "cc.createNewCampaign()",
+      "tag": "BUTTON"
+    },
+    {
+      "text": "My Cards",
+      "ngClick": "cc.navigateToState(obj.state)",
+      "tag": "A"
+    },
+    {
+      "text": "Subusers",
+      "ngClick": "cc.navigateToState(obj.state)",
+      "tag": "A"
+    },
+    {
+      "text": "Start",
+      "ngClick": "cc.navigateToState(obj.state)",
+      "tag": "A"
+    },
+    {
+      "text": "Settings",
+      "ngClick": "cc.navigateToState(obj.state)",
+      "tag": "A"
+    }
+  ],
+  "uiSrefs": [
+    {
+      "text": "",
+      "uiSref": "container.manage-my-cards",
+      "tag": "IMG"
+    },
+    {
+      "text": "Upgrade Now",
+      "uiSref": "container.settings",
+      "tag": "A"
+    },
+    {
+      "text": "Dashboard",
+      "uiSref": "container.dash",
+      "tag": "A"
+    },
+    {
+      "text": "Settings",
+      "uiSref": "container.settings",
+      "tag": "A"
+    },
+    {
+      "text": "",
+      "uiSref": "container.manage-my-cards",
+      "tag": "IMG"
+    },
+    {
+      "text": "Upgrade Now",
+      "uiSref": "container.settings",
+      "tag": "A"
+    },
+    {
+      "text": "",
+      "uiSref": "container.manage-my-cards",
+      "tag": "A"
+    },
+    {
+      "text": "Dashboard",
+      "uiSref": "container.dash",
+      "tag": "A"
+    },
+    {
+      "text": "Settings",
+      "uiSref": "container.settings",
+      "tag": "A"
+    }
+  ]
+}

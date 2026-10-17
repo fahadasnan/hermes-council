@@ -111,7 +111,8 @@ for role in $ROLES; do
   hermes -p $role mcp remove playwright >/dev/null 2>&1 || true
   print Y | hermes -p $role mcp add playwright --command npx --connect-timeout 120 --args \
     -y @playwright/mcp@latest --browser $MCP_BROWSER --headless --isolated \
-    --storage-state "$DIR/auth.json" --output-dir "$DIR/screenshots" >/dev/null
+    --storage-state "$DIR/auth.json" --init-script "$DIR/session-restore.js" \
+    --output-dir "$DIR/screenshots" >/dev/null
 
   hermes -p $role tools enable kanban >/dev/null
   hermes -p $role tools disable browser computer_use >/dev/null

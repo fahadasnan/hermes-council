@@ -1,0 +1,295 @@
+{
+  "pages": [
+    {
+      "name": "login-page",
+      "url": "https://app.loopyloyalty.com/auth/login",
+      "title": "Loopy Loyalty",
+      "html": {
+        "elements": [
+          {
+            "tag": "A",
+            "text": "",
+            "href": "https://loopyloyalty.com/",
+            "type": "",
+            "id": "",
+            "class": "",
+            "placeholder": "",
+            "role": ""
+          },
+          {
+            "tag": "H1",
+            "text": "Log in to Loopy Loyalty",
+            "href": "",
+            "type": "",
+            "id": "",
+            "class": "ng-scope",
+            "placeholder": "",
+            "role": ""
+          },
+          {
+            "tag": "A",
+            "text": "Create an account for free",
+            "href": "https://app.loopyloyalty.com/signup/get-started",
+            "type": "",
+            "id": "",
+            "class": "ng-scope",
+            "placeholder": "",
+            "role": ""
+          },
+          {
+            "tag": "INPUT",
+            "text": "",
+            "href": "",
+            "type": "text",
+            "id": "username",
+            "class": "form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required",
+            "placeholder": "",
+            "role": ""
+          },
+          {
+            "tag": "A",
+            "text": "Show",
+            "href": "",
+            "type": "",
+            "id": "",
+            "class": "pull-right ll-password-link ng-binding",
+            "placeholder": "",
+            "role": ""
+          },
+          {
+            "tag": "INPUT",
+            "text": "",
+            "href": "",
+            "type": "password",
+            "id": "password",
+            "class": "form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required",
+            "placeholder": "",
+            "role": ""
+          },
+          {
+            "tag": "BUTTON",
+            "text": "Log in",
+            "href": "",
+            "type": "submit",
+            "id": "",
+            "class": "btn btn-custom btn-lg ng-scope",
+            "placeholder": "",
+            "role": ""
+          },
+          {
+            "tag": "A",
+            "text": "Forgot Password?",
+            "href": "https://app.loopyloyalty.com/auth/forgot-password",
+            "type": "",
+            "id": "",
+            "class": "ng-scope",
+            "placeholder": "",
+            "role": ""
+          }
+        ],
+        "bodyText": "Log in to Loopy Loyalty\n\nNeed an account? Create an account for free.\n\nUsername or Email address\nPassword\n Show\nLog in\nForgot Password?\n© Copyright 2012-2024 PassKit, Inc. All Rights Reserved."
+      }
+    }
+  ],
+  "network": [
+    {
+      "url": "https://app.loopyloyalty.com/",
+      "method": "GET",
+      "resourceType": "document",
+      "headers": {
+        "upgrade-insecure-requests": "1",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.8010.12 Safari/537.36",
+        "sec-ch-ua": "\"HeadlessChrome\";v=\"153\", \"Not_A Brand\";v=\"8\", \"Chromium\";v=\"153\"",
+        "sec-ch-ua-mobile": "?0",
+        "sec-ch-ua-platform": "\"macOS\""
+      },
+      "status": 200,
+      "responseBody": "<!DOCTYPE html>\n<html ng-app=\"app\">\n\n<head>\n  <title ng-bind=\"title\">\n    Loopy Loyalty\n  </title>\n  <!-- Google Tag Manager -->\n<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push(\n\n  {'gtm.start': new Date().getTime(),event:'gtm.js'}\n  );var f=d.getElementsByTagName(s)[0],\n  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n  })(window,document,'script','dataLayer','GTM-MLR2SL5');</script>\n  <!-- End Google Tag Manager -->\n  <meta charset=\"utf-8\" />\n  <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge, chrome=1\" />\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no\" />\n\n  <base href=\"/\">\n\n  <link rel=\"icon\" href=\"/images/ll-128x128.png\">\n\n  <!-- include twitter bootstrap & FA styles -->\n  <link href=\"//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css\" rel=\"stylesheet\">\n  <link href=\"//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css\" type=\"text/css\" rel=\"stylesheet\">\n\n  <!-- Dependency for ui-select -->\n  <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/select2/3.4.5/select2.css\">\n\n  <!-- PassKit Hosted int-tel-input (v17.0.0; with libphonenumber 8.12.2) -->\n  <link rel=\"stylesheet\" href=\"https://client-f.passkit.net/int-tel-input/css/intlTelInput.min.css\" />\n\n  <link rel=\"stylesheet\" href=\"styles/lib-209e5ef7af.css\">\n\n  <link rel=\"stylesheet\" href=\"styles/app-5f614fac94.css\">\n  <meta name=\"referrer\" content=\"strict-origin-when-cross-origin\" />\n</head>\n\n<body>\n<!-- Google Tag Manager (noscript) -->\n<noscript><iframe src=\"https://www.googletagmanager.com/ns.html?id=GTM-MLR2SL5\"\n  height=\"0\" width=\"0\" style=\"display:none;visibility:hidden\"></iframe></noscript>\n  <!-- End Google Tag Manager (noscript) -->\n<div ui-view autoscroll='true'>\n</div>\n\n<script src=\"/config/environment.js\"></script>\n<script src=\"https://maps.googleapis.com/maps/api/js?"
+    },
+    {
+      "url": "https://app.loopyloyalty.com/styles/lib-209e5ef7af.css",
+      "method": "GET",
+      "resourceType": "stylesheet",
+      "headers": {
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "https://app.loopyloyalty.com/",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.8010.12 Safari/537.36",
+        "sec-ch-ua": "\"HeadlessChrome\";v=\"153\", \"Not_A Brand\";v=\"8\", \"Chromium\";v=\"153\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "status": 200,
+      "responseBody": ".toast-title{font-weight:700}.toast-message{-ms-word-wrap:break-word;word-wrap:break-word}.toast-message a,.toast-message label{color:#fff}.toast-message a:hover{color:#ccc;text-decoration:none}.toast-close-button{position:relative;right:-.3em;top:-.3em;float:right;font-size:20px;font-weight:700;color:#fff;-webkit-text-shadow:0 1px 0 #fff;text-shadow:0 1px 0 #fff;opacity:.8;line-height:1}.toast-close-button:focus,.toast-close-button:hover{color:#000;text-decoration:none;cursor:pointer;opacity:.4}.rtl .toast-close-button{left:-.3em;float:left;right:.3em}button.toast-close-button{padding:0;cursor:pointer;background:0 0;border:0;-webkit-appearance:none}.toast-top-center{top:0;right:0;width:100%}.toast-bottom-center{bottom:0;right:0;width:100%}.toast-top-full-width{top:0;right:0;width:100%}.toast-bottom-full-width{bottom:0;right:0;width:100%}.toast-top-left{top:12px;left:12px}.toast-top-right{top:12px;right:12px}.toast-bottom-right{right:12px;bottom:12px}.toast-bottom-left{bottom:12px;left:12px}#toast-container{position:fixed;z-index:999999;pointer-events:none}#toast-container *{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}#toast-container>div{position:relative;pointer-events:auto;overflow:hidden;margin:0 0 6px;padding:15px 15px 15px 50px;width:300px;-moz-border-radius:3px 3px 3px 3px;-webkit-border-radius:3px 3px 3px 3px;border-radius:3px 3px 3px 3px;background-position:15px center;background-repeat:no-repeat;-moz-box-shadow:0 0 12px #999;-webkit-box-shadow:0 0 12px #999;box-shadow:0 0 12px #999;color:#fff;opacity:.8}#toast-container>div.rtl{direction:rtl;padding:15px 50px 15px 15px;background-position:right 15px center}#toast-container>div:hover{-moz-box-shadow:0 0 12px #000;-webkit-box-shadow:0 0 12px #000;box-shadow:0 0 12px #000;opacity:1;cursor:pointer}#toast-container>.toast-info{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvq"
+    },
+    {
+      "url": "https://app.loopyloyalty.com/styles/app-5f614fac94.css",
+      "method": "GET",
+      "resourceType": "stylesheet",
+      "headers": {
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "https://app.loopyloyalty.com/",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.8010.12 Safari/537.36",
+        "sec-ch-ua": "\"HeadlessChrome\";v=\"153\", \"Not_A Brand\";v=\"8\", \"Chromium\";v=\"153\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "status": 200,
+      "responseBody": ".ng-hide{display:none!important}@font-face{font-family:Roboto;src:url(https://d2f43yyuobkq14.cloudfront.net/Roboto/Roboto-Regular.ttf) format('truetype');font-weight:400}@font-face{font-family:Roboto;src:url(https://d2f43yyuobkq14.cloudfront.net/Roboto/Roboto-Thin.ttf) format('truetype');font-weight:300}@font-face{font-family:Roboto;src:url(https://d2f43yyuobkq14.cloudfront.net/Roboto/Roboto-Bold.ttf) format('truetype');font-weight:700}@font-face{font-family:'Source Sans Pro';src:url(https://d2f43yyuobkq14.cloudfront.net/Source_Sans_Pro/SourceSansPro-Regular.ttf) format('truetype');font-weight:400}@font-face{font-family:'Source Sans Pro';src:url(https://d2f43yyuobkq14.cloudfront.net/Source_Sans_Pro/SourceSansPro-Light.ttf) format('truetype');font-weight:300}@font-face{font-family:'Source Sans Pro';src:url(https://d2f43yyuobkq14.cloudfront.net/Source_Sans_Pro/SourceSansPro-SemiBold.ttf) format('truetype');font-weight:600}.landing-page-outer-div input[type=button],.landing-page-outer-div input[type=date],.landing-page-outer-div input[type=email],.landing-page-outer-div input[type=submit],.landing-page-outer-div input[type=tel],.landing-page-outer-div input[type=text],.landing-page-outer-div input[type=url]{-webkit-appearance:none;border-radius:0}select{background:url(data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0Ljk1IDEwIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGwtb3BhY2l0eTowLjB9LmNscy0ye2ZpbGw6IzhhOGE4YTt9PC9zdHlsZT48L2RlZnM+PHRpdGxlPmFycm93czwvdGl0bGU+PHJlY3QgY2xhc3M9ImNscy0xIiB3aWR0aD0iNC45NSIgaGVpZ2h0PSIxMCIvPjxwb2x5Z29uIGNsYXNzPSJjbHMtMiIgcG9pbnRzPSIxLjQxIDQuNjcgMi40OCAzLjE4IDMuNTQgNC42NyAxLjQxIDQuNjciLz48cG9seWdvbiBjbGFzcz0iY2xzLTIiIHBvaW50cz0iMy41NCA1LjMzIDIuNDggNi44MiAxLjQxIDUuMzMgMy41NCA1LjMzIi8+PC9zdmc+) no-repeat!important;background-position:right 0 center!important;padding-right:22px!important;-moz-appearance:none;-webkit-appearance:none;appearance:none}.landing-page-o"
+    },
+    {
+      "url": "https://app.loopyloyalty.com/config/environment.js",
+      "method": "GET",
+      "resourceType": "script",
+      "headers": {
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "https://app.loopyloyalty.com/",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.8010.12 Safari/537.36",
+        "sec-ch-ua": "\"HeadlessChrome\";v=\"153\", \"Not_A Brand\";v=\"8\", \"Chromium\";v=\"153\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "status": 200,
+      "responseBody": "(function(window) {\n  window.__env = window.__env || {};\n\n  // API url\n  window.__env.resourceApiPath = 'https://api.loopyloyalty.com/';\n\n  window.__env.intercomAppId = 'p6uuiqym';\n\n  window.__env.defaultState = 'container.manage-my-cards';\n\n  window.__env.imgEndpoint = 'https://s3.amazonaws.com/passkit-api-core-production/';\n\n  window.__env.stripePublishableKey = 'pk_live_p3S4dy3C0OpWQPzPSwcpz7sj';\n\n  window.__env.passLinkURL = 'https://q.passkit.net/p-';\n\n  window.__env.apiLinkURL = 'https://api-pass.passkit.net/v3/passes/';\n\n  window.__env.shortLinkURL = 'https://loyalty.is/';\n\n  window.__env.defaultCountryCode = 'us';\n\n  window.__env.enableDebug = false;\n\n}(this));\n"
+    },
+    {
+      "url": "https://maps.googleapis.com/maps/api/js?key=AIzaSyDYxbvsaLJWHoD41beX5o19038MQUHLaYM&libraries=places",
+      "method": "GET",
+      "resourceType": "script",
+      "headers": {
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "https://app.loopyloyalty.com/",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.8010.12 Safari/537.36",
+        "sec-ch-ua": "\"HeadlessChrome\";v=\"153\", \"Not_A Brand\";v=\"8\", \"Chromium\";v=\"153\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "status": 200,
+      "responseBody": "\n\nwindow.google = window.google || {};\ngoogle.maps = google.maps || {};\n(function() {\n  \n  var modules = google.maps.modules = {};\n  google.maps.__gjsload__ = function(name, text) {\n    modules[name] = text;\n  };\n  \n  google.maps.Load = function(apiLoad) {\n    delete google.maps.Load;\n    apiLoad([0.009999999776482582,[null,[[\"https://khms0.googleapis.com/kh?v=1015\\u0026hl=en-US\\u0026gl=US\\u0026\",\"https://khms1.googleapis.com/kh?v=1015\\u0026hl=en-US\\u0026gl=US\\u0026\"],null,null,null,1,\"1015\",[\"https://khms0.google.com/kh?v=1015\\u0026hl=en-US\\u0026gl=US\\u0026\",\"https://khms1.google.com/kh?v=1015\\u0026hl=en-US\\u0026gl=US\\u0026\"]],null,null,null,null,[[\"https://cbks0.googleapis.com/cbk?\",\"https://cbks1.googleapis.com/cbk?\"]],[[\"https://khms0.googleapis.com/kh?v=170\\u0026hl=en-US\\u0026gl=US\\u0026\",\"https://khms1.googleapis.com/kh?v=170\\u0026hl=en-US\\u0026gl=US\\u0026\"],null,null,null,null,\"170\",[\"https://khms0.google.com/kh?v=170\\u0026hl=en-US\\u0026gl=US\\u0026\",\"https://khms1.google.com/kh?v=170\\u0026hl=en-US\\u0026gl=US\\u0026\"]],null,null,null,null,null,null,null,[[\"https://streetviewpixels-pa.googleapis.com/v1/thumbnail?hl=en-US\\u0026gl=US\\u0026\",\"https://streetviewpixels-pa.googleapis.com/v1/thumbnail?hl=en-US\\u0026gl=US\\u0026\"]]],[\"en-US\",\"US\",null,0,null,null,\"https://maps.gstatic.com/mapfiles/\",null,\"https://maps.googleapis.com\",\"https://maps.googleapis.com\",null,\"https://maps.google.com\",null,\"https://maps.gstatic.com/maps-api-v3/api/images/\",\"https://www.google.com/maps\",null,\"https://www.google.com\",1,\"https://maps.googleapis.com/maps_api_js_slo/log?hasfast=true\",0,1],[\"https://maps.googleapis.com/maps-api-v3/api/js/66/9d\",\"3.66.9d\"],[3880653237],null,null,null,[112],null,null,\"\",[\"places\"],null,1,\"https://khms.googleapis.com/mz?v=1015\\u0026\",\"AIzaSyDYxbvsaLJWHoD41beX5o19038MQUHLaYM\",\"https://earthbuilder.googleapis.com\",\"https://earthbuilder.googleapis.com\",null,\"https://mts.googleapis.com/maps/vt/icon\",[[\"https://maps.googleapis.com/maps/vt\"],[\"https://maps.goo"
+    },
+    {
+      "url": "https://app.loopyloyalty.com/js/lib-2353771e22.js",
+      "method": "GET",
+      "resourceType": "script",
+      "headers": {
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "https://app.loopyloyalty.com/",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.8010.12 Safari/537.36",
+        "sec-ch-ua": "\"HeadlessChrome\";v=\"153\", \"Not_A Brand\";v=\"8\", \"Chromium\";v=\"153\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "status": 200,
+      "responseBody": "function ClusterIcon(e,t){e.getMarkerClusterer().extend(ClusterIcon,google.maps.OverlayView),this.cluster_=e,this.className_=e.getMarkerClusterer().getClusterClass(),this.styles_=t,this.center_=null,this.div_=null,this.sums_=null,this.visible_=!1,this.setMap(e.getMap())}function Cluster(e){this.markerClusterer_=e,this.map_=e.getMap(),this.gridSize_=e.getGridSize(),this.minClusterSize_=e.getMinimumClusterSize(),this.averageCenter_=e.getAverageCenter(),this.hideLabel_=e.getHideLabel(),this.markers_=[],this.center_=null,this.bounds_=null,this.clusterIcon_=new ClusterIcon(this,e.getStyles())}function MarkerClusterer(e,t,n){this.extend(MarkerClusterer,google.maps.OverlayView),t=t||[],n=n||{},this.markers_=[],this.clusters_=[],this.listeners_=[],this.activeMap_=null,this.ready_=!1,this.gridSize_=n.gridSize||60,this.minClusterSize_=n.minimumClusterSize||2,this.maxZoom_=n.maxZoom||null,this.styles_=n.styles||[],this.title_=n.title||\"\",this.zoomOnClick_=!0,void 0!==n.zoomOnClick&&(this.zoomOnClick_=n.zoomOnClick),this.averageCenter_=!1,void 0!==n.averageCenter&&(this.averageCenter_=n.averageCenter),this.ignoreHidden_=!1,void 0!==n.ignoreHidden&&(this.ignoreHidden_=n.ignoreHidden),this.enableRetinaIcons_=!1,void 0!==n.enableRetinaIcons&&(this.enableRetinaIcons_=n.enableRetinaIcons),this.hideLabel_=!1,void 0!==n.hideLabel&&(this.hideLabel_=n.hideLabel),this.imagePath_=n.imagePath||MarkerClusterer.IMAGE_PATH,this.imageExtension_=n.imageExtension||MarkerClusterer.IMAGE_EXTENSION,this.imageSizes_=n.imageSizes||MarkerClusterer.IMAGE_SIZES,this.calculator_=n.calculator||MarkerClusterer.CALCULATOR,this.batchSize_=n.batchSize||MarkerClusterer.BATCH_SIZE,this.batchSizeIE_=n.batchSizeIE||MarkerClusterer.BATCH_SIZE_IE,this.clusterClass_=n.clusterClass||\"cluster\",-1!==navigator.userAgent.toLowerCase().indexOf(\"msie\")&&(this.batchSize_=this.batchSizeIE_),this.setupStyles_(),this.addMarkers(t,!0),this.setMap(e)}function inherits(e,t){function n(){}n.prototype=t.prototype,e.superClass_=t.pr"
+    },
+    {
+      "url": "https://app.loopyloyalty.com/js/app-21db9b2f00.js",
+      "method": "GET",
+      "resourceType": "script",
+      "headers": {
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "https://app.loopyloyalty.com/",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.8010.12 Safari/537.36",
+        "sec-ch-ua": "\"HeadlessChrome\";v=\"153\", \"Not_A Brand\";v=\"8\", \"Chromium\";v=\"153\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "status": 200,
+      "responseBody": "!function(){\"use strict\";angular.module(\"app\",[\"app.core\",\"app.layout\",\"app.auth\",\"app.services\",\"app.widgets\",\"app.signup\",\"app.setup\",\"app.landingPage\",\"app.container\",\"app.dash\",\"app.manage-my-cards\",\"app.settings\",\"app.subusers\",\"app.messages\",\"app.edit\",\"app.overview\",\"app.insights\",\"app.customers\"])}(),function(){\"use strict\";angular.module(\"app.auth\",[\"app.core\",\"angular-jwt\"])}(),function(){\"use strict\";angular.module(\"blocks.exception\",[\"blocks.logger\"])}(),function(){\"use strict\";angular.module(\"blocks.logger\",[])}(),function(){\"use strict\";angular.module(\"blocks.router\",[\"ui.router\",\"blocks.logger\"])}(),function(){\"use strict\";angular.module(\"app.customers\",[\"app.core\"])}(),function(){\"use strict\";angular.module(\"app.edit\",[\"app.core\"])}(),function(){\"use strict\";angular.module(\"app.insights\",[\"app.core\"])}(),function(){\"use strict\";angular.module(\"app.messages\",[\"app.core\"])}(),function(){\"use strict\";angular.module(\"app.overview\",[\"app.core\"])}(),function(){\"use strict\";angular.module(\"app.container\",[\"app.core\",\"app.services\"])}(),function(){\"use strict\";angular.module(\"app.dash\",[\"app.core\"])}(),function(){\"use strict\";angular.module(\"app.manage-my-cards\",[\"app.core\"])}(),function(){\"use strict\";angular.module(\"app.settings\",[\"app.core\"])}(),function(){\"use strict\";angular.module(\"app.subusers\",[\"app.core\"])}(),function(){\"use strict\";angular.module(\"app.core\",[\"ngAnimate\",\"ngSanitize\",\"blocks.exception\",\"blocks.logger\",\"blocks.router\",\"ui.router\",\"ui.bootstrap\",\"puigcerber.countryPicker\",\"pascalprecht.translate\",\"naif.base64\",\"colorpicker.module\",\"ui.select\",\"datatables\",\"chart.js\",\"uiGmapgoogle-maps\",\"ui.bootstrap.datetimepicker\",\"ngCookies\"])}(),function(){\"use strict\";angular.module(\"app.landingPage\",[\"app.core\",\"app.services\"])}(),function(){\"use strict\";angular.module(\"app.layout\",[\"app.core\"])}(),function(){\"use strict\";angular.module(\"app.services\",[\"app.core\"])}(),function(){\"use strict\";angular.module(\"app.setup\",[\"app.core\"])}(),function(){"
+    },
+    {
+      "url": "https://www.youtube.com/iframe_api",
+      "method": "GET",
+      "resourceType": "script",
+      "headers": {
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "https://app.loopyloyalty.com/",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.8010.12 Safari/537.36",
+        "sec-ch-ua": "\"HeadlessChrome\";v=\"153\", \"Not_A Brand\";v=\"8\", \"Chromium\";v=\"153\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "status": 200,
+      "responseBody": "var scriptUrl = 'https:\\/\\/www.youtube.com\\/s\\/player\\/0229cd64\\/www-widgetapi.vflset\\/www-widgetapi.js';try{var ttPolicy=window.trustedTypes.createPolicy(\"youtube-widget-api\",{createScriptURL:function(x){return x}});scriptUrl=ttPolicy.createScriptURL(scriptUrl)}catch(e){}var YT;if(!window[\"YT\"])YT={loading:0,loaded:0};var YTConfig;if(!window[\"YTConfig\"])YTConfig={\"host\":\"https://www.youtube.com\"};\nif(!YT.loading){YT.loading=1;(function(){var l=[];YT.ready=function(f){if(YT.loaded)f();else l.push(f)};window.onYTReady=function(){YT.loaded=1;var i=0;for(;i<l.length;i++)try{l[i]()}catch(e){}};YT.setConfig=function(c){var k;for(k in c)if(c.hasOwnProperty(k))YTConfig[k]=c[k]};var a=document.createElement(\"script\");a.type=\"text/javascript\";a.id=\"www-widgetapi-script\";a.src=scriptUrl;a.async=true;var c=document.currentScript;if(c){var n=c.nonce||c.getAttribute(\"nonce\");if(n)a.setAttribute(\"nonce\",\nn)}var b=document.getElementsByTagName(\"script\")[0];b.parentNode.insertBefore(a,b)})()};\n"
+    },
+    {
+      "url": "https://maps.googleapis.com/maps/api/mapsjs/gen_204?csp_test=true",
+      "method": "GET",
+      "resourceType": "xhr",
+      "headers": {
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "https://app.loopyloyalty.com/",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.8010.12 Safari/537.36",
+        "sec-ch-ua": "\"HeadlessChrome\";v=\"153\", \"Not_A Brand\";v=\"8\", \"Chromium\";v=\"153\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "status": 200,
+      "responseBody": "{}\n"
+    },
+    {
+      "url": "https://app.loopyloyalty.com/images/logo.png",
+      "method": "GET",
+      "resourceType": "image",
+      "headers": {
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "https://app.loopyloyalty.com/auth/login",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.8010.12 Safari/537.36",
+        "sec-ch-ua": "\"HeadlessChrome\";v=\"153\", \"Not_A Brand\";v=\"8\", \"Chromium\";v=\"153\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "status": 200,
+      "responseBody": "�PNG\r\n\u001a\n\u0000\u0000\u0000\rIHDR\u0000\u0000\u0002d\u0000\u0000\u0000v\b\u0006\u0000\u0000\u0000f��\u0005\u0000\u0000)�IDAT\u0018\u0019��\t��u�8����g8�C\u0004īAPD�\r�;o\u0011ɻ̮u��-�.���m�������Ge[�f��\u0001\n�x��y��� �\"\u001e�5����~���vb��|��g���~��(��(��(��(��(��(��(��(��(��(��(��(��(��(��(��(��(��(��(��(��(��(��(��(��(��(��(��(��(��(��(��(��(��(��(��(��(����K��ɻ��Bj1\n�`g��H\f�(���r��2��<�ƫX�wUP��1�*C�FM\u0012Q\u0014�\u001cURs\u000b\u0003��W%\u0015EQ��M/��Xy\u001b��8\u0010��\u0010�,�p\f�(�U\u001dfa:��L|(��(�����z���y\u001c�\u001d�W?\u001c�\u0003�x\fSq\u0003扢(��(�����h��}1Le��q:f�g�#��(������,��F�\u0019\u001f�0�7\n_���%\u0006��(��(�B9=�@�\u00003q2\u0006�~[�\u001bx\f�DN\u0014EQ\u0014EQ\u0017��~�p+�\r��yv�u�%���(��(*���u\u001c~��z�j|\r{�KxI�\u001b��`0����Z��jQ\u0014Uʖ�\u001a\tR���>�#\u0015E�k\u0017\fB��\u0012\u0014�.��A�\u0011\u0018�\u001c\n�J�\u0016˰L�^y��\u001c�̆e?L�阦{\f�Wq(v�fhԪ/��\u0013��(��ڡ�,��\u000e�!ժ\n�p\"�DQ��\u000e;�^[\t\nX�yx\u001cWc��;\u0011?C5\n�J�\u0012��)\\���v�u���\u001c\u001b��p3N�}*kO\\�\t��kkS�EQ������g�\u0006���a\br�}c1\u0016��d|\u001b�u�\u001f\u0006�X?l�\t�\u0007�\u0018\u0017�֑Sy\u0017�\u001c\u001b���\u0019�U�p�\u0016\u0013tn-\n�(ʬ \u0011�3�\f�t�^\u0014�\fu��[���5�Y�A�\bg�֑SY���z�A�\u0001��('���,|T\u0014E]�Yb��\u001a}\u0014��kK�H\u0014�~�q1\u0006)��N�6r*�\u001f�}�� \\�=\u0004J� � �<�\u0010EQ��YA�\u0013㱃(�8\u001c�Qʧ/>!j#�2v�%��}�Ƶ\u0018\"@^��F���T�1\u0018)��.�J\fФ\u0013ۉ���v�k�����7\f���z�]p�@\t>H�5K\u0004�jQ\u0014u�*���ZMr\u0012\u001d*���K��\n�6r�ޏ�������\u0000��\u001bi�\u0012� )RQ\u0014u�\u0002r\u0018��k\u0016EQT\u0019y]k\"��k�x\u001c/�U��U\u001fԢ\u0016㱻��S<��t�ZA\"���&��و�ޛi_�\u0015��(��V^�\u0019�E_]c:���X���o8���8\u0015��H��s\u0004HDQ�\u00135��YmRgi�O��(�����u>��)�:L�w�\u0016�bS\u001c���\t��ע\u0011/b\u0001\u001e�=���`�\u0018�\"Q>��\u001a<�\u0003\t��,.�7:�F\u0014E=K�j�A�DQ\u0014UB^��\u001c_W^��L<��8\u0011��!臜���ŹX�i�\u0005\u001e��8\u0013?���cS����G�zU�uT#A\rjP@�\u000fь\u0006=O5��c�\u0016)V�\t�z�\u001c��\u00195��J-�ڈ5��$i�\u0011k,Nk�U���\u001c\u0006 �\u0004uX�f4��Q�>(` �X�\u0006$H�V��,j#�k\u001c�]�ϕ�*��<~�����\u0010|\n��\f�\u0000��\u000e�7\u000eR\u001e����#'\u0015�\u001d�\rv�8�0\u0012�Q�&��Z,ųX�\u0005x[��`,j�\r�c \u0006c[�h�|��b���X��t�\u0001�\u0016�c$�Ė��G0\u0004��-��KX�\u0005��\u0017����sU��*�7\u0000�Ѭ}9��\u0000�\u00049\u001b��\u0018�Q�\u0003[�\u001f��\u0000�\u0014�c\r^�l,�\\4)�0�� L5V�^�m�\u0004�u%Z4`�p}�\u0003>��\u0018��h�v\u0018���.���l,�kX����!չj\f֢�s94a��뇁h־*4b�\"�_�ӔG3�\u0015?�h\\��[�B<��x]�\u0002�c\f��\u001e\u0018��a8\f��\u001f�`\\�R���\u0004^�\u001e9T+�������8\u0012\u00131���d]O�~܍Gu�\u001dq\u0018����g�v��Y�\u000b��~�q$�ž8\b\u0003ulW�Z�\u0019x\u0002�b�lv�%HЬs��\u0010��\u000b��p\u001c��1\u0004��W��q����($8\u0014\u001f�Ǳ���ֺ>�T܇��X6����Ca�a\u0006�C����E쉱Z�֕C\u0013.�T�\u001b��8\u0010\u00131@����j<���8�۰\u001d�\u0001( ��*��M�/\fF��U�\u000e\u0017�!�7&cw�@����t�@���o/\u001c�t�8\u001d��p�\u0006�j�>\\��0���I8\u0015c��\u001e\u000e���\"��e�;\u001d�c�v$R�r�N�\u0019��+Hl$\u0006���'�V�\t��sp\u000b.�S�o\u0013�\u000b>�Z��\u0013{j�߸\u0012�)�\u001c���8YiF�4���q\u000f~�9�,E-F��n��t��\u0005H��#�m<\u000e�w1Yi��\u0014��9�\u001a�B�0o㣲�(��\\��\u0002�Q�\u0014p��\u001b�s�Y�*�\u0000\u001c����\u0013��\u0006\u001b�=���-��9����xH龄���0\u000f*AN"
+    },
+    {
+      "url": "https://www.youtube.com/s/player/0229cd64/www-widgetapi.vflset/www-widgetapi.js",
+      "method": "GET",
+      "resourceType": "script",
+      "headers": {
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "https://app.loopyloyalty.com/",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.8010.12 Safari/537.36",
+        "sec-ch-ua": "\"HeadlessChrome\";v=\"153\", \"Not_A Brand\";v=\"8\", \"Chromium\";v=\"153\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "status": 200,
+      "responseBody": "(function(){'use strict';var n,aa=typeof Object.create==\"function\"?Object.create:function(a){function b(){}\nb.prototype=a;return new b},p=typeof Object.defineProperties==\"function\"?Object.defineProperty:function(a,b,c){if(a==Array.prototype||a==Object.prototype)return a;\na[b]=c.value;return a};\nfunction ba(a){a=[\"object\"==typeof globalThis&&globalThis,a,\"object\"==typeof window&&window,\"object\"==typeof self&&self,\"object\"==typeof global&&global];for(var b=0;b<a.length;++b){var c=a[b];if(c&&c.Math==Math)return c}throw Error(\"Cannot find global object\");}\nvar q=ba(this);function r(a,b){if(b)a:{var c=q;a=a.split(\".\");for(var d=0;d<a.length-1;d++){var h=a[d];if(!(h in c))break a;c=c[h]}a=a[a.length-1];d=c[a];b=b(d);b!=d&&b!=null&&p(c,a,{configurable:!0,writable:!0,value:b})}}\nvar t;if(typeof Object.setPrototypeOf==\"function\")t=Object.setPrototypeOf;else{var v;a:{var ca={a:!0},da={};try{da.__proto__=ca;v=da.a;break a}catch(a){}v=!1}t=v?function(a,b){a.__proto__=b;if(a.__proto__!==b)throw new TypeError(a+\" is not extensible\");return a}:null}var ea=t;\nfunction fa(a){var b=0;return function(){return b<a.length?{done:!1,value:a[b++]}:{done:!0}}}\nfunction x(a){var b=typeof Symbol!=\"undefined\"&&Symbol.iterator&&a[Symbol.iterator];if(b)return b.call(a);if(typeof a.length==\"number\")return{next:fa(a)};throw Error(String(a)+\" is not an iterable or ArrayLike\");}\nfunction ha(a,b){var c;b&&!b.done&&(c=a[\"return\"])&&c.call(a)}\nr(\"Symbol\",function(a){function b(k){if(this instanceof b)throw new TypeError(\"Symbol is not a constructor\");return new c(d+(k||\"\")+\"_\"+h++,k)}\nfunction c(k,f){this.h=k;p(this,\"description\",{configurable:!0,writable:!0,value:f})}\nif(a)return a;c.prototype.toString=function(){return this.h};\nvar d=\"jscomp_symbol_\"+(Math.random()*1E9>>>0)+\"_\",h=0;return b});\nr(\"Symbol.iterator\",function(a){if(a)return a;a=Symbol(\"Symbol.iterator\");p(Array.prototype,a,{configurable:!0,writable:!0,value:function(){return ia(fa(this))}});\nreturn a});\nfunction ia(a){var b=(typeof Itera"
+    },
+    {
+      "url": "https://www.google-analytics.com/j/collect?v=1&_v=j102&a=1009427577&t=pageview&_s=1&dl=https%3A%2F%2Fapp.loopyloyalty.com%2Fauth%2Flogin&ul=en-us&dt=Loopy%20Loyalty&sr=1280x720&vp=1280x720&_u=ACCACEABBAAAACAAI~&jid=812040752&gjid=922516497&cid=1530635852.1792219876&tid=UA-56934929-1&_gid=1602491383.1792219876&_r=1&_slc=1&z=437102161",
+      "method": "POST",
+      "resourceType": "xhr",
+      "headers": {
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "https://app.loopyloyalty.com/",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.8010.12 Safari/537.36",
+        "sec-ch-ua": "\"HeadlessChrome\";v=\"153\", \"Not_A Brand\";v=\"8\", \"Chromium\";v=\"153\"",
+        "content-type": "text/plain",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "status": 200,
+      "responseBody": "2,x"
+    },
+    {
+      "url": "https://connect.facebook.net/signals/config/908685596241622?v=2.9.419&r=stable&domain=app.loopyloyalty.com&hme=7459fa3e38c2784dbaf309537bed5fa7e8560fab51fb61e53e5ffafeb46a02a9&ex_m=118%2C241%2C171%2C27%2C82%2C83%2C162%2C78%2C77%2C11%2C181%2C102%2C20%2C153%2C141%2C46%2C85%2C90%2C149%2C176%2C183%2C8%2C4%2C5%2C7%2C6%2C3%2C103%2C115%2C32%2C17%2C31%2C18%2C33%2C34%2C35%2C37%2C55%2C163%2C87%2C126%2C22%2C24%2C51%2C47%2C49%2C48%2C95%2C104%2C108%2C124%2C160%2C164%2C53%2C125%2C29%2C26%2C133%2C79%2C43%2C166%2C165%2C167%2C157%2C155%2C30%2C42%2C66%2C123%2C178%2C80%2C21%2C128%2C93%2C76%2C23%2C97%2C98%2C130%2C96%2C151%2C150%2C154%2C109%2C177%2C180%2C41%2C56%2C127%2C54%2C161%2C72%2C185%2C110%2C184%2C210%2C255%2C84%2C274%2C273%2C272%2C14%2C25%2C28%2C40%2C62%2C117%2C68%2C10%2C73%2C111%2C112%2C113%2C119%2C144%2C38%2C36%2C146%2C147%2C148%2C143%2C142%2C172%2C86%2C175%2C173%2C174%2C57%2C69%2C67%2C137%2C19%2C179%2C52%2C324%2C325%2C326%2C323%2C339%2C361%2C248%2C237%2C70%2C238%2C236%2C364%2C355%2C59%2C249%2C121%2C145%2C92%2C135%2C61%2C134%2C140%2C139%2C65%2C74%2C168%2C88%2C89%2C129%2C44%2C39%2C60%2C63%2C114%2C182%2C1%2C138%2C16%2C136%2C12%2C2%2C64%2C105%2C15%2C75%2C71%2C132%2C101%2C100%2C187%2C188%2C106%2C107%2C9%2C116%2C186%2C58%2C158%2C99%2C91%2C81%2C131%2C120%2C169%2C50%2C159%2C0%2C94%2C152%2C156%2C170%2C45%2C122%2C13%2C189",
+      "method": "GET",
+      "resourceType": "script",
+      "headers": {
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "https://app.loopyloyalty.com/",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.8010.12 Safari/537.36",
+        "sec-ch-ua": "\"HeadlessChrome\";v=\"153\", \"Not_A Brand\";v=\"8\", \"Chromium\";v=\"153\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "status": 200,
+      "responseBody": "/**\n* Copyright (c) 2017-present, Facebook, Inc. All rights reserved.\n*\n* You are hereby granted a non-exclusive, worldwide, royalty-free license to use,\n* copy, modify, and distribute this software in source code or binary form for use\n* in connection with the web services and APIs provided by Facebook.\n*\n* As with any software that integrates with the Facebook platform, your use of\n* this software is subject to the Facebook Platform Policy\n* [http://developers.facebook.com/policy/]. This copyright notice shall be\n* included in all copies or substantial portions of the software.\n*\n* THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\n* IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS\n* FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR\n* COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER\n* IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN\n* CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n*/\n(function(e,t,n,r){var o={exports:{}},a=o.exports;(function(){var a=e.fbq;if(a.execStart=e.performance&&e.performance.now&&e.performance.now(),!(function(){var t=e.postMessage||function(){};return a?!0:(t({action:\"FB_LOG\",logType:\"Facebook Pixel Error\",logMessage:\"Pixel code is not installed correctly on this page\"},\"*\"),\"error\"in console,!1)})())return;function i(e,t,n){return t=c(t),l(e,u()?Reflect.construct(t,n||[],c(e).constructor):t.apply(e,n))}function l(e,t){if(t&&(L(t)==\"object\"||typeof t==\"function\"))return t;if(t!==void 0)throw new TypeError(\"Derived constructors may only return object or undefined\");return s(e)}function s(e){if(e===void 0)throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\");return e}function u(){try{var e=!Boolean.prototype.valueOf.call(Reflect.construct(Boolean,[],function(){}))}catch(e){}return(u=function(){return!!e})()}function c(e){return c=Object.setProtot"
+    },
+    {
+      "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-TTHRRGSK6D&gtm=45je6ae1v892167237za20ozb892159225zd892159225xf1&_p=1792219947264&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AAAAAAQC&cid=1530635852.1792219876&frm=0&pscdl=noapi&rcb=11&sr=1280x720&uaa=arm&uab=64&uafvl=HeadlessChrome%3B153.0.8010.12%7CNot_A%2520Brand%3B8.0.0.0%7CChromium%3B153.0.8010.12&uam=&uamb=0&uap=macOS&uapv=27.0.1&uaw=0&ul=en-us&_s=1&tag_exp=115616985~115938466~115938469~118897920~118897930~120213116~120385422~120469145~120469153~121246026~121246034&sid=1792219876&sct=1&seg=1&dl=https%3A%2F%2Fapp.loopyloyalty.com%2Fauth%2Flogin&dt=Loopy%20Loyalty&en=page_view&tfd=2292",
+      "method": "POST",
+      "resourceType": "fetch",
+      "headers": {
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "https://app.loopyloyalty.com/",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.8010.12 Safari/537.36",
+        "sec-ch-ua": "\"HeadlessChrome\";v=\"153\", \"Not_A Brand\";v=\"8\", \"Chromium\";v=\"153\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "status": 204
+    }
+  ],
+  "errors": [],
+  "landedOn": "https://app.loopyloyalty.com/auth/login",
+  "loggedIn": false
+}

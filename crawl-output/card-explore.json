@@ -1,0 +1,120 @@
+{
+  "campaignId": "new",
+  "cardsPage": {
+    "label": "manage-my-cards",
+    "url": "https://app.loopyloyalty.com/manage-my-cards",
+    "title": "Loopy Loyalty",
+    "headings": [],
+    "interactive": [
+      {
+        "tag": "A",
+        "text": "My Cards",
+        "href": "",
+        "uiSref": "",
+        "ngClick": "cc.navigateToState(obj.state)"
+      },
+      {
+        "tag": "A",
+        "text": "Subusers",
+        "href": "",
+        "uiSref": "",
+        "ngClick": "cc.navigateToState(obj.state)"
+      },
+      {
+        "tag": "A",
+        "text": "Start",
+        "href": "",
+        "uiSref": "",
+        "ngClick": "cc.navigateToState(obj.state)"
+      },
+      {
+        "tag": "A",
+        "text": "Settings",
+        "href": "",
+        "uiSref": "",
+        "ngClick": "cc.navigateToState(obj.state)"
+      },
+      {
+        "tag": "A",
+        "text": "Resend verification email",
+        "href": "",
+        "uiSref": "",
+        "ngClick": "cc.resend()"
+      },
+      {
+        "tag": "A",
+        "text": "Upgrade Now",
+        "href": "https://app.loopyloyalty.com/settings",
+        "uiSref": "container.settings",
+        "ngClick": ""
+      }
+    ],
+    "tables": [],
+    "bodyText": " \n\n   You haven't verified your email address. Resend verification email.\n\n15 days left on trial UPGRADE NOW"
+  },
+  "cardLinks": [],
+  "mutations": [
+    {
+      "method": "POST",
+      "path": "/account/login",
+      "status": 200,
+      "postData": "{\"username\":\"ibefehdi@gmail.com\",\"password\":\"F@had123\"}"
+    },
+    {
+      "method": "POST",
+      "path": "/events/analytics/transactions/new",
+      "status": 200,
+      "postData": "{\"draw\":1,\"start\":0,\"length\":10,\"search\":\"\",\"order\":{\"column\":\"created\",\"dir\":\"desc\"}}"
+    }
+  ],
+  "getEndpoints": [
+    {
+      "path": "/",
+      "status": 200
+    },
+    {
+      "path": "/campaigns",
+      "status": 200
+    },
+    {
+      "path": "/account",
+      "status": 200
+    },
+    {
+      "path": "/images",
+      "status": 200
+    },
+    {
+      "path": "/images",
+      "status": 200
+    },
+    {
+      "path": "/images",
+      "status": 200
+    },
+    {
+      "path": "/images",
+      "status": 200
+    },
+    {
+      "path": "/images",
+      "status": 200
+    },
+    {
+      "path": "/events/dashboard",
+      "status": 200
+    },
+    {
+      "path": "/locations",
+      "status": 200
+    },
+    {
+      "path": "/beacons",
+      "status": 200
+    },
+    {
+      "path": "/campaign/id/new",
+      "status": 403
+    }
+  ]
+}

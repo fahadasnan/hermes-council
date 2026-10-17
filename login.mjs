@@ -11,6 +11,7 @@ import { fileURLToPath } from 'node:url';
 
 const DIR = dirname(fileURLToPath(import.meta.url));
 const STATE = `${DIR}/auth.json`;
+const SESSION_SCRIPT = `${DIR}/session-restore.js`;
 const CHROME_PROFILE = `${DIR}/chrome-profile`;
 const CDP_PORT = 9333;
 const INTERACTIVE_TIMEOUT_MS = 10 * 60 * 1000;
@@ -62,22 +63,66 @@ const PASS_SEL = 'input[type="password"]';
 const LOGIN_GATE_SEL = 'input[type="password"], input[autocomplete="one-time-code"], input[type="email"], input[type="tel"]';
 const LOGIN_PATH_RE = /(log-?in|sign-?in|sign-?up|auth|otp|verif|session)/i;
 
+// /help is public on this app and loads with no session. Treat only an in-app path as logged in.
+const PUBLIC_PATH_RE = /^\/(?:help(?:\/.*)?)?$/;
+
+function isDashboardUrl(urlString) {
+  let url;
+  try {
+    url = new URL(urlString);
+  } catch {
+    return false;
+  }
+  if (url.host !== new URL(dashboardUrl).host) return false;
+  const path = url.pathname || '/';
+  if (PUBLIC_PATH_RE.test(path)) return false;
+  if (LOGIN_PATH_RE.test(path)) return false;
+  return true;
+}
+
 async function isLoggedIn(page) {
-  if (LOGIN_PATH_RE.test(new URL(page.url()).pathname)) return false;
-  return !(await page.locator(LOGIN_GATE_SEL).first().isVisible().catch(() => false));
+  if (!isDashboardUrl(page.url())) return false;
+  if (await page.locator(LOGIN_GATE_SEL).first().isVisible().catch(() => false)) return false;
+  // Loopy keeps the login token in sessionStorage, which a fresh browser does not keep.
+  return page.evaluate(() => Boolean(sessionStorage.getItem('jwt'))).catch(() => false);
+}
+
+async function waitUntilLoggedIn(page, timeoutMs) {
+  const deadline = Date.now() + timeoutMs;
+  let streak = 0;
+  while (Date.now() < deadline) {
+    const ok = await isLoggedIn(page).catch(() => false);
+    streak = ok ? streak + 1 : 0;
+    // The app flashes an in-app route, then sends an anonymous visitor back to login.
+    if (streak >= 5) {
+      await page.goto(dashboardUrl, { waitUntil: 'domcontentloaded' }).catch(() => {});
+      await page.waitForTimeout(3000);
+      if (await isLoggedIn(page).catch(() => false)) return true;
+      streak = 0;
+    }
+    await page.waitForTimeout(1000);
+  }
+  return false;
 }
 
 async function saveAndExit(browser, context, page) {
+  const session = await page.evaluate(() => ({ ...sessionStorage })).catch(() => null);
+  if (!session?.jwt) {
+    await browser.close();
+    throw new Error(`Reached ${page.url()} but no session token was stored. Log in again.`);
+  }
+  const script = `(() => {\n  const data = ${JSON.stringify(session)};\n  for (const [key, value] of Object.entries(data)) sessionStorage.setItem(key, value);\n})();\n`;
+  await import('node:fs').then((fs) => fs.writeFileSync(SESSION_SCRIPT, script));
   await context.storageState({ path: STATE, indexedDB: true });
   console.log(`Saved session to ${STATE} (landed on ${page.url()})`);
   await browser.close();
-  process.exit(0);
 }
 
 if (mode === 'check') {
   if (!existsSync(STATE)) process.exit(1);
   const browser = await chromium.launch();
   const context = await browser.newContext({ storageState: STATE });
+  if (existsSync(SESSION_SCRIPT)) await context.addInitScript({ path: SESSION_SCRIPT });
   const page = await context.newPage();
   await page.goto(dashboardUrl, { waitUntil: 'domcontentloaded' });
   await page.waitForLoadState('networkidle', { timeout: 15000 }).catch(() => {});
@@ -129,8 +174,7 @@ async function interactiveLoginWithRealChrome(chromePath) {
       const tabs = await cdpTabs().catch(() => []);
       const inDashboard = tabs.some((t) => {
         try {
-          const u = new URL(t.url);
-          return u.host === host && !LOGIN_PATH_RE.test(u.pathname);
+          return isDashboardUrl(t.url);
         } catch {
           return false;
         }
@@ -150,10 +194,14 @@ async function interactiveLoginWithRealChrome(chromePath) {
 
   const browser = await chromium.connectOverCDP(`http://127.0.0.1:${CDP_PORT}`);
   const context = browser.contexts()[0];
-  await context.storageState({ path: STATE, indexedDB: true });
-  const landed = context.pages().map((p) => p.url()).find((u) => u.includes(host)) || '';
-  console.log(`Saved session to ${STATE} (landed on ${landed})`);
-  await browser.close().catch(() => {});
+  const page = context.pages().find((p) => {
+    try {
+      return isDashboardUrl(p.url());
+    } catch {
+      return false;
+    }
+  }) || context.pages().at(-1);
+  await saveAndExit(browser, context, page);
   chrome.kill();
   process.exit(0);
 }
@@ -201,6 +249,7 @@ if (mode === 'interactive') {
   }
   await page.waitForLoadState('networkidle', { timeout: 15000 }).catch(() => {});
   await saveAndExit(browser, context, page);
+  process.exit(0);
 }
 
 const user = page.locator(USER_SEL).first();
@@ -215,10 +264,11 @@ await pass.waitFor({ state: 'visible', timeout: 20000 });
 await pass.fill(env.DASHBOARD_PASS);
 await pass.press('Enter');
 
-await page
-  .waitForFunction(() => !document.querySelector('input[type="password"]'), null, { timeout: 30000 })
-  .catch(() => {
-    throw new Error(`Login did not complete (still on ${page.url()}). Check credentials, or run: node login.mjs --headed`);
-  });
+const loggedIn = await waitUntilLoggedIn(page, 30000);
+if (!loggedIn) {
+  await browser.close();
+  throw new Error(`Login did not reach the dashboard (still on ${page.url()}). Check credentials, or run: node login.mjs --headed`);
+}
 await page.waitForLoadState('networkidle', { timeout: 15000 }).catch(() => {});
 await saveAndExit(browser, context, page);
+process.exit(0);

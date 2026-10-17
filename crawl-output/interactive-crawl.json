@@ -1,0 +1,1851 @@
+{
+  "pages": [
+    {
+      "label": "container.dash",
+      "url": "https://app.loopyloyalty.com/dash",
+      "title": "Loopy Loyalty",
+      "headings": [
+        {
+          "level": "H1",
+          "text": "Welcome to Loopy Loyalty, ibefehdi!"
+        },
+        {
+          "level": "H2",
+          "text": "Getting Started"
+        },
+        {
+          "level": "H2",
+          "text": "After Activating"
+        },
+        {
+          "level": "H2",
+          "text": "Loopy Loyalty Video Academy"
+        },
+        {
+          "level": "H3",
+          "text": "1. Create your Card"
+        }
+      ],
+      "interactive": [
+        {
+          "tag": "A",
+          "text": "My Cards",
+          "href": "",
+          "uiSref": "",
+          "ngClick": "cc.navigateToState(obj.state)",
+          "className": "btn"
+        },
+        {
+          "tag": "A",
+          "text": "Subusers",
+          "href": "",
+          "uiSref": "",
+          "ngClick": "cc.navigateToState(obj.state)",
+          "className": "btn"
+        },
+        {
+          "tag": "A",
+          "text": "Start",
+          "href": "",
+          "uiSref": "",
+          "ngClick": "cc.navigateToState(obj.state)",
+          "className": "btn"
+        },
+        {
+          "tag": "A",
+          "text": "Settings",
+          "href": "",
+          "uiSref": "",
+          "ngClick": "cc.navigateToState(obj.state)",
+          "className": "btn"
+        },
+        {
+          "tag": "A",
+          "text": "Resend verification email",
+          "href": "",
+          "uiSref": "",
+          "ngClick": "cc.resend()",
+          "className": ""
+        },
+        {
+          "tag": "A",
+          "text": "Upgrade Now",
+          "href": "https://app.loopyloyalty.com/settings",
+          "uiSref": "container.settings",
+          "ngClick": "",
+          "className": "a-upgrade-now"
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Create New Card",
+          "href": "",
+          "uiSref": "",
+          "ngClick": "cc.createNewCampaign()",
+          "className": "btn btn-custom btn-lg pull-right hidden-xs hidden-sm"
+        },
+        {
+          "tag": "A",
+          "text": "Follow this Quick Start Guide",
+          "href": "https://app.loopyloyalty.com/images/loopy-loyalty-user-guide.pdf",
+          "uiSref": "",
+          "ngClick": "",
+          "className": ""
+        },
+        {
+          "tag": "A",
+          "text": "Loopy Loyalty Stamper App",
+          "href": "https://play.google.com/store/apps/details?id=com.loopyloyalty.app.scanner",
+          "uiSref": "",
+          "ngClick": "",
+          "className": ""
+        }
+      ],
+      "tables": [],
+      "forms": [],
+      "bodyPreview": " \n\n   You haven't verified your email address. Resend verification email.\n\n15 days left on trial UPGRADE NOW\nWelcome to Loopy Loyalty, ibefehdi!\n  Create New Card\nGetting Started\n\n  Follow this Quick Start Guide\n\n3 Simple Steps:\n\nCreate your card\nPreview & activate your card\nDownload the Loopy Loyalty Stamper App\nAfter Activating\n\n  Share your card URL\n\n  Issue stamps\n\n  Send messages to customers\n\n  Analyze results & performance\n\nLoopy Loyalty Video Academy\n1. Create your Card\nCard Design\nCard Details\nCard Customisations\nSamples\nCafe Template\nSTAMPS REQUIRED UNTIL NEXT REWARD\n\t\n8\n Tap ⋯ for details\nRestaurant Template\nSTAMPS REQUIRED UNTIL NEXT REWARD\n\t\n10\n Tap ⋯ for details\nRetail Template\nSTAMPS REQUIRED UNTIL NEXT REWARD\n\t\n19\n Tap ⋯ for details\nSalon Template\nSTAMPS REQUIRED UNTIL NEXT REWARD\n\t\n13\n Tap ⋯ for details\nEntertainment Template\nSTAMPS REQUIRED UNTIL NEXT REWARD\n\t\n22\n Tap ⋯ for details\nInstructor Template\nSTAMPS REQUIRED UNTIL NEXT REWARD\n\t\n8\n Tap ⋯ for details\nService Template\nSTAMPS REQUIRED UNTIL NEXT REWARD\n\t\n3\n Tap ⋯ for details"
+    },
+    {
+      "label": "container.manage-my-cards",
+      "url": "https://app.loopyloyalty.com/manage-my-cards",
+      "title": "Loopy Loyalty",
+      "headings": [],
+      "interactive": [
+        {
+          "tag": "A",
+          "text": "My Cards",
+          "href": "",
+          "uiSref": "",
+          "ngClick": "cc.navigateToState(obj.state)",
+          "className": "btn"
+        },
+        {
+          "tag": "A",
+          "text": "Subusers",
+          "href": "",
+          "uiSref": "",
+          "ngClick": "cc.navigateToState(obj.state)",
+          "className": "btn"
+        },
+        {
+          "tag": "A",
+          "text": "Start",
+          "href": "",
+          "uiSref": "",
+          "ngClick": "cc.navigateToState(obj.state)",
+          "className": "btn"
+        },
+        {
+          "tag": "A",
+          "text": "Settings",
+          "href": "",
+          "uiSref": "",
+          "ngClick": "cc.navigateToState(obj.state)",
+          "className": "btn"
+        },
+        {
+          "tag": "A",
+          "text": "Resend verification email",
+          "href": "",
+          "uiSref": "",
+          "ngClick": "cc.resend()",
+          "className": ""
+        },
+        {
+          "tag": "A",
+          "text": "Upgrade Now",
+          "href": "https://app.loopyloyalty.com/settings",
+          "uiSref": "container.settings",
+          "ngClick": "",
+          "className": "a-upgrade-now"
+        }
+      ],
+      "tables": [],
+      "forms": [],
+      "bodyPreview": " \n\n   You haven't verified your email address. Resend verification email.\n\n15 days left on trial UPGRADE NOW"
+    },
+    {
+      "label": "container.settings",
+      "url": "https://app.loopyloyalty.com/settings",
+      "title": "Loopy Loyalty",
+      "headings": [
+        {
+          "level": "H1",
+          "text": "Settings"
+        },
+        {
+          "level": "H2",
+          "text": "My Account"
+        },
+        {
+          "level": "H2",
+          "text": "Billing"
+        }
+      ],
+      "interactive": [
+        {
+          "tag": "A",
+          "text": "My Cards",
+          "href": "",
+          "uiSref": "",
+          "ngClick": "cc.navigateToState(obj.state)",
+          "className": "btn"
+        },
+        {
+          "tag": "A",
+          "text": "Subusers",
+          "href": "",
+          "uiSref": "",
+          "ngClick": "cc.navigateToState(obj.state)",
+          "className": "btn"
+        },
+        {
+          "tag": "A",
+          "text": "Start",
+          "href": "",
+          "uiSref": "",
+          "ngClick": "cc.navigateToState(obj.state)",
+          "className": "btn"
+        },
+        {
+          "tag": "A",
+          "text": "Settings",
+          "href": "",
+          "uiSref": "",
+          "ngClick": "cc.navigateToState(obj.state)",
+          "className": "btn"
+        },
+        {
+          "tag": "A",
+          "text": "Resend verification email",
+          "href": "",
+          "uiSref": "",
+          "ngClick": "cc.resend()",
+          "className": ""
+        },
+        {
+          "tag": "A",
+          "text": "Upgrade Now",
+          "href": "https://app.loopyloyalty.com/settings",
+          "uiSref": "container.settings",
+          "ngClick": "",
+          "className": "a-upgrade-now"
+        },
+        {
+          "tag": "A",
+          "text": "General",
+          "href": "https://app.loopyloyalty.com/",
+          "uiSref": "",
+          "ngClick": "select($event)",
+          "className": "nav-link ng-binding"
+        },
+        {
+          "tag": "A",
+          "text": "Business",
+          "href": "https://app.loopyloyalty.com/",
+          "uiSref": "",
+          "ngClick": "select($event)",
+          "className": "nav-link ng-binding"
+        },
+        {
+          "tag": "A",
+          "text": "Privacy",
+          "href": "https://app.loopyloyalty.com/",
+          "uiSref": "",
+          "ngClick": "select($event)",
+          "className": "nav-link ng-binding"
+        },
+        {
+          "tag": "A",
+          "text": "Password",
+          "href": "https://app.loopyloyalty.com/",
+          "uiSref": "",
+          "ngClick": "select($event)",
+          "className": "nav-link ng-binding"
+        },
+        {
+          "tag": "A",
+          "text": "Developer Tools",
+          "href": "https://app.loopyloyalty.com/",
+          "uiSref": "",
+          "ngClick": "select($event)",
+          "className": "nav-link ng-binding"
+        },
+        {
+          "tag": "A",
+          "text": "Delete",
+          "href": "https://app.loopyloyalty.com/",
+          "uiSref": "",
+          "ngClick": "select($event)",
+          "className": "nav-link ng-binding"
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Update",
+          "href": "",
+          "uiSref": "",
+          "ngClick": "",
+          "className": "btn btn-custom btn-lg ng-scope"
+        },
+        {
+          "tag": "A",
+          "text": "Plan",
+          "href": "https://app.loopyloyalty.com/",
+          "uiSref": "",
+          "ngClick": "select($event)",
+          "className": "nav-link ng-binding"
+        },
+        {
+          "tag": "A",
+          "text": "Credit Card",
+          "href": "https://app.loopyloyalty.com/",
+          "uiSref": "",
+          "ngClick": "select($event)",
+          "className": "nav-link ng-binding"
+        },
+        {
+          "tag": "A",
+          "text": "Invoices",
+          "href": "https://app.loopyloyalty.com/",
+          "uiSref": "",
+          "ngClick": "select($event)",
+          "className": "nav-link ng-binding"
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Subscribe to Starter Monthly",
+          "href": "",
+          "uiSref": "",
+          "ngClick": "vm.openSubscribeModal('starter', userCreditCardForm.$valid)",
+          "className": "btn btn-custom btn-start-plan ng-scope"
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Subscribe to Growth Monthly",
+          "href": "",
+          "uiSref": "",
+          "ngClick": "vm.openSubscribeModal('growth', userCreditCardForm.$valid)",
+          "className": "btn btn-custom btn-start-plan ng-scope"
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Subscribe to Ultimate Monthly",
+          "href": "",
+          "uiSref": "",
+          "ngClick": "vm.openSubscribeModal('ultimate', userCreditCardForm.$valid)",
+          "className": "btn btn-custom btn-start-plan ng-scope"
+        },
+        {
+          "tag": "BUTTON",
+          "text": "×",
+          "href": "",
+          "uiSref": "",
+          "ngClick": "",
+          "className": "toast-close-button"
+        }
+      ],
+      "tables": [],
+      "forms": [
+        {
+          "tag": "INPUT",
+          "type": "text",
+          "name": "username",
+          "placeholder": "",
+          "id": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "text",
+          "name": "firstName",
+          "placeholder": "",
+          "id": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "text",
+          "name": "lastName",
+          "placeholder": "",
+          "id": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "email",
+          "name": "email",
+          "placeholder": "",
+          "id": ""
+        },
+        {
+          "tag": "SELECT",
+          "type": "select-one",
+          "name": "",
+          "placeholder": "",
+          "id": ""
+        },
+        {
+          "tag": "SELECT",
+          "type": "select-one",
+          "name": "",
+          "placeholder": "",
+          "id": ""
+        },
+        {
+          "tag": "SELECT",
+          "type": "select-one",
+          "name": "",
+          "placeholder": "",
+          "id": ""
+        }
+      ],
+      "bodyPreview": " \n\n   You haven't verified your email address. Resend verification email.\n\n15 days left on trial UPGRADE NOW\nSettings\nMy Account\nGeneral\nBusiness\nPrivacy\nPassword\nDeveloper Tools\nDelete\nUsername (cannot be changed)\nFirst Name*\nLast Name*\nEmail*\nUpdate\nBilling\nPlan\nCredit Card\nInvoices\n\nTRY OUT ANY PLAN. NO COMMITMENT. CANCEL ANYTIME.\n\nUS$ 25 /month\n \n\nSTARTER\n\nMonth-to-Month\nBilled Annually\nSubscribe to Starter Monthly\n\nIncludes :\n\n1 card design\n\n1 location\n\n1 beacon\n\n3 Subusers\n\nLabel text customisation\n\nUnique customer enrollments\n\nData Export\n\nUS$ 69 /month\n \n\nGROWTH\n\nMonth-to-Month\nBilled Annually\nSubscribe to Growth Monthly\n\nIncludes :\n\n3 card designs\n\n3 locations\n\n3 beacons\n\n10 subusers\n\nLabel text customisation\n\nUnique customer enrollments\n\nData Export\n\nUS$ 95 /month\n \n\nULTIMATE\n\nMonth-to-Month\nBilled Annually\nSubscribe to Ultimate Monthly\n\nIncludes :\n\n10 card designs\n\n10 locations\n\n10 beacons\n\n50 subusers\n\nLabel text customisation\n\nUnique customer enrollments\n\nData Export\n\nPlease note that unless you are in your free trial, clicking on Subscribe for any plan will immediately charge your credit card for the monthly or annual plan you have selected.\n\nLocations\n\nDisplay lock screen messages when customers are near your location(s).\n\nAdd Location\nBeacons\n\nDisplay lock screen messages when your customers are in proximity to your bluetooth beacon(s). Learn more.\n\nAdd Beacon\nZapier\n×\n[ll2 Error] Cannot set property isOpen of [object Object] which has only a getter"
+    },
+    {
+      "label": "My Cards",
+      "url": "https://app.loopyloyalty.com/manage-my-cards",
+      "title": "Loopy Loyalty",
+      "headings": [],
+      "interactive": [
+        {
+          "tag": "A",
+          "text": "My Cards",
+          "href": "",
+          "uiSref": "",
+          "ngClick": "cc.navigateToState(obj.state)",
+          "className": "btn"
+        },
+        {
+          "tag": "A",
+          "text": "Subusers",
+          "href": "",
+          "uiSref": "",
+          "ngClick": "cc.navigateToState(obj.state)",
+          "className": "btn"
+        },
+        {
+          "tag": "A",
+          "text": "Start",
+          "href": "",
+          "uiSref": "",
+          "ngClick": "cc.navigateToState(obj.state)",
+          "className": "btn"
+        },
+        {
+          "tag": "A",
+          "text": "Settings",
+          "href": "",
+          "uiSref": "",
+          "ngClick": "cc.navigateToState(obj.state)",
+          "className": "btn"
+        },
+        {
+          "tag": "A",
+          "text": "Resend verification email",
+          "href": "",
+          "uiSref": "",
+          "ngClick": "cc.resend()",
+          "className": ""
+        },
+        {
+          "tag": "A",
+          "text": "Upgrade Now",
+          "href": "https://app.loopyloyalty.com/settings",
+          "uiSref": "container.settings",
+          "ngClick": "",
+          "className": "a-upgrade-now"
+        },
+        {
+          "tag": "BUTTON",
+          "text": "×",
+          "href": "",
+          "uiSref": "",
+          "ngClick": "",
+          "className": "toast-close-button"
+        }
+      ],
+      "tables": [],
+      "forms": [],
+      "bodyPreview": " \n\n   You haven't verified your email address. Resend verification email.\n\n15 days left on trial UPGRADE NOW\n×\n[ll2 Error] Cannot set property isOpen of [object Object] which has only a getter"
+    },
+    {
+      "label": "Subusers",
+      "url": "https://app.loopyloyalty.com/manage-my-cards",
+      "title": "Loopy Loyalty",
+      "headings": [
+        {
+          "level": "H3",
+          "text": "Premium Feature"
+        }
+      ],
+      "interactive": [
+        {
+          "tag": "A",
+          "text": "Subusers",
+          "href": "https://docs.loopyloyalty.com/en/articles/1469700-create-and-manage-subusers",
+          "uiSref": "",
+          "ngClick": "",
+          "className": ""
+        },
+        {
+          "tag": "A",
+          "text": "How to try out premium features during your free trial",
+          "href": "http://docs.loopyloyalty.com/pricing-privacy-security-and-terms/how-to-try-out-premium-features-in-loopy-loyalty-during-your-free-trial",
+          "uiSref": "",
+          "ngClick": "",
+          "className": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Subscribe to a plan",
+          "href": "",
+          "uiSref": "",
+          "ngClick": "vm.ok()",
+          "className": "btn btn-custom"
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Cancel",
+          "href": "",
+          "uiSref": "",
+          "ngClick": "vm.cancel()",
+          "className": "btn btn-custom-back"
+        },
+        {
+          "tag": "A",
+          "text": "My Cards",
+          "href": "",
+          "uiSref": "",
+          "ngClick": "cc.navigateToState(obj.state)",
+          "className": "btn"
+        },
+        {
+          "tag": "A",
+          "text": "Subusers",
+          "href": "",
+          "uiSref": "",
+          "ngClick": "cc.navigateToState(obj.state)",
+          "className": "btn"
+        },
+        {
+          "tag": "A",
+          "text": "Start",
+          "href": "",
+          "uiSref": "",
+          "ngClick": "cc.navigateToState(obj.state)",
+          "className": "btn"
+        },
+        {
+          "tag": "A",
+          "text": "Settings",
+          "href": "",
+          "uiSref": "",
+          "ngClick": "cc.navigateToState(obj.state)",
+          "className": "btn"
+        },
+        {
+          "tag": "A",
+          "text": "Resend verification email",
+          "href": "",
+          "uiSref": "",
+          "ngClick": "cc.resend()",
+          "className": ""
+        },
+        {
+          "tag": "A",
+          "text": "Upgrade Now",
+          "href": "https://app.loopyloyalty.com/settings",
+          "uiSref": "container.settings",
+          "ngClick": "",
+          "className": "a-upgrade-now"
+        },
+        {
+          "tag": "BUTTON",
+          "text": "×",
+          "href": "",
+          "uiSref": "",
+          "ngClick": "",
+          "className": "toast-close-button"
+        }
+      ],
+      "tables": [],
+      "forms": [],
+      "bodyPreview": " Premium Feature\n\nUnlock Subusers - available with all Loopy Loyalty Subscriptions.\n\nHow to try out premium features during your free trial\n\nSubscribe to a plan Cancel\n \n\n   You haven't verified your email address. Resend verification email.\n\n15 days left on trial UPGRADE NOW\n×\n[ll2 Error] Cannot set property isOpen of [object Object] which has only a getter"
+    },
+    {
+      "label": "Start",
+      "url": "https://app.loopyloyalty.com/help",
+      "title": "Loopy Loyalty",
+      "headings": [
+        {
+          "level": "H3",
+          "text": "Premium Feature"
+        },
+        {
+          "level": "H1",
+          "text": "Choose a Template"
+        },
+        {
+          "level": "H3",
+          "text": "Cafe Template"
+        },
+        {
+          "level": "H3",
+          "text": "Restaurant Template"
+        },
+        {
+          "level": "H3",
+          "text": "Retail Template"
+        },
+        {
+          "level": "H3",
+          "text": "Salon Template"
+        },
+        {
+          "level": "H3",
+          "text": "Entertainment Template"
+        },
+        {
+          "level": "H3",
+          "text": "Instructor Template"
+        },
+        {
+          "level": "H3",
+          "text": "Service Template"
+        },
+        {
+          "level": "H3",
+          "text": "Blank"
+        }
+      ],
+      "interactive": [
+        {
+          "tag": "A",
+          "text": "Subusers",
+          "href": "https://docs.loopyloyalty.com/en/articles/1469700-create-and-manage-subusers",
+          "uiSref": "",
+          "ngClick": "",
+          "className": ""
+        },
+        {
+          "tag": "A",
+          "text": "How to try out premium features during your free trial",
+          "href": "http://docs.loopyloyalty.com/pricing-privacy-security-and-terms/how-to-try-out-premium-features-in-loopy-loyalty-during-your-free-trial",
+          "uiSref": "",
+          "ngClick": "",
+          "className": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Subscribe to a plan",
+          "href": "",
+          "uiSref": "",
+          "ngClick": "vm.ok()",
+          "className": "btn btn-custom"
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Cancel",
+          "href": "",
+          "uiSref": "",
+          "ngClick": "vm.cancel()",
+          "className": "btn btn-custom-back"
+        },
+        {
+          "tag": "A",
+          "text": "My Cards",
+          "href": "",
+          "uiSref": "",
+          "ngClick": "cc.navigateToState(obj.state)",
+          "className": "btn"
+        },
+        {
+          "tag": "A",
+          "text": "Subusers",
+          "href": "",
+          "uiSref": "",
+          "ngClick": "cc.navigateToState(obj.state)",
+          "className": "btn"
+        },
+        {
+          "tag": "A",
+          "text": "Start",
+          "href": "",
+          "uiSref": "",
+          "ngClick": "cc.navigateToState(obj.state)",
+          "className": "btn"
+        },
+        {
+          "tag": "A",
+          "text": "Settings",
+          "href": "",
+          "uiSref": "",
+          "ngClick": "cc.navigateToState(obj.state)",
+          "className": "btn"
+        },
+        {
+          "tag": "A",
+          "text": "Resend verification email",
+          "href": "",
+          "uiSref": "",
+          "ngClick": "cc.resend()",
+          "className": ""
+        },
+        {
+          "tag": "A",
+          "text": "Upgrade Now",
+          "href": "https://app.loopyloyalty.com/settings",
+          "uiSref": "container.settings",
+          "ngClick": "",
+          "className": "a-upgrade-now"
+        },
+        {
+          "tag": "BUTTON",
+          "text": "×",
+          "href": "",
+          "uiSref": "",
+          "ngClick": "",
+          "className": "toast-close-button"
+        }
+      ],
+      "tables": [],
+      "forms": [],
+      "bodyPreview": " Premium Feature\n\nUnlock Subusers - available with all Loopy Loyalty Subscriptions.\n\nHow to try out premium features during your free trial\n\nSubscribe to a plan Cancel\n \n\n   You haven't verified your email address. Resend verification email.\n\n15 days left on trial UPGRADE NOW\nChoose a Template\nCafe Template\nSTAMPS REQUIRED UNTIL NEXT REWARD\n\t\n8\n Tap ⋯ for details\nRestaurant Template\nSTAMPS REQUIRED UNTIL NEXT REWARD\n\t\n10\n Tap ⋯ for details\nRetail Template\nSTAMPS REQUIRED UNTIL NEXT REWARD\n\t\n19\n Tap ⋯ for details\nSalon Template\nSTAMPS REQUIRED UNTIL NEXT REWARD\n\t\n13\n Tap ⋯ for details\nEntertainment Template\nSTAMPS REQUIRED UNTIL NEXT REWARD\n\t\n22\n Tap ⋯ for details\nInstructor Template\nSTAMPS REQUIRED UNTIL NEXT REWARD\n\t\n8\n Tap ⋯ for details\nService Template\nSTAMPS REQUIRED UNTIL NEXT REWARD\n\t\n3\n Tap ⋯ for details\nBlank\nResources\nQuick Start Guide\nTutorials & Support\nStamper App\n×\n[ll2 Error] Cannot set property isOpen of [object Object] which has only a getter"
+    },
+    {
+      "label": "Settings",
+      "url": "https://app.loopyloyalty.com/settings",
+      "title": "Loopy Loyalty",
+      "headings": [
+        {
+          "level": "H3",
+          "text": "Premium Feature"
+        },
+        {
+          "level": "H1",
+          "text": "Settings"
+        },
+        {
+          "level": "H2",
+          "text": "My Account"
+        },
+        {
+          "level": "H2",
+          "text": "Billing"
+        }
+      ],
+      "interactive": [
+        {
+          "tag": "A",
+          "text": "Subusers",
+          "href": "https://docs.loopyloyalty.com/en/articles/1469700-create-and-manage-subusers",
+          "uiSref": "",
+          "ngClick": "",
+          "className": ""
+        },
+        {
+          "tag": "A",
+          "text": "How to try out premium features during your free trial",
+          "href": "http://docs.loopyloyalty.com/pricing-privacy-security-and-terms/how-to-try-out-premium-features-in-loopy-loyalty-during-your-free-trial",
+          "uiSref": "",
+          "ngClick": "",
+          "className": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Subscribe to a plan",
+          "href": "",
+          "uiSref": "",
+          "ngClick": "vm.ok()",
+          "className": "btn btn-custom"
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Cancel",
+          "href": "",
+          "uiSref": "",
+          "ngClick": "vm.cancel()",
+          "className": "btn btn-custom-back"
+        },
+        {
+          "tag": "A",
+          "text": "My Cards",
+          "href": "",
+          "uiSref": "",
+          "ngClick": "cc.navigateToState(obj.state)",
+          "className": "btn"
+        },
+        {
+          "tag": "A",
+          "text": "Subusers",
+          "href": "",
+          "uiSref": "",
+          "ngClick": "cc.navigateToState(obj.state)",
+          "className": "btn"
+        },
+        {
+          "tag": "A",
+          "text": "Start",
+          "href": "",
+          "uiSref": "",
+          "ngClick": "cc.navigateToState(obj.state)",
+          "className": "btn"
+        },
+        {
+          "tag": "A",
+          "text": "Settings",
+          "href": "",
+          "uiSref": "",
+          "ngClick": "cc.navigateToState(obj.state)",
+          "className": "btn"
+        },
+        {
+          "tag": "A",
+          "text": "Resend verification email",
+          "href": "",
+          "uiSref": "",
+          "ngClick": "cc.resend()",
+          "className": ""
+        },
+        {
+          "tag": "A",
+          "text": "Upgrade Now",
+          "href": "https://app.loopyloyalty.com/settings",
+          "uiSref": "container.settings",
+          "ngClick": "",
+          "className": "a-upgrade-now"
+        },
+        {
+          "tag": "A",
+          "text": "General",
+          "href": "https://app.loopyloyalty.com/",
+          "uiSref": "",
+          "ngClick": "select($event)",
+          "className": "nav-link ng-binding"
+        },
+        {
+          "tag": "A",
+          "text": "Business",
+          "href": "https://app.loopyloyalty.com/",
+          "uiSref": "",
+          "ngClick": "select($event)",
+          "className": "nav-link ng-binding"
+        },
+        {
+          "tag": "A",
+          "text": "Privacy",
+          "href": "https://app.loopyloyalty.com/",
+          "uiSref": "",
+          "ngClick": "select($event)",
+          "className": "nav-link ng-binding"
+        },
+        {
+          "tag": "A",
+          "text": "Password",
+          "href": "https://app.loopyloyalty.com/",
+          "uiSref": "",
+          "ngClick": "select($event)",
+          "className": "nav-link ng-binding"
+        },
+        {
+          "tag": "A",
+          "text": "Developer Tools",
+          "href": "https://app.loopyloyalty.com/",
+          "uiSref": "",
+          "ngClick": "select($event)",
+          "className": "nav-link ng-binding"
+        },
+        {
+          "tag": "A",
+          "text": "Delete",
+          "href": "https://app.loopyloyalty.com/",
+          "uiSref": "",
+          "ngClick": "select($event)",
+          "className": "nav-link ng-binding"
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Update",
+          "href": "",
+          "uiSref": "",
+          "ngClick": "",
+          "className": "btn btn-custom btn-lg ng-scope"
+        },
+        {
+          "tag": "A",
+          "text": "Plan",
+          "href": "https://app.loopyloyalty.com/",
+          "uiSref": "",
+          "ngClick": "select($event)",
+          "className": "nav-link ng-binding"
+        },
+        {
+          "tag": "A",
+          "text": "Credit Card",
+          "href": "https://app.loopyloyalty.com/",
+          "uiSref": "",
+          "ngClick": "select($event)",
+          "className": "nav-link ng-binding"
+        },
+        {
+          "tag": "A",
+          "text": "Invoices",
+          "href": "https://app.loopyloyalty.com/",
+          "uiSref": "",
+          "ngClick": "select($event)",
+          "className": "nav-link ng-binding"
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Subscribe to Starter Monthly",
+          "href": "",
+          "uiSref": "",
+          "ngClick": "vm.openSubscribeModal('starter', userCreditCardForm.$valid)",
+          "className": "btn btn-custom btn-start-plan ng-scope"
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Subscribe to Growth Monthly",
+          "href": "",
+          "uiSref": "",
+          "ngClick": "vm.openSubscribeModal('growth', userCreditCardForm.$valid)",
+          "className": "btn btn-custom btn-start-plan ng-scope"
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Subscribe to Ultimate Monthly",
+          "href": "",
+          "uiSref": "",
+          "ngClick": "vm.openSubscribeModal('ultimate', userCreditCardForm.$valid)",
+          "className": "btn btn-custom btn-start-plan ng-scope"
+        },
+        {
+          "tag": "BUTTON",
+          "text": "×",
+          "href": "",
+          "uiSref": "",
+          "ngClick": "",
+          "className": "toast-close-button"
+        }
+      ],
+      "tables": [],
+      "forms": [
+        {
+          "tag": "INPUT",
+          "type": "text",
+          "name": "username",
+          "placeholder": "",
+          "id": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "text",
+          "name": "firstName",
+          "placeholder": "",
+          "id": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "text",
+          "name": "lastName",
+          "placeholder": "",
+          "id": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "email",
+          "name": "email",
+          "placeholder": "",
+          "id": ""
+        },
+        {
+          "tag": "SELECT",
+          "type": "select-one",
+          "name": "",
+          "placeholder": "",
+          "id": ""
+        },
+        {
+          "tag": "SELECT",
+          "type": "select-one",
+          "name": "",
+          "placeholder": "",
+          "id": ""
+        },
+        {
+          "tag": "SELECT",
+          "type": "select-one",
+          "name": "",
+          "placeholder": "",
+          "id": ""
+        }
+      ],
+      "bodyPreview": " Premium Feature\n\nUnlock Subusers - available with all Loopy Loyalty Subscriptions.\n\nHow to try out premium features during your free trial\n\nSubscribe to a plan Cancel\n \n\n   You haven't verified your email address. Resend verification email.\n\n15 days left on trial UPGRADE NOW\nSettings\nMy Account\nGeneral\nBusiness\nPrivacy\nPassword\nDeveloper Tools\nDelete\nUsername (cannot be changed)\nFirst Name*\nLast Name*\nEmail*\nUpdate\nBilling\nPlan\nCredit Card\nInvoices\n\nTRY OUT ANY PLAN. NO COMMITMENT. CANCEL ANYTIME.\n\nUS$ 25 /month\n \n\nSTARTER\n\nMonth-to-Month\nBilled Annually\nSubscribe to Starter Monthly\n\nIncludes :\n\n1 card design\n\n1 location\n\n1 beacon\n\n3 Subusers\n\nLabel text customisation\n\nUnique customer enrollments\n\nData Export\n\nUS$ 69 /month\n \n\nGROWTH\n\nMonth-to-Month\nBilled Annually\nSubscribe to Growth Monthly\n\nIncludes :\n\n3 card designs\n\n3 locations\n\n3 beacons\n\n10 subusers\n\nLabel text customisation\n\nUnique customer enrollments\n\nData Export\n\nUS$ 95 /month\n \n\nULTIMATE\n\nMonth-to-Month\nBilled Annually\nSubscribe to Ultimate Monthly\n\nIncludes :\n\n10 card designs\n\n10 locations\n\n10 beacons\n\n50 subusers\n\nLabel text customisation\n\nUnique customer enrollments\n\nData Export\n\nPlease note that unless you are in your free trial, clicking on Subscribe for any plan will immediately charge your credit card for the monthly or annual plan you have selected.\n\nLocations\n\nDisplay lock screen messages when customers are near your location(s).\n\nAdd Location\nMap\nSatellite\nMap data ©2026 Google\nTerms\nReport a map error\nBeacons\n\nDisplay lock screen messages when your customers are in proximity to your bluetooth beacon(s). Learn more.\n\nAdd Beacon\nZapier\n×\n[ll2 Error] Cannot set property isOpen of [object Object] which has only a getter"
+    },
+    {
+      "label": "My Cards",
+      "url": "https://app.loopyloyalty.com/manage-my-cards",
+      "title": "Loopy Loyalty",
+      "headings": [
+        {
+          "level": "H3",
+          "text": "Premium Feature"
+        }
+      ],
+      "interactive": [
+        {
+          "tag": "A",
+          "text": "Subusers",
+          "href": "https://docs.loopyloyalty.com/en/articles/1469700-create-and-manage-subusers",
+          "uiSref": "",
+          "ngClick": "",
+          "className": ""
+        },
+        {
+          "tag": "A",
+          "text": "How to try out premium features during your free trial",
+          "href": "http://docs.loopyloyalty.com/pricing-privacy-security-and-terms/how-to-try-out-premium-features-in-loopy-loyalty-during-your-free-trial",
+          "uiSref": "",
+          "ngClick": "",
+          "className": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Subscribe to a plan",
+          "href": "",
+          "uiSref": "",
+          "ngClick": "vm.ok()",
+          "className": "btn btn-custom"
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Cancel",
+          "href": "",
+          "uiSref": "",
+          "ngClick": "vm.cancel()",
+          "className": "btn btn-custom-back"
+        },
+        {
+          "tag": "A",
+          "text": "My Cards",
+          "href": "",
+          "uiSref": "",
+          "ngClick": "cc.navigateToState(obj.state)",
+          "className": "btn"
+        },
+        {
+          "tag": "A",
+          "text": "Subusers",
+          "href": "",
+          "uiSref": "",
+          "ngClick": "cc.navigateToState(obj.state)",
+          "className": "btn"
+        },
+        {
+          "tag": "A",
+          "text": "Start",
+          "href": "",
+          "uiSref": "",
+          "ngClick": "cc.navigateToState(obj.state)",
+          "className": "btn"
+        },
+        {
+          "tag": "A",
+          "text": "Settings",
+          "href": "",
+          "uiSref": "",
+          "ngClick": "cc.navigateToState(obj.state)",
+          "className": "btn"
+        },
+        {
+          "tag": "A",
+          "text": "Resend verification email",
+          "href": "",
+          "uiSref": "",
+          "ngClick": "cc.resend()",
+          "className": ""
+        },
+        {
+          "tag": "A",
+          "text": "Upgrade Now",
+          "href": "https://app.loopyloyalty.com/settings",
+          "uiSref": "container.settings",
+          "ngClick": "",
+          "className": "a-upgrade-now"
+        },
+        {
+          "tag": "BUTTON",
+          "text": "×",
+          "href": "",
+          "uiSref": "",
+          "ngClick": "",
+          "className": "toast-close-button"
+        }
+      ],
+      "tables": [],
+      "forms": [],
+      "bodyPreview": " Premium Feature\n\nUnlock Subusers - available with all Loopy Loyalty Subscriptions.\n\nHow to try out premium features during your free trial\n\nSubscribe to a plan Cancel\n \n\n   You haven't verified your email address. Resend verification email.\n\n15 days left on trial UPGRADE NOW\n×\n[ll2 Error] Cannot set property isOpen of [object Object] which has only a getter"
+    },
+    {
+      "label": "Subusers",
+      "url": "https://app.loopyloyalty.com/manage-my-cards",
+      "title": "Loopy Loyalty",
+      "headings": [
+        {
+          "level": "H3",
+          "text": "Premium Feature"
+        },
+        {
+          "level": "H3",
+          "text": "Premium Feature"
+        }
+      ],
+      "interactive": [
+        {
+          "tag": "A",
+          "text": "Subusers",
+          "href": "https://docs.loopyloyalty.com/en/articles/1469700-create-and-manage-subusers",
+          "uiSref": "",
+          "ngClick": "",
+          "className": ""
+        },
+        {
+          "tag": "A",
+          "text": "How to try out premium features during your free trial",
+          "href": "http://docs.loopyloyalty.com/pricing-privacy-security-and-terms/how-to-try-out-premium-features-in-loopy-loyalty-during-your-free-trial",
+          "uiSref": "",
+          "ngClick": "",
+          "className": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Subscribe to a plan",
+          "href": "",
+          "uiSref": "",
+          "ngClick": "vm.ok()",
+          "className": "btn btn-custom"
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Cancel",
+          "href": "",
+          "uiSref": "",
+          "ngClick": "vm.cancel()",
+          "className": "btn btn-custom-back"
+        },
+        {
+          "tag": "A",
+          "text": "My Cards",
+          "href": "",
+          "uiSref": "",
+          "ngClick": "cc.navigateToState(obj.state)",
+          "className": "btn"
+        },
+        {
+          "tag": "A",
+          "text": "Subusers",
+          "href": "",
+          "uiSref": "",
+          "ngClick": "cc.navigateToState(obj.state)",
+          "className": "btn"
+        },
+        {
+          "tag": "A",
+          "text": "Start",
+          "href": "",
+          "uiSref": "",
+          "ngClick": "cc.navigateToState(obj.state)",
+          "className": "btn"
+        },
+        {
+          "tag": "A",
+          "text": "Settings",
+          "href": "",
+          "uiSref": "",
+          "ngClick": "cc.navigateToState(obj.state)",
+          "className": "btn"
+        },
+        {
+          "tag": "A",
+          "text": "Resend verification email",
+          "href": "",
+          "uiSref": "",
+          "ngClick": "cc.resend()",
+          "className": ""
+        },
+        {
+          "tag": "A",
+          "text": "Upgrade Now",
+          "href": "https://app.loopyloyalty.com/settings",
+          "uiSref": "container.settings",
+          "ngClick": "",
+          "className": "a-upgrade-now"
+        },
+        {
+          "tag": "BUTTON",
+          "text": "×",
+          "href": "",
+          "uiSref": "",
+          "ngClick": "",
+          "className": "toast-close-button"
+        }
+      ],
+      "tables": [],
+      "forms": [],
+      "bodyPreview": " Premium Feature\n\nUnlock Subusers - available with all Loopy Loyalty Subscriptions.\n\nHow to try out premium features during your free trial\n\nSubscribe to a plan Cancel\n Premium Feature\n\nUnlock Subusers - available with all Loopy Loyalty Subscriptions.\n\nHow to try out premium features during your free trial\n\nSubscribe to a plan Cancel\n \n\n   You haven't verified your email address. Resend verification email.\n\n15 days left on trial UPGRADE NOW\n×\n[ll2 Error] Cannot set property isOpen of [object Object] which has only a getter"
+    },
+    {
+      "label": "Start",
+      "url": "https://app.loopyloyalty.com/help",
+      "title": "Loopy Loyalty",
+      "headings": [
+        {
+          "level": "H3",
+          "text": "Premium Feature"
+        },
+        {
+          "level": "H3",
+          "text": "Premium Feature"
+        },
+        {
+          "level": "H1",
+          "text": "Choose a Template"
+        },
+        {
+          "level": "H3",
+          "text": "Cafe Template"
+        },
+        {
+          "level": "H3",
+          "text": "Restaurant Template"
+        },
+        {
+          "level": "H3",
+          "text": "Retail Template"
+        },
+        {
+          "level": "H3",
+          "text": "Salon Template"
+        },
+        {
+          "level": "H3",
+          "text": "Entertainment Template"
+        },
+        {
+          "level": "H3",
+          "text": "Instructor Template"
+        },
+        {
+          "level": "H3",
+          "text": "Service Template"
+        },
+        {
+          "level": "H3",
+          "text": "Blank"
+        }
+      ],
+      "interactive": [
+        {
+          "tag": "A",
+          "text": "Subusers",
+          "href": "https://docs.loopyloyalty.com/en/articles/1469700-create-and-manage-subusers",
+          "uiSref": "",
+          "ngClick": "",
+          "className": ""
+        },
+        {
+          "tag": "A",
+          "text": "How to try out premium features during your free trial",
+          "href": "http://docs.loopyloyalty.com/pricing-privacy-security-and-terms/how-to-try-out-premium-features-in-loopy-loyalty-during-your-free-trial",
+          "uiSref": "",
+          "ngClick": "",
+          "className": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Subscribe to a plan",
+          "href": "",
+          "uiSref": "",
+          "ngClick": "vm.ok()",
+          "className": "btn btn-custom"
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Cancel",
+          "href": "",
+          "uiSref": "",
+          "ngClick": "vm.cancel()",
+          "className": "btn btn-custom-back"
+        },
+        {
+          "tag": "A",
+          "text": "My Cards",
+          "href": "",
+          "uiSref": "",
+          "ngClick": "cc.navigateToState(obj.state)",
+          "className": "btn"
+        },
+        {
+          "tag": "A",
+          "text": "Subusers",
+          "href": "",
+          "uiSref": "",
+          "ngClick": "cc.navigateToState(obj.state)",
+          "className": "btn"
+        },
+        {
+          "tag": "A",
+          "text": "Start",
+          "href": "",
+          "uiSref": "",
+          "ngClick": "cc.navigateToState(obj.state)",
+          "className": "btn"
+        },
+        {
+          "tag": "A",
+          "text": "Settings",
+          "href": "",
+          "uiSref": "",
+          "ngClick": "cc.navigateToState(obj.state)",
+          "className": "btn"
+        },
+        {
+          "tag": "A",
+          "text": "Resend verification email",
+          "href": "",
+          "uiSref": "",
+          "ngClick": "cc.resend()",
+          "className": ""
+        },
+        {
+          "tag": "A",
+          "text": "Upgrade Now",
+          "href": "https://app.loopyloyalty.com/settings",
+          "uiSref": "container.settings",
+          "ngClick": "",
+          "className": "a-upgrade-now"
+        },
+        {
+          "tag": "BUTTON",
+          "text": "×",
+          "href": "",
+          "uiSref": "",
+          "ngClick": "",
+          "className": "toast-close-button"
+        }
+      ],
+      "tables": [],
+      "forms": [],
+      "bodyPreview": " Premium Feature\n\nUnlock Subusers - available with all Loopy Loyalty Subscriptions.\n\nHow to try out premium features during your free trial\n\nSubscribe to a plan Cancel\n Premium Feature\n\nUnlock Subusers - available with all Loopy Loyalty Subscriptions.\n\nHow to try out premium features during your free trial\n\nSubscribe to a plan Cancel\n \n\n   You haven't verified your email address. Resend verification email.\n\n15 days left on trial UPGRADE NOW\nChoose a Template\nCafe Template\nSTAMPS REQUIRED UNTIL NEXT REWARD\n\t\n8\n Tap ⋯ for details\nRestaurant Template\nSTAMPS REQUIRED UNTIL NEXT REWARD\n\t\n10\n Tap ⋯ for details\nRetail Template\nSTAMPS REQUIRED UNTIL NEXT REWARD\n\t\n19\n Tap ⋯ for details\nSalon Template\nSTAMPS REQUIRED UNTIL NEXT REWARD\n\t\n13\n Tap ⋯ for details\nEntertainment Template\nSTAMPS REQUIRED UNTIL NEXT REWARD\n\t\n22\n Tap ⋯ for details\nInstructor Template\nSTAMPS REQUIRED UNTIL NEXT REWARD\n\t\n8\n Tap ⋯ for details\nService Template\nSTAMPS REQUIRED UNTIL NEXT REWARD\n\t\n3\n Tap ⋯ for details\nBlank\nResources\nQuick Start Guide\nTutorials & Support\nStamper App\n×\n[ll2 Error] Cannot set property isOpen of [object Object] which has only a getter"
+    },
+    {
+      "label": "Settings",
+      "url": "https://app.loopyloyalty.com/settings",
+      "title": "Loopy Loyalty",
+      "headings": [
+        {
+          "level": "H3",
+          "text": "Premium Feature"
+        },
+        {
+          "level": "H3",
+          "text": "Premium Feature"
+        },
+        {
+          "level": "H1",
+          "text": "Settings"
+        },
+        {
+          "level": "H2",
+          "text": "My Account"
+        },
+        {
+          "level": "H2",
+          "text": "Billing"
+        }
+      ],
+      "interactive": [
+        {
+          "tag": "A",
+          "text": "Subusers",
+          "href": "https://docs.loopyloyalty.com/en/articles/1469700-create-and-manage-subusers",
+          "uiSref": "",
+          "ngClick": "",
+          "className": ""
+        },
+        {
+          "tag": "A",
+          "text": "How to try out premium features during your free trial",
+          "href": "http://docs.loopyloyalty.com/pricing-privacy-security-and-terms/how-to-try-out-premium-features-in-loopy-loyalty-during-your-free-trial",
+          "uiSref": "",
+          "ngClick": "",
+          "className": ""
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Subscribe to a plan",
+          "href": "",
+          "uiSref": "",
+          "ngClick": "vm.ok()",
+          "className": "btn btn-custom"
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Cancel",
+          "href": "",
+          "uiSref": "",
+          "ngClick": "vm.cancel()",
+          "className": "btn btn-custom-back"
+        },
+        {
+          "tag": "A",
+          "text": "My Cards",
+          "href": "",
+          "uiSref": "",
+          "ngClick": "cc.navigateToState(obj.state)",
+          "className": "btn"
+        },
+        {
+          "tag": "A",
+          "text": "Subusers",
+          "href": "",
+          "uiSref": "",
+          "ngClick": "cc.navigateToState(obj.state)",
+          "className": "btn"
+        },
+        {
+          "tag": "A",
+          "text": "Start",
+          "href": "",
+          "uiSref": "",
+          "ngClick": "cc.navigateToState(obj.state)",
+          "className": "btn"
+        },
+        {
+          "tag": "A",
+          "text": "Settings",
+          "href": "",
+          "uiSref": "",
+          "ngClick": "cc.navigateToState(obj.state)",
+          "className": "btn"
+        },
+        {
+          "tag": "A",
+          "text": "Resend verification email",
+          "href": "",
+          "uiSref": "",
+          "ngClick": "cc.resend()",
+          "className": ""
+        },
+        {
+          "tag": "A",
+          "text": "Upgrade Now",
+          "href": "https://app.loopyloyalty.com/settings",
+          "uiSref": "container.settings",
+          "ngClick": "",
+          "className": "a-upgrade-now"
+        },
+        {
+          "tag": "A",
+          "text": "General",
+          "href": "https://app.loopyloyalty.com/",
+          "uiSref": "",
+          "ngClick": "select($event)",
+          "className": "nav-link ng-binding"
+        },
+        {
+          "tag": "A",
+          "text": "Business",
+          "href": "https://app.loopyloyalty.com/",
+          "uiSref": "",
+          "ngClick": "select($event)",
+          "className": "nav-link ng-binding"
+        },
+        {
+          "tag": "A",
+          "text": "Privacy",
+          "href": "https://app.loopyloyalty.com/",
+          "uiSref": "",
+          "ngClick": "select($event)",
+          "className": "nav-link ng-binding"
+        },
+        {
+          "tag": "A",
+          "text": "Password",
+          "href": "https://app.loopyloyalty.com/",
+          "uiSref": "",
+          "ngClick": "select($event)",
+          "className": "nav-link ng-binding"
+        },
+        {
+          "tag": "A",
+          "text": "Developer Tools",
+          "href": "https://app.loopyloyalty.com/",
+          "uiSref": "",
+          "ngClick": "select($event)",
+          "className": "nav-link ng-binding"
+        },
+        {
+          "tag": "A",
+          "text": "Delete",
+          "href": "https://app.loopyloyalty.com/",
+          "uiSref": "",
+          "ngClick": "select($event)",
+          "className": "nav-link ng-binding"
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Update",
+          "href": "",
+          "uiSref": "",
+          "ngClick": "",
+          "className": "btn btn-custom btn-lg ng-scope"
+        },
+        {
+          "tag": "A",
+          "text": "Plan",
+          "href": "https://app.loopyloyalty.com/",
+          "uiSref": "",
+          "ngClick": "select($event)",
+          "className": "nav-link ng-binding"
+        },
+        {
+          "tag": "A",
+          "text": "Credit Card",
+          "href": "https://app.loopyloyalty.com/",
+          "uiSref": "",
+          "ngClick": "select($event)",
+          "className": "nav-link ng-binding"
+        },
+        {
+          "tag": "A",
+          "text": "Invoices",
+          "href": "https://app.loopyloyalty.com/",
+          "uiSref": "",
+          "ngClick": "select($event)",
+          "className": "nav-link ng-binding"
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Subscribe to Starter Monthly",
+          "href": "",
+          "uiSref": "",
+          "ngClick": "vm.openSubscribeModal('starter', userCreditCardForm.$valid)",
+          "className": "btn btn-custom btn-start-plan ng-scope"
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Subscribe to Growth Monthly",
+          "href": "",
+          "uiSref": "",
+          "ngClick": "vm.openSubscribeModal('growth', userCreditCardForm.$valid)",
+          "className": "btn btn-custom btn-start-plan ng-scope"
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Subscribe to Ultimate Monthly",
+          "href": "",
+          "uiSref": "",
+          "ngClick": "vm.openSubscribeModal('ultimate', userCreditCardForm.$valid)",
+          "className": "btn btn-custom btn-start-plan ng-scope"
+        }
+      ],
+      "tables": [],
+      "forms": [
+        {
+          "tag": "INPUT",
+          "type": "text",
+          "name": "username",
+          "placeholder": "",
+          "id": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "text",
+          "name": "firstName",
+          "placeholder": "",
+          "id": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "text",
+          "name": "lastName",
+          "placeholder": "",
+          "id": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "email",
+          "name": "email",
+          "placeholder": "",
+          "id": ""
+        },
+        {
+          "tag": "SELECT",
+          "type": "select-one",
+          "name": "",
+          "placeholder": "",
+          "id": ""
+        },
+        {
+          "tag": "SELECT",
+          "type": "select-one",
+          "name": "",
+          "placeholder": "",
+          "id": ""
+        },
+        {
+          "tag": "SELECT",
+          "type": "select-one",
+          "name": "",
+          "placeholder": "",
+          "id": ""
+        }
+      ],
+      "bodyPreview": " Premium Feature\n\nUnlock Subusers - available with all Loopy Loyalty Subscriptions.\n\nHow to try out premium features during your free trial\n\nSubscribe to a plan Cancel\n Premium Feature\n\nUnlock Subusers - available with all Loopy Loyalty Subscriptions.\n\nHow to try out premium features during your free trial\n\nSubscribe to a plan Cancel\n \n\n   You haven't verified your email address. Resend verification email.\n\n15 days left on trial UPGRADE NOW\nSettings\nMy Account\nGeneral\nBusiness\nPrivacy\nPassword\nDeveloper Tools\nDelete\nUsername (cannot be changed)\nFirst Name*\nLast Name*\nEmail*\nUpdate\nBilling\nPlan\nCredit Card\nInvoices\n\nTRY OUT ANY PLAN. NO COMMITMENT. CANCEL ANYTIME.\n\nUS$ 25 /month\n \n\nSTARTER\n\nMonth-to-Month\nBilled Annually\nSubscribe to Starter Monthly\n\nIncludes :\n\n1 card design\n\n1 location\n\n1 beacon\n\n3 Subusers\n\nLabel text customisation\n\nUnique customer enrollments\n\nData Export\n\nUS$ 69 /month\n \n\nGROWTH\n\nMonth-to-Month\nBilled Annually\nSubscribe to Growth Monthly\n\nIncludes :\n\n3 card designs\n\n3 locations\n\n3 beacons\n\n10 subusers\n\nLabel text customisation\n\nUnique customer enrollments\n\nData Export\n\nUS$ 95 /month\n \n\nULTIMATE\n\nMonth-to-Month\nBilled Annually\nSubscribe to Ultimate Monthly\n\nIncludes :\n\n10 card designs\n\n10 locations\n\n10 beacons\n\n50 subusers\n\nLabel text customisation\n\nUnique customer enrollments\n\nData Export\n\nPlease note that unless you are in your free trial, clicking on Subscribe for any plan will immediately charge your credit card for the monthly or annual plan you have selected.\n\nLocations\n\nDisplay lock screen messages when customers are near your location(s).\n\nAdd Location\nMap\nSatellite\nMap data ©2026 Google\nTerms\nReport a map error\nBeacons\n\nDisplay lock screen messages when your customers are in proximity to your bluetooth beacon(s). Learn more.\n\nAdd Beacon\nZapier"
+    }
+  ],
+  "apiCalls": [
+    {
+      "method": "GET",
+      "path": "/auth/login",
+      "status": 301,
+      "hasPostData": false,
+      "responsePreview": ""
+    },
+    {
+      "method": "GET",
+      "path": "/",
+      "status": 200,
+      "hasPostData": false,
+      "responsePreview": "<!DOCTYPE html>\n<html ng-app=\"app\">\n\n<head>\n  <title ng-bind=\"title\">\n    Loopy Loyalty\n  </title>\n  <!-- Google Tag Manager -->\n<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push(\n\n  {'gtm.start': new Date().getTime(),event:'gtm.js'}\n  );var f=d.getElementsByTagName(s)[0],\n  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n  })(window,document,'script','dataLayer','GTM-MLR2SL5');</script>"
+    },
+    {
+      "method": "POST",
+      "path": "/account/login",
+      "status": 200,
+      "hasPostData": true,
+      "responsePreview": "{\"email\":\"ibefehdi@gmail.com\",\"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJidXNpbmVzcyI6ImliZWZlaGRpIiwiY3JlYXRlVGltZSI6IjIwMjYtMTAtMTdUMDY6MDQ6NDIuOTI5OTM0ODE1WiIsImVtYWlsIjoiaWJlZmVoZGlAZ21haWwuY29tIiwiZXhwIjoxNzkyMjg4NjYyLCJleHBpcnlEYXRlIjoiMjAyNi0xMS0wMVQwNjowNDoyNi4wNjc2NDQ3NzZaIiwiaWF0IjoxNzkyMjIwMjYyLCJpaGFzaCI6Ijc2NTJjZDM1YmJkM2MyZTQyMjJjNTIzNTI0Njc5MmExM2U3Yzk4N2U2MDVjNjhmMjZlOTk0MjYxNjcxZjYyNTUiLCJsaW1pdCI6MSwicGtBZG1pbiI6ZmFsc2UsInBsYW4iOiJ0cmlhbCIsInN0YXR1cyI6InNldHVwIiwidHJpYWxE"
+    },
+    {
+      "method": "GET",
+      "path": "/campaigns",
+      "status": 200,
+      "hasPostData": false,
+      "responsePreview": "{\"offset\":23847,\"total_rows\":0,\"rows\":[]}"
+    },
+    {
+      "method": "GET",
+      "path": "/account",
+      "status": 200,
+      "hasPostData": false,
+      "responsePreview": "{\"MailSubscriptions\":null,\"business\":{\"AupCheckFailed\":false,\"AupCheckProcessed\":true,\"addressLine1\":\"\",\"country\":\"\",\"email\":\"\",\"name\":\"ibefehdi\",\"phone\":\"\",\"taxId\":\"\",\"website\":\"https://ibefehdi.com\"},\"businessBilling\":{\"AupCheckFailed\":false,\"AupCheckProcessed\":true,\"addressLine1\":\"\",\"country\":\"\",\"email\":\"\",\"name\":\"ibefehdi\",\"phone\":\"\",\"taxId\":\"\",\"website\":\"https://ibefehdi.com\"},\"discounts\":[],\"email\":\"ibefehdi@gmail.com\",\"expiry\":\"2026-11-01T06:04:26.067644776Z\",\"firstName\":\"Fahad\",\"id\":\"6jh"
+    },
+    {
+      "method": "GET",
+      "path": "/images",
+      "status": 200,
+      "hasPostData": false,
+      "responsePreview": "<?xml version=\"1.0\"?>\n<svg width=\"1125\" height=\"432\"\n     xmlns=\"http://www.w3.org/2000/svg\"\n     xmlns:xlink=\"http://www.w3.org/1999/xlink\">\n<image x=\"0\" y=\"0\" width=\"1125\" height=\"432\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABGUAAAGwCAIAAACPQ08yAACAAElEQVR4nLz9B3MkSZIfinvIlCWggR5xs2J4Z/+7/5rxfej3Nd5X4LMljTxyuXs3PdPoboiSKUM9C/eqRKEEumf2jLm9GKAqMzLCw8PDw38u5L/+P/83AFzfXAPA/YcPIYS//OUvjLFyVIYQnLWMMakUAPz+978LIczncwB4eHhgjAkhGGN//OMfAGA0GoUQfvrpJwD4+PGeMaaUShMJAEVRAEBZxgY/44PWOMb"
+    },
+    {
+      "method": "GET",
+      "path": "/manage-my-cards",
+      "status": 301,
+      "hasPostData": false,
+      "responsePreview": ""
+    },
+    {
+      "method": "GET",
+      "path": "/events/dashboard",
+      "status": 200,
+      "hasPostData": false,
+      "responsePreview": "{}"
+    },
+    {
+      "method": "GET",
+      "path": "/locations",
+      "status": 200,
+      "hasPostData": false,
+      "responsePreview": "{\"offset\":11955,\"total_rows\":0,\"rows\":[]}"
+    },
+    {
+      "method": "GET",
+      "path": "/beacons",
+      "status": 200,
+      "hasPostData": false,
+      "responsePreview": "{\"offset\":1404,\"total_rows\":0,\"rows\":[]}"
+    }
+  ],
+  "navMappings": [
+    {
+      "text": "My Cards",
+      "stateName": "container.manage-my-cards"
+    },
+    {
+      "text": "Subusers",
+      "stateName": "container.subusers"
+    },
+    {
+      "text": "Start",
+      "stateName": "container.help"
+    },
+    {
+      "text": "Settings",
+      "stateName": "container.settings"
+    },
+    {
+      "text": "My Cards",
+      "stateName": "container.manage-my-cards"
+    },
+    {
+      "text": "Subusers",
+      "stateName": "container.subusers"
+    },
+    {
+      "text": "Start",
+      "stateName": "container.help"
+    },
+    {
+      "text": "Settings",
+      "stateName": "container.settings"
+    }
+  ],
+  "angularInfo": {
+    "hasAngular": true,
+    "currentState": "container.manage-my-cards",
+    "allStates": [
+      {
+        "name": "404",
+        "url": "/404"
+      },
+      {
+        "name": "",
+        "url": "^"
+      },
+      {
+        "name": "auth",
+        "url": "/auth"
+      },
+      {
+        "name": "auth.login",
+        "url": "/login"
+      },
+      {
+        "name": "auth.renew-subscription",
+        "url": "/renew-subscription"
+      },
+      {
+        "name": "auth.verify",
+        "url": "/verify/:code"
+      },
+      {
+        "name": "auth.forgot-password",
+        "url": "/forgot-password"
+      },
+      {
+        "name": "auth.reset-password",
+        "url": "/reset-password/:username/:code"
+      },
+      {
+        "name": "signup",
+        "url": "/signup"
+      },
+      {
+        "name": "signup.get-started",
+        "url": "/get-started"
+      },
+      {
+        "name": "setup",
+        "url": "/setup"
+      },
+      {
+        "name": "setup.account",
+        "url": "/account"
+      },
+      {
+        "name": "landing-page",
+        "url": "/landing-page/:campaignId"
+      },
+      {
+        "name": "stamp",
+        "url": "/stamp"
+      },
+      {
+        "name": "container"
+      },
+      {
+        "name": "container.dash",
+        "url": "/dash"
+      },
+      {
+        "name": "container.help",
+        "url": "/help"
+      },
+      {
+        "name": "container.manage-my-cards",
+        "url": "/manage-my-cards"
+      },
+      {
+        "name": "container.settings",
+        "url": "/settings"
+      },
+      {
+        "name": "container.subusers",
+        "url": "/subusers"
+      },
+      {
+        "name": "container.subuser-profile",
+        "url": "/subuser/:subuserId"
+      },
+      {
+        "name": "invoice",
+        "url": "/invoice/:invoiceId"
+      },
+      {
+        "name": "container.edit-design",
+        "url": "/edit/:campaignId/design"
+      },
+      {
+        "name": "container.edit-details",
+        "url": "/edit/:campaignId/details"
+      },
+      {
+        "name": "container.edit-locations",
+        "url": "/edit/:campaignId/locations"
+      },
+      {
+        "name": "container.edit-data",
+        "url": "/edit/:campaignId/data"
+      },
+      {
+        "name": "container.edit-labels",
+        "url": "/edit/:campaignId/labels"
+      },
+      {
+        "name": "container.edit-support",
+        "url": "/edit/:campaignId/support"
+      },
+      {
+        "name": "container.customers",
+        "url": "/customers/:campaignId"
+      },
+      {
+        "name": "container.customer-profile",
+        "url": "/customers/:campaignId/profile/:cardId"
+      },
+      {
+        "name": "container.insights",
+        "url": "/insights/:campaignId"
+      },
+      {
+        "name": "container.messages",
+        "url": "/messages/:campaignId"
+      },
+      {
+        "name": "container.overview",
+        "url": "/overview/:campaignId"
+      },
+      {
+        "name": "container.csv-verify",
+        "url": "/csv-verify/:file"
+      }
+    ]
+  }
+}

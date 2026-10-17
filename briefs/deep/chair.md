@@ -9,14 +9,14 @@ Inputs: everything in {{COUNCIL_DIR}}/output/technical/ (settings.md, reports.md
 Structure of TECHNICAL_REPORT.md:
 
 1. Scope and method: what this pass covered, what changed versus FINAL_REPORT.md, confidence summary.
-2. System architecture: component diagram, frontend stack, API hosts and style, auth mechanism (no secrets), realtime, third parties.
+2. System architecture: component diagram, frontend stack, API hosts and style, auth mechanism (no secrets), realtime, third parties (including wallet or pass hosts if observed).
 3. Domain model: classDiagram and erDiagram, entity reference tables.
 4. Module technical reference: for every page, grouped by module: route, purpose, UI structure, fields, actions, API calls, links in and out.
 5. Page connectivity: full adjacency table and navigation flowchart.
 6. Setup and settings reference, including "setting -> affected features".
-7. Reports reference: catalogue, metrics, filters, data lineage.
+7. Analytics reference: catalogue, metrics, filters, data lineage.
 8. Create and edit flows: one sequenceDiagram per flow, validation rules, propagation matrix.
-9. Lifecycles: stateDiagram-v2 for appointment, sale/payment, stock order and any others observed.
+9. Lifecycles: stateDiagram-v2 for program, pass, reward, and any other lifecycle the evidence supports.
 10. API endpoint catalogue (complete table).
 11. Items missed by the first survey and how they were resolved; remaining unknowns.
 12. Test records created and cleanup checklist.

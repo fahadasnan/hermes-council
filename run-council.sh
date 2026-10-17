@@ -5,7 +5,7 @@
 #   ./run-council.sh plan ["optional focus"]   design council: phase plan, decisions, conventions, Cursor/Claude skills -> output/plan/
 #   ./run-council.sh review ["optional focus"] adversarial cross-review of the plan, then the chair applies accepted fixes
 #   ./run-council.sh final ["optional focus"]  last pass: one self-contained output/plan/PLAN.md (phases and subphases, UML,
-#                                               reasoning, Fresha parity, extra features)
+#                                               reasoning, Loopy Loyalty parity, extra features)
 #                                               (review and final wait for an unfinished plan chair automatically)
 #   ./run-council.sh audit <phase> <repo> ["optional focus"]
 #                                               audit whether a full plan phase (e.g. 0 or 5, every subphase plus the exit
@@ -152,17 +152,17 @@ elif [[ $MODE == plan ]]; then
 
   P="$OUT/plan"
   B="$P/briefs"
-  mkdir -p "$B" "$P/skill-drafts" "$P/sql" "$P/skills/.cursor/skills" "$P/skills/.claude/skills"
+  mkdir -p "$B" "$P/skill-drafts" "$P/django" "$P/skills/.cursor/skills" "$P/skills/.claude/skills"
   for f in briefs/plan/*.md; do
     sed "s|{{COUNCIL_DIR}}|$DIR|g" "$f" > "$B/${f:t}"
   done
 
   REPORT="$P/IMPLEMENTATION_PLAN.md"
-  GOAL="Design council for a new multi-tenant spa/salon SaaS (first tenant SpaCorner, multiple branches with their own staff and services) on Supabase + Edge Functions (Deno) + React/TypeScript, using the reverse-engineering reports in $OUT as read-only input. Every member reads $B/common.md and $B/skill-format.md first, then its own brief. Verifier follows $B/verifier.md. Chair follows $B/chair.md. $FOCUS Final deliverables: $P/decisions.md, $REPORT, $P/CONVENTIONS.md, and the skills in $P/skills/."
+  GOAL="Design council for a new multi-tenant wallet-pass SaaS for Kuwait and the GCC. A business asks us for an account and we create it; public signup and subscription billing are the last phase only. The product issues every Apple Wallet pass style and every current Google Wallet class, with relevant locations on any pass. Staff enroll, update, and redeem. When a store already has an API, the MVP must be easy to connect to it (tenant API and signed webhooks); named POS connectors come later. Stack: Django, PostgreSQL, Celery and React/TypeScript. Reverse-engineering reports in $OUT are read-only input. Every member reads $B/common.md and $B/skill-format.md first, then its own brief. Verifier follows $B/verifier.md. Chair follows $B/chair.md. $FOCUS Final deliverables: $P/decisions.md, $REPORT, $P/CONVENTIONS.md, and the skills in $P/skills/."
   WORKERS=(
     --worker "cartographer:Product requirements, scope and roles - follow briefs $B/common.md and $B/requirements.md"
-    --worker "linker:Data model, multi-tenancy and database conventions - follow briefs $B/common.md and $B/data-model.md"
-    --worker "linker:Edge Functions backend architecture and conventions - follow briefs $B/common.md and $B/backend.md"
+    --worker "linker:Data model, multi-tenancy and Django models - follow briefs $B/common.md and $B/data-model.md"
+    --worker "linker:Django API, services and wallet worker - follow briefs $B/common.md and $B/backend.md"
     --worker "cartographer:Frontend architecture, i18n and RTL conventions - follow briefs $B/common.md and $B/frontend.md"
   )
 elif [[ $MODE == review ]]; then
@@ -180,10 +180,10 @@ elif [[ $MODE == review ]]; then
   done
 
   REPORT="$P/REVISION_LOG.md"
-  GOAL="Round 2 adversarial review of the multi-tenant spa/salon SaaS plan in $P. Reviewers audit work they did not write and only write to $R. Every member reads $B/common.md first, then its own brief. Verifier follows $B/verifier.md. Chair follows $B/chair.md and applies the accepted fixes to decisions.md, IMPLEMENTATION_PLAN.md, CONVENTIONS.md, the SQL drafts and the skills. $FOCUS Final deliverables: the revised plan files and $REPORT."
+  GOAL="Round 2 adversarial review of the multi-tenant loyalty SaaS plan in $P. Reviewers audit work they did not write and only write to $R. Every member reads $B/common.md first, then its own brief. Verifier follows $B/verifier.md. Chair follows $B/chair.md and applies the accepted fixes to decisions.md, IMPLEMENTATION_PLAN.md, CONVENTIONS.md, the Django models and the skills. $FOCUS Final deliverables: the revised plan files and $REPORT."
   WORKERS=(
     --worker "linker:Coverage, requirements and frontend audit - follow briefs $B/common.md and $B/coverage.md"
-    --worker "cartographer:Data model, SQL, security and Edge Functions audit - follow briefs $B/common.md and $B/data-backend.md"
+    --worker "cartographer:Data model, Django API, security and worker audit - follow briefs $B/common.md and $B/data-backend.md"
     --worker "linker:Decisions and conventions audit - follow briefs $B/common.md and $B/decisions-audit.md"
     --worker "cartographer:Implementation plan and skills audit - follow briefs $B/common.md and $B/plan-skills-audit.md"
   )
@@ -202,13 +202,13 @@ elif [[ $MODE == final ]]; then
   done
 
   REPORT="$P/PLAN.md"
-  GOAL="Final round for the multi-tenant spa/salon SaaS plan in $P: go over the revised plan once more and produce one self-contained PLAN.md with phases and subphases, UML diagrams, the reasoning behind every decision, the council's findings, the Fresha parity matrix, and extra features beyond Fresha. Every member reads $B/common.md first, then its own brief. Verifier follows $B/verifier.md. Chair follows $B/chair.md. $FOCUS Final deliverable: $REPORT."
+  GOAL="Final round for the multi-tenant loyalty SaaS plan in $P: go over the revised plan once more and produce one self-contained PLAN.md with phases and subphases, UML diagrams, the reasoning behind every decision, the council's findings, the Loopy Loyalty parity matrix, and extra features beyond Loopy Loyalty. Every member reads $B/common.md first, then its own brief. Verifier follows $B/verifier.md. Chair follows $B/chair.md. $FOCUS Final deliverable: $REPORT."
   WORKERS=(
-    --worker "cartographer:Fresha parity, extra features and user journeys - follow briefs $B/common.md and $B/parity.md"
+    --worker "cartographer:Loopy Loyalty parity, extra features and user journeys - follow briefs $B/common.md and $B/parity.md"
     --worker "linker:Architecture and UML diagrams - follow briefs $B/common.md and $B/architecture-uml.md"
     --worker "cartographer:Decisions reasoning, council findings and a final independent pass - follow briefs $B/common.md and $B/reasoning.md"
     --worker "linker:Phases and subphases with backlog, dependencies and timeline - follow briefs $B/common.md and $B/phases.md"
-    --worker "linker:Corrected SQL migrations and RLS tests - follow briefs $B/common.md and $B/sql.md"
+    --worker "linker:Corrected Django models and tenant-isolation tests - follow briefs $B/common.md and $B/django.md"
   )
 elif [[ $MODE == audit ]]; then
   A="$OUT/audit/phase-$PHASE"

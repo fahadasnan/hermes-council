@@ -1,0 +1,395 @@
+[
+  {
+    "label": "manage-my-cards",
+    "url": "https://app.loopyloyalty.com/manage-my-cards",
+    "headings": [],
+    "interactive": [
+      {
+        "tag": "A",
+        "text": "My Cards",
+        "href": "",
+        "uiSref": ""
+      },
+      {
+        "tag": "A",
+        "text": "Insights",
+        "href": "",
+        "uiSref": ""
+      },
+      {
+        "tag": "A",
+        "text": "Subusers",
+        "href": "",
+        "uiSref": ""
+      },
+      {
+        "tag": "A",
+        "text": "Start",
+        "href": "",
+        "uiSref": ""
+      },
+      {
+        "tag": "A",
+        "text": "Settings",
+        "href": "",
+        "uiSref": ""
+      },
+      {
+        "tag": "A",
+        "text": "Resend verification email",
+        "href": "",
+        "uiSref": ""
+      },
+      {
+        "tag": "A",
+        "text": "Upgrade Now",
+        "href": "https://app.loopyloyalty.com/settings",
+        "uiSref": "container.settings"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "MANAGE",
+        "href": "",
+        "uiSref": ""
+      },
+      {
+        "tag": "BUTTON",
+        "text": "DELETE",
+        "href": "",
+        "uiSref": ""
+      }
+    ],
+    "body": " \n\n   You haven't verified your email address. Resend verification email.\n\n15 days left on trial UPGRADE NOW\nSTAMPS REQUIRED UNTIL NEXT REWARD\n\t\n8\n Tap ⋯ for details\n\nCOUNCIL TEST - DRAFT\n\nMANAGE DELETE "
+  },
+  {
+    "label": "manage-card",
+    "url": "https://app.loopyloyalty.com/edit/wI4XeFr6rHCTUHGOEFazZ/design",
+    "headings": [
+      {
+        "level": "H3",
+        "text": "Type"
+      },
+      {
+        "level": "H3",
+        "text": "Images"
+      },
+      {
+        "level": "H3",
+        "text": "Stamps"
+      }
+    ],
+    "interactive": [
+      {
+        "tag": "A",
+        "text": "Overview",
+        "href": "",
+        "uiSref": ""
+      },
+      {
+        "tag": "A",
+        "text": "Insights",
+        "href": "",
+        "uiSref": ""
+      },
+      {
+        "tag": "A",
+        "text": "Messages",
+        "href": "",
+        "uiSref": ""
+      },
+      {
+        "tag": "A",
+        "text": "Customers",
+        "href": "",
+        "uiSref": ""
+      },
+      {
+        "tag": "A",
+        "text": "Edit",
+        "href": "",
+        "uiSref": ""
+      },
+      {
+        "tag": "A",
+        "text": "Resend verification email",
+        "href": "",
+        "uiSref": ""
+      },
+      {
+        "tag": "A",
+        "text": "Upgrade Now",
+        "href": "https://app.loopyloyalty.com/settings",
+        "uiSref": "container.settings"
+      },
+      {
+        "tag": "A",
+        "text": "Design",
+        "href": "",
+        "uiSref": ""
+      },
+      {
+        "tag": "A",
+        "text": "Details",
+        "href": "",
+        "uiSref": ""
+      },
+      {
+        "tag": "A",
+        "text": "Locations",
+        "href": "",
+        "uiSref": ""
+      },
+      {
+        "tag": "A",
+        "text": "Support",
+        "href": "",
+        "uiSref": ""
+      },
+      {
+        "tag": "A",
+        "text": "Data",
+        "href": "",
+        "uiSref": ""
+      },
+      {
+        "tag": "A",
+        "text": "Custom",
+        "href": "",
+        "uiSref": ""
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Save",
+        "href": "",
+        "uiSref": ""
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Save & Preview",
+        "href": "",
+        "uiSref": ""
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Activate",
+        "href": "",
+        "uiSref": ""
+      },
+      {
+        "tag": "A",
+        "text": "Watch video tutorial: Designing your Card",
+        "href": "",
+        "uiSref": ""
+      }
+    ],
+    "body": "   You haven't verified your email address. Resend verification email.\n\n15 days left on trial UPGRADE NOW\nIn view: COUNCIL TEST\n Design\n Details\n Locations\n Support\n Data\n Custom \nSave\nSave & Preview\nActivate\n Watch video tutorial: Designing your Card\nType \nSingle Reward\nMulti Reward\nImages\nIcon \nicon_file\n\nRecommended size: 87x87 pixels. Must be square.\n\nLogo \nlogo_file\n\nRecommended size: 480x150 pixels. Should have a minimum height of 150 px and a maximum width of (height x 3.2).\n\nStamps \n1 stamps\n2 stamps\n3 stamps\n4 stamps\n5 stamps\n6 stamps\n7 stamps\n8 stamps\n9 stamps\n10 stamps\n11 stamps\n12 stamps\n13 stamps\n14 stamps\n15 stamps\n16 stamps\n17 stamps\n18 stamps\n19 stamps\n20 stamps\n21 stamps\n22 stamps\n23 stamps\n24 stamps\n25 stamps\n26 stamps\n27 stamps\n28 stamps\n29 stamps\n30 stamps\nPick Stamped Image\nbagel\n\nOR\n\nUpload Stamped Image\nstampImage_file\n\nMinimum square resolution of 200 x 200 px\n\nPick Un-stamped Image\nbagel\n\nOR\n\nUpload Un-stamped Image\nunstampImage_file\n\nMinimum square resolution of 200 x 200 px\n\nOR\n\nUse Stamped Image \nColors \nCard\nBackground\nText\nBackground\nStamp Circle\nStamp\n\nYour Customers' View\n\nSTAMPS REQUIRED UNTIL NEXT REWARD\n\t\n8\n Tap ⋯ for details"
+  },
+  {
+    "label": "insights",
+    "url": "https://app.loopyloyalty.com/dash",
+    "headings": [
+      {
+        "level": "H2",
+        "text": "Total statistics"
+      },
+      {
+        "level": "H2",
+        "text": "Acquisition"
+      }
+    ],
+    "interactive": [
+      {
+        "tag": "A",
+        "text": "My Cards",
+        "href": "",
+        "uiSref": ""
+      },
+      {
+        "tag": "A",
+        "text": "Insights",
+        "href": "",
+        "uiSref": ""
+      },
+      {
+        "tag": "A",
+        "text": "Subusers",
+        "href": "",
+        "uiSref": ""
+      },
+      {
+        "tag": "A",
+        "text": "Start",
+        "href": "",
+        "uiSref": ""
+      },
+      {
+        "tag": "A",
+        "text": "Settings",
+        "href": "",
+        "uiSref": ""
+      },
+      {
+        "tag": "A",
+        "text": "Resend verification email",
+        "href": "",
+        "uiSref": ""
+      },
+      {
+        "tag": "A",
+        "text": "Upgrade Now",
+        "href": "https://app.loopyloyalty.com/settings",
+        "uiSref": "container.settings"
+      }
+    ],
+    "body": "Insights\n \n\n   You haven't verified your email address. Resend verification email.\n\n15 days left on trial UPGRADE NOW\nTotal statistics\n\n0\n\nCustomers Enrolled\n\n0\n\nStamps Issued\n\n0\n\nRewards Issued\n\n0\n\nRewards Redeemed\n\nAcquisition\n Group by:\nDay\nMonth\nYear\nRewards Overview"
+  },
+  {
+    "label": "subusers",
+    "url": "https://app.loopyloyalty.com/manage-my-cards",
+    "headings": [],
+    "interactive": [
+      {
+        "tag": "A",
+        "text": "My Cards",
+        "href": "",
+        "uiSref": ""
+      },
+      {
+        "tag": "A",
+        "text": "Insights",
+        "href": "",
+        "uiSref": ""
+      },
+      {
+        "tag": "A",
+        "text": "Subusers",
+        "href": "",
+        "uiSref": ""
+      },
+      {
+        "tag": "A",
+        "text": "Start",
+        "href": "",
+        "uiSref": ""
+      },
+      {
+        "tag": "A",
+        "text": "Settings",
+        "href": "",
+        "uiSref": ""
+      },
+      {
+        "tag": "A",
+        "text": "Resend verification email",
+        "href": "",
+        "uiSref": ""
+      },
+      {
+        "tag": "A",
+        "text": "Upgrade Now",
+        "href": "https://app.loopyloyalty.com/settings",
+        "uiSref": "container.settings"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "MANAGE",
+        "href": "",
+        "uiSref": ""
+      },
+      {
+        "tag": "BUTTON",
+        "text": "DELETE",
+        "href": "",
+        "uiSref": ""
+      }
+    ],
+    "body": " \n\n   You haven't verified your email address. Resend verification email.\n\n15 days left on trial UPGRADE NOW\nSTAMPS REQUIRED UNTIL NEXT REWARD\n\t\n8\n Tap ⋯ for details\n\nCOUNCIL TEST - DRAFT\n\nMANAGE DELETE "
+  },
+  {
+    "label": "start",
+    "url": "https://app.loopyloyalty.com/help",
+    "headings": [
+      {
+        "level": "H1",
+        "text": "Choose a Template"
+      },
+      {
+        "level": "H3",
+        "text": "Cafe Template"
+      },
+      {
+        "level": "H3",
+        "text": "Restaurant Template"
+      },
+      {
+        "level": "H3",
+        "text": "Retail Template"
+      },
+      {
+        "level": "H3",
+        "text": "Salon Template"
+      },
+      {
+        "level": "H3",
+        "text": "Entertainment Template"
+      },
+      {
+        "level": "H3",
+        "text": "Instructor Template"
+      },
+      {
+        "level": "H3",
+        "text": "Service Template"
+      },
+      {
+        "level": "H3",
+        "text": "Blank"
+      }
+    ],
+    "interactive": [
+      {
+        "tag": "A",
+        "text": "My Cards",
+        "href": "",
+        "uiSref": ""
+      },
+      {
+        "tag": "A",
+        "text": "Insights",
+        "href": "",
+        "uiSref": ""
+      },
+      {
+        "tag": "A",
+        "text": "Subusers",
+        "href": "",
+        "uiSref": ""
+      },
+      {
+        "tag": "A",
+        "text": "Start",
+        "href": "",
+        "uiSref": ""
+      },
+      {
+        "tag": "A",
+        "text": "Settings",
+        "href": "",
+        "uiSref": ""
+      },
+      {
+        "tag": "A",
+        "text": "Resend verification email",
+        "href": "",
+        "uiSref": ""
+      },
+      {
+        "tag": "A",
+        "text": "Upgrade Now",
+        "href": "https://app.loopyloyalty.com/settings",
+        "uiSref": "container.settings"
+      }
+    ],
+    "body": " \nStart\n\n   You haven't verified your email address. Resend verification email.\n\n15 days left on trial UPGRADE NOW\nChoose a Template\nCafe Template\nSTAMPS REQUIRED UNTIL NEXT REWARD\n\t\n8\n Tap ⋯ for details\nRestaurant Template\nSTAMPS REQUIRED UNTIL NEXT REWARD\n\t\n10\n Tap ⋯ for details\nRetail Template\nSTAMPS REQUIRED UNTIL NEXT REWARD\n\t\n19\n Tap ⋯ for details\nSalon Template\nSTAMPS REQUIRED UNTIL NEXT REWARD\n\t\n13\n Tap ⋯ for details\nEntertainment Template\nSTAMPS REQUIRED UNTIL NEXT REWARD\n\t\n22\n Tap ⋯ for details\nInstructor Template\nSTAMPS REQUIRED UNTIL NEXT REWARD\n\t\n8\n Tap ⋯ for details\nService Template\nSTAMPS REQUIRED UNTIL NEXT REWARD\n\t\n3\n Tap ⋯ for details\nBlank\nResources\nQuick Start Guide\nTutorials & Support\nStamper App"
+  }
+]

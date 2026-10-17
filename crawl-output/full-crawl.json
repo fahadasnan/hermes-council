@@ -1,0 +1,74 @@
+{
+  "allStates": [
+    {
+      "label": "manage-my-cards",
+      "url": "https://app.loopyloyalty.com/manage-my-cards",
+      "headings": [],
+      "interactiveSummary": [
+        {
+          "tag": "A",
+          "text": "My Cards",
+          "href": "",
+          "uiSref": "",
+          "ngClick": "cc.navigateToState(obj.state)",
+          "className": "btn"
+        },
+        {
+          "tag": "A",
+          "text": "Subusers",
+          "href": "",
+          "uiSref": "",
+          "ngClick": "cc.navigateToState(obj.state)",
+          "className": "btn"
+        },
+        {
+          "tag": "A",
+          "text": "Start",
+          "href": "",
+          "uiSref": "",
+          "ngClick": "cc.navigateToState(obj.state)",
+          "className": "btn"
+        },
+        {
+          "tag": "A",
+          "text": "Settings",
+          "href": "",
+          "uiSref": "",
+          "ngClick": "cc.navigateToState(obj.state)",
+          "className": "btn"
+        },
+        {
+          "tag": "A",
+          "text": "Resend verification email",
+          "href": "",
+          "uiSref": "",
+          "ngClick": "cc.resend()",
+          "className": ""
+        },
+        {
+          "tag": "A",
+          "text": "Upgrade Now",
+          "href": "https://app.loopyloyalty.com/settings",
+          "uiSref": "container.settings",
+          "ngClick": "",
+          "className": "a-upgrade-now"
+        }
+      ],
+      "tableCount": 0,
+      "formCount": 0,
+      "bodyPreview": " \n\n   You haven't verified your email address. Resend verification email.\n\n15 days left on trial UPGRADE NOW"
+    }
+  ],
+  "edges": [],
+  "apiEndpoints": [
+    "GET /styles/lib-209e5ef7af.css",
+    "GET /styles/app-5f614fac94.css",
+    "GET /config/environment.js",
+    "GET /js/lib-2353771e22.js",
+    "GET /js/app-21db9b2f00.js",
+    "GET /images/iphone-background.png",
+    "GET /images/quick-start-guide.png",
+    "GET /images/tutorials-and-support.png",
+    "GET /images/stamper-app.png"
+  ]
+}
