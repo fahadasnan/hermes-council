@@ -1,6 +1,6 @@
 ---
 name: feature-delivery
-description: Use when implementing any backlog task end to end in the wallet-pass SaaS — the full recipe from model to merged PR. Covers the task lifecycle (model, migration, service, permission, API, UI, tests, docs, PR), the definition of done, the commit message format, the PR checklist, and the extra steps for tenant-scoped models, ledger-touching changes, new pass styles, and new API endpoints.
+description: Use when implementing any backlog task end to end in the wallet-pass SaaS — the full recipe from model to merged PR. Covers the task lifecycle (phase progress file, model, migration, service, permission, API, UI, tests, docs, check script, evidence, PR), the definition of done, the commit message format, the PR checklist, and the extra steps for tenant-scoped models, ledger-touching changes, new pass styles, and new API endpoints.
 ---
 
 # Feature delivery: backlog task to merged PR
@@ -9,6 +9,7 @@ One backlog task = one PR (the implementation plan sizes tasks for this). This i
 
 ## The end-to-end path
 
+0. **Claim the task in the phase progress file (ADR-57, the GlowDesk rhythm).** Add your row to `plan/evidence/phase-<n>-progress.md` in this task's own commit (task id, branch, commit SHA, tests run, deviations). After a context reset, reread this file first and never redo or skip a finished task from memory. Run `scripts/phase<n>-check.sh <task-id>` before opening the PR — full logs land in `/tmp/phase<n>-check/<task>/`, never in the repo. The last task of an epic writes `plan/evidence/<epic>/REVIEW.md` plus the numbered artifacts that prove the acceptance criteria (saved test output, Playwright screenshots); the last task of a phase writes the `plan/evidence/phase-<n>-gates/` pack.
 1. **Read the task's ADRs.** Every plan task references the decisions it implements. If the task and an ADR conflict, stop and get the ADR amended first — code never silently deviates.
 2. **Model** (if the task touches data): canonical name from the glossary; `TenantOwnedModel`; direct `tenant_id`; composite same-tenant FKs for every relation; named constraints; `*_minor` BigInt for money, plain ints for balances. Checklist: django-data skill.
 3. **Migration**: generated, then read by hand (constraint names, no destructive ops, no add+drop in one migration). `makemigrations --check` passes in CI.
@@ -19,7 +20,7 @@ One backlog task = one PR (the implementation plan sizes tasks for this). This i
 8. **Worker** (if async effects): outbox-row-driven Celery task, idempotent, retry policy per queue, dead-letter visibility; beat entry if periodic.
 9. **Tests** (written alongside, not after):
    - Backend: tenant-isolation trio for any new model; the ledger matrix (happy/replay/conflict/concurrent/insufficient/voided/wrong-scope) for any ledger path; API tests (auth, per-role permission, isolation-404, error codes); signer golden files for projection changes.
-   - Frontend: form/validator tests; mutation-protocol tests where applicable; formatter tests for any new money/date/count rendering; Playwright journey for golden flows, in `ar` where user-visible.
+   - Frontend: form/validator tests; mutation-protocol tests where applicable; formatter tests for any new money/date/count rendering; Playwright journeys for golden flows, in `en` **and** `ar` for anything user-visible, with light and dark screenshots in both languages for the evidence pack (ADR-57 — round 2 F-PIPE-2).
 10. **Docs**: runbook changes for ops behavior; the store-developer guide for tenant-API changes; audit events wired for sensitive actions.
 11. **PR**: commit format below, checklist completed, OpenAPI + DTO mirrors updated, one task only.
 
@@ -52,7 +53,7 @@ Review: one approval minimum; ledger, tenancy, and signer changes need a second 
 
 ## Definition of done (CONVENTIONS §11)
 
-Merged to `main` behind no dead flags; migrations applied in staging; CI green including new tests; en/ar complete; OpenAPI + mirrors updated; audit events wired; docs/runbooks touched where behavior changed; phase acceptance criteria unbroken; loading/empty/error states render through `<QueryState>` for anything user-visible.
+Merged to `main` behind no dead flags; migrations applied in staging; CI green including new tests; en/ar complete; OpenAPI + mirrors updated; audit events wired; docs/runbooks touched where behavior changed; phase acceptance criteria unbroken; loading/empty/error states render through `<QueryState>` for anything user-visible; the task's row in `plan/evidence/phase-<n>-progress.md` names the commit, the checks run (`scripts/phase<n>-check.sh`), and any deviation; epics close with `plan/evidence/<epic>/REVIEW.md` + numbered artifacts and phases with `plan/evidence/phase-<n>-gates/GATES.md` (ADR-57).
 
 ## Special recipes
 
