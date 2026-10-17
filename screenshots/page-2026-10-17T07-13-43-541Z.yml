@@ -1,0 +1,124 @@
+- generic [ref=e271]:
+  - text: 
+  - list [ref=e273]:
+    - listitem [ref=e274]:
+      - generic [ref=e275] [cursor=pointer]: 
+    - listitem [ref=e277]:
+      - generic [ref=e278] [cursor=pointer]: 
+    - listitem [ref=e280]:
+      - generic [ref=e281] [cursor=pointer]:
+        - generic [ref=e282]: 
+        - generic [ref=e283]: 
+    - listitem [ref=e284]:
+      - generic [ref=e285] [cursor=pointer]: 
+    - generic [ref=e287]: Start
+    - listitem [ref=e290]:
+      - generic [ref=e291] [cursor=pointer]: 
+  - navigation [ref=e293]:
+    - alert [ref=e294]:
+      - paragraph [ref=e295]:
+        - generic [aria-hidden] [ref=e296]: 
+        - text: You haven't verified your email address. Resend verification email.
+    - generic [ref=e297]:
+      - img [ref=e299] [cursor=pointer]
+      - list [ref=e300]:
+        - listitem [ref=e301]:
+          - generic [ref=e302]: 15 days left on trial
+          - link "Upgrade Now" [ref=e303] [cursor=pointer]:
+            - /url: /settings
+        - listitem [ref=e304]:
+          - link [ref=e305] [cursor=pointer]:
+            - /url: /manage-my-cards
+            - generic [aria-hidden] [ref=e306]: 
+        - listitem [ref=e307]:
+          - link [ref=e308] [cursor=pointer]:
+            - /url: http://docs.loopyloyalty.com/
+            - generic [aria-hidden] [ref=e309]: 
+        - listitem [ref=e310]:
+          - link "" [ref=e312] [cursor=pointer]:
+            - /url: ""
+  - generic [ref=e317]:
+    - heading "Choose a Template" [level=1] [ref=e320]
+    - generic [ref=e321]:
+      - generic [ref=e322]:
+        - heading "Cafe Template" [level=3] [ref=e323] [cursor=pointer]
+        - generic [ref=e325] [cursor=pointer]:
+          - generic:
+            - generic [ref=e328]: STAMPS REQUIRED UNTIL NEXT REWARD
+            - generic [ref=e332]: "8"
+          - generic [ref=e335]:
+            - img "PDF 417 Code" [ref=e336]
+            - text: Tap ⋯ for details
+      - generic [ref=e337]:
+        - heading "Restaurant Template" [level=3] [ref=e338] [cursor=pointer]
+        - generic [ref=e340] [cursor=pointer]:
+          - generic:
+            - generic [ref=e343]: STAMPS REQUIRED UNTIL NEXT REWARD
+            - generic [ref=e347]: "10"
+          - generic [ref=e350]:
+            - img "PDF 417 Code" [ref=e351]
+            - text: Tap ⋯ for details
+      - generic [ref=e352]:
+        - heading "Retail Template" [level=3] [ref=e353] [cursor=pointer]
+        - generic [ref=e355] [cursor=pointer]:
+          - generic:
+            - generic [ref=e358]: STAMPS REQUIRED UNTIL NEXT REWARD
+            - generic [ref=e362]: "19"
+          - generic [ref=e365]:
+            - img "PDF 417 Code" [ref=e366]
+            - text: Tap ⋯ for details
+      - generic [ref=e367]:
+        - heading "Salon Template" [level=3] [ref=e368] [cursor=pointer]
+        - generic [ref=e370] [cursor=pointer]:
+          - generic:
+            - generic [ref=e373]: STAMPS REQUIRED UNTIL NEXT REWARD
+            - generic [ref=e377]: "13"
+          - generic [ref=e380]:
+            - img "PDF 417 Code" [ref=e381]
+            - text: Tap ⋯ for details
+      - generic [ref=e382]:
+        - heading "Entertainment Template" [level=3] [ref=e383] [cursor=pointer]
+        - generic [ref=e385] [cursor=pointer]:
+          - generic:
+            - generic [ref=e388]: STAMPS REQUIRED UNTIL NEXT REWARD
+            - generic [ref=e392]: "22"
+          - generic [ref=e395]:
+            - img "PDF 417 Code" [ref=e396]
+            - text: Tap ⋯ for details
+      - generic [ref=e397]:
+        - heading "Instructor Template" [level=3] [ref=e398] [cursor=pointer]
+        - generic [ref=e400] [cursor=pointer]:
+          - generic:
+            - generic [ref=e403]: STAMPS REQUIRED UNTIL NEXT REWARD
+            - generic [ref=e407]: "8"
+          - generic [ref=e410]:
+            - img "PDF 417 Code" [ref=e411]
+            - text: Tap ⋯ for details
+      - generic [ref=e412]:
+        - heading "Service Template" [level=3] [ref=e413] [cursor=pointer]
+        - generic [ref=e415] [cursor=pointer]:
+          - generic:
+            - generic [ref=e418]: STAMPS REQUIRED UNTIL NEXT REWARD
+            - generic [ref=e422]: "3"
+          - generic [ref=e425]:
+            - img "PDF 417 Code" [ref=e426]
+            - text: Tap ⋯ for details
+      - generic [ref=e427]:
+        - heading "Blank" [level=3] [ref=e428] [cursor=pointer]
+        - button [ref=e429] [cursor=pointer]:
+          - generic [aria-hidden] [ref=e430]: 
+    - heading "Resources" [level=1] [ref=e433]
+    - generic [ref=e434]:
+      - generic [ref=e435] [cursor=pointer]:
+        - heading "Quick Start Guide" [level=3] [ref=e436]
+        - link [ref=e437]:
+          - /url: https://loopyloyalty.com/docs/loopy-loyalty-cheat-sheet.pdf
+      - generic [ref=e440] [cursor=pointer]:
+        - heading "Tutorials & Support" [level=3] [ref=e441]
+        - link [ref=e442]:
+          - /url: http://docs.loopyloyalty.com/
+      - generic [ref=e445] [cursor=pointer]:
+        - heading "Stamper App" [level=3] [ref=e446]
+        - link [ref=e447]:
+          - /url: http://docs.loopyloyalty.com/issuing-stamps-and-redeeming-rewards/how-to-issue-stamps-with-the-loopy-loyalty-stamper-app
+  - text:      

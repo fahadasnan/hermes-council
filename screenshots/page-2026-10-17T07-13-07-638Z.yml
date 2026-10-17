@@ -1,0 +1,57 @@
+- generic [ref=e72]:
+  - text: 
+  - list [ref=e74]:
+    - listitem [ref=e75]:
+      - generic [ref=e76] [cursor=pointer]: 
+    - generic [ref=e78]: My Cards
+    - listitem [ref=e81]:
+      - generic [ref=e82] [cursor=pointer]: 
+    - listitem [ref=e84]:
+      - generic [ref=e85] [cursor=pointer]:
+        - generic [ref=e86]: 
+        - generic [ref=e87]: 
+    - listitem [ref=e88]:
+      - generic [ref=e89] [cursor=pointer]: 
+    - listitem [ref=e91]:
+      - generic [ref=e92] [cursor=pointer]: 
+  - navigation [ref=e94]:
+    - alert [ref=e95]:
+      - paragraph [ref=e96]:
+        - generic [aria-hidden] [ref=e97]: 
+        - text: You haven't verified your email address. Resend verification email.
+    - generic [ref=e98]:
+      - img [ref=e100] [cursor=pointer]
+      - list [ref=e101]:
+        - listitem [ref=e102]:
+          - generic [ref=e103]: 15 days left on trial
+          - link "Upgrade Now" [ref=e104] [cursor=pointer]:
+            - /url: /settings
+        - listitem [ref=e105]:
+          - link [ref=e106] [cursor=pointer]:
+            - /url: /manage-my-cards
+            - generic [aria-hidden] [ref=e107]: 
+        - listitem [ref=e108]:
+          - link [ref=e109] [cursor=pointer]:
+            - /url: http://docs.loopyloyalty.com/
+            - generic [aria-hidden] [ref=e110]: 
+        - listitem [ref=e111]:
+          - link "" [ref=e113] [cursor=pointer]:
+            - /url: ""
+  - generic [ref=e119]:
+    - generic [ref=e120]:
+      - generic [ref=e124] [cursor=pointer]:
+        - generic:
+          - generic [ref=e127]: STAMPS REQUIRED UNTIL NEXT REWARD
+          - generic [ref=e131]: "8"
+        - generic [ref=e134]:
+          - img "PDF 417 Code" [ref=e135]
+          - text: Tap ⋯ for details
+      - generic [ref=e137]:
+        - paragraph [ref=e138]: COUNCIL TEST - DRAFT
+        - button "MANAGE" [ref=e139] [cursor=pointer]
+        - button "DELETE" [ref=e140] [cursor=pointer]:
+          - text: DELETE
+          - generic [aria-hidden] [ref=e141]: 
+    - button [ref=e143] [cursor=pointer]:
+      - generic [aria-hidden] [ref=e144]: 
+  - text:      

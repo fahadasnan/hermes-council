@@ -1,0 +1,56 @@
+- generic [ref=e2031]:
+  - text: 
+  - list [ref=e2033]:
+    - listitem [ref=e2034]:
+      - generic [ref=e2035] [cursor=pointer]: 
+    - listitem [ref=e2037]:
+      - generic [ref=e2038] [cursor=pointer]: 
+    - listitem [ref=e2040]:
+      - generic [ref=e2041] [cursor=pointer]:
+        - generic [ref=e2042]: 
+        - generic [ref=e2043]: 
+    - listitem [ref=e2044]:
+      - generic [ref=e2045] [cursor=pointer]: 
+    - listitem [ref=e2047]:
+      - generic [ref=e2048] [cursor=pointer]: 
+  - navigation [ref=e2050]:
+    - alert [ref=e2051]:
+      - paragraph [ref=e2052]:
+        - generic [aria-hidden] [ref=e2053]: 
+        - text: You haven't verified your email address. Resend verification email.
+    - generic [ref=e2054]:
+      - img [ref=e2056] [cursor=pointer]
+      - list [ref=e2057]:
+        - listitem [ref=e2058]:
+          - generic [ref=e2059]: 15 days left on trial
+          - link "Upgrade Now" [ref=e2060] [cursor=pointer]:
+            - /url: /settings
+        - listitem [ref=e2061]:
+          - link [ref=e2062] [cursor=pointer]:
+            - /url: /manage-my-cards
+            - generic [aria-hidden] [ref=e2063]: 
+        - listitem [ref=e2064]:
+          - link [ref=e2065] [cursor=pointer]:
+            - /url: http://docs.loopyloyalty.com/
+            - generic [aria-hidden] [ref=e2066]: 
+        - listitem [ref=e2067]:
+          - link "" [ref=e2069] [cursor=pointer]:
+            - /url: ""
+  - generic [ref=e2075]:
+    - generic [ref=e2076]:
+      - generic [ref=e2080] [cursor=pointer]:
+        - generic:
+          - generic [ref=e2083]: STAMPS REQUIRED UNTIL NEXT REWARD
+          - generic [ref=e2087]: "8"
+        - generic [ref=e2090]:
+          - img "PDF 417 Code" [ref=e2091]
+          - text: Tap ⋯ for details
+      - generic [ref=e2093]:
+        - paragraph [ref=e2094]: COUNCIL TEST - DRAFT
+        - button "MANAGE" [ref=e2095] [cursor=pointer]
+        - button "DELETE" [ref=e2096] [cursor=pointer]:
+          - text: DELETE
+          - generic [aria-hidden] [ref=e2097]: 
+    - button [ref=e2099] [cursor=pointer]:
+      - generic [aria-hidden] [ref=e2100]: 
+  - text:      

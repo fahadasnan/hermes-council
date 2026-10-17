@@ -1,0 +1,522 @@
+- generic [ref=f15e2]:
+  - text: 
+  - list [ref=f15e4]:
+    - listitem [ref=f15e5]:
+      - generic [ref=f15e6] [cursor=pointer]: 
+    - listitem [ref=f15e8]:
+      - generic [ref=f15e9] [cursor=pointer]: 
+    - listitem [ref=f15e11]:
+      - generic [ref=f15e12] [cursor=pointer]:
+        - generic [ref=f15e13]: 
+        - generic [ref=f15e14]: 
+    - listitem [ref=f15e15]:
+      - generic [ref=f15e16] [cursor=pointer]: 
+    - listitem [ref=f15e18]:
+      - generic [ref=f15e19] [cursor=pointer]: 
+  - navigation [ref=f15e21]:
+    - alert [ref=f15e22]:
+      - paragraph [ref=f15e23]:
+        - generic [aria-hidden] [ref=f15e24]: 
+        - text: You haven't verified your email address. Resend verification email.
+    - generic [ref=f15e25]:
+      - img [ref=f15e27] [cursor=pointer]
+      - list [ref=f15e28]:
+        - listitem [ref=f15e29]:
+          - generic [ref=f15e30]: 15 days left on trial
+          - link "Upgrade Now" [ref=f15e31] [cursor=pointer]:
+            - /url: /settings
+        - listitem [ref=f15e32]:
+          - link [ref=f15e33] [cursor=pointer]:
+            - /url: /manage-my-cards
+            - generic [aria-hidden] [ref=f15e34]: 
+        - listitem [ref=f15e35]:
+          - link [ref=f15e36] [cursor=pointer]:
+            - /url: http://docs.loopyloyalty.com/
+            - generic [aria-hidden] [ref=f15e37]: 
+        - listitem [ref=f15e38]:
+          - link "" [ref=f15e40] [cursor=pointer]:
+            - /url: ""
+  - generic [ref=f15e47]:
+    - heading "Settings" [level=1] [ref=f15e48]
+    - generic [ref=f15e49]:
+      - generic [ref=f15e50]:
+        - heading "My Account" [level=2] [ref=f15e51]
+        - generic [ref=f15e53]:
+          - list [ref=f15e54]:
+            - listitem [ref=f15e55]:
+              - link "General" [ref=f15e56] [cursor=pointer]:
+                - /url: ""
+            - listitem [ref=f15e57]:
+              - link "Business" [ref=f15e58] [cursor=pointer]:
+                - /url: ""
+            - listitem [ref=f15e59]:
+              - link "Privacy" [ref=f15e60] [cursor=pointer]:
+                - /url: ""
+            - listitem [ref=f15e61]:
+              - link "Password" [ref=f15e62] [cursor=pointer]:
+                - /url: ""
+            - listitem [ref=f15e63]:
+              - link "Developer Tools" [ref=f15e64] [cursor=pointer]:
+                - /url: ""
+            - listitem [ref=f15e65]:
+              - link "Delete" [ref=f15e66]:
+                - /url: ""
+          - generic [ref=f15e67]:
+            - text: 
+            - generic [ref=f15e399]:
+              - paragraph [ref=f15e400]: We're sorry to see you go, before you delete your account, it would help us a lot if you could give an expliantion as to why Loopy Loyalty did not help grow customer loyalty at your business
+              - generic [ref=f15e401]:
+                - generic [ref=f15e402]:
+                  - checkbox [ref=f15e403]
+                  - generic [ref=f15e404]: Technology is hard to understand
+                - generic [ref=f15e405]:
+                  - checkbox "Customers not interested" [ref=f15e406]
+                  - generic [ref=f15e407]: Customers not interested
+                - generic [ref=f15e408]:
+                  - checkbox "Technology is hard to understand Not enough features" [ref=f15e409]
+                  - generic [ref=f15e410]: Not enough features
+                - generic [ref=f15e411]:
+                  - generic [ref=f15e412]: Other please specify
+                  - textbox "Other please specify" [ref=f15e413]
+              - paragraph [ref=f15e414]: Please enter your password to complete account deletion
+              - generic [ref=f15e415]:
+                - generic [ref=f15e416]: Password
+                - generic [ref=f15e417] [cursor=pointer]:
+                  - generic [aria-hidden] [ref=f15e418]: 
+                  - text: Show
+                - textbox [ref=f15e419]
+              - generic [ref=f15e420]:
+                - paragraph [ref=f15e421]: Once you delete your account, all of your personal information and customer data will be lost
+                - button "Delete" [ref=f15e423] [cursor=pointer]
+      - generic [ref=f15e85]:
+        - heading "Billing" [level=2] [ref=f15e86]
+        - generic [ref=f15e88]:
+          - list [ref=f15e89]:
+            - listitem [ref=f15e90]:
+              - link "Plan" [ref=f15e91] [cursor=pointer]:
+                - /url: ""
+            - listitem [ref=f15e92]:
+              - link "Credit Card" [active] [ref=f15e93]:
+                - /url: ""
+            - listitem [ref=f15e94]:
+              - link "Invoices" [ref=f15e95] [cursor=pointer]:
+                - /url: ""
+          - generic [ref=f15e425]:
+            - generic [ref=f15e427]:
+              - generic [ref=f15e428]: Credit or debit card
+              - generic [ref=f15e430]:
+                - iframe [ref=f15e431]:
+                  - generic [ref=f17e1]:
+                    - generic [aria-hidden]: 0123456789０１２３４５６７８９
+                    - textbox [disabled] [aria-hidden]
+                    - generic [ref=f17e3]:
+                      - generic [ref=f17e4]:
+                        - generic [aria-hidden]: Number
+                        - textbox "Credit or debit card number" [ref=f17e9]:
+                          - /placeholder: Card number
+                      - generic:
+                        - generic:
+                          - generic:
+                            - generic:
+                              - textbox [aria-hidden]:
+                                - /placeholder: MM / YY
+                        - generic:
+                          - generic:
+                            - generic:
+                              - textbox [aria-hidden]:
+                                - /placeholder: CVC
+                    - textbox [disabled] [aria-hidden]
+                    - button [aria-hidden]
+                - textbox [aria-hidden]
+                - iframe [ref=f15e433]:
+                  - button "Autofill using Link with a card ending in ••••" [ref=f25e3] [cursor=pointer]:
+                    - generic [ref=f25e17]: ••••
+              - alert
+            - separator [ref=f15e434]
+            - generic [ref=f15e435]:
+              - generic [ref=f15e436]: Billing Address Line 1*
+              - textbox [ref=f15e437]
+            - generic [ref=f15e438]:
+              - generic [ref=f15e439]: Address Line 2
+              - textbox [ref=f15e440]
+            - generic [ref=f15e441]:
+              - generic [ref=f15e442]: City*
+              - textbox [ref=f15e443]
+            - generic [ref=f15e444]:
+              - generic [ref=f15e445]: Region
+              - textbox [ref=f15e446]
+            - generic [ref=f15e447]:
+              - generic [ref=f15e448]: Zip
+              - textbox [ref=f15e449]
+            - generic [ref=f15e450]:
+              - generic [ref=f15e451]: Country*
+              - combobox [ref=f15e452]:
+                - option [selected]
+                - option "Afghanistan"
+                - option "Åland Islands"
+                - option "Albania"
+                - option "Algeria"
+                - option "American Samoa"
+                - option "Andorra"
+                - option "Angola"
+                - option "Anguilla"
+                - option "Antarctica"
+                - option "Antigua and Barbuda"
+                - option "Argentina"
+                - option "Armenia"
+                - option "Aruba"
+                - option "Australia"
+                - option "Austria"
+                - option "Azerbaijan"
+                - option "Bahamas (the)"
+                - option "Bahrain"
+                - option "Bangladesh"
+                - option "Barbados"
+                - option "Belarus"
+                - option "Belgium"
+                - option "Belize"
+                - option "Benin"
+                - option "Bermuda"
+                - option "Bhutan"
+                - option "Bolivia (Plurinational State of)"
+                - option "Bonaire, Sint Eustatius and Saba"
+                - option "Bosnia and Herzegovina"
+                - option "Botswana"
+                - option "Bouvet Island"
+                - option "Brazil"
+                - option "British Indian Ocean Territory (the)"
+                - option "Brunei Darussalam"
+                - option "Bulgaria"
+                - option "Burkina Faso"
+                - option "Burundi"
+                - option "Cabo Verde"
+                - option "Cambodia"
+                - option "Cameroon"
+                - option "Canada"
+                - option "Cayman Islands (the)"
+                - option "Central African Republic (the)"
+                - option "Chad"
+                - option "Chile"
+                - option "China"
+                - option "Christmas Island"
+                - option "Cocos (Keeling) Islands (the)"
+                - option "Colombia"
+                - option "Comoros (the)"
+                - option "Congo (the)"
+                - option "Congo (the Democratic Republic of the)"
+                - option "Cook Islands (the)"
+                - option "Costa Rica"
+                - option "Côte d'Ivoire"
+                - option "Croatia"
+                - option "Cuba"
+                - option "Curaçao"
+                - option "Cyprus"
+                - option "Czech Republic (the)"
+                - option "Denmark"
+                - option "Djibouti"
+                - option "Dominica"
+                - option "Dominican Republic (the)"
+                - option "Ecuador"
+                - option "Egypt"
+                - option "El Salvador"
+                - option "Equatorial Guinea"
+                - option "Eritrea"
+                - option "Estonia"
+                - option "Ethiopia"
+                - option "Falkland Islands (the) [Malvinas]"
+                - option "Faroe Islands (the)"
+                - option "Fiji"
+                - option "Finland"
+                - option "France"
+                - option "French Guiana"
+                - option "French Polynesia"
+                - option "French Southern Territories (the)"
+                - option "Gabon"
+                - option "Gambia (the)"
+                - option "Georgia"
+                - option "Germany"
+                - option "Ghana"
+                - option "Gibraltar"
+                - option "Greece"
+                - option "Greenland"
+                - option "Grenada"
+                - option "Guadeloupe"
+                - option "Guam"
+                - option "Guatemala"
+                - option "Guernsey"
+                - option "Guinea"
+                - option "Guinea-Bissau"
+                - option "Guyana"
+                - option "Haiti"
+                - option "Heard Island and McDonald Islands"
+                - option "Holy See (the)"
+                - option "Honduras"
+                - option "Hong Kong"
+                - option "Hungary"
+                - option "Iceland"
+                - option "India"
+                - option "Indonesia"
+                - option "Iran (Islamic Republic of)"
+                - option "Iraq"
+                - option "Ireland"
+                - option "Isle of Man"
+                - option "Israel"
+                - option "Italy"
+                - option "Jamaica"
+                - option "Japan"
+                - option "Jersey"
+                - option "Jordan"
+                - option "Kazakhstan"
+                - option "Kenya"
+                - option "Kiribati"
+                - option "Korea (the Democratic People's Republic of)"
+                - option "Korea (the Republic of)"
+                - option "Kuwait"
+                - option "Kyrgyzstan"
+                - option "Lao People's Democratic Republic (the)"
+                - option "Latvia"
+                - option "Lebanon"
+                - option "Lesotho"
+                - option "Liberia"
+                - option "Libya"
+                - option "Liechtenstein"
+                - option "Lithuania"
+                - option "Luxembourg"
+                - option "Macao"
+                - option "Macedonia (the former Yugoslav Republic of)"
+                - option "Madagascar"
+                - option "Malawi"
+                - option "Malaysia"
+                - option "Maldives"
+                - option "Mali"
+                - option "Malta"
+                - option "Marshall Islands (the)"
+                - option "Martinique"
+                - option "Mauritania"
+                - option "Mauritius"
+                - option "Mayotte"
+                - option "Mexico"
+                - option "Micronesia (Federated States of)"
+                - option "Moldova (the Republic of)"
+                - option "Monaco"
+                - option "Mongolia"
+                - option "Montenegro"
+                - option "Montserrat"
+                - option "Morocco"
+                - option "Mozambique"
+                - option "Myanmar"
+                - option "Namibia"
+                - option "Nauru"
+                - option "Nepal"
+                - option "Netherlands (the)"
+                - option "New Caledonia"
+                - option "New Zealand"
+                - option "Nicaragua"
+                - option "Niger (the)"
+                - option "Nigeria"
+                - option "Niue"
+                - option "Norfolk Island"
+                - option "Northern Mariana Islands (the)"
+                - option "Norway"
+                - option "Oman"
+                - option "Pakistan"
+                - option "Palau"
+                - option "Palestine, State of"
+                - option "Panama"
+                - option "Papua New Guinea"
+                - option "Paraguay"
+                - option "Peru"
+                - option "Philippines (the)"
+                - option "Pitcairn"
+                - option "Poland"
+                - option "Portugal"
+                - option "Puerto Rico"
+                - option "Qatar"
+                - option "Réunion"
+                - option "Romania"
+                - option "Russian Federation (the)"
+                - option "Rwanda"
+                - option "Saint Barthélemy"
+                - option "Saint Helena, Ascension and Tristan da Cunha"
+                - option "Saint Kitts and Nevis"
+                - option "Saint Lucia"
+                - option "Saint Martin (French part)"
+                - option "Saint Pierre and Miquelon"
+                - option "Saint Vincent and the Grenadines"
+                - option "Samoa"
+                - option "San Marino"
+                - option "Sao Tome and Principe"
+                - option "Saudi Arabia"
+                - option "Senegal"
+                - option "Serbia"
+                - option "Seychelles"
+                - option "Sierra Leone"
+                - option "Singapore"
+                - option "Sint Maarten (Dutch part)"
+                - option "Slovakia"
+                - option "Slovenia"
+                - option "Solomon Islands"
+                - option "Somalia"
+                - option "South Africa"
+                - option "South Georgia and the South Sandwich Islands"
+                - option "South Sudan"
+                - option "Spain"
+                - option "Sri Lanka"
+                - option "Sudan (the)"
+                - option "Suriname"
+                - option "Svalbard and Jan Mayen"
+                - option "Swaziland"
+                - option "Sweden"
+                - option "Switzerland"
+                - option "Syrian Arab Republic"
+                - option "Taiwan (Province of China)"
+                - option "Tajikistan"
+                - option "Tanzania, United Republic of"
+                - option "Thailand"
+                - option "Timor-Leste"
+                - option "Togo"
+                - option "Tokelau"
+                - option "Tonga"
+                - option "Trinidad and Tobago"
+                - option "Tunisia"
+                - option "Turkey"
+                - option "Turkmenistan"
+                - option "Turks and Caicos Islands (the)"
+                - option "Tuvalu"
+                - option "Uganda"
+                - option "Ukraine"
+                - option "United Arab Emirates (the)"
+                - option "United Kingdom of Great Britain and Northern Ireland (the)"
+                - option "United States Minor Outlying Islands (the)"
+                - option "United States of America (the)"
+                - option "Uruguay"
+                - option "Uzbekistan"
+                - option "Vanuatu"
+                - option "Venezuela (Bolivarian Republic of)"
+                - option "Vietnam"
+                - option "Virgin Islands (British)"
+                - option "Virgin Islands (U.S.)"
+                - option "Wallis and Futuna"
+                - option "Western Sahara"
+                - option "Yemen"
+                - option "Zambia"
+                - option "Zimbabwe"
+            - generic [ref=f15e453]:
+              - text: ">"
+              - generic [ref=f15e454]: Mobile Number
+              - generic [ref=f15e455]:
+                - 'combobox "United States: +1" [ref=f15e457]'
+                - textbox "(201) 555-0123" [ref=f15e460]
+              - paragraph [ref=f15e461]: Optionally provide us with your mobile number to ensure you can enjoy the service uninterrupted. We will send you a text if there are any issues with your subscription or credit card.
+            - generic [ref=f15e462]:
+              - generic [ref=f15e463]: Tax ID
+              - textbox [ref=f15e464]
+              - paragraph [ref=f15e465]: If you require a tax id number to be shown on your invoice, enter it here.
+            - button "Update Payment Details" [ref=f15e468] [cursor=pointer]
+    - generic [ref=f15e164]:
+      - heading "Locations" [level=2] [ref=f15e165]
+      - generic [ref=f15e167]:
+        - generic [ref=f15e168]:
+          - paragraph [ref=f15e169]: Display lock screen messages when customers are near your location(s).
+          - button "Add Location" [ref=f15e171] [cursor=pointer]
+        - generic [ref=f15e177]:
+          - generic:
+            - button "Keyboard shortcuts"
+          - region "Map" [ref=f15e178]
+          - generic [ref=f15e179]:
+            - iframe [aria-hidden] [ref=f15e199]
+            - menubar [ref=f15e200] [cursor=pointer]:
+              - menuitemradio "Show street map" [checked] [ref=f15e201]: Map
+              - menuitemradio "Show satellite imagery" [ref=f15e202]: Satellite
+            - button "Toggle fullscreen view" [ref=f15e203] [cursor=pointer]
+            - generic:
+              - generic:
+                - button "Map camera controls" [ref=f15e205] [cursor=pointer]
+                - button "Drag Pegman onto the map to open Street View" [ref=f15e206] [cursor=pointer]:
+                  - generic:
+                    - img "Street View Pegman Control"
+            - link "Open this area in Google Maps (opens a new window)" [ref=f15e208] [cursor=pointer]:
+              - /url: https://maps.google.com/maps?ll=51.546357,-0.057514&z=8&t=m&hl=en-US&gl=US&mapclient=apiv3
+              - img "Google" [ref=f15e210]
+            - generic [ref=f15e211]:
+              - button "Keyboard shortcuts" [ref=f15e217] [cursor=pointer]
+              - button "Map Data" [ref=f15e223] [cursor=pointer]
+              - link "Terms (opens in new tab)" [ref=f15e228] [cursor=pointer]:
+                - /url: https://www.google.com/intl/en-US_US/help/terms_maps.html
+                - text: Terms
+              - link "Report a map error (opens in new tab)" [ref=f15e233] [cursor=pointer]:
+                - /url: https://www.google.com/maps/@51.5463573,-0.0575145,8z/data=!10m1!1e1!12b1?source=apiv3&rapsrc=apiv3
+                - text: Report a map error
+    - generic [ref=f15e235]:
+      - heading "Beacons" [level=2] [ref=f15e236]
+      - generic [ref=f15e237]:
+        - paragraph [ref=f15e238]: Display lock screen messages when your customers are in proximity to your bluetooth beacon(s). Learn more.
+        - button "Add Beacon" [ref=f15e240] [cursor=pointer]
+    - generic [ref=f15e242]:
+      - heading "Zapier" [level=2] [ref=f15e243]
+      - generic [ref=f15e245]:
+        - generic [ref=f15e248]:
+          - generic [ref=f15e250]:
+            - generic [ref=f15e253]:
+              - heading [level=3] [ref=f15e257]:
+                - link "Add new Loopy Loyalty customers to a Mailchimp list using Mailchimp + Loopy Loyalty apps false" [ref=f15e258] [cursor=pointer]:
+                  - /url: https://zapier.com/webintent/create-zap?template=19506&utm_source=partner&utm_medium=embed&utm_campaign=wfe_ade&provider=Loopy-Loyalty&entry-point-location=partner_embed&referer=https%3A%2F%2Fapp.loopyloyalty.com%2Fsettings%3Futm_source%3Dpartner%26utm_medium%3Dembed%26utm_campaign%3Dwfe_ade%26referer%3Dhttps%253A%252F%252Fapp.loopyloyalty.com%252Fsettings&referrer=https%3A%2F%2Fapp.loopyloyalty.com%2Fsettings%3Futm_source%3Dpartner%26utm_medium%3Dembed%26utm_campaign%3Dwfe_ade%26referer%3Dhttps%253A%252F%252Fapp.loopyloyalty.com%252Fsettings
+                  - text: Add new Loopy Loyalty customers to a Mailchimp list
+              - generic: Mailchimp + Loopy Loyalty
+              - generic: Use this workflow
+            - generic [ref=f15e262]:
+              - heading [level=3] [ref=f15e266]:
+                - link "Save Loopy Loyalty customer enrollments as Google Sheets rows using Loopy Loyalty + Google Sheets apps false" [ref=f15e267] [cursor=pointer]:
+                  - /url: https://zapier.com/webintent/create-zap?template=19501&utm_source=partner&utm_medium=embed&utm_campaign=wfe_ade&provider=Loopy-Loyalty&entry-point-location=partner_embed&referer=https%3A%2F%2Fapp.loopyloyalty.com%2Fsettings%3Futm_source%3Dpartner%26utm_medium%3Dembed%26utm_campaign%3Dwfe_ade%26referer%3Dhttps%253A%252F%252Fapp.loopyloyalty.com%252Fsettings&referrer=https%3A%2F%2Fapp.loopyloyalty.com%2Fsettings%3Futm_source%3Dpartner%26utm_medium%3Dembed%26utm_campaign%3Dwfe_ade%26referer%3Dhttps%253A%252F%252Fapp.loopyloyalty.com%252Fsettings
+                  - text: Save Loopy Loyalty customer enrollments as Google Sheets rows
+              - generic: Loopy Loyalty + Google Sheets
+              - generic: Use this workflow
+            - generic [ref=f15e271]:
+              - heading [level=3] [ref=f15e275]:
+                - link "Log new Loopy Loyalty stamps to a Google Sheets spreadsheet using Loopy Loyalty + Google Sheets apps false" [ref=f15e276] [cursor=pointer]:
+                  - /url: https://zapier.com/webintent/create-zap?template=19502&utm_source=partner&utm_medium=embed&utm_campaign=wfe_ade&provider=Loopy-Loyalty&entry-point-location=partner_embed&referer=https%3A%2F%2Fapp.loopyloyalty.com%2Fsettings%3Futm_source%3Dpartner%26utm_medium%3Dembed%26utm_campaign%3Dwfe_ade%26referer%3Dhttps%253A%252F%252Fapp.loopyloyalty.com%252Fsettings&referrer=https%3A%2F%2Fapp.loopyloyalty.com%2Fsettings%3Futm_source%3Dpartner%26utm_medium%3Dembed%26utm_campaign%3Dwfe_ade%26referer%3Dhttps%253A%252F%252Fapp.loopyloyalty.com%252Fsettings
+                  - text: Log new Loopy Loyalty stamps to a Google Sheets spreadsheet
+              - generic: Loopy Loyalty + Google Sheets
+              - generic: Use this workflow
+          - generic [ref=f15e278]:
+            - paragraph [ref=f15e279]: Not seeing what you're looking for?
+            - link "Create a workflow from scratch" [ref=f15e280] [cursor=pointer]:
+              - /url: https://zapier.com/webintent/create-zap/?utm_source=partner&utm_medium=embed&utm_campaign=wfe_ade
+              - text: Create from scratch
+            - text: or
+            - link "Learn more about Zapier" [ref=f15e281] [cursor=pointer]:
+              - /url: https://zapier.com/how-it-works/?utm_source=partner&utm_medium=embed&utm_campaign=wfe_ade
+              - text: learn more
+        - generic [ref=f15e284]:
+          - generic [ref=f15e286]:
+            - generic [ref=f15e289]:
+              - heading [level=3] [ref=f15e293]:
+                - link "Add new Loopy Loyalty customers to a Mailchimp list using Mailchimp + Loopy Loyalty apps false" [ref=f15e294] [cursor=pointer]:
+                  - /url: https://zapier.com/webintent/create-zap?template=19506&utm_source=partner&utm_medium=embed&utm_campaign=wfe_ade&provider=Loopy-Loyalty&entry-point-location=partner_embed&referer=https%3A%2F%2Fapp.loopyloyalty.com%2Fsettings%3Futm_source%3Dpartner%26utm_medium%3Dembed%26utm_campaign%3Dwfe_ade%26referer%3Dhttps%253A%252F%252Fapp.loopyloyalty.com%252Fsettings&referrer=https%3A%2F%2Fapp.loopyloyalty.com%2Fsettings%3Futm_source%3Dpartner%26utm_medium%3Dembed%26utm_campaign%3Dwfe_ade%26referer%3Dhttps%253A%252F%252Fapp.loopyloyalty.com%252Fsettings
+                  - text: Add new Loopy Loyalty customers to a Mailchimp list
+              - generic: Mailchimp + Loopy Loyalty
+              - generic: Use this workflow
+            - generic [ref=f15e298]:
+              - heading [level=3] [ref=f15e302]:
+                - link "Save Loopy Loyalty customer enrollments as Google Sheets rows using Loopy Loyalty + Google Sheets apps false" [ref=f15e303] [cursor=pointer]:
+                  - /url: https://zapier.com/webintent/create-zap?template=19501&utm_source=partner&utm_medium=embed&utm_campaign=wfe_ade&provider=Loopy-Loyalty&entry-point-location=partner_embed&referer=https%3A%2F%2Fapp.loopyloyalty.com%2Fsettings%3Futm_source%3Dpartner%26utm_medium%3Dembed%26utm_campaign%3Dwfe_ade%26referer%3Dhttps%253A%252F%252Fapp.loopyloyalty.com%252Fsettings&referrer=https%3A%2F%2Fapp.loopyloyalty.com%2Fsettings%3Futm_source%3Dpartner%26utm_medium%3Dembed%26utm_campaign%3Dwfe_ade%26referer%3Dhttps%253A%252F%252Fapp.loopyloyalty.com%252Fsettings
+                  - text: Save Loopy Loyalty customer enrollments as Google Sheets rows
+              - generic: Loopy Loyalty + Google Sheets
+              - generic: Use this workflow
+            - generic [ref=f15e307]:
+              - heading [level=3] [ref=f15e311]:
+                - link "Log new Loopy Loyalty stamps to a Google Sheets spreadsheet using Loopy Loyalty + Google Sheets apps false" [ref=f15e312] [cursor=pointer]:
+                  - /url: https://zapier.com/webintent/create-zap?template=19502&utm_source=partner&utm_medium=embed&utm_campaign=wfe_ade&provider=Loopy-Loyalty&entry-point-location=partner_embed&referer=https%3A%2F%2Fapp.loopyloyalty.com%2Fsettings%3Futm_source%3Dpartner%26utm_medium%3Dembed%26utm_campaign%3Dwfe_ade%26referer%3Dhttps%253A%252F%252Fapp.loopyloyalty.com%252Fsettings&referrer=https%3A%2F%2Fapp.loopyloyalty.com%2Fsettings%3Futm_source%3Dpartner%26utm_medium%3Dembed%26utm_campaign%3Dwfe_ade%26referer%3Dhttps%253A%252F%252Fapp.loopyloyalty.com%252Fsettings
+                  - text: Log new Loopy Loyalty stamps to a Google Sheets spreadsheet
+              - generic: Loopy Loyalty + Google Sheets
+              - generic: Use this workflow
+          - generic [ref=f15e314]:
+            - paragraph [ref=f15e315]: Not seeing what you're looking for?
+            - link "Create a workflow from scratch" [ref=f15e316] [cursor=pointer]:
+              - /url: https://zapier.com/webintent/create-zap/?utm_source=partner&utm_medium=embed&utm_campaign=wfe_ade
+              - text: Create from scratch
+            - text: or
+            - link "Learn more about Zapier" [ref=f15e317] [cursor=pointer]:
+              - /url: https://zapier.com/how-it-works/?utm_source=partner&utm_medium=embed&utm_campaign=wfe_ade
+              - text: learn more
+  - text:      

@@ -1,0 +1,61 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e773]:
+    - text: 
+    - list [ref=e775]:
+      - listitem [ref=e776]:
+        - generic [ref=e777] [cursor=pointer]: 
+      - generic [ref=e779]: My Cards
+      - listitem [ref=e782]:
+        - generic [ref=e783] [cursor=pointer]: 
+      - listitem [ref=e785]:
+        - generic [ref=e786] [cursor=pointer]:
+          - generic [ref=e787]: 
+          - generic [ref=e788]: 
+      - listitem [ref=e789]:
+        - generic [ref=e790] [cursor=pointer]: 
+      - listitem [ref=e792]:
+        - generic [ref=e793] [cursor=pointer]: 
+    - navigation [ref=e795]:
+      - alert [ref=e796]:
+        - paragraph [ref=e797]:
+          - generic [aria-hidden] [ref=e798]: 
+          - text: You haven't verified your email address. Resend verification email.
+      - generic [ref=e799]:
+        - img [ref=e801] [cursor=pointer]
+        - list [ref=e802]:
+          - listitem [ref=e803]:
+            - generic [ref=e804]: 15 days left on trial
+            - link "Upgrade Now" [ref=e805] [cursor=pointer]:
+              - /url: /settings
+          - listitem [ref=e806]:
+            - link [ref=e807] [cursor=pointer]:
+              - /url: /manage-my-cards
+              - generic [aria-hidden] [ref=e808]: 
+          - listitem [ref=e809]:
+            - link [ref=e810] [cursor=pointer]:
+              - /url: http://docs.loopyloyalty.com/
+              - generic [aria-hidden] [ref=e811]: 
+          - listitem [ref=e812]:
+            - link "" [ref=e814] [cursor=pointer]:
+              - /url: ""
+    - generic [ref=e820]:
+      - generic [ref=e821]:
+        - generic [ref=e825] [cursor=pointer]:
+          - generic:
+            - generic [ref=e828]: STAMPS REQUIRED UNTIL NEXT REWARD
+            - generic [ref=e832]: "8"
+          - generic [ref=e835]:
+            - img "PDF 417 Code" [ref=e836]
+            - text: Tap ⋯ for details
+        - generic [ref=e838]:
+          - paragraph [ref=e839]: COUNCIL TEST - DRAFT
+          - button "MANAGE" [ref=e840] [cursor=pointer]
+          - button "DELETE" [ref=e841] [cursor=pointer]:
+            - text: DELETE
+            - generic [aria-hidden] [ref=e842]: 
+      - button [ref=e844] [cursor=pointer]:
+        - generic [aria-hidden] [ref=e845]: 
+    - text:      
+  - generic [ref=e770]:
+    - button "×" [ref=e771] [cursor=pointer]
+    - generic [ref=e772]: "[ll2 Error] Cannot set property isOpen of [object Object] which has only a getter"

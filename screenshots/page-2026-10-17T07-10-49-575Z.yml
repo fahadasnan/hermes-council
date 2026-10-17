@@ -1,0 +1,145 @@
+- generic [ref=e657]:
+  - text: 
+  - list [ref=e659]:
+    - listitem [ref=e660]:
+      - generic: 
+    - listitem [ref=e661]:
+      - generic: 
+    - listitem [ref=e662]:
+      - generic: 
+    - listitem [ref=e663]:
+      - generic: 
+    - listitem [ref=e664]:
+      - generic [ref=e665] [cursor=pointer]: 
+  - navigation [ref=e667]:
+    - alert [ref=e668]:
+      - paragraph [ref=e669]:
+        - generic [aria-hidden] [ref=e670]: 
+        - text: You haven't verified your email address. Resend verification email.
+    - generic [ref=e671]:
+      - img [ref=e673] [cursor=pointer]
+      - list [ref=e674]:
+        - listitem [ref=e675]:
+          - generic [ref=e676]: 15 days left on trial
+          - link "Upgrade Now" [ref=e677] [cursor=pointer]:
+            - /url: /settings
+        - listitem [ref=e678]:
+          - generic [ref=e679]: "In view: COUNCIL TEST"
+        - listitem [ref=e680]:
+          - link [ref=e681] [cursor=pointer]:
+            - /url: /manage-my-cards
+            - generic [aria-hidden] [ref=e682]: 
+        - listitem [ref=e683]:
+          - link [ref=e684] [cursor=pointer]:
+            - /url: http://docs.loopyloyalty.com/
+            - generic [aria-hidden] [ref=e685]: 
+        - listitem [ref=e686]:
+          - link "" [ref=e688] [cursor=pointer]:
+            - /url: ""
+  - generic [ref=e692]:
+    - navigation [ref=e693]:
+      - generic [ref=e694]:
+        - list [ref=e695]:
+          - listitem [ref=e696]:
+            - generic [ref=e697] [cursor=pointer]:
+              - generic [ref=e698]: 
+              - text: Design
+          - listitem [ref=e699]:
+            - generic [ref=e700] [cursor=pointer]:
+              - generic [ref=e701]: 
+              - text: Details
+          - listitem [ref=e702]:
+            - generic [ref=e703] [cursor=pointer]:
+              - generic [ref=e704]: 
+              - text: Locations
+          - listitem [ref=e705]:
+            - generic [ref=e706] [cursor=pointer]:
+              - generic [ref=e707]: 
+              - text: Support
+          - listitem [ref=e708]:
+            - generic [ref=e709] [cursor=pointer]:
+              - generic [ref=e710]: 
+              - text: Data
+          - listitem [ref=e711]:
+            - generic [ref=e712] [cursor=pointer]:
+              - generic [ref=e713]: 
+              - text: Custom
+              - generic [ref=e714]: 
+        - list [ref=e715]:
+          - listitem [ref=e716]:
+            - button "Save" [ref=e717] [cursor=pointer]
+          - listitem [ref=e718]:
+            - button "Save & Preview" [ref=e719] [cursor=pointer]
+          - listitem [ref=e720]:
+            - button "Activate" [ref=e721] [cursor=pointer]
+        - text:          
+    - generic [ref=e723]:
+      - generic [ref=e725]:
+        - generic [ref=e727]:
+          - generic [ref=e728]:
+            - generic [ref=e729]:
+              - generic [ref=e730]:
+                - generic [ref=e731]: Terms & Conditions
+                - generic [aria-hidden] [ref=e733]: 
+              - generic [ref=e734]:
+                - generic [ref=e735]: Enabled
+                - checkbox [checked] [ref=e736] [cursor=pointer]
+            - textbox [ref=e737]: 1. Earn 1 stamp for every _______________ purchased. 2. Collect __ stamps to receive a _______________ upon your next visit. 3. This card, stamps, and rewards are valid until_______________. 4. This card can only be used at _______________ (and _______________). 5. Stamps and rewards cannot be exchanged, refunded, replaced or redeemed for cash. 6. Cards are non-transferrable and cannot be combined with other cards. 7. The Company reserve the right of final decisions in case of any disputes.
+          - generic [ref=e738]:
+            - generic [ref=e739]: Link to full terms and conditions (optional)
+            - generic [aria-hidden] [ref=e741]: 
+            - textbox "http://www.yourbusiness.com/termsandconditions" [ref=e742]
+        - generic [ref=e744]:
+          - heading "Card Issuer Details" [level=3] [ref=e745]
+          - paragraph [ref=e746]: Please provide contact information for customers who have queries, complaints, or claims with respect to your digital stamp card.
+          - generic [ref=e747]:
+            - generic [ref=e748]: Business Name
+            - generic [aria-hidden] [ref=e750]: 
+            - textbox "ibefehdi" [ref=e751]
+          - generic [ref=e752]:
+            - generic [ref=e753]: Email
+            - generic [aria-hidden] [ref=e755]: 
+            - textbox "ibefehdi@gmail.com" [ref=e756]
+          - generic [ref=e757]:
+            - generic [ref=e758]: Phone
+            - generic [aria-hidden] [ref=e760]: 
+            - textbox [ref=e761]
+      - generic [ref=e763]:
+        - paragraph [ref=e764]: Your Customers' View
+        - generic [ref=e766]:
+          - paragraph [ref=e769]: COUNCIL-TEST card
+          - img "Pass back" [ref=e770]
+          - generic [ref=e771]:
+            - paragraph [ref=e772]: LATEST UPDATES
+            - paragraph [ref=e773]: Any messages you send will be displayed here.
+          - generic [ref=e774]:
+            - paragraph [ref=e775]: HOW TO COLLECT STAMPS
+            - paragraph [ref=e776]: "COUNCIL-TEST: get 1 stamp per visit"
+          - generic [ref=e777]:
+            - paragraph [ref=e778]: REWARD DETAILS
+            - paragraph [ref=e779]: "COUNCIL-TEST: free item after 8 stamps"
+          - generic [ref=e780]:
+            - paragraph [ref=e781]: STAMPS UNTIL NEXT REWARD
+            - paragraph [ref=e782]: "8"
+          - generic [ref=e783]:
+            - paragraph [ref=e784]: REWARDS EARNED
+            - paragraph [ref=e785]: "0: COUNCIL-TEST reward"
+          - generic [ref=e786]:
+            - paragraph [ref=e787]: USEFUL LINKS
+            - paragraph [ref=e788]:
+              - link "Visit our website" [ref=e789] [cursor=pointer]:
+                - /url: https://loopyloyalty.com
+          - generic [ref=e790]:
+            - paragraph [ref=e791]: TERMS & CONDITIONS
+            - paragraph [ref=e792]: 1. Earn 1 stamp for every _______________ purchased. 2. Collect __ stamps to receive a _______________ upon your next visit. 3. This card, stamps, and rewards are valid until_______________. 4. This card can only be used at _______________ (and _______________). 5. Stamps and rewards cannot be exchanged, refunded, replaced or redeemed for cash. 6. Cards are non-transferrable and cannot be combined with other cards. 7. The Company reserve the right of final decisions in case of any disputes.
+          - generic [ref=e793]:
+            - paragraph [ref=e794]: QUESTIONS ABOUT THIS CARD? CONTACT
+            - paragraph [ref=e795]: ibefehdi
+            - paragraph [ref=e796]: ibefehdi@gmail.com
+            - paragraph
+        - text:  
+        - generic [ref=e797]:
+          - button "" [ref=e798] [cursor=pointer]
+          - button "" [ref=e800] [cursor=pointer]
+          - button "" [ref=e802] [cursor=pointer]
+  - text:     
