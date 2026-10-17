@@ -170,7 +170,7 @@ Format: US-<area>-<n>. "Location" always means a location within the acting user
 
 ### Staff
 - US-STF-1: Create a staff member. Owner/manager creates staff with name, login, PIN/password, assigned locations, role staff. AC: staff cannot log in until credentials set; scope enforced server-side.
-- US-STF-2: Staff attribution. Every counter action records staff_member_id and location_id on the ledger event. AC: transaction views show the actor.
+- US-STF-2: Staff attribution. Every counter action records the acting staff `Membership` (membership_id) and location_id on the `LedgerEntry`. AC: transaction views show the actor. (Round 2 F-REQ-1: wording corrected to the ADR-44 canonical names.)
 
 ### Programs (store card stamps, store card points, coupon, generic)
 - US-PRG-1: Create a store-card program with stamp rules. Owner picks store card style, design (colors, logo/icon/strip), stamp target (1–30), earn rule text, reward name/description, per-reward lock-screen messages. AC: live pass preview renders both Apple and Google variants.
@@ -208,7 +208,7 @@ Format: US-<area>-<n>. "Location" always means a location within the acting user
 ## 5. Non-functional requirements
 
 - Tenant isolation: `tenant_id` on every tenant-owned row; tenant-scoped Django manager + object permissions; server derives tenant from the authenticated user, never from the request body. DB constraints for: idempotency uniqueness (unique `idempotency_key` per tenant+endpoint scope), non-negative balances (check constraints / generated columns), FK integrity.
-- Append-only ledger: `ledger_event` rows are never updated or deleted; corrections are new reversing events. Balances are derived (SUM) or maintained as constrained generated/cached values that the ORM cannot bypass.
+- Append-only ledger: `LedgerEntry` rows (`ledger_entries`) are never updated or deleted; corrections are new reversing events. (Round 2 F-REQ-1: name corrected per ADR-44.) Balances are derived (SUM) or maintained as constrained generated/cached values that the ORM cannot bypass.
 - Idempotency: every ledger write (API or UI) carries a client idempotency key; replays return the original result. A double tap at the counter cannot double-credit.
 - Pass updates: a committed ledger event enqueues a Celery task that signs and pushes the Apple pass and updates the Google object; retries with backoff; a failed push never blocks the ledger write; the pass is a projection of the ledger.
 - Audit trail: who/what/when for every mutation (provisioning, program edits, credential issuance, staff changes, voids), append-only.

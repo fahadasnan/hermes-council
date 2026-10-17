@@ -1,5 +1,7 @@
 # Data model, multi-tenancy, and Django models
 
+> **SUPERSEDED / ILLUSTRATIVE (round 2, F-CONSISTENCY-1..11/13).** This round-1 member file is an illustrative draft, not binding. ADR-44 demotes it and the `django/*.py` drafts: canonical names (`Membership`, `LedgerEntry`, `Balance`, `Pass`), the UUID-public / `BigAutoField`-internal PK rule (ADR-33), contextvars tenancy (ADR-11), and composite FKs via `db_constraint=False` + migration `RunSQL` (ADR-10) are defined in `decisions.md` and `CONVENTIONS.md`, and taught copy-safe in the `django-data` / `django-backend` skills. Phase 0 rewrites the models from those sources. Do not copy code from this file.
+
 Author: linker (council data-model brief)
 Date: 2026-10-17
 Inputs: common.md, data-model.md, FINAL_REPORT.md, TECHNICAL_REPORT.md

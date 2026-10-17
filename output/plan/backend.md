@@ -1,5 +1,7 @@
 # Django API, Services, and Wallet Worker — Backend Design
 
+> **SUPERSEDED / ILLUSTRATIVE (round 2, F-CONSISTENCY-1..11/13).** This round-1 member file is an illustrative draft, not binding. Where any name, endpoint, token scheme, money handling, thread-local tenancy, pass-balance, JWT, or direct-enqueue example below disagrees with `decisions.md` (ADR-44 canonical names and the ADR layer) or `CONVENTIONS.md`, those documents win. The canonical, copy-safe patterns live in the skills (`skills/.cursor/skills/`, identical in `skills/.claude/skills/`) and `IMPLEMENTATION_PLAN.md`. Do not copy code from this file.
+
 Date: 2026-10-17
 Author: linker (Hermes Agent)
 Brief: /Users/fahad/council/output/plan/briefs/backend.md
