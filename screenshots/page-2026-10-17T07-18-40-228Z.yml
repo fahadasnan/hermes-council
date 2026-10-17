@@ -1,0 +1,7 @@
+- generic [ref=f35e4]:
+  - img "Loopy Loyalty Logo" [ref=f35e6]
+  - generic [ref=f35e7]:
+    - generic [ref=f35e8]: Card ID
+    - textbox [active] [ref=f35e9]
+    - paragraph [ref=f35e10]: Scan stamp-card to continue.
+  - button "Stamp Card!" [disabled] [ref=f35e12]
