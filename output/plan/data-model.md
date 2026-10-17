@@ -52,7 +52,7 @@ Where one side lacks an equivalent, we still issue on the side that supports it.
 
 ### 1.5 Pass signer decision
 
-**Propoal: Sign passes ourselves (not through a pass provider).**
+**Proposal: Sign passes ourselves (not through a pass provider).**
 
 - Context: We must issue every Apple Wallet and Google Wallet pass style. A pass provider (PassKit, etc.) adds a dependency and per-pass cost that scales with volume.
 - Options:
@@ -219,7 +219,7 @@ erDiagram
 | name | varchar(255) | NOT NULL | The business name, e.g. “Alshaya” |
 | slug | varchar(100) | NOT NULL, UNIQUE, regex `^[a-z0-9-]+$` | For URLs and API namespaces |
 | currency | varchar(3) | NOT NULL, default 'KWD' | ISO 4217 currency code |
-| timezone | varchar(50) | NOT NULL, default 'Asia/Kuwait' | IANA timezone |
+| timezone | varchar(50) | NOT NULL, default 'Asia/Kuwaitt' | IANA timezone |
 | is_active | boolean | NOT NULL, default true | Soft-disable a tenant |
 | created_at | timestamptz | NOT NULL, auto_now_add | |
 | updated_at | timestamptz | NOT NULL, auto_now | |
@@ -236,7 +236,7 @@ Indexes: UNIQUE (slug)
 | lat | decimal(9,6) | NULL | WGS84 latitude |
 | lon | decimal(9,6) | NULL | WGS84 longitude |
 | address | text | NOT NULL, default '' | Human-readable address |
-| timezone | varchar(50) | NOT NULL, default 'Asia/Kuwait' | Per-location tz |
+| timezone | varchar(50) | NOT NULL, default 'Asia/Kuwaitt' | Per-location tz |
 | is_active | boolean | NOT NULL, default true | |
 | created_at | timestamptz | NOT NULL | |
 | updated_at | timestamptz | NOT NULL | |
@@ -248,11 +248,11 @@ Unique: (tenant, name)
 
 | Field | Type | Constaints | Notes |
 |---|---|---|---|
-| id | serial | PK | Dango default |
+| id | serial | PK | Django default |
 | email | varchar(255) | NOT NULL, UNIQUE | Used as username |
 | first_name | varchar(150) | NOT NULL | |
 | last_name | varchar(150) | NOT NULL | |
-| is_staff | boolean | default false | Dango admin access |
+| is_staff | boolean | default false | Django admin access |
 | is_active | boolean | default true | |
 | date_joined | timestamptz | NOT NULL | |
 

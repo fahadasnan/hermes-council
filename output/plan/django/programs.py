@@ -174,7 +174,7 @@ class Reward(models.Model):
     stamps_required = models.PositiveIntegerField(
         null=True,
         blank=True,
-        help_text='Required for store_card; NULL for coupoon/generic',
+        help_text='Required for store_card; NULL for coupon/generic',
     )
     cost = models.DecimalField(
         max_digits=12,
@@ -187,13 +187,13 @@ class Reward(models.Model):
         max_length=500,
         null=True,
         blank=True,
-        help_text='Must contain {#} placehoolder',
+        help_text='Must contain {#} placeholder',
     )
     reward_message = models.CharField(max_length=500, null=True, blank=True)
     sort_order = models.IntegerField(default=0)
 
     class Meta:
-        db_table = 'rewardss'
+        db_table = 'rewards'
         ordering = ['sort_order']
 
     def __str__(self):
