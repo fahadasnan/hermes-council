@@ -12,22 +12,21 @@ Phase-based plan from an empty repository to the first business live on a real p
 
 ```mermaid
 flowchart TD
-  P0["Phase 0 Foundation: repo, Django, CI, auth, tenancy, i18n baseline"]
-  P1["Phase 1 Tenancy and provisioning: platform admin, memberships, dashboard shell"]
-  P2["Phase 2 Programs and pass pipeline: editor, signer, enrollment, wallets"]
-  P3["Phase 3 Ledger and counter: Balance, LedgerEntry, counter tool, customers"]
-  P4["Phase 4 Analytics, export, audit polish"]
-  P5["Phase 5 Tenant API and webhooks - MVP complete"]
-  P6["Phase 6 Event ticket P1"]
-  P7["Phase 7 Boarding pass P2"]
-  P8["Phase 8 Beacons P3"]
-  P9["Phase 9 Push campaigns P4"]
-  P10["Phase 10 Automations, referrals, tiers P5"]
-  P11["Phase 11 Named connectors, developer portal P6"]
-  P12["Phase 12 White-label P7"]
-  P13["Phase 13 Self-serve signup and billing P8"]
-  P0 --> P1 --> P2 --> P3 --> P4 --> P5
-  P5 --> P6 --> P7 --> P8 --> P9 --> P10 --> P11 --> P12 --> P13
+  P0["0 Foundation<br/>repo, Django, auth, tenancy"]
+  P1["1 Provisioning<br/>platform admin, memberships"]
+  P2["2 Programs and passes<br/>editor, signer, enrollment"]
+  P3["3 Ledger and counter<br/>balances, customers"]
+  P4["4 Analytics<br/>export and audit"]
+  P5["5 Tenant API<br/>MVP complete"]
+  P6["6 Event ticket"]
+  P7["7 Boarding pass"]
+  P8["8 Beacons"]
+  P9["9 Campaigns"]
+  P10["10 Automations, referrals, tiers"]
+  P11["11 Connectors and portal"]
+  P12["12 White-label"]
+  P13["13 Signup and billing<br/>last phase"]
+  P0 --> P1 --> P2 --> P3 --> P4 --> P5 --> P6 --> P7 --> P8 --> P9 --> P10 --> P11 --> P12 --> P13
   P3 -.-> P9
   P5 -.-> P11
   P1 -.-> P13
@@ -39,28 +38,29 @@ Solid chain = hard dependency (the MVP is strictly linear). Dotted = soft reuse:
 
 ```mermaid
 gantt
-  title Relative timeline from first commit, week 1 = 2026-11-02
+  title Relative timeline from the first commit
   dateFormat YYYY-MM-DD
-  axisFormat %b %d
+  axisFormat %b %Y
+  tickInterval 1month
   section MVP
-  Phase 0 Foundation            :p0, 2026-11-02, 21d
-  Phase 1 Tenancy provisioning  :p1, after p0, 21d
-  Phase 2 Programs pass pipeline :p2, after p1, 28d
-  Phase 3 Ledger and counter    :p3, after p2, 28d
-  Phase 4 Analytics export      :p4, after p3, 14d
-  Phase 5 Tenant API webhooks   :p5, after p4, 21d
-  section Post MVP
-  Phase 6 Event ticket          :p6, after p5, 14d
-  Phase 7 Boarding pass         :p7, after p6, 14d
-  Phase 8 Beacons               :p8, after p7, 14d
-  Phase 9 Push campaigns        :p9, after p8, 14d
-  Phase 10 Automations referrals tiers :p10, after p9, 28d
-  Phase 11 Connectors portal    :p11, after p10, 21d
-  Phase 12 White label          :p12, after p11, 14d
-  Phase 13 Self serve billing   :p13, after p12, 28d
+  0 Foundation     :p0, 2026-11-02, 21d
+  1 Provisioning   :p1, after p0, 21d
+  2 Programs       :p2, after p1, 28d
+  3 Ledger         :p3, after p2, 28d
+  4 Analytics      :p4, after p3, 14d
+  5 Tenant API     :p5, after p4, 21d
+  section Later
+  6 Event ticket   :p6, after p5, 14d
+  7 Boarding pass  :p7, after p6, 14d
+  8 Beacons        :p8, after p7, 14d
+  9 Campaigns      :p9, after p8, 14d
+  10 Automations   :p10, after p9, 28d
+  11 Connectors    :p11, after p10, 21d
+  12 White-label   :p12, after p11, 14d
+  13 Signup        :p13, after p12, 28d
 ```
 
-First business can go live at the end of Phase 5 (~week 21). Post-MVP phases sell the roadmap; none of them blocks the MVP.
+Week 1 starts 2026-11-02. The first business can go live at the end of Phase 5 (~week 21). Post-MVP phases sell the roadmap; none of them blocks the MVP.
 
 ---
 
