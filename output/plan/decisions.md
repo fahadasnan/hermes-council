@@ -40,7 +40,7 @@ Statuses: **Accepted** (build it this way), **Accepted with changes** (build it 
 - Context: `data-model.md` §2.2 proposed JWT for the tenant API. `backend.md` §3.3/§9.2 and the django-backend skill draft proposed HMAC-signed requests with a per-tenant credential. The two cannot both be right, and the verifier ruled the JWT claim WRONG.
 - Decision: The tenant API (the seam a store's POS/online system calls) authenticates with an `ApiCredential` (key id + secret) and an HMAC-SHA256 signature over a canonical request string. No JWT anywhere in the MVP. The server resolves the tenant from the credential, never from the request body or a token claim.
 - Canonical contract:
-  - Headers: `X-Api-Key: ***`, `X-Timestamp: <unix_seconds>`, `X-Signature: hex(HMAC-SHA256(secret, signing_string))`.
+  - Headers: `X-Api-Key: <key_id>`, `X-Timestamp: <unix_seconds>`, `X-Signature: hex(HMAC-SHA256(secret, signing_string))`.
   - Signing string: `{METHOD}\n{PATH}\n{TIMESTAMP}\n{SHA256_HEX(body)}` (hashing the body avoids whitespace ambiguity in the raw-body variant the backend draft showed).
   - Replay window: reject timestamps more than 300 s from server time. Constant-time signature comparison.
   - Per-credential rate limits (see ADR-43).
