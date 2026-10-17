@@ -26,13 +26,22 @@ flowchart TD
   P11["11 Connectors and portal"]
   P12["12 White-label"]
   P13["13 Signup and billing<br/>last phase"]
-  P0 --> P1 --> P2 --> P3 --> P4 --> P5 --> P6 --> P7 --> P8 --> P9 --> P10 --> P11 --> P12 --> P13
+  P0 --> P1 --> P2 --> P3 --> P4 --> P5 --> P6 --> P7
+  P2 -.-> P8
+  P5 -.-> P8
+  P2 -.-> P9
   P3 -.-> P9
+  P3 --> P10
+  P9 -.-> P10
   P5 -.-> P11
+  P2 -.-> P12
+  P5 -.-> P12
   P1 -.-> P13
 ```
 
-Solid chain = hard dependency (the MVP is strictly linear). Dotted = soft reuse: campaigns (Phase 9) build on ledger events and segmentation data from Phase 3; connectors (Phase 11) extend the Phase 5 API seam; signup (Phase 13) reuses the Phase 1 provisioning service (ADR-28).
+Solid = hard dependency (Phases 0–5 are strictly linear; automations (Phase 10) hard-require the Phase 3 ledger). Dotted = soft reuse: beacons (Phase 8) reuse the Phase 2 projection pipeline and the shipped MVP; campaigns (Phase 9) build on ledger events and segmentation data from Phase 3 and the Phase 2 push plumbing; connectors (Phase 11) extend the Phase 5 API seam; white-label (Phase 12) rethemes the Phase 2 enrollment app and the Phase 5 email/integration surface; signup (Phase 13) reuses the Phase 1 provisioning service (ADR-28). Round 2 F-PLAN-3: the diagram no longer draws a false solid chain through the later phases — their real dependencies are the subsets named in each phase's "Dependencies" line. The Gantt below is a **staffing serialization**: later phases are staffed sequentially, not dependency-ordered.
+
+Every phase also runs on the ADR-57 evidence pipeline (round 2 F-PIPE-1): a `plan/evidence/phase-<n>-progress.md` row per task with its commit SHA, `scripts/phase<n>-check.sh` with logs in `/tmp`, an epic `REVIEW.md` + numbered artifacts pack at the end of every epic, and a `plan/evidence/phase-<n>-gates/` pack at the end of every phase. User-facing journeys are Playwright-tested in `en` **and** `ar`, with light and dark evidence screenshots in both languages (ADR-57, round 2 F-PIPE-2/F-verifier-4).
 
 ## Timeline (relative durations)
 
@@ -60,7 +69,7 @@ gantt
   13 Signup        :p13, after p12, 28d
 ```
 
-Week 1 starts 2026-11-02. The first business can go live at the end of Phase 5 (~week 21). Post-MVP phases sell the roadmap; none of them blocks the MVP.
+Week 1 starts 2026-11-02. The first business can go live at the end of Phase 5 (~week 21). Post-MVP phases sell the roadmap; none of them blocks the MVP. The Gantt orders later phases by staffing, not by dependency (see the diagram above — round 2 F-PLAN-3).
 
 ---
 
