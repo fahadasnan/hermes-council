@@ -398,59 +398,86 @@ After giving 1 stamp to COUNCIL TEST Alice (cartogapher, 2026-10-17):
 
 ### Navigation
 
-URL: /subusers (left rail icon, marked with premium icon )
+URL: /subusers (left rail icon, marked with premium icon)
 - Page IS directly accessible on trial (not gated from view)
-- Create action IS gated: click opens premium upsell dialog
+- **Create Subuser dialog opens on trial without premium blocking** (verified 2026-10-17)
+- The left-rail icon shows a premium badge but the page and dialog are accessible
 
-### Form fields (from FINAL_REPORT.md page inventory, UNVERIFIED)
+### Create Subuser dialog (observed live)
 
-| Field | Type | Required | Notes |
-|-------|------|----------|-------|
-| Username | textbox | yes | Prefixed with account name |
-| Password | textbox | yes | |
-| Notes | textbox | no | |
-| Location | combobox | no | Scoped to a location |
+Header: "Create a New Subuser"
 
-### Plan limits
+| Field | Type | Required | Validation | Notes |
+|-------|------|----------|------------|-------|
+| Username | textbox | yes | "Please enter a value for this field." | Prefixed with "ibefehdi+" |
+| Password | textbox | yes | "Please enter a password of at least 6 characters." | |
+| Notes | textbox | no | (Optional placeholder) | |
+| Location | combobox | no | None | Global locations list populated |
 
-- Starter: 3 subusers
-- Growth: 10 subusers
-- Ultimate: 50 subusers
+Buttons: Cancel / Create Subuser
 
-### Blocked by safety rules
+Summary validation: "Form is invalid" toast on empty submit.
 
-Brief says: "create a COUNCIL-TEST stamper if the UI allows it. If the UI says this changes billing or subscription cost, stop and document instead."
+### Subuser list table
 
-Since this is premium-gated (requires paid subscription), per safety rules: **FLOW NOT EXERCISED**. Documented from UI inspection only.
+Columns: Profile, Username, Created, Notes, Location, Status
+Empty state: "No data available in table"
+Pagination: Show 10/25/50/100 entries, search box
+
+### API calls observed
+
+- GET /subusers → 200 (list subusers, empty on trial)
+- GET /locations → 200 (populates location dropdown)
+
+### Create attempt result
+
+**NOT CREATED**: The JS value setting bypassed Angular validation (same issue as landing page). No POST to /subusers was observed. The dialog UI allows filling fields and clicking Create, but Angular validation rejects values set via JS.
+
+### Plan description from UI
+
+"Create subusers to track stamps and rewards issued & redeemed by each staff member. You can create up to 10 subusers with the Growth plan and up to 50 subusers with the Ultimate plan."
+
+### Safety assessment
+
+Per safety rules: "create a COUNCIL-TEST stamper if the UI allows it. If the UI says this changes billing or subscription cost, stop and document instead."
+
+The dialog opens without any billing/subscription warning. The plan description mentions subuser limits per plan tier but does not say creating subusers changes billing. A POST to /subusers likely returns a plan-limit error (similar to card limit) or successfully creates one on the trial.
 
 ---
 
 ## Flow7: Campaign / Message
 
-### Messages page
+### Messages page (observed live)
 
-URL: /messages/{campignId}
+URL: /messages/{campaignId}
 API: GET /card/cid/{id}?count=true (audience count)
+
+Header: "Send Messages to Customers"
+Description: "These messages will appear on the lock screen and under 'Latest Updates' on your customers' digital stamp card."
 
 ### Form fields
 
 | Field | Type | Notes |
 |-------|------|-------|
-| Audience | radio | All customers / A segment |
-| Message | textbox | ~90-character best practice hint shown |
+| Who? | radio | All of my customers (default) / A segment of my customers |
+| Message | textbox | Placeholder: "It's Taco Tuesday! Drop by for all you can eat tacos and beer from 7-10pm." |
+| Ideas | static text | 4 example messages shown (Taco Tuesday, jazz set, champagne, hair wash) |
+
+Best practice hint: "Keep your message short and sweet (~ 90 characters)."
+
+### Premium gating
+
+Right sidebar shows "Unlock for more" — premium messaging features are restricted. The basic "All customers" message composer is accessible.
 
 ### Buttons
 
-- **Send Message**: Sends immediately (no draft)
+- **Send Message**: Sends immediately. Only button available.
 - **No "Save as Draft" option**: The UI has only "Send Message". Draft functionality does not exist.
-
-### Safety
-
-Per rules: **NEVER SEND OR SCHEDULE**. No message was sent. No draft option available to exercise.
 
 ### Push Message History
 
-Table on /messages/{id} and /overview/{id}: Date, Message, Segment, Reach colums. Empty for unactivated account.
+Table below composer: Date, Message, Segment, Reach columns.
+Empty state: "No data available in table"
 
 ```mermaid
 sequenceDiagram

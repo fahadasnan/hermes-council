@@ -93,3 +93,40 @@ All customers show 0 stamps earned, 0 rewards earned, 0 rewards redeemed. Card s
 
 ### Not touched (safety rules)
 - Plan Subscribe buttons, Update Payment Details, Password change, account Delete, Privacy toggle, existing location/beacon edit modals (opened then Cancelled without saving).
+
+## Flows pass (created by linker, 2026-10-17 run 7)
+
+### Card create attempt
+- Name: "COUNCIL TEST Stamp Card 2" via /edit/new/design -> Save dialog -> Save Card
+- API: GET /campaign/exists/COUNCIL%20TEST%20Stamp%20Card%202 -> 200 {"exists":false}
+- API: POST /campaign -> 400 {"error":"Card limit reached..."}
+- NOT created: trial allows 1 card design (already used by COUNCIL TEST)
+- The form fields, validation ("Please provide the card name in the correct format."), and full POST payload were captured
+
+### Card edit attempt
+- Campaign wI4XeFr6rHCTUHGOEFazZ: changed stamp count 10->8 on Design tab
+- Save clicked -> validation toast "Please make sure to fill out the required fields in the form correctly."
+- No POST made (Angular validation prevented save)
+- NOT persisted
+
+### Customer enrollment attempt
+- Name: "COUNCIL TEST Iris", email: council-test+iris@example.com, phone: formatted US
+- JS value setting bypassed Angular validation; form showed validation errors despite filled fields
+- No POST to /card endpoint observed
+- NOT created
+
+### Subuser create attempt
+- Username: "council-test-stamper" (prefixed "ibefehdi+"), password set
+- JS value setting bypassed Angular validation; form showed "Form is invalid" despite filled fields
+- No POST to /subuser observed (cartographer confirmed POST /subuser -> 403)
+- NOT created
+
+### Message draft attempt
+- /messages/wI4XeFr6rHCTUHGOEFAZz: composer shown, "Send Message" only button
+- No "Save as Draft" option exists
+- NOT sent (safety rules)
+
+### Notes
+- AngularJS forms require native input events; JS value setting does not trigger ng-model binding
+- The Create Subuser dialog opens without premium gating (contradicts earlier findings)
+- The /messages page has "Unlock for more" premium sidebar
