@@ -1,0 +1,12 @@
+# Coverage and product audit
+
+Output: `/Users/fahad/council/output/plan/review2/coverage.md`
+
+Audit `requirements.md`, `frontend.md`, the frontend and i18n parts of `CONVENTIONS.md`, and the `react-frontend`, `i18n-rtl` and `loyalty-domain-glossary` skills.
+
+1. Feature parity map. Walk every page, feature, setting and report in the reverse-engineering evidence (`pages.json`, `technical/settings.md`, `technical/reports.md`, `technical/flows.md`, `TECHNICAL_REPORT.md`). For each, state where the plan covers it (module, phase, ADR) or that it is missing. Missing items must get a proposed phase (MVP, a named later phase, or explicitly out of scope with a reason). Present this as a table.
+2. MVP completeness. For each MVP area (tenants, locations, staff, store card, coupon, generic pass, relevant locations, card design and publish, enrollment and wallet passes, the ledger action for each style, customers, basic analytics) check that user stories, acceptance criteria, screens, permissions and tests exist and agree with each other. Acceptance criteria must be testable. Event ticket and boarding pass must be present as required later phases on the same signer.
+3. First-business walkthrough. Simulate a realistic week at a business with two locations end to end through the plan: onboarding the tenant, two locations in the same time zone, a stamper who works at both, a program whose reward threshold is set once for the tenant, a customer who enrolls from a QR code and saves the pass, stamps at location A, stamps at location B, a double tap that must not double-credit, a redemption, a manager who must only see their location, an Arabic-speaking customer on the enrollment page. Every step the plan cannot handle is a finding.
+4. Roles and permissions. Check the roles matrix covers every action in the MVP and matches the Django permissions and queryset rules described elsewhere.
+5. Frontend and RTL. Check routing with tenant and location context, offline or flaky network behaviour at the counter, Arabic numerals and date formats, mixed-direction text (Arabic names with phone numbers), the enrollment page in RTL, the stamp counter on a phone, and that no visual design decisions conflict with leaving visuals to the external design skill.
+6. Skills. For the three skills above: would an engineer or AI following them build the right thing? Flag vague rules, wrong examples, and contradictions with `decisions.md` or `CONVENTIONS.md`.

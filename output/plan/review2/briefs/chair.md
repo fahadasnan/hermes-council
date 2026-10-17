@@ -1,0 +1,11 @@
+# Chair: apply round 2 fixes
+
+Inputs: `/Users/fahad/council/output/plan/review2/adjudication.md` (authoritative) and the reviewer files it refers to.
+
+1. Before changing anything, snapshot round 1 with the terminal: `mkdir -p /Users/fahad/council/output/plan/round1 && cp -R /Users/fahad/council/output/plan/decisions.md /Users/fahad/council/output/plan/IMPLEMENTATION_PLAN.md /Users/fahad/council/output/plan/CONVENTIONS.md /Users/fahad/council/output/plan/skills /Users/fahad/council/output/plan/django /Users/fahad/council/output/plan/round1/`. Skip this if `round1/` already exists.
+2. Apply every accepted fix from the adjudication, in its order, to `decisions.md`, `IMPLEMENTATION_PLAN.md`, `CONVENTIONS.md`, the Django models in `django/`, and the skills. Edit files in place; keep their structure. Changed ADRs get a `Revised in round 2: <finding ids>` line; reversed ADRs are marked `Superseded by ADR-<n>` and the new ADR is added. Do not apply rejected findings.
+3. Skills must stay identical in `skills/.cursor/skills/` and `skills/.claude/skills/`: edit one copy, then copy it over the other.
+4. Write `/Users/fahad/council/output/plan/REVISION_LOG.md`: one row per finding (id, severity, ruling, what changed, files), plus a short summary of the biggest changes and anything deliberately left open with the reason.
+5. Validate: `node /Users/fahad/council/check-skills.mjs /Users/fahad/council/output/plan/skills` and `node /Users/fahad/council/check-mermaid.mjs` on every changed Markdown file. Fix until both pass.
+6. Never modify the reverse-engineering reports (`output/*.md`, `output/*.json`, `output/technical/`), the round 1 member files (`requirements.md`, `data-model.md`, `backend.md`, `frontend.md`, `review.md`), or anything in `review2/` and `round1/`. Do not modify `/Users/fahad/GlowDesk`.
+7. The GlowDesk coding pipeline in `common.md` is mandatory. Read the GlowDesk files named there and write the rhythm into `feature-delivery`, `react-frontend`, `CONVENTIONS.md`, and `IMPLEMENTATION_PLAN.md`: phase progress file, check script with logs in `/tmp`, Playwright in English and Arabic, an evidence pack at the end of every epic, and a gate pack at the end of every phase. Phase 0 creates the harness. Keep Django, pytest, and Celery. Do not copy Supabase, pgTAP, Deno, or Edge Functions. Both skill trees stay identical.
