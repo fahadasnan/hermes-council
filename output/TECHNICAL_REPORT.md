@@ -756,7 +756,7 @@ Status column: CONFIRMED = live-clicked or live-observed this pass or by the ver
 | any page | /subusers | rail users icon (premium badge) | navigate | CONFIRMED (page reachable on trial) |
 | any page | docs.loopyloyalty.com | top-bar help icon | external | CONFIRMED |
 | any page | campaign in view | dropdown campaign entry | state select | CONFIRMED |
-| dropdown | /edit/new/design | Create New Card | navigate | CONFIRMED (same destination as the "+" tile) |
+| dropdown | /edit/new/design | Create New Card | navigate | dropdown opened live; destination reported as /edit/new/design, same as the confirmed "+" tile |
 | dropdown | (logout) | Logout | navigate | UNVERIFIED (not exercised) |
 | /manage-my-cards | /edit/:id/design | MANAGE | navigate | CONFIRMED |
 | /manage-my-cards | /edit/new/design | "+" tile | navigate | CONFIRMED by controlled click; the older /help observation is stale |
@@ -867,13 +867,10 @@ flowchart TD
     CPR -->|"pass link"| PASS
     LP -->|"Join Now!, wallet redirect"| PASS
     MSG -.->|"Send Message, never exercised"| PASS
-    CST -.->|"CSV button, Ultimate-gated modal"| SET
-    OVW -.->|"transactions CSV button, Ultimate-gated modal"| SET
     SET -->|"plan limits gate"| MC
-    STP -.->|"addStamps with undefined count, 500"| CPR
 ```
 
-Note on the last two CSV edges: the modal's "Upgrade my Account" button leads toward plan upgrade (Settings billing); the export itself never fires on this trial. The /stamp edge is drawn to the profile only to show the verified workaround for the same operation; there is no UI navigation between /stamp and the profile.
+Notes on two things the diagram deliberately does not draw. The CSV export buttons on /customers/:id and /overview/:id open a self-contained "Premium Feature" modal; the destination of its "Upgrade my Account" button was never captured, so no edge is asserted (section 7.5). /stamp stays an isolated node: it has no navigation entry or exit, and there is no UI path between it and the customer profile. The profile Give Stamps tab is the verified workaround for the same stamp operation (section 8.5).
 
 ### 5.3 API call heatmap
 
@@ -1122,6 +1119,22 @@ Outcome on this account: BLOCKED by the plan limit. `POST /campaign` returned 40
 Steps: MANAGE on a tile opens `/edit/:id/design` prefilled (fetches `GET /campaign/id/:id` and `GET /images/stampTemplates`); edit any tab; Save persists silently for existing cards (no name dialog; the dialog is new-cards-only); Save & Preview generates a preview; Activate (saved campaigns only) flips status 1 to 2.
 
 Observed attempt: changed stamp count 10 to 8 on the Design tab, clicked Save, got the validation toast "Please make sure to fill out the required fields in the form correctly." and no request was made. AngularJS validation blocked the save; nothing persisted. The endpoint that persists editor tab edits was therefore never captured (UNVERIFIED); the only confirmed campaign write is Insights' `PATCH /campaign/:campaignId`. Activate was never pressed (blocked by unverified email; UNVERIFIED).
+
+```mermaid
+sequenceDiagram
+    actor User
+    participant UI as Card editor
+    participant API as api.loopyloyalty.com
+    User->>UI: Click MANAGE on /manage-my-cards
+    UI->>API: GET /account
+    UI->>API: GET /campaigns
+    UI->>API: GET /campaign/id/:campaignId
+    UI->>API: GET /images/stampTemplates
+    UI-->>User: /edit/:id/design prefilled (no name dialog on existing cards)
+    User->>UI: Change stamp count 10 to 8, click Save
+    UI-->>User: validation toast, no request fired, nothing persisted
+    note over User,API: the tab-edit save endpoint was never captured. Activate (status 1 to 2) was never pressed, blocked by email verification
+```
 
 ### 8.3 Create a location and a beacon (Settings)
 
