@@ -1,6 +1,14 @@
 """
 Django models for the tenants app.
 
+Status (round 2, F-CONSISTENCY adjudication): illustrative draft, superseded per
+ADR-44. The binding patterns live in decisions.md / CONVENTIONS.md and the
+django-data / django-backend skills; Phase 0 rewrites these models from those
+sources. Do not copy this code as-is (known draft deviations: class-attribute
+tenant context instead of contextvars; plain FKs instead of composite
+same-tenant FKs via db_constraint=False + migration RunSQL; undeclared default
+PKs on internal tables instead of BigAutoField per ADR-33).
+
 Multi-tenant foundation: Tenant, Location, Membership, Beacon,
 APICredential, WebhookSubscription, and the TenantScopedManager
 base class that every tenant-owned model must use.

@@ -1,6 +1,11 @@
 """
 Django models for the programs app.
 
+Status (round 2, F-CONSISTENCY adjudication): illustrative draft, superseded per
+ADR-44. The binding patterns live in decisions.md / CONVENTIONS.md and the
+django-data / django-backend skills; Phase 0 rewrites these models from those
+sources. Do not copy this code as-is.
+
 Programs (loyalty programs), design, rewards, enrollment fields,
 location and beacon assignments, useful links, custom labels,
 and style-specific configuration tables.

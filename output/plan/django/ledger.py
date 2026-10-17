@@ -1,6 +1,13 @@
 """
 Django models for the ledger app.
 
+Status (round 2, F-CONSISTENCY adjudication): illustrative draft, superseded per
+ADR-44. The binding patterns live in decisions.md / CONVENTIONS.md and the
+django-data / django-backend skills; Phase 0 rewrites these models from those
+sources. Do not copy this code as-is (known draft deviations: plain FKs instead
+of composite same-tenant FKs via db_constraint=False + migration RunSQL; missing
+append-only DB trigger and signed-delta checks defined in ADR-9).
+
 The ledger is append-only. Every event that changes a pass balance
 (earn, redeem, issue, void) creates an immutable LedgerEntry.
 The Pass balance is the sum of the ledger, denormalized for fast reads.

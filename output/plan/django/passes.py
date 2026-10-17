@@ -1,3 +1,13 @@
+"""
+Django models for the passes app.
+
+Status (round 2, F-CONSISTENCY adjudication): illustrative draft, superseded per
+ADR-44. The binding patterns live in decisions.md / CONVENTIONS.md and the
+django-data / django-backend skills; Phase 0 rewrites these models from those
+sources. Do not copy this code as-is (known draft deviation: balance stored on
+Pass, superseded by the separate Balance aggregate in ADR-4/ADR-44).
+"""
+
 import uuid
 from django.db import models
 
