@@ -1,0 +1,196 @@
+- generic [ref=f36e1]:
+  - dialog [active] [ref=f36e155]:
+    - generic [ref=f36e157]:
+      - heading " Premium Feature" [level=3] [ref=f36e159]:
+        - generic [ref=f36e160]: 
+        - text: Premium Feature
+      - generic [ref=f36e163]:
+        - paragraph [ref=f36e164]:
+          - text: Unlock
+          - link "CSV Exports" [ref=f36e165] [cursor=pointer]:
+            - /url: http://docs.loopyloyalty.com/learning-from-your-customers/export-data-in-csv-format
+          - text: "- available with the"
+          - strong [ref=f36e166]: Ultimate
+          - text: plan.
+        - paragraph [ref=f36e167]:
+          - link "How to try out premium features during your free trial" [ref=f36e168] [cursor=pointer]:
+            - /url: http://docs.loopyloyalty.com/pricing-privacy-security-and-terms/how-to-try-out-premium-features-in-loopy-loyalty-during-your-free-trial
+      - generic [ref=f36e169]:
+        - button "Upgrade my Account" [ref=f36e170] [cursor=pointer]
+        - button "Cancel" [ref=f36e171] [cursor=pointer]
+  - generic [aria-hidden] [ref=f36e2]:
+    - text: 
+    - list [ref=f36e5]:
+      - listitem [ref=f36e6]:
+        - generic: 
+      - listitem [ref=f36e7]:
+        - generic: 
+      - listitem [ref=f36e8]:
+        - generic: 
+      - listitem [ref=f36e9]:
+        - generic: 
+      - listitem [ref=f36e10]:
+        - generic [ref=f36e11] [cursor=pointer]: 
+    - navigation [ref=f36e13]:
+      - alert [ref=f36e14]:
+        - paragraph [ref=f36e15]:
+          - generic [aria-hidden] [ref=f36e16]: 
+          - text: You haven't verified your email address. Resend verification email.
+      - generic [ref=f36e17]:
+        - img [ref=f36e19] [cursor=pointer]
+        - list [ref=f36e20]:
+          - listitem [ref=f36e21]:
+            - generic [ref=f36e22]: 15 days left on trial
+            - link [ref=f36e173] [cursor=pointer]:
+              - /url: /settings
+              - text: Upgrade Now
+          - listitem [ref=f36e35]:
+            - generic [ref=f36e36]: "In view: COUNCIL TEST"
+          - listitem [ref=f36e24]:
+            - link [ref=f36e25] [cursor=pointer]:
+              - /url: /manage-my-cards
+              - generic [aria-hidden] [ref=f36e26]: 
+          - listitem [ref=f36e27]:
+            - link [ref=f36e28] [cursor=pointer]:
+              - /url: http://docs.loopyloyalty.com/
+              - generic [aria-hidden] [ref=f36e29]: 
+          - listitem [ref=f36e30]:
+            - link [ref=f36e174] [cursor=pointer]:
+              - /url: ""
+              - generic [ref=f36e33]: 
+    - generic [ref=f36e41]:
+      - button [ref=f36e175] [cursor=pointer]:
+        - generic [aria-hidden] [ref=f36e43]: 
+        - generic [ref=f36e44]: 
+      - heading [level=1] [ref=f36e176]: Customers
+      - generic [ref=f36e46]:
+        - generic [ref=f36e47]:
+          - text: Show
+          - combobox [ref=f36e177]
+          - text: entries
+        - generic [ref=f36e49]:
+          - text: "Search:"
+          - searchbox [ref=f36e178]
+        - table [ref=f36e51]:
+          - rowgroup [ref=f36e52]:
+            - row [ref=f36e179]:
+              - columnheader [ref=f36e54]
+              - columnheader [ref=f36e180]: First Name
+              - columnheader [ref=f36e181]: Email Address
+              - columnheader [ref=f36e182]: Mobile Number
+              - columnheader [ref=f36e183] [cursor=pointer]: ▾Signup Date (y-m-d)
+              - columnheader [ref=f36e184] [cursor=pointer]: Card Status
+              - columnheader [ref=f36e185] [cursor=pointer]: Stamps Earned
+              - columnheader [ref=f36e186] [cursor=pointer]: Rewards Earned
+              - columnheader [ref=f36e187] [cursor=pointer]: Rewards Redeemed
+          - rowgroup [ref=f36e63]:
+            - row [ref=f36e188]:
+              - cell [ref=f36e189]:
+                - link [ref=f36e190] [cursor=pointer]:
+                  - /url: /customers/wI4XeFr6rHCTUHGOEFazZ/profile/RTgLMCuFyOvpMH
+                  - text: Actions
+              - cell [ref=f36e191]: COUNCIL TEST Helen
+              - cell [ref=f36e192]: council-test+helen@example.com
+              - cell [ref=f36e193]: "+12015550107"
+              - cell [ref=f36e194]: 2026-10-17
+              - cell [ref=f36e195]: issued
+              - cell [ref=f36e196]: "0"
+              - cell [ref=f36e197]: "0"
+              - cell [ref=f36e198]: "0"
+            - row [ref=f36e199]:
+              - cell [ref=f36e200]:
+                - link [ref=f36e201] [cursor=pointer]:
+                  - /url: /customers/wI4XeFr6rHCTUHGOEFazZ/profile/Kr54wYnVCU7mNM
+                  - text: Actions
+              - cell [ref=f36e202]: COUNCIL TEST George
+              - cell [ref=f36e203]: council-test+george@example.com
+              - cell [ref=f36e204]: "+12015550106"
+              - cell [ref=f36e205]: 2026-10-17
+              - cell [ref=f36e206]: issued
+              - cell [ref=f36e207]: "0"
+              - cell [ref=f36e208]: "0"
+              - cell [ref=f36e209]: "0"
+            - row [ref=f36e210]:
+              - cell [ref=f36e211]:
+                - link [ref=f36e212] [cursor=pointer]:
+                  - /url: /customers/wI4XeFr6rHCTUHGOEFazZ/profile/lYWxtjodR51CUv
+                  - text: Actions
+              - cell [ref=f36e213]: COUNCIL TEST Fiona
+              - cell [ref=f36e214]: council-test+fiona@example.com
+              - cell [ref=f36e215]: "+12015550105"
+              - cell [ref=f36e216]: 2026-10-17
+              - cell [ref=f36e217]: issued
+              - cell [ref=f36e218]: "0"
+              - cell [ref=f36e219]: "0"
+              - cell [ref=f36e220]: "0"
+            - row [ref=f36e221]:
+              - cell [ref=f36e222]:
+                - link [ref=f36e223] [cursor=pointer]:
+                  - /url: /customers/wI4XeFr6rHCTUHGOEFazZ/profile/ioPyLW887pmNQT
+                  - text: Actions
+              - cell [ref=f36e224]: COUNCIL TEST Edward
+              - cell [ref=f36e225]: council-test+edward@example.com
+              - cell [ref=f36e226]: "+12015550104"
+              - cell [ref=f36e227]: 2026-10-17
+              - cell [ref=f36e228]: issued
+              - cell [ref=f36e229]: "0"
+              - cell [ref=f36e230]: "0"
+              - cell [ref=f36e231]: "0"
+            - row [ref=f36e232]:
+              - cell [ref=f36e233]:
+                - link [ref=f36e234] [cursor=pointer]:
+                  - /url: /customers/wI4XeFr6rHCTUHGOEFazZ/profile/OkossS0uRwTfPF
+                  - text: Actions
+              - cell [ref=f36e235]: COUNCIL TEST Diana
+              - cell [ref=f36e236]: council-test+diana@example.com
+              - cell [ref=f36e237]: "+12015550103"
+              - cell [ref=f36e238]: 2026-10-17
+              - cell [ref=f36e239]: issued
+              - cell [ref=f36e240]: "0"
+              - cell [ref=f36e241]: "0"
+              - cell [ref=f36e242]: "0"
+            - row [ref=f36e243]:
+              - cell [ref=f36e244]:
+                - link [ref=f36e245] [cursor=pointer]:
+                  - /url: /customers/wI4XeFr6rHCTUHGOEFazZ/profile/eiVH1t0LE058Li
+                  - text: Actions
+              - cell [ref=f36e246]: COUNCIL TEST Charlie
+              - cell [ref=f36e247]: council-test+charlie@example.com
+              - cell [ref=f36e248]: "+12015550102"
+              - cell [ref=f36e249]: 2026-10-17
+              - cell [ref=f36e250]: issued
+              - cell [ref=f36e251]: "0"
+              - cell [ref=f36e252]: "0"
+              - cell [ref=f36e253]: "0"
+            - row [ref=f36e254]:
+              - cell [ref=f36e255]:
+                - link [ref=f36e256] [cursor=pointer]:
+                  - /url: /customers/wI4XeFr6rHCTUHGOEFazZ/profile/LtUUN2mxP5cDdg
+                  - text: Actions
+              - cell [ref=f36e257]: COUNCIL TEST Bob
+              - cell [ref=f36e258]: council-test+bob@example.com
+              - cell [ref=f36e259]: "+12015550101"
+              - cell [ref=f36e260]: 2026-10-17
+              - cell [ref=f36e261]: issued
+              - cell [ref=f36e262]: "0"
+              - cell [ref=f36e263]: "0"
+              - cell [ref=f36e264]: "0"
+            - row [ref=f36e265]:
+              - cell [ref=f36e266]:
+                - link [ref=f36e267] [cursor=pointer]:
+                  - /url: /customers/wI4XeFr6rHCTUHGOEFazZ/profile/xZuG0J01d5TGR2
+                  - text: Actions
+              - cell [ref=f36e268]: COUNCIL TEST Alice
+              - cell [ref=f36e269]: council-test+alice@example.com
+              - cell [ref=f36e270]: "+12015550123"
+              - cell [ref=f36e271]: 2026-10-17
+              - cell [ref=f36e272]: issued
+              - cell [ref=f36e273]: "0"
+              - cell [ref=f36e274]: "0"
+              - cell [ref=f36e275]: "0"
+        - status [ref=f36e152]: Showing 1 to 8 of 8 entries
+        - generic [ref=f36e153]:
+          - text: FirstPrevious
+          - generic [ref=f36e154]: "1"
+          - text: NextLast
+    - text:     

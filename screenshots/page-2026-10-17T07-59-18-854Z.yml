@@ -1,0 +1,105 @@
+- generic [ref=f36e1]:
+  - dialog [active] [ref=f36e155]:
+    - generic [ref=f36e157]:
+      - heading " Premium Feature" [level=3] [ref=f36e159]:
+        - generic [ref=f36e160]: 
+        - text: Premium Feature
+      - generic [ref=f36e163]:
+        - paragraph [ref=f36e164]:
+          - text: Unlock
+          - link "CSV Exports" [ref=f36e165] [cursor=pointer]:
+            - /url: http://docs.loopyloyalty.com/learning-from-your-customers/export-data-in-csv-format
+          - text: "- available with the"
+          - strong [ref=f36e166]: Ultimate
+          - text: plan.
+        - paragraph [ref=f36e167]:
+          - link "How to try out premium features during your free trial" [ref=f36e168] [cursor=pointer]:
+            - /url: http://docs.loopyloyalty.com/pricing-privacy-security-and-terms/how-to-try-out-premium-features-in-loopy-loyalty-during-your-free-trial
+      - generic [ref=f36e169]:
+        - button "Upgrade my Account" [ref=f36e170] [cursor=pointer]
+        - button "Cancel" [ref=f36e171] [cursor=pointer]
+  - generic [aria-hidden] [ref=f36e2]:
+    - text: 
+    - list [ref=f36e5]:
+      - listitem [ref=f36e6]:
+        - generic: 
+      - listitem [ref=f36e7]:
+        - generic: 
+      - listitem [ref=f36e8]:
+        - generic: 
+      - listitem [ref=f36e9]:
+        - generic: 
+      - listitem [ref=f36e10]:
+        - generic [ref=f36e11] [cursor=pointer]: 
+    - navigation [ref=f36e13]:
+      - alert [ref=f36e14]:
+        - paragraph [ref=f36e15]:
+          - generic [aria-hidden] [ref=f36e16]: 
+          - text: You haven't verified your email address. Resend verification email.
+      - generic [ref=f36e17]:
+        - img [ref=f36e19] [cursor=pointer]
+        - list [ref=f36e20]:
+          - listitem [ref=f36e21]:
+            - generic [ref=f36e22]: 15 days left on trial
+            - link [ref=f36e173] [cursor=pointer]:
+              - /url: /settings
+              - text: Upgrade Now
+          - listitem [ref=f36e35]:
+            - generic [ref=f36e36]: "In view: COUNCIL TEST"
+          - listitem [ref=f36e24]:
+            - link [ref=f36e25] [cursor=pointer]:
+              - /url: /manage-my-cards
+              - generic [aria-hidden] [ref=f36e26]: 
+          - listitem [ref=f36e27]:
+            - link [ref=f36e28] [cursor=pointer]:
+              - /url: http://docs.loopyloyalty.com/
+              - generic [aria-hidden] [ref=f36e29]: 
+          - listitem [ref=f36e30]:
+            - link [ref=f36e174] [cursor=pointer]:
+              - /url: ""
+              - generic [ref=f36e33]: 
+    - generic [ref=f36e41]:
+      - button [ref=f36e175] [cursor=pointer]:
+        - generic [aria-hidden] [ref=f36e43]: 
+        - generic [ref=f36e44]: 
+      - heading [level=1] [ref=f36e176]: Customers
+      - generic [ref=f36e46]:
+        - generic [ref=f36e47]:
+          - text: Show
+          - combobox [ref=f36e177]
+          - text: entries
+        - generic [ref=f36e49]:
+          - text: "Search:"
+          - searchbox [ref=f36e178]: Alice
+        - table [ref=f36e51]:
+          - rowgroup [ref=f36e52]:
+            - row [ref=f36e179]:
+              - columnheader [ref=f36e54]
+              - columnheader [ref=f36e180]: First Name
+              - columnheader [ref=f36e181]: Email Address
+              - columnheader [ref=f36e182]: Mobile Number
+              - columnheader [ref=f36e183] [cursor=pointer]: ▾Signup Date (y-m-d)
+              - columnheader [ref=f36e184] [cursor=pointer]: Card Status
+              - columnheader [ref=f36e185] [cursor=pointer]: Stamps Earned
+              - columnheader [ref=f36e186] [cursor=pointer]: Rewards Earned
+              - columnheader [ref=f36e187] [cursor=pointer]: Rewards Redeemed
+          - rowgroup [ref=f36e63]:
+            - row [ref=f36e276]:
+              - cell [ref=f36e277]:
+                - link [ref=f36e278] [cursor=pointer]:
+                  - /url: /customers/wI4XeFr6rHCTUHGOEFazZ/profile/xZuG0J01d5TGR2
+                  - text: Actions
+              - cell [ref=f36e279]: COUNCIL TEST Alice
+              - cell [ref=f36e280]: council-test+alice@example.com
+              - cell [ref=f36e281]: "+12015550123"
+              - cell [ref=f36e282]: 2026-10-17
+              - cell [ref=f36e283]: issued
+              - cell [ref=f36e284]: "0"
+              - cell [ref=f36e285]: "0"
+              - cell [ref=f36e286]: "0"
+        - status [ref=f36e152]: Showing 1 to 1 of 1 entries (filtered from 8 total entries)
+        - generic [ref=f36e153]:
+          - text: FirstPrevious
+          - generic [ref=f36e287]: "1"
+          - text: NextLast
+    - text:     

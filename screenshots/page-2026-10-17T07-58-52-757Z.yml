@@ -1,0 +1,152 @@
+- generic [ref=f33e2]:
+  - text: 
+  - list [ref=f33e5]:
+    - listitem [ref=f33e6]:
+      - generic: 
+    - listitem [ref=f33e7]:
+      - generic: 
+    - listitem [ref=f33e8]:
+      - generic: 
+    - listitem [ref=f33e9]:
+      - generic: 
+    - listitem [ref=f33e10]:
+      - generic [ref=f33e11] [cursor=pointer]: 
+  - navigation [ref=f33e13]:
+    - alert [ref=f33e14]:
+      - paragraph [ref=f33e15]:
+        - generic [aria-hidden] [ref=f33e16]: 
+        - text: You haven't verified your email address. Resend verification email.
+    - generic [ref=f33e17]:
+      - img [ref=f33e19] [cursor=pointer]
+      - list [ref=f33e20]:
+        - listitem [ref=f33e21]:
+          - generic [ref=f33e22]: 15 days left on trial
+          - link "Upgrade Now" [ref=f33e23] [cursor=pointer]:
+            - /url: /settings
+        - listitem [ref=f33e35]:
+          - generic [ref=f33e36]: "In view: COUNCIL TEST"
+        - listitem [ref=f33e24]:
+          - link [ref=f33e25] [cursor=pointer]:
+            - /url: /manage-my-cards
+            - generic [aria-hidden] [ref=f33e26]: 
+        - listitem [ref=f33e27]:
+          - link [ref=f33e28] [cursor=pointer]:
+            - /url: http://docs.loopyloyalty.com/
+            - generic [aria-hidden] [ref=f33e29]: 
+        - listitem [ref=f33e30]:
+          - link "" [ref=f33e32] [cursor=pointer]:
+            - /url: ""
+  - generic [ref=f33e38]:
+    - navigation [ref=f33e39]:
+      - generic [ref=f33e40]:
+        - list [ref=f33e41]:
+          - listitem [ref=f33e42]:
+            - generic [ref=f33e43] [cursor=pointer]: Profile
+          - listitem [ref=f33e44]:
+            - generic [ref=f33e45] [cursor=pointer]: Send Messages
+          - listitem [ref=f33e46]:
+            - generic [ref=f33e47] [cursor=pointer]: Give Stamps
+          - listitem
+          - listitem [ref=f33e48]:
+            - generic [ref=f33e49] [cursor=pointer]: Delete Customer
+        - list [ref=f33e50]:
+          - listitem [ref=f33e51]:
+            - button "Back" [ref=f33e52] [cursor=pointer]
+    - generic [ref=f33e54]:
+      - generic:
+        - generic [ref=f33e55]:
+          - button [ref=f33e58] [cursor=pointer]:
+            - generic [aria-hidden] [ref=f33e59]: 
+          - generic [ref=f33e60]:
+            - generic [ref=f33e61]:
+              - paragraph [ref=f33e62]: "Signed Up:"
+              - paragraph [ref=f33e63]: Oct 17, 2026 10:47:56 AM
+            - generic [ref=f33e64]:
+              - paragraph [ref=f33e65]: "Stamps Earned:"
+              - paragraph [ref=f33e66]: "0"
+            - generic [ref=f33e67]:
+              - paragraph [ref=f33e68]: "Rewards Earned:"
+              - paragraph [ref=f33e69]: "0"
+            - generic [ref=f33e70]:
+              - paragraph [ref=f33e71]: "Rewards Redeemed:"
+              - paragraph [ref=f33e72]: "0"
+          - generic [ref=f33e73]:
+            - generic [ref=f33e74]:
+              - paragraph [ref=f33e75]:
+                - text: "Card Status:"
+                - generic [aria-hidden] [ref=f33e77]: 
+              - paragraph [ref=f33e78]: issued
+            - generic [ref=f33e79]:
+              - paragraph [ref=f33e80]: "Last Stamp Earned:"
+              - paragraph
+            - generic [ref=f33e81]:
+              - paragraph [ref=f33e82]: "Last Reward Earned:"
+              - paragraph
+            - generic [ref=f33e83]:
+              - paragraph [ref=f33e84]: "Last Reward Redeemed:"
+              - paragraph
+          - generic [ref=f33e86]:
+            - generic [ref=f33e87]:
+              - generic [ref=f33e89] [cursor=pointer]:
+                - text: Personal Info
+                - generic [aria-hidden] [ref=f33e90]: 
+              - generic [aria-hidden] [ref=f33e93] [cursor=pointer]: 
+            - generic [ref=f33e96]:
+              - generic [ref=f33e98]:
+                - generic [ref=f33e99]: "Email Address:"
+                - paragraph [ref=f33e100]: council-test+helen@example.com
+              - generic [ref=f33e102]:
+                - generic [ref=f33e103]: "First Name:"
+                - paragraph [ref=f33e104]: COUNCIL TEST Helen
+              - generic [ref=f33e106]:
+                - generic [ref=f33e107]: "Mobile Number:"
+                - paragraph [ref=f33e108]: "+12015550107"
+          - separator [ref=f33e111]
+          - paragraph [ref=f33e114]:
+            - text: "View this customers pass:"
+            - link "https://loyalty.is/RTgLMCuFyOvpMH" [ref=f33e115] [cursor=pointer]:
+              - /url: https://loyalty.is/RTgLMCuFyOvpMH
+          - separator [ref=f33e116]
+          - generic [ref=f33e119]:
+            - heading "Latest Transactions" [level=2] [ref=f33e120]
+            - generic [ref=f33e121]:
+              - generic [ref=f33e122]:
+                - text: Show
+                - combobox "Show entries" [ref=f33e123]:
+                  - option "10" [selected]
+                  - option "25"
+                  - option "50"
+                  - option "100"
+                - text: entries
+              - generic [ref=f33e124]:
+                - text: "Search:"
+                - searchbox "Search:" [ref=f33e125]
+              - table [ref=f33e126]:
+                - rowgroup [ref=f33e127]:
+                  - row [ref=f33e128]:
+                    - 'columnheader "Event: activate to sort column descending" [ref=f33e129] [cursor=pointer]': ▴Event
+                    - 'columnheader "Quantity: activate to sort column ascending" [ref=f33e130] [cursor=pointer]': Quantity
+                    - 'columnheader "Date and Time: activate to sort column ascending" [ref=f33e131] [cursor=pointer]': Date and Time
+                - rowgroup [ref=f33e132]:
+                  - row [ref=f33e133]:
+                    - cell "Signed up" [ref=f33e134]
+                    - cell "1" [ref=f33e136]
+                    - cell "2026-10-17, at 10:47:56" [ref=f33e137]
+              - status [ref=f33e138]: Showing 1 to 1 of 1 entries
+              - generic [ref=f33e139]:
+                - text: FirstPrevious
+                - generic [ref=f33e140]: "1"
+                - text: NextLast
+        - generic [ref=f33e142]:
+          - generic [ref=f33e144]:
+            - generic:
+              - generic [ref=f33e147]: STAMPS REQUIRED UNTIL NEXT REWARD
+              - generic [ref=f33e151]: "10"
+            - generic [ref=f33e154]:
+              - img "PDF 417 Code" [ref=f33e155]
+              - text: Tap ⋯ for details
+          - generic [ref=f33e156]:
+            - button "" [ref=f33e157] [cursor=pointer]
+            - button "" [ref=f33e159] [cursor=pointer]
+      - text:      
+  - text:     

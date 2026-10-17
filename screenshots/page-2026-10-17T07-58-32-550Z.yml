@@ -1,0 +1,300 @@
+- generic [active] [ref=f30e1]:
+  - generic [ref=f30e204]:
+    - text: 
+    - list [ref=f30e206]:
+      - listitem [ref=f30e207]:
+        - generic: 
+      - listitem [ref=f30e208]:
+        - generic: 
+      - listitem [ref=f30e209]:
+        - generic: 
+      - listitem [ref=f30e210]:
+        - generic: 
+      - listitem [ref=f30e211]:
+        - generic [ref=f30e212] [cursor=pointer]: 
+    - navigation [ref=f30e214]:
+      - alert [ref=f30e215]:
+        - paragraph [ref=f30e216]:
+          - generic [aria-hidden] [ref=f30e217]: 
+          - text: You haven't verified your email address. Resend verification email.
+      - generic [ref=f30e218]:
+        - img [ref=f30e220] [cursor=pointer]
+        - list [ref=f30e221]:
+          - listitem [ref=f30e222]:
+            - generic [ref=f30e223]: 15 days left on trial
+            - link "Upgrade Now" [ref=f30e224] [cursor=pointer]:
+              - /url: /settings
+          - listitem [ref=f30e225]:
+            - link [ref=f30e226] [cursor=pointer]:
+              - /url: /manage-my-cards
+              - generic [aria-hidden] [ref=f30e227]: 
+          - listitem [ref=f30e228]:
+            - link [ref=f30e229] [cursor=pointer]:
+              - /url: http://docs.loopyloyalty.com/
+              - generic [aria-hidden] [ref=f30e230]: 
+          - listitem [ref=f30e231]:
+            - link "" [ref=f30e233] [cursor=pointer]:
+              - /url: ""
+    - generic [ref=f30e238]:
+      - generic [ref=f30e240]:
+        - heading "Insights" [level=1] [ref=f30e241]
+        - paragraph [ref=f30e242]: Track sales you've generated from your digital stamp cards.
+        - generic [ref=f30e243]:
+          - paragraph [ref=f30e244]: Your program has driven $0.00 in revenue and cost $0.00* in rewards. You have broken even.
+          - paragraph [ref=f30e245]: "*$0.00 worth of rewards have already been claimed, with $0.00 outstanding"
+      - generic [ref=f30e248]:
+        - generic [ref=f30e249]:
+          - heading "All time stats" [level=2] [ref=f30e251]
+          - button [ref=f30e253] [cursor=pointer]:
+            - generic [aria-hidden] [ref=f30e254]: 
+        - generic [ref=f30e255]:
+          - generic [ref=f30e256]:
+            - paragraph [ref=f30e257]: "0"
+            - paragraph [ref=f30e258]: Customers Signed Up
+          - generic [ref=f30e259]:
+            - paragraph [ref=f30e260]: "0"
+            - paragraph [ref=f30e261]: Stamps Issued
+          - generic [ref=f30e262]:
+            - paragraph [ref=f30e263]: "0"
+            - paragraph [ref=f30e264]: Rewards Issued
+          - generic [ref=f30e265]:
+            - paragraph [ref=f30e266]: "0"
+            - paragraph [ref=f30e267]: Rewards Redeemed
+      - generic [ref=f30e271]:
+        - generic [ref=f30e272]:
+          - generic [ref=f30e273]: Currency
+          - combobox [ref=f30e278]:
+            - option [selected]
+            - 'option "US Dollar: USD"'
+            - 'option "Canadian Dollar: CAD"'
+            - 'option "Euro: EUR"'
+            - 'option "United Arab Emirates Dirham: AED"'
+            - 'option "Afghan Afghani: AFN"'
+            - 'option "Albanian Lek: ALL"'
+            - 'option "Armenian Dram: AMD"'
+            - 'option "Argentine Peso: ARS"'
+            - 'option "Australian Dollar: AUD"'
+            - 'option "Azerbaijani Manat: AZN"'
+            - 'option "Bosnia-Herzegovina Convertible Mark: BAM"'
+            - 'option "Bangladeshi Taka: BDT"'
+            - 'option "Bulgarian Lev: BGN"'
+            - 'option "Bahraini Dinar: BHD"'
+            - 'option "Burundian Franc: BIF"'
+            - 'option "Brunei Dollar: BND"'
+            - 'option "Bolivian Boliviano: BOB"'
+            - 'option "Brazilian Real: BRL"'
+            - 'option "Botswanan Pula: BWP"'
+            - 'option "Belarusian Ruble: BYR"'
+            - 'option "Belize Dollar: BZD"'
+            - 'option "Congolese Franc: CDF"'
+            - 'option "Swiss Franc: CHF"'
+            - 'option "Chilean Peso: CLP"'
+            - 'option "Chinese Yuan: CNY"'
+            - 'option "Colombian Peso: COP"'
+            - 'option "Costa Rican Colón: CRC"'
+            - 'option "Cape Verdean Escudo: CVE"'
+            - 'option "Czech Republic Koruna: CZK"'
+            - 'option "Djiboutian Franc: DJF"'
+            - 'option "Danish Krone: DKK"'
+            - 'option "Dominican Peso: DOP"'
+            - 'option "Algerian Dinar: DZD"'
+            - 'option "Estonian Kroon: EEK"'
+            - 'option "Egyptian Pound: EGP"'
+            - 'option "Eritrean Nakfa: ERN"'
+            - 'option "Ethiopian Birr: ETB"'
+            - 'option "British Pound Sterling: GBP"'
+            - 'option "Georgian Lari: GEL"'
+            - 'option "Ghanaian Cedi: GHS"'
+            - 'option "Guinean Franc: GNF"'
+            - 'option "Guatemalan Quetzal: GTQ"'
+            - 'option "Hong Kong Dollar: HKD"'
+            - 'option "Honduran Lempira: HNL"'
+            - 'option "Croatian Kuna: HRK"'
+            - 'option "Hungarian Forint: HUF"'
+            - 'option "Indonesian Rupiah: IDR"'
+            - 'option "Israeli New Sheqel: ILS"'
+            - 'option "Indian Rupee: INR"'
+            - 'option "Iraqi Dinar: IQD"'
+            - 'option "Iranian Rial: IRR"'
+            - 'option "Icelandic Króna: ISK"'
+            - 'option "Jamaican Dollar: JMD"'
+            - 'option "Jordanian Dinar: JOD"'
+            - 'option "Japanese Yen: JPY"'
+            - 'option "Kenyan Shilling: KES"'
+            - 'option "Cambodian Riel: KHR"'
+            - 'option "Comorian Franc: KMF"'
+            - 'option "South Korean Won: KRW"'
+            - 'option "Kuwaiti Dinar: KWD"'
+            - 'option "Kazakhstani Tenge: KZT"'
+            - 'option "Lebanese Pound: LBP"'
+            - 'option "Sri Lankan Rupee: LKR"'
+            - 'option "Lithuanian Litas: LTL"'
+            - 'option "Latvian Lats: LVL"'
+            - 'option "Libyan Dinar: LYD"'
+            - 'option "Moroccan Dirham: MAD"'
+            - 'option "Moldovan Leu: MDL"'
+            - 'option "Malagasy Ariary: MGA"'
+            - 'option "Macedonian Denar: MKD"'
+            - 'option "Myanma Kyat: MMK"'
+            - 'option "Macanese Pataca: MOP"'
+            - 'option "Mauritian Rupee: MUR"'
+            - 'option "Mexican Peso: MXN"'
+            - 'option "Malaysian Ringgit: MYR"'
+            - 'option "Mozambican Metical: MZN"'
+            - 'option "Namibian Dollar: NAD"'
+            - 'option "Nigerian Naira: NGN"'
+            - 'option "Nicaraguan Córdoba: NIO"'
+            - 'option "Norwegian Krone: NOK"'
+            - 'option "Nepalese Rupee: NPR"'
+            - 'option "New Zealand Dollar: NZD"'
+            - 'option "Omani Rial: OMR"'
+            - 'option "Panamanian Balboa: PAB"'
+            - 'option "Peruvian Nuevo Sol: PEN"'
+            - 'option "Philippine Peso: PHP"'
+            - 'option "Pakistani Rupee: PKR"'
+            - 'option "Polish Zloty: PLN"'
+            - 'option "Paraguayan Guarani: PYG"'
+            - 'option "Qatari Rial: QAR"'
+            - 'option "Romanian Leu: RON"'
+            - 'option "Serbian Dinar: RSD"'
+            - 'option "Russian Ruble: RUB"'
+            - 'option "Rwandan Franc: RWF"'
+            - 'option "Saudi Riyal: SAR"'
+            - 'option "Sudanese Pound: SDG"'
+            - 'option "Swedish Krona: SEK"'
+            - 'option "Singapore Dollar: SGD"'
+            - 'option "Somali Shilling: SOS"'
+            - 'option "Syrian Pound: SYP"'
+            - 'option "Thai Baht: THB"'
+            - 'option "Tunisian Dinar: TND"'
+            - 'option "Tongan Paʻanga: TOP"'
+            - 'option "Turkish Lira: TRY"'
+            - 'option "Trinidad and Tobago Dollar: TTD"'
+            - 'option "New Taiwan Dollar: TWD"'
+            - 'option "Tanzanian Shilling: TZS"'
+            - 'option "Ukrainian Hryvnia: UAH"'
+            - 'option "Ugandan Shilling: UGX"'
+            - 'option "Uruguayan Peso: UYU"'
+            - 'option "Uzbekistan Som: UZS"'
+            - 'option "Venezuelan Bolívar: VEF"'
+            - 'option "Vietnamese Dong: VND"'
+            - 'option "CFA Franc BEAC: XAF"'
+            - 'option "CFA Franc BCEAO: XOF"'
+            - 'option "Yemeni Rial: YER"'
+            - 'option "South African Rand: ZAR"'
+            - 'option "Zambian Kwacha: ZMK"'
+        - generic [ref=f30e279]:
+          - generic [ref=f30e282]:
+            - text: Stamp Value
+            - generic [aria-hidden] [ref=f30e284]: 
+          - spinbutton "00.00" [ref=f30e289]
+        - generic [ref=f30e290]:
+          - generic [ref=f30e293]:
+            - text: Reward Cost
+            - generic [aria-hidden] [ref=f30e295]: 
+          - button "Submit" [ref=f30e298] [cursor=pointer]
+      - generic [ref=f30e299]:
+        - heading "Activity Day Group by:" [level=2] [ref=f30e301]:
+          - text: Activity
+          - generic [aria-hidden] [ref=f30e303]: 
+          - combobox "Group by:" [ref=f30e304]:
+            - option "Day" [selected]
+            - option "Month"
+          - generic [ref=f30e305]: "Group by:"
+          - button [ref=f30e306] [cursor=pointer]:
+            - generic [aria-hidden] [ref=f30e307]: 
+        - generic [ref=f30e310]:
+          - heading [level=2] [ref=f30e312]:
+            - text: Stamp Count Histogram
+            - generic [aria-hidden] [ref=f30e314]: 
+          - button [ref=f30e316] [cursor=pointer]:
+            - generic [aria-hidden] [ref=f30e317]: 
+      - generic [ref=f30e320]:
+        - heading [level=2] [ref=f30e323]:
+          - text: Transactions
+          - generic [aria-hidden] [ref=f30e325]: 
+        - generic [ref=f30e326]:
+          - generic [ref=f30e327]:
+            - text: Show
+            - combobox "Show entries" [ref=f30e328]:
+              - option "10" [selected]
+              - option "25"
+              - option "50"
+              - option "100"
+            - text: entries
+          - generic [ref=f30e329]:
+            - text: "Search:"
+            - searchbox "Search:" [ref=f30e330]
+          - table [ref=f30e331]:
+            - rowgroup [ref=f30e332]:
+              - row [ref=f30e333]:
+                - 'columnheader "Date and Time: activate to sort column ascending" [ref=f30e334] [cursor=pointer]': ▾Date and Time
+                - columnheader "Customer" [ref=f30e335]
+                - columnheader "Event" [ref=f30e336]
+                - columnheader "User" [ref=f30e337]
+            - rowgroup [ref=f30e338]:
+              - row [ref=f30e339]:
+                - cell "2026-10-17, at 10:47" [ref=f30e340]
+                - cell [ref=f30e341]:
+                  - link "Customer" [ref=f30e342] [cursor=pointer]:
+                    - /url: /customers/wI4XeFr6rHCTUHGOEFazZ/profile/RTgLMCuFyOvpMH
+                - cell "Signed up" [ref=f30e343]
+                - cell "ibefehdi" [ref=f30e345]
+              - row [ref=f30e346]:
+                - cell "2026-10-17, at 10:47" [ref=f30e347]
+                - cell [ref=f30e348]:
+                  - link "Customer" [ref=f30e349] [cursor=pointer]:
+                    - /url: /customers/wI4XeFr6rHCTUHGOEFazZ/profile/Kr54wYnVCU7mNM
+                - cell "Signed up" [ref=f30e350]
+                - cell "ibefehdi" [ref=f30e352]
+              - row [ref=f30e353]:
+                - cell "2026-10-17, at 10:47" [ref=f30e354]
+                - cell [ref=f30e355]:
+                  - link "Customer" [ref=f30e356] [cursor=pointer]:
+                    - /url: /customers/wI4XeFr6rHCTUHGOEFazZ/profile/lYWxtjodR51CUv
+                - cell "Signed up" [ref=f30e357]
+                - cell "ibefehdi" [ref=f30e359]
+              - row [ref=f30e360]:
+                - cell "2026-10-17, at 10:47" [ref=f30e361]
+                - cell [ref=f30e362]:
+                  - link "Customer" [ref=f30e363] [cursor=pointer]:
+                    - /url: /customers/wI4XeFr6rHCTUHGOEFazZ/profile/ioPyLW887pmNQT
+                - cell "Signed up" [ref=f30e364]
+                - cell "ibefehdi" [ref=f30e366]
+              - row [ref=f30e367]:
+                - cell "2026-10-17, at 10:47" [ref=f30e368]
+                - cell [ref=f30e369]:
+                  - link "Customer" [ref=f30e370] [cursor=pointer]:
+                    - /url: /customers/wI4XeFr6rHCTUHGOEFazZ/profile/OkossS0uRwTfPF
+                - cell "Signed up" [ref=f30e371]
+                - cell "ibefehdi" [ref=f30e373]
+              - row [ref=f30e374]:
+                - cell "2026-10-17, at 10:47" [ref=f30e375]
+                - cell [ref=f30e376]:
+                  - link "Customer" [ref=f30e377] [cursor=pointer]:
+                    - /url: /customers/wI4XeFr6rHCTUHGOEFazZ/profile/eiVH1t0LE058Li
+                - cell "Signed up" [ref=f30e378]
+                - cell "ibefehdi" [ref=f30e380]
+              - row [ref=f30e381]:
+                - cell "2026-10-17, at 10:47" [ref=f30e382]
+                - cell [ref=f30e383]:
+                  - link "Customer" [ref=f30e384] [cursor=pointer]:
+                    - /url: /customers/wI4XeFr6rHCTUHGOEFazZ/profile/LtUUN2mxP5cDdg
+                - cell "Signed up" [ref=f30e385]
+                - cell "ibefehdi" [ref=f30e387]
+              - row [ref=f30e388]:
+                - cell "2026-10-17, at 10:47" [ref=f30e389]
+                - cell [ref=f30e390]:
+                  - link "Customer" [ref=f30e391] [cursor=pointer]:
+                    - /url: /customers/wI4XeFr6rHCTUHGOEFazZ/profile/xZuG0J01d5TGR2
+                - cell "Signed up" [ref=f30e392]
+                - cell "ibefehdi" [ref=f30e394]
+          - status [ref=f30e395]: Showing 1 to 8 of 8 entries
+          - generic [ref=f30e396]:
+            - text: FirstPrevious
+            - generic [ref=f30e397]: "1"
+            - text: NextLast
+    - text:     
+  - generic [ref=f30e398]:
+    - button "×" [ref=f30e399] [cursor=pointer]
+    - generic [ref=f30e400]: Saved stamp/reward values.
