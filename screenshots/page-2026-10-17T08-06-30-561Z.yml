@@ -1,0 +1,141 @@
+- generic [ref=f6e2]:
+  - text: 
+  - list [ref=f6e4]:
+    - listitem [ref=f6e5]:
+      - generic: 
+    - listitem [ref=f6e6]:
+      - generic: 
+    - listitem [ref=f6e7]:
+      - generic: 
+    - listitem [ref=f6e8]:
+      - generic: 
+    - listitem [ref=f6e9]:
+      - generic [ref=f6e10] [cursor=pointer]: 
+  - navigation [ref=f6e12]:
+    - alert [ref=f6e13]:
+      - paragraph [ref=f6e14]:
+        - generic [aria-hidden] [ref=f6e15]: 
+        - text: You haven't verified your email address. Resend verification email.
+    - generic [ref=f6e16]:
+      - img [ref=f6e18] [cursor=pointer]
+      - list [ref=f6e19]:
+        - listitem [ref=f6e20]:
+          - generic [ref=f6e21]: 15 days left on trial
+          - link "Upgrade Now" [ref=f6e22] [cursor=pointer]:
+            - /url: /settings
+        - listitem [ref=f6e23]:
+          - link [ref=f6e24] [cursor=pointer]:
+            - /url: /manage-my-cards
+            - generic [aria-hidden] [ref=f6e25]: 
+        - listitem [ref=f6e26]:
+          - link [ref=f6e27] [cursor=pointer]:
+            - /url: http://docs.loopyloyalty.com/
+            - generic [aria-hidden] [ref=f6e28]: 
+        - listitem [ref=f6e29]:
+          - link "" [ref=f6e31] [cursor=pointer]:
+            - /url: ""
+  - generic [ref=f6e35]:
+    - navigation [ref=f6e36]:
+      - generic [ref=f6e37]:
+        - list [ref=f6e38]:
+          - listitem [ref=f6e39]:
+            - generic [ref=f6e40] [cursor=pointer]:
+              - generic [ref=f6e41]: 
+              - text: Design
+          - listitem [ref=f6e42]:
+            - generic [ref=f6e43] [cursor=pointer]:
+              - generic [ref=f6e44]: 
+              - text: Details
+          - listitem [ref=f6e45]:
+            - generic [ref=f6e46] [cursor=pointer]:
+              - generic [ref=f6e47]: 
+              - text: Locations
+          - listitem [ref=f6e48]:
+            - generic [ref=f6e49] [cursor=pointer]:
+              - generic [ref=f6e50]: 
+              - text: Support
+          - listitem [ref=f6e51]:
+            - generic [ref=f6e52] [cursor=pointer]:
+              - generic [ref=f6e53]: 
+              - text: Data
+          - listitem [ref=f6e54]:
+            - generic [ref=f6e55] [cursor=pointer]:
+              - generic [ref=f6e56]: 
+              - text: Custom
+              - generic [ref=f6e57]: 
+        - list [ref=f6e58]:
+          - listitem [ref=f6e59]:
+            - button "Save" [ref=f6e60] [cursor=pointer]
+          - listitem [ref=f6e61]:
+            - button "Save & Preview" [ref=f6e62] [cursor=pointer]
+        - text:          
+    - generic [ref=f6e64]:
+      - generic [ref=f6e66]:
+        - generic [ref=f6e68]:
+          - heading [level=3] [ref=f6e69]:
+            - text: Locations
+            - generic [aria-hidden] [ref=f6e71]: 
+          - paragraph [ref=f6e72]:
+            - text: Let your customers know where your card be used. You can also trigger
+            - link "lock screen messages" [ref=f6e73] [cursor=pointer]:
+              - /url: http://docs.loopyloyalty.com/creating-digital-stamp-cards/location-based-messages
+            - text: when your customers are near your location(s).
+          - table [ref=f6e74]:
+            - rowgroup [ref=f6e75]:
+              - row [ref=f6e76]:
+                - columnheader [ref=f6e77]:
+                  - text: Location
+                  - generic [aria-hidden] [ref=f6e79]: 
+                - columnheader [ref=f6e80]:
+                  - text: Address on Card
+                  - generic [aria-hidden] [ref=f6e82]: 
+                - columnheader [ref=f6e83]:
+                  - text: Display
+                  - generic [aria-hidden] [ref=f6e85]: 
+                - columnheader [ref=f6e86]:
+                  - text: Message
+                  - generic [aria-hidden] [ref=f6e88]: 
+            - rowgroup [ref=f6e89]:
+              - row [ref=f6e90]:
+                - cell "No locations added. Please select from the list below." [ref=f6e91]
+          - button [ref=f6e92] [cursor=pointer]:
+            - generic [aria-hidden] [ref=f6e93]: 
+        - text: 
+        - generic [ref=f6e95]:
+          - heading [level=3] [ref=f6e96]:
+            - text: Beacons
+            - generic [aria-hidden] [ref=f6e98]: 
+          - paragraph [ref=f6e99]:
+            - text: Display beacon based messages when customers are near your beacon(s).
+            - link "Learn more about beacon based messages." [ref=f6e100] [cursor=pointer]:
+              - /url: http://docs.loopyloyalty.com/creating-digital-stamp-cards/location-based-messages
+          - table [ref=f6e101]:
+            - rowgroup [ref=f6e102]:
+              - row [ref=f6e103]:
+                - columnheader [ref=f6e104]:
+                  - text: Beacon
+                  - generic [aria-hidden] [ref=f6e106]: 
+                - columnheader [ref=f6e107]:
+                  - text: Message
+                  - generic [aria-hidden] [ref=f6e109]: 
+            - rowgroup [ref=f6e110]:
+              - row [ref=f6e111]:
+                - cell "No beacons added. Please select from the list below." [ref=f6e112]
+          - button [ref=f6e113] [cursor=pointer]:
+            - generic [aria-hidden] [ref=f6e114]: 
+        - text: 
+      - generic [ref=f6e116]:
+        - paragraph [ref=f6e117]: Your Customers' View
+        - generic [ref=f6e119]:
+          - generic:
+            - generic [ref=f6e122]: STAMPS REQUIRED UNTIL NEXT REWARD
+            - generic [ref=f6e126]: "8"
+          - generic [ref=f6e129]:
+            - img "PDF 417 Code" [ref=f6e130]
+            - text: Tap ⋯ for details
+        - text:  
+        - generic [ref=f6e131]:
+          - button "" [ref=f6e132] [cursor=pointer]
+          - button "" [ref=f6e134] [cursor=pointer]
+          - button "" [ref=f6e136] [cursor=pointer]
+  - text:     

@@ -1,0 +1,273 @@
+- generic [ref=e2]:
+  - text: 
+  - list [ref=e5]:
+    - listitem [ref=e6]:
+      - generic [ref=e7] [cursor=pointer]: 
+    - listitem [ref=e9]:
+      - generic [ref=e10] [cursor=pointer]: 
+    - listitem [ref=e12]:
+      - generic [ref=e13] [cursor=pointer]:
+        - generic [ref=e14]: 
+        - generic [ref=e15]: 
+    - listitem [ref=e16]:
+      - generic [ref=e17] [cursor=pointer]: 
+    - listitem [ref=e19]:
+      - generic [ref=e20] [cursor=pointer]: 
+  - navigation [ref=e22]:
+    - alert [ref=e23]:
+      - paragraph [ref=e24]:
+        - generic [aria-hidden] [ref=e25]: 
+        - text: You haven't verified your email address. Resend verification email.
+    - generic [ref=e26]:
+      - img [ref=e28] [cursor=pointer]
+      - list [ref=e29]:
+        - listitem [ref=e30]:
+          - generic [ref=e31]: 15 days left on trial
+          - link "Upgrade Now" [ref=e32] [cursor=pointer]:
+            - /url: /settings
+        - listitem [ref=e33]:
+          - link [ref=e34] [cursor=pointer]:
+            - /url: /manage-my-cards
+            - generic [aria-hidden] [ref=e35]: 
+        - listitem [ref=e36]:
+          - link [ref=e37] [cursor=pointer]:
+            - /url: http://docs.loopyloyalty.com/
+            - generic [aria-hidden] [ref=e38]: 
+        - listitem [ref=e39]:
+          - link "" [ref=e41] [cursor=pointer]:
+            - /url: ""
+  - generic [ref=e48]:
+    - heading "Settings" [level=1] [ref=e49]
+    - generic [ref=e50]:
+      - generic [ref=e51]:
+        - heading "My Account" [level=2] [ref=e52]
+        - generic [ref=e54]:
+          - list [ref=e55]:
+            - listitem [ref=e56]:
+              - link "General" [ref=e57] [cursor=pointer]:
+                - /url: ""
+            - listitem [ref=e58]:
+              - link "Business" [ref=e59] [cursor=pointer]:
+                - /url: ""
+            - listitem [ref=e60]:
+              - link "Privacy" [ref=e61] [cursor=pointer]:
+                - /url: ""
+            - listitem [ref=e62]:
+              - link "Password" [active] [ref=e63]:
+                - /url: ""
+            - listitem [ref=e64]:
+              - link "Developer Tools" [ref=e65] [cursor=pointer]:
+                - /url: ""
+            - listitem [ref=e66]:
+              - link "Delete" [ref=e67] [cursor=pointer]:
+                - /url: ""
+          - generic [ref=e68]:
+            - generic [ref=e384]:
+              - generic [ref=e385]:
+                - generic [ref=e386]: Current Password
+                - generic [ref=e387] [cursor=pointer]:
+                  - generic [aria-hidden] [ref=e388]: 
+                  - text: Show
+                - textbox [ref=e389]
+              - generic [ref=e390]:
+                - generic [ref=e391]: New Password
+                - textbox [ref=e392]
+              - generic [ref=e393]:
+                - generic [ref=e394]: Confirm Password
+                - textbox [ref=e395]
+              - list [ref=e398]:
+                - listitem [ref=e399]: 8 characters minimum
+                - listitem [ref=e400]: 1 number
+              - button "Update" [ref=e403] [cursor=pointer]
+            - text: 
+      - generic [ref=e86]:
+        - heading "Billing" [level=2] [ref=e87]
+        - generic [ref=e89]:
+          - list [ref=e90]:
+            - listitem [ref=e91]:
+              - link "Plan" [ref=e92]:
+                - /url: ""
+            - listitem [ref=e93]:
+              - link "Credit Card" [ref=e94] [cursor=pointer]:
+                - /url: ""
+            - listitem [ref=e95]:
+              - link "Invoices" [ref=e96] [cursor=pointer]:
+                - /url: ""
+          - generic [ref=e100]:
+            - paragraph [ref=e103]: Try out any plan. No commitment. Cancel anytime.
+            - generic [ref=e105]:
+              - generic [ref=e107]:
+                - generic [ref=e108]:
+                  - paragraph [ref=e109]: US$ 25 /month
+                  - paragraph [ref=e111]: Starter
+                  - combobox [ref=e113]:
+                    - option "Month-to-Month" [selected]
+                    - option "Billed Annually"
+                  - button "Subscribe to Starter Monthly" [ref=e114] [cursor=pointer]
+                - generic [ref=e115]:
+                  - paragraph [ref=e116]: "Includes :"
+                  - paragraph [ref=e117]: 1 card design
+                  - paragraph [ref=e118]: 1 location
+                  - paragraph [ref=e119]: 1 beacon
+                  - paragraph [ref=e120]: 3 Subusers
+                  - paragraph [ref=e121]: Label text customisation
+                  - paragraph [ref=e122]: Unique customer enrollments
+                  - paragraph [ref=e123]: Data Export
+              - generic [ref=e125]:
+                - generic [ref=e126]:
+                  - paragraph [ref=e127]: US$ 69 /month
+                  - paragraph [ref=e129]: Growth
+                  - combobox [ref=e131]:
+                    - option "Month-to-Month" [selected]
+                    - option "Billed Annually"
+                  - button "Subscribe to Growth Monthly" [ref=e132] [cursor=pointer]
+                - generic [ref=e133]:
+                  - paragraph [ref=e134]: "Includes :"
+                  - paragraph [ref=e135]: 3 card designs
+                  - paragraph [ref=e136]: 3 locations
+                  - paragraph [ref=e137]: 3 beacons
+                  - paragraph [ref=e138]: 10 subusers
+                  - paragraph [ref=e139]: Label text customisation
+                  - paragraph [ref=e140]: Unique customer enrollments
+                  - paragraph [ref=e141]: Data Export
+              - generic [ref=e143]:
+                - generic [ref=e144]:
+                  - paragraph [ref=e145]: US$ 95 /month
+                  - paragraph [ref=e147]: Ultimate
+                  - combobox [ref=e149]:
+                    - option "Month-to-Month" [selected]
+                    - option "Billed Annually"
+                  - button "Subscribe to Ultimate Monthly" [ref=e150] [cursor=pointer]
+                - generic [ref=e151]:
+                  - paragraph [ref=e152]: "Includes :"
+                  - paragraph [ref=e153]: 10 card designs
+                  - paragraph [ref=e154]: 10 locations
+                  - paragraph [ref=e155]: 10 beacons
+                  - paragraph [ref=e156]: 50 subusers
+                  - paragraph [ref=e157]: Label text customisation
+                  - paragraph [ref=e158]: Unique customer enrollments
+                  - paragraph [ref=e159]: Data Export
+            - paragraph [ref=e162]:
+              - emphasis [ref=e163]: Please note that unless you are in your free trial, clicking on Subscribe for any plan will immediately charge your credit card for the monthly or annual plan you have selected.
+    - generic [ref=e165]:
+      - heading "Locations" [level=2] [ref=e166]
+      - generic [ref=e168]:
+        - generic [ref=e169]:
+          - paragraph [ref=e170]: Display lock screen messages when customers are near your location(s).
+          - table [ref=e171]:
+            - rowgroup [ref=e172]:
+              - row [ref=e173]:
+                - columnheader "Location" [ref=e174]
+                - columnheader "Display Address" [ref=e175]
+                - columnheader [ref=e176]
+            - rowgroup [ref=e177]:
+              - row [ref=e178]:
+                - cell [ref=e179]:
+                  - link "COUNCIL TEST Location" [ref=e180] [cursor=pointer]:
+                    - /url: http://maps.google.com/?q=22.287614,114.148313
+                - cell "221B Baker St, London NW1 6XE" [ref=e181]
+                - cell [ref=e182]:
+                  - button [ref=e183] [cursor=pointer]:
+                    - generic [aria-hidden] [ref=e184]: 
+                  - button [ref=e185] [cursor=pointer]:
+                    - generic [aria-hidden] [ref=e186]: 
+          - button "Add Location" [ref=e188] [cursor=pointer]
+        - generic [ref=e194]:
+          - generic:
+            - button "Keyboard shortcuts"
+          - region "Map" [ref=e195]
+          - generic [ref=e196]:
+            - button [ref=e225] [cursor=pointer]
+            - iframe [aria-hidden] [ref=e226]
+            - menubar [ref=e227] [cursor=pointer]:
+              - menuitemradio "Show street map" [checked] [ref=e228]: Map
+              - menuitemradio "Show satellite imagery" [ref=e229]: Satellite
+            - button "Toggle fullscreen view" [ref=e230] [cursor=pointer]
+            - generic:
+              - generic:
+                - button "Map camera controls" [ref=e232] [cursor=pointer]
+                - button "Drag Pegman onto the map to open Street View" [ref=e233] [cursor=pointer]:
+                  - generic:
+                    - img "Street View Pegman Control"
+            - link "Open this area in Google Maps (opens a new window)" [ref=e235] [cursor=pointer]:
+              - /url: https://maps.google.com/maps?ll=22.287614,114.148313&z=8&t=m&hl=en-US&gl=US&mapclient=apiv3
+              - img "Google" [ref=e237]
+            - generic [ref=e238]:
+              - button "Keyboard shortcuts" [ref=e244] [cursor=pointer]
+              - generic [ref=e245]: Map data ©2026
+              - link "Terms (opens in new tab)" [ref=e254] [cursor=pointer]:
+                - /url: https://www.google.com/intl/en-US_US/help/terms_maps.html
+                - text: Terms
+    - generic [ref=e256]:
+      - heading "Beacons" [level=2] [ref=e257]
+      - generic [ref=e258]:
+        - paragraph [ref=e259]: Display lock screen messages when your customers are in proximity to your bluetooth beacon(s). Learn more.
+        - button "Add Beacon" [ref=e261] [cursor=pointer]
+    - generic [ref=e263]:
+      - heading "Zapier" [level=2] [ref=e264]
+      - generic [ref=e266]:
+        - generic [ref=e269]:
+          - generic [ref=e271]:
+            - generic [ref=e274]:
+              - heading [level=3] [ref=e278]:
+                - link "Add new Loopy Loyalty customers to a Mailchimp list using Mailchimp + Loopy Loyalty apps false" [ref=e279] [cursor=pointer]:
+                  - /url: https://zapier.com/webintent/create-zap?template=19506&utm_source=partner&utm_medium=embed&utm_campaign=wfe_ade&provider=Loopy-Loyalty&entry-point-location=partner_embed&referer=https%3A%2F%2Fapp.loopyloyalty.com%2Fsettings%3Futm_source%3Dpartner%26utm_medium%3Dembed%26utm_campaign%3Dwfe_ade%26referer%3Dhttps%253A%252F%252Fapp.loopyloyalty.com%252Fsettings&referrer=https%3A%2F%2Fapp.loopyloyalty.com%2Fsettings%3Futm_source%3Dpartner%26utm_medium%3Dembed%26utm_campaign%3Dwfe_ade%26referer%3Dhttps%253A%252F%252Fapp.loopyloyalty.com%252Fsettings
+                  - text: Add new Loopy Loyalty customers to a Mailchimp list
+              - generic: Mailchimp + Loopy Loyalty
+              - generic: Use this workflow
+            - generic [ref=e283]:
+              - heading [level=3] [ref=e287]:
+                - link "Save Loopy Loyalty customer enrollments as Google Sheets rows using Loopy Loyalty + Google Sheets apps false" [ref=e288] [cursor=pointer]:
+                  - /url: https://zapier.com/webintent/create-zap?template=19501&utm_source=partner&utm_medium=embed&utm_campaign=wfe_ade&provider=Loopy-Loyalty&entry-point-location=partner_embed&referer=https%3A%2F%2Fapp.loopyloyalty.com%2Fsettings%3Futm_source%3Dpartner%26utm_medium%3Dembed%26utm_campaign%3Dwfe_ade%26referer%3Dhttps%253A%252F%252Fapp.loopyloyalty.com%252Fsettings&referrer=https%3A%2F%2Fapp.loopyloyalty.com%2Fsettings%3Futm_source%3Dpartner%26utm_medium%3Dembed%26utm_campaign%3Dwfe_ade%26referer%3Dhttps%253A%252F%252Fapp.loopyloyalty.com%252Fsettings
+                  - text: Save Loopy Loyalty customer enrollments as Google Sheets rows
+              - generic: Loopy Loyalty + Google Sheets
+              - generic: Use this workflow
+            - generic [ref=e292]:
+              - heading [level=3] [ref=e296]:
+                - link "Log new Loopy Loyalty stamps to a Google Sheets spreadsheet using Loopy Loyalty + Google Sheets apps false" [ref=e297] [cursor=pointer]:
+                  - /url: https://zapier.com/webintent/create-zap?template=19502&utm_source=partner&utm_medium=embed&utm_campaign=wfe_ade&provider=Loopy-Loyalty&entry-point-location=partner_embed&referer=https%3A%2F%2Fapp.loopyloyalty.com%2Fsettings%3Futm_source%3Dpartner%26utm_medium%3Dembed%26utm_campaign%3Dwfe_ade%26referer%3Dhttps%253A%252F%252Fapp.loopyloyalty.com%252Fsettings&referrer=https%3A%2F%2Fapp.loopyloyalty.com%2Fsettings%3Futm_source%3Dpartner%26utm_medium%3Dembed%26utm_campaign%3Dwfe_ade%26referer%3Dhttps%253A%252F%252Fapp.loopyloyalty.com%252Fsettings
+                  - text: Log new Loopy Loyalty stamps to a Google Sheets spreadsheet
+              - generic: Loopy Loyalty + Google Sheets
+              - generic: Use this workflow
+          - generic [ref=e299]:
+            - paragraph [ref=e300]: Not seeing what you're looking for?
+            - link "Create a workflow from scratch" [ref=e301] [cursor=pointer]:
+              - /url: https://zapier.com/webintent/create-zap/?utm_source=partner&utm_medium=embed&utm_campaign=wfe_ade
+              - text: Create from scratch
+            - text: or
+            - link "Learn more about Zapier" [ref=e302] [cursor=pointer]:
+              - /url: https://zapier.com/how-it-works/?utm_source=partner&utm_medium=embed&utm_campaign=wfe_ade
+              - text: learn more
+        - generic [ref=e305]:
+          - generic [ref=e307]:
+            - generic [ref=e310]:
+              - heading [level=3] [ref=e314]:
+                - link "Add new Loopy Loyalty customers to a Mailchimp list using Mailchimp + Loopy Loyalty apps false" [ref=e315] [cursor=pointer]:
+                  - /url: https://zapier.com/webintent/create-zap?template=19506&utm_source=partner&utm_medium=embed&utm_campaign=wfe_ade&provider=Loopy-Loyalty&entry-point-location=partner_embed&referer=https%3A%2F%2Fapp.loopyloyalty.com%2Fsettings%3Futm_source%3Dpartner%26utm_medium%3Dembed%26utm_campaign%3Dwfe_ade%26referer%3Dhttps%253A%252F%252Fapp.loopyloyalty.com%252Fsettings&referrer=https%3A%2F%2Fapp.loopyloyalty.com%2Fsettings%3Futm_source%3Dpartner%26utm_medium%3Dembed%26utm_campaign%3Dwfe_ade%26referer%3Dhttps%253A%252F%252Fapp.loopyloyalty.com%252Fsettings
+                  - text: Add new Loopy Loyalty customers to a Mailchimp list
+              - generic: Mailchimp + Loopy Loyalty
+              - generic: Use this workflow
+            - generic [ref=e319]:
+              - heading [level=3] [ref=e323]:
+                - link "Save Loopy Loyalty customer enrollments as Google Sheets rows using Loopy Loyalty + Google Sheets apps false" [ref=e324] [cursor=pointer]:
+                  - /url: https://zapier.com/webintent/create-zap?template=19501&utm_source=partner&utm_medium=embed&utm_campaign=wfe_ade&provider=Loopy-Loyalty&entry-point-location=partner_embed&referer=https%3A%2F%2Fapp.loopyloyalty.com%2Fsettings%3Futm_source%3Dpartner%26utm_medium%3Dembed%26utm_campaign%3Dwfe_ade%26referer%3Dhttps%253A%252F%252Fapp.loopyloyalty.com%252Fsettings&referrer=https%3A%2F%2Fapp.loopyloyalty.com%2Fsettings%3Futm_source%3Dpartner%26utm_medium%3Dembed%26utm_campaign%3Dwfe_ade%26referer%3Dhttps%253A%252F%252Fapp.loopyloyalty.com%252Fsettings
+                  - text: Save Loopy Loyalty customer enrollments as Google Sheets rows
+              - generic: Loopy Loyalty + Google Sheets
+              - generic: Use this workflow
+            - generic [ref=e328]:
+              - heading [level=3] [ref=e332]:
+                - link "Log new Loopy Loyalty stamps to a Google Sheets spreadsheet using Loopy Loyalty + Google Sheets apps false" [ref=e333] [cursor=pointer]:
+                  - /url: https://zapier.com/webintent/create-zap?template=19502&utm_source=partner&utm_medium=embed&utm_campaign=wfe_ade&provider=Loopy-Loyalty&entry-point-location=partner_embed&referer=https%3A%2F%2Fapp.loopyloyalty.com%2Fsettings%3Futm_source%3Dpartner%26utm_medium%3Dembed%26utm_campaign%3Dwfe_ade%26referer%3Dhttps%253A%252F%252Fapp.loopyloyalty.com%252Fsettings&referrer=https%3A%2F%2Fapp.loopyloyalty.com%2Fsettings%3Futm_source%3Dpartner%26utm_medium%3Dembed%26utm_campaign%3Dwfe_ade%26referer%3Dhttps%253A%252F%252Fapp.loopyloyalty.com%252Fsettings
+                  - text: Log new Loopy Loyalty stamps to a Google Sheets spreadsheet
+              - generic: Loopy Loyalty + Google Sheets
+              - generic: Use this workflow
+          - generic [ref=e335]:
+            - paragraph [ref=e336]: Not seeing what you're looking for?
+            - link "Create a workflow from scratch" [ref=e337] [cursor=pointer]:
+              - /url: https://zapier.com/webintent/create-zap/?utm_source=partner&utm_medium=embed&utm_campaign=wfe_ade
+              - text: Create from scratch
+            - text: or
+            - link "Learn more about Zapier" [ref=e338] [cursor=pointer]:
+              - /url: https://zapier.com/how-it-works/?utm_source=partner&utm_medium=embed&utm_campaign=wfe_ade
+              - text: learn more
+  - text:      

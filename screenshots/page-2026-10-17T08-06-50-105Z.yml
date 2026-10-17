@@ -1,0 +1,160 @@
+- generic [active] [ref=f9e1]:
+  - generic [ref=f9e191]:
+    - text: 
+    - list [ref=f9e193]:
+      - listitem [ref=f9e194]:
+        - generic: 
+      - listitem [ref=f9e195]:
+        - generic: 
+      - listitem [ref=f9e196]:
+        - generic: 
+      - listitem [ref=f9e197]:
+        - generic: 
+      - listitem [ref=f9e198]:
+        - generic [ref=f9e199] [cursor=pointer]: 
+    - navigation [ref=f9e201]:
+      - alert [ref=f9e202]:
+        - paragraph [ref=f9e203]:
+          - generic [aria-hidden] [ref=f9e204]: 
+          - text: You haven't verified your email address. Resend verification email.
+      - generic [ref=f9e205]:
+        - img [ref=f9e207] [cursor=pointer]
+        - list [ref=f9e208]:
+          - listitem [ref=f9e209]:
+            - generic [ref=f9e210]: 15 days left on trial
+            - link "Upgrade Now" [ref=f9e211] [cursor=pointer]:
+              - /url: /settings
+          - listitem [ref=f9e212]:
+            - generic [ref=f9e213]: "In view: COUNCIL TEST"
+          - listitem [ref=f9e214]:
+            - link [ref=f9e215] [cursor=pointer]:
+              - /url: /manage-my-cards
+              - generic [aria-hidden] [ref=f9e216]: 
+          - listitem [ref=f9e217]:
+            - link [ref=f9e218] [cursor=pointer]:
+              - /url: http://docs.loopyloyalty.com/
+              - generic [aria-hidden] [ref=f9e219]: 
+          - listitem [ref=f9e220]:
+            - link "" [ref=f9e222] [cursor=pointer]:
+              - /url: ""
+    - generic [ref=f9e226]:
+      - navigation [ref=f9e227]:
+        - generic [ref=f9e228]:
+          - list [ref=f9e229]:
+            - listitem [ref=f9e230]:
+              - generic [ref=f9e231] [cursor=pointer]: Profile
+            - listitem [ref=f9e232]:
+              - generic [ref=f9e233] [cursor=pointer]: Send Messages
+            - listitem [ref=f9e234]:
+              - generic [ref=f9e235] [cursor=pointer]: Give Stamps
+            - listitem
+            - listitem [ref=f9e236]:
+              - generic [ref=f9e237] [cursor=pointer]: Delete Customer
+          - list [ref=f9e238]:
+            - listitem [ref=f9e239]:
+              - button "Back" [ref=f9e240] [cursor=pointer]
+      - generic [ref=f9e242]:
+        - generic:
+          - generic [ref=f9e243]:
+            - button [ref=f9e246] [cursor=pointer]:
+              - generic [aria-hidden] [ref=f9e247]: 
+            - generic [ref=f9e248]:
+              - generic [ref=f9e249]:
+                - paragraph [ref=f9e250]: "Signed Up:"
+                - paragraph [ref=f9e251]: Oct 17, 2026 10:47:06 AM
+              - generic [ref=f9e252]:
+                - paragraph [ref=f9e253]: "Stamps Earned:"
+                - paragraph [ref=f9e254]: "1"
+              - generic [ref=f9e255]:
+                - paragraph [ref=f9e256]: "Rewards Earned:"
+                - paragraph [ref=f9e257]: "0"
+              - generic [ref=f9e258]:
+                - paragraph [ref=f9e259]: "Rewards Redeemed:"
+                - paragraph [ref=f9e260]: "0"
+            - generic [ref=f9e261]:
+              - generic [ref=f9e262]:
+                - paragraph [ref=f9e263]:
+                  - text: "Card Status:"
+                  - generic [aria-hidden] [ref=f9e265]: 
+                - paragraph [ref=f9e266]: issued
+              - generic [ref=f9e267]:
+                - paragraph [ref=f9e268]: "Last Stamp Earned:"
+                - paragraph [ref=f9e269]: Oct 17, 2026 11:06:48 AM
+              - generic [ref=f9e270]:
+                - paragraph [ref=f9e271]: "Last Reward Earned:"
+                - paragraph
+              - generic [ref=f9e272]:
+                - paragraph [ref=f9e273]: "Last Reward Redeemed:"
+                - paragraph
+            - generic [ref=f9e275]:
+              - generic [ref=f9e276]:
+                - generic [ref=f9e278] [cursor=pointer]:
+                  - text: Personal Info
+                  - generic [aria-hidden] [ref=f9e279]: 
+                - generic [aria-hidden] [ref=f9e282] [cursor=pointer]: 
+              - generic [ref=f9e285]:
+                - generic [ref=f9e287]:
+                  - generic [ref=f9e288]: "Email Address:"
+                  - paragraph [ref=f9e289]: council-test+alice@example.com
+                - generic [ref=f9e291]:
+                  - generic [ref=f9e292]: "First Name:"
+                  - paragraph [ref=f9e293]: COUNCIL TEST Alice
+                - generic [ref=f9e295]:
+                  - generic [ref=f9e296]: "Mobile Number:"
+                  - paragraph [ref=f9e297]: "+12015550123"
+            - separator [ref=f9e300]
+            - paragraph [ref=f9e303]:
+              - text: "View this customers pass:"
+              - link "https://loyalty.is/xZuG0J01d5TGR2" [ref=f9e304] [cursor=pointer]:
+                - /url: https://loyalty.is/xZuG0J01d5TGR2
+            - separator [ref=f9e305]
+            - generic [ref=f9e308]:
+              - heading "Latest Transactions" [level=2] [ref=f9e309]
+              - generic [ref=f9e310]:
+                - generic [ref=f9e311]:
+                  - text: Show
+                  - combobox "Show entries" [ref=f9e312]:
+                    - option "10" [selected]
+                    - option "25"
+                    - option "50"
+                    - option "100"
+                  - text: entries
+                - generic [ref=f9e313]:
+                  - text: "Search:"
+                  - searchbox "Search:" [ref=f9e314]
+                - table [ref=f9e315]:
+                  - rowgroup [ref=f9e316]:
+                    - row [ref=f9e317]:
+                      - 'columnheader "Event: activate to sort column descending" [ref=f9e318] [cursor=pointer]': ▴Event
+                      - 'columnheader "Quantity: activate to sort column ascending" [ref=f9e319] [cursor=pointer]': Quantity
+                      - 'columnheader "Date and Time: activate to sort column ascending" [ref=f9e320] [cursor=pointer]': Date and Time
+                  - rowgroup [ref=f9e321]:
+                    - row [ref=f9e322]:
+                      - cell "1 stamp earned" [ref=f9e323]
+                      - cell "1" [ref=f9e325]
+                      - cell "2026-10-17, at 11:06:49" [ref=f9e326]
+                    - row [ref=f9e327]:
+                      - cell "Signed up" [ref=f9e328]
+                      - cell "1" [ref=f9e330]
+                      - cell "2026-10-17, at 10:47:07" [ref=f9e331]
+                - status [ref=f9e332]: Showing 1 to 2 of 2 entries
+                - generic [ref=f9e333]:
+                  - text: FirstPrevious
+                  - generic [ref=f9e334]: "1"
+                  - text: NextLast
+          - generic [ref=f9e336]:
+            - generic [ref=f9e338]:
+              - generic:
+                - generic [ref=f9e341]: STAMPS REQUIRED UNTIL NEXT REWARD
+                - generic [ref=f9e345]: "9"
+              - generic [ref=f9e348]:
+                - img "PDF 417 Code" [ref=f9e349]
+                - text: Tap ⋯ for details
+            - generic [ref=f9e350]:
+              - button "" [ref=f9e351] [cursor=pointer]
+              - button "" [ref=f9e353] [cursor=pointer]
+        - text:      
+    - text:     
+  - generic [ref=f9e355]:
+    - button "×" [ref=f9e356] [cursor=pointer]
+    - generic [ref=f9e357]: Card Successfully Stamped

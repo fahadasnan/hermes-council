@@ -1,0 +1,75 @@
+- generic [ref=f38e2]:
+  - text: 
+  - list [ref=f38e4]:
+    - listitem [ref=f38e5]:
+      - generic [ref=f38e6] [cursor=pointer]: 
+    - listitem [ref=f38e8]:
+      - generic [ref=f38e9] [cursor=pointer]: 
+    - listitem [ref=f38e11]:
+      - generic [ref=f38e12] [cursor=pointer]:
+        - generic [ref=f38e13]: 
+        - generic [ref=f38e14]: 
+    - listitem [ref=f38e15]:
+      - generic [ref=f38e16] [cursor=pointer]: 
+    - listitem [ref=f38e18]:
+      - generic [ref=f38e19] [cursor=pointer]: 
+  - navigation [ref=f38e21]:
+    - alert [ref=f38e22]:
+      - paragraph [ref=f38e23]:
+        - generic [aria-hidden] [ref=f38e24]: 
+        - text: You haven't verified your email address. Resend verification email.
+    - generic [ref=f38e25]:
+      - img [ref=f38e27] [cursor=pointer]
+      - list [ref=f38e28]:
+        - listitem [ref=f38e29]:
+          - generic [ref=f38e30]: 15 days left on trial
+          - link "Upgrade Now" [ref=f38e31] [cursor=pointer]:
+            - /url: /settings
+        - listitem [ref=f38e32]:
+          - link [ref=f38e33] [cursor=pointer]:
+            - /url: /manage-my-cards
+            - generic [aria-hidden] [ref=f38e34]: 
+        - listitem [ref=f38e35]:
+          - link [ref=f38e36] [cursor=pointer]:
+            - /url: http://docs.loopyloyalty.com/
+            - generic [aria-hidden] [ref=f38e37]: 
+        - listitem [ref=f38e38]:
+          - link "" [ref=f38e40] [cursor=pointer]:
+            - /url: ""
+  - generic [ref=f38e46]:
+    - generic [ref=f38e48]:
+      - generic [ref=f38e50]:
+        - generic [ref=f38e51]:
+          - heading "Total statistics" [level=2] [ref=f38e53]
+          - button [ref=f38e55] [cursor=pointer]:
+            - generic [aria-hidden] [ref=f38e56]: 
+        - separator [ref=f38e57]
+      - generic [ref=f38e58]:
+        - generic [ref=f38e59]:
+          - paragraph [ref=f38e60]: "8"
+          - paragraph [ref=f38e61]: Customers Enrolled
+        - generic [ref=f38e62]:
+          - paragraph [ref=f38e63]: "2"
+          - paragraph [ref=f38e64]: Stamps Issued
+        - generic [ref=f38e65]:
+          - paragraph [ref=f38e66]: "0"
+          - paragraph [ref=f38e67]: Rewards Issued
+        - generic [ref=f38e68]:
+          - paragraph [ref=f38e69]: "0"
+          - paragraph [ref=f38e70]: Rewards Redeemed
+      - separator [ref=f38e71]
+    - generic [ref=f38e73]:
+      - heading "Acquisition" [level=2] [ref=f38e74]
+      - separator [ref=f38e75]
+    - generic [ref=f38e79]:
+      - button [ref=f38e80] [cursor=pointer]:
+        - generic [aria-hidden] [ref=f38e81]: 
+      - generic [ref=f38e82]: "Group by:"
+      - combobox "Group by:" [ref=f38e83]:
+        - option "Day" [selected]
+        - option "Month"
+        - option "Year"
+    - generic [ref=f38e89]:
+      - heading "Rewards Overview" [level=2] [ref=f38e90]
+      - separator [ref=f38e91]
+  - text:      

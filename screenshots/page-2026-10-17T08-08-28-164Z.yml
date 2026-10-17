@@ -1,0 +1,216 @@
+- generic [active] [ref=f18e1]:
+  - generic [ref=f18e2]:
+    - text: 
+    - list [ref=f18e4]:
+      - listitem [ref=f18e5]:
+        - generic: 
+      - listitem [ref=f18e6]:
+        - generic: 
+      - listitem [ref=f18e7]:
+        - generic: 
+      - listitem [ref=f18e8]:
+        - generic: 
+      - listitem [ref=f18e9]:
+        - generic [ref=f18e10] [cursor=pointer]: 
+    - navigation [ref=f18e12]:
+      - alert [ref=f18e13]:
+        - paragraph [ref=f18e14]:
+          - generic [aria-hidden] [ref=f18e15]: 
+          - text: You haven't verified your email address. Resend verification email.
+      - generic [ref=f18e16]:
+        - img [ref=f18e18] [cursor=pointer]
+        - list [ref=f18e19]:
+          - listitem [ref=f18e20]:
+            - generic [ref=f18e21]: 15 days left on trial
+            - link "Upgrade Now" [ref=f18e22] [cursor=pointer]:
+              - /url: /settings
+          - listitem [ref=f18e23]:
+            - link [ref=f18e24] [cursor=pointer]:
+              - /url: /manage-my-cards
+              - generic [aria-hidden] [ref=f18e25]: 
+          - listitem [ref=f18e26]:
+            - link [ref=f18e27] [cursor=pointer]:
+              - /url: http://docs.loopyloyalty.com/
+              - generic [aria-hidden] [ref=f18e28]: 
+          - listitem [ref=f18e29]:
+            - link "" [ref=f18e31] [cursor=pointer]:
+              - /url: ""
+    - generic [ref=f18e35]:
+      - navigation [ref=f18e36]:
+        - generic [ref=f18e37]:
+          - list [ref=f18e38]:
+            - listitem [ref=f18e39]:
+              - generic [ref=f18e40] [cursor=pointer]:
+                - generic [ref=f18e41]: 
+                - text: Design
+            - listitem [ref=f18e42]:
+              - generic [ref=f18e43] [cursor=pointer]:
+                - generic [ref=f18e44]: 
+                - text: Details
+            - listitem [ref=f18e45]:
+              - generic [ref=f18e46] [cursor=pointer]:
+                - generic [ref=f18e47]: 
+                - text: Locations
+            - listitem [ref=f18e48]:
+              - generic [ref=f18e49] [cursor=pointer]:
+                - generic [ref=f18e50]: 
+                - text: Support
+            - listitem [ref=f18e51]:
+              - generic [ref=f18e52] [cursor=pointer]:
+                - generic [ref=f18e53]: 
+                - text: Data
+            - listitem [ref=f18e54]:
+              - generic [ref=f18e55] [cursor=pointer]:
+                - generic [ref=f18e56]: 
+                - text: Custom
+                - generic [ref=f18e57]: 
+          - list [ref=f18e58]:
+            - listitem [ref=f18e59]:
+              - button "Save" [ref=f18e60] [cursor=pointer]
+            - listitem [ref=f18e61]:
+              - button "Save & Preview" [ref=f18e62] [cursor=pointer]
+          - text:          
+      - generic [ref=f18e64]:
+        - generic [ref=f18e65]:
+          - generic [ref=f18e66] [cursor=pointer]:
+            - generic [ref=f18e67]: 
+            - text: "Watch video tutorial: Designing your Card"
+          - generic [ref=f18e68]:
+            - generic [ref=f18e71]:
+              - heading [level=3] [ref=f18e72]:
+                - text: Type
+                - generic [aria-hidden] [ref=f18e74] [cursor=pointer]: 
+              - generic [ref=f18e76] [cursor=pointer]:
+                - radio "Single Reward" [checked] [ref=f18e77]
+                - text: Single Reward
+              - generic [ref=f18e79] [cursor=pointer]:
+                - radio "Multi Reward" [ref=f18e80]
+                - text: Multi Reward
+            - heading "Images" [level=3] [ref=f18e83]
+            - generic [ref=f18e84]:
+              - generic [ref=f18e85]:
+                - generic [ref=f18e86]: Icon
+                - generic [aria-hidden] [ref=f18e88] [cursor=pointer]: 
+                - button "Choose File" [ref=f18e90] [cursor=pointer]
+                - paragraph [ref=f18e91]: "Recommended size: 87x87 pixels. Must be square."
+              - generic [ref=f18e92]:
+                - generic [ref=f18e93]: Logo
+                - generic [aria-hidden] [ref=f18e95] [cursor=pointer]: 
+                - button "Choose File" [ref=f18e97] [cursor=pointer]
+                - paragraph [ref=f18e98]: "Recommended size: 480x150 pixels. Should have a minimum height of 150 px and a maximum width of (height x 3.2)."
+            - heading [level=3] [ref=f18e101]:
+              - text: Stamps
+              - generic [aria-hidden] [ref=f18e103]: 
+            - generic [ref=f18e104]:
+              - combobox [ref=f18e107]:
+                - option "1 stamps"
+                - option "2 stamps"
+                - option "3 stamps"
+                - option "4 stamps"
+                - option "5 stamps"
+                - option "6 stamps"
+                - option "7 stamps"
+                - option "8 stamps"
+                - option "9 stamps"
+                - option "10 stamps" [selected]
+                - option "11 stamps"
+                - option "12 stamps"
+                - option "13 stamps"
+                - option "14 stamps"
+                - option "15 stamps"
+                - option "16 stamps"
+                - option "17 stamps"
+                - option "18 stamps"
+                - option "19 stamps"
+                - option "20 stamps"
+                - option "21 stamps"
+                - option "22 stamps"
+                - option "23 stamps"
+                - option "24 stamps"
+                - option "25 stamps"
+                - option "26 stamps"
+                - option "27 stamps"
+                - option "28 stamps"
+                - option "29 stamps"
+                - option "30 stamps"
+              - generic [ref=f18e109]:
+                - generic [ref=f18e110]:
+                  - generic [ref=f18e111]:
+                    - generic [ref=f18e112]: Pick Stamped Image
+                    - generic [ref=f18e113]:
+                      - generic "Select box select" [ref=f18e114] [cursor=pointer]: bagel
+                      - button "Select box focus" [ref=f18e118] [cursor=pointer]
+                  - generic [ref=f18e120]:
+                    - separator [ref=f18e121]
+                    - paragraph [ref=f18e122]: OR
+                    - separator [ref=f18e123]
+                - generic [ref=f18e125]:
+                  - generic [ref=f18e126]: Upload Stamped Image
+                  - button "Choose File" [ref=f18e128] [cursor=pointer]
+                  - paragraph [ref=f18e129]: Minimum square resolution of 200 x 200 px
+              - generic [ref=f18e131]:
+                - generic [ref=f18e132]:
+                  - generic [ref=f18e133]:
+                    - generic [ref=f18e134]: Pick Un-stamped Image
+                    - generic [ref=f18e135]:
+                      - generic "Select box select" [ref=f18e136] [cursor=pointer]: bagel
+                      - button "Select box focus" [ref=f18e140] [cursor=pointer]
+                  - generic [ref=f18e142]:
+                    - separator [ref=f18e143]
+                    - paragraph [ref=f18e144]: OR
+                    - separator [ref=f18e145]
+                - generic [ref=f18e147]:
+                  - generic [ref=f18e148]: Upload Un-stamped Image
+                  - button "Choose File" [ref=f18e150] [cursor=pointer]
+                  - paragraph [ref=f18e151]: Minimum square resolution of 200 x 200 px
+                  - generic [ref=f18e152]:
+                    - separator [ref=f18e153]
+                    - paragraph [ref=f18e154]: OR
+                    - separator [ref=f18e155]
+                - generic [ref=f18e156]:
+                  - generic [ref=f18e158]:
+                    - text: Use Stamped Image
+                    - generic [aria-hidden] [ref=f18e160]: 
+                  - checkbox [ref=f18e162] [cursor=pointer]
+            - heading [level=3] [ref=f18e165]:
+              - text: Colors
+              - generic [aria-hidden] [ref=f18e167] [cursor=pointer]: 
+            - tablist [ref=f18e170]:
+              - generic [ref=f18e171]:
+                - tab [selected] [ref=f18e172]:
+                  - heading [level=4] [ref=f18e173]:
+                    - button "Card" [expanded] [ref=f18e174] [cursor=pointer]
+                - tabpanel "Card" [ref=f18e176]:
+                  - generic [ref=f18e178]:
+                    - generic [ref=f18e179]:
+                      - generic [ref=f18e180]: Background
+                      - generic [ref=f18e181] [cursor=pointer]
+                      - textbox [ref=f18e182]: rgb(92,77,160)
+                    - generic [ref=f18e183]:
+                      - generic [ref=f18e184]: Text
+                      - generic [ref=f18e185] [cursor=pointer]
+                      - textbox [ref=f18e186]: rgb(255,255,255)
+              - tab [ref=f18e188]:
+                - heading [level=4] [ref=f18e189]:
+                  - button "Background" [ref=f18e190] [cursor=pointer]
+              - tab [ref=f18e193]:
+                - heading [level=4] [ref=f18e194]:
+                  - button "Stamp Circle" [ref=f18e195] [cursor=pointer]
+              - tab [ref=f18e198]:
+                - heading [level=4] [ref=f18e199]:
+                  - button "Stamp" [ref=f18e200] [cursor=pointer]
+        - generic [ref=f18e203]:
+          - paragraph [ref=f18e204]: Your Customers' View
+          - generic [ref=f18e228]:
+            - generic [ref=f18e229]: ibefehdi
+            - generic [ref=f18e231]:
+              - paragraph [ref=f18e232]: A sample message
+              - paragraph [ref=f18e233]: Unlock for more
+          - generic [ref=f18e218]:
+            - button "" [ref=f18e219] [cursor=pointer]
+            - button "" [ref=f18e221] [cursor=pointer]
+            - button "" [ref=f18e223] [cursor=pointer]
+    - text:     
+  - generic [ref=f18e234]:
+    - button "×" [ref=f18e235] [cursor=pointer]
+    - generic [ref=f18e236]: "The file you selected cannot be uploaded. Details: undefined"

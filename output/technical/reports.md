@@ -70,7 +70,7 @@ All exports in the entire analytics surface: exactly one — the CSV download bu
     - Currency selector (combobox, ~117 ISO currencies, "US Dollar: USD" default).
     - Stamp Value: numeric spinbutton ($ 00.00) — estimated revenue per stamp.
     - Reward Cost: one numeric spinbutton per reward, labelled "#1 : $" (multi-reward campaigns presumably get #2, #3... — UNVERIFIED, only single-reward draft available) + Submit button.
-    - Submit writes via `PATCH /campaign/:campaignId` with the full campaign object; relevant fields `stampValue: number` and `rewards[].cost: number` (verified by setting 1.23 / 2.34, then reverting to 0 — see test-records.md).
+    - Submit writes via `PATCH /campaign/:campaignId` with the full campaign object; relevant fields `stampValue: number` and `rewards[].cost: number` (verified by setting 1.23 / 2.34, then reverting to 0 — see test-records.md). Re-verified 2026-10-17 11:05: `GET /campaign/id/:id` no longer carries `stampValue`/`rewards[].cost` (zero values dropped server-side), UI shows 0/empty, currency back to USD. Evidence: reports-verify-insights.png / reports-verify-insights.yml.
   - "Activity" chart section: Group by combobox (Day / Month only — no Year here, unlike /dash) + icon button. Selecting Month fires `GET /events/analytics/all/:campaignId?groupBy=month`.
   - "Stamp Count Histogram" section (data from stampTotals; refresh icon button). Observed data: `{"stampTotals":[[0,8]]}` = 8 customers holding 0 stamps (pairs of [stampCount, customerCount]).
   - "Transactions" DataTable (same server-side protocol as Overview): columns Date and Time (sortable), Customer (link → profile), Event, User; Show 10/25/50/100 entries; Search; pagination; "Showing 1 to 8 of 8 entries".
@@ -214,6 +214,8 @@ classDiagram
 ```
 
 ## Corrections to baseline
+
+- Live-data drift (noted 2026-10-17 11:05): Stamps Issued on /insights now reads 1 (was 0 when §3 was first drafted) — another council member apparently succeeded in stamping one card after the seed run. All structure/API findings above are unaffected; KPI examples are point-in-time.
 
 - pages.md §10 (Insights) missed: Stamp Value / Reward Cost inputs + Submit (PATCH /campaign/:id), Currency selector (writes campaign.currency), Activity chart group-by, Stamp Count Histogram, Transactions table with drill-downs. Documented here.
 - links.md misspelled/misattributed endpoints ("/events/dashboard?groupBy=day" vs its API table "/events/dashboard"); confirmed exact paths: `/events/dashboard`, `/events/analytics/all/:id`, `/events/analytics/stampTotals/:id`, `/events/analytics/transactions/:id`, `/events/pushHistory/:id`, `/card/cid/:id`, `/card/:cardId?includeEvents=true`.

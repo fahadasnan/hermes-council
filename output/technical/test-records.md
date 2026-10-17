@@ -50,8 +50,28 @@ All customers show 0 stamps earned, 0 rewards earned, 0 rewards redeemed. Card s
 - Did NOT send any message per safety rules.
 - Push Message History: empty
 
+### Beacon (created by cartographer, 2026-10-17 11:07)
+- Created "COUNCIL TEST Beacon" via Settings > Add Beacon modal (fields: Name of Beacon, UUID, Major, Minor — all required; validation msgs "Please enter a valid uuid." / "Please enter a minor."; all-zero UUID rejected).
+- API: GET /beacons (list), GET /beacons/uuid/:value (duplicate check), POST /beacon (singular) => 201 Created, then GET /beacons refresh. UUID F7826DA6-4FA2-4E98-8024-BC5B71E0893E, major 1, minor 1.
+- Not reverted (own COUNCIL-TEST record; also proves the beacon API surface).
+
+### Stamp (created by cartographer, 2026-10-17 11:06)
+- Gave 1 stamp to COUNCIL TEST Alice (card xZuG0J01d5TGR2) via customer profile "Give Stamps" tab.
+- API: POST /card/cid/xZuG0J01d5TGR2/addStamps/1 => 200 OK. UI toast "Card Successfully Stamped"; Stamps Earned 1; transaction "1 stamp earned" recorded; pass counter 10 -> 9.
+- Note: the profile Give Stamps tab works even though the /stamp page passes an undefined count (API 500); the endpoint pattern is POST /card/cid/:cardId/addStamps/:count.
+- Not reverted (additive test data on own COUNCIL-TEST record).
+
 ### Notes
 - Account email unverified (ibefehdi@gmaill.com); blocks campaign activation
 - Campaign must be activated (status 2) for stamping, rewards, and messaging to work
 - Settings page JS error: "Cannot set property iisOpen of [object Object] which has only a getter"
 - Zapier gallery rendered twice (known bug)
+
+## Settings changed (by cartographer, 2026-10-17, reports deep pass)
+
+### Insights economics — campaign wI4XeFr6rHCTUHGOEFazZ
+- Page: /insights/wI4XeFr6rHCTUHGOEFazZ (Revenue inputs form)
+- Change: set Stamp Value = 1.23 and Reward Cost (#1) = 2.34, clicked Submit (writes `PATCH /campaign/wI4XeFr6rHCTUHGOEFazZ`: `stampValue`, `rewards[].cost`) to verify the write path.
+- Reverted: yes — set both back to 0 and Submitted again.
+- Verification (cartographer, 2026-10-17 11:05, run 2 of this task): `GET /campaign/id/wI4XeFr6rHCTUHGOEFazZ` returns NO `stampValue` and NO `rewards[].cost` field (zero values are dropped server-side); Insights UI shows Stamp Value "0", Reward Cost empty, Currency "US Dollar: USD". Screenshot: /Users/fahad/council/screenshots/reports-verify-insights.png (also reports-verify-insights.yml snapshot).
+- Note: original values were absent/0 (draft campaign never configured), so revert restored the original state exactly.

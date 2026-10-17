@@ -1,0 +1,452 @@
+- generic [ref=f12e2]:
+  - text: 
+  - list [ref=f12e4]:
+    - listitem [ref=f12e5]:
+      - generic: 
+    - listitem [ref=f12e6]:
+      - generic: 
+    - listitem [ref=f12e7]:
+      - generic: 
+    - listitem [ref=f12e8]:
+      - generic: 
+    - listitem [ref=f12e9]:
+      - generic [ref=f12e10] [cursor=pointer]: 
+  - navigation [ref=f12e12]:
+    - alert [ref=f12e13]:
+      - paragraph [ref=f12e14]:
+        - generic [aria-hidden] [ref=f12e15]: 
+        - text: You haven't verified your email address. Resend verification email.
+    - generic [ref=f12e16]:
+      - img [ref=f12e18] [cursor=pointer]
+      - list [ref=f12e19]:
+        - listitem [ref=f12e20]:
+          - generic [ref=f12e21]: 15 days left on trial
+          - link "Upgrade Now" [ref=f12e22] [cursor=pointer]:
+            - /url: /settings
+        - listitem [ref=f12e23]:
+          - link [ref=f12e24] [cursor=pointer]:
+            - /url: /manage-my-cards
+            - generic [aria-hidden] [ref=f12e25]: 
+        - listitem [ref=f12e26]:
+          - link [ref=f12e27] [cursor=pointer]:
+            - /url: http://docs.loopyloyalty.com/
+            - generic [aria-hidden] [ref=f12e28]: 
+        - listitem [ref=f12e29]:
+          - link "" [ref=f12e31] [cursor=pointer]:
+            - /url: ""
+  - generic [ref=f12e35]:
+    - navigation [ref=f12e36]:
+      - generic [ref=f12e37]:
+        - list [ref=f12e38]:
+          - listitem [ref=f12e39]:
+            - generic [ref=f12e40] [cursor=pointer]:
+              - generic [ref=f12e41]: 
+              - text: Design
+          - listitem [ref=f12e42]:
+            - generic [ref=f12e43] [cursor=pointer]:
+              - generic [ref=f12e44]: 
+              - text: Details
+          - listitem [ref=f12e45]:
+            - generic [ref=f12e46] [cursor=pointer]:
+              - generic [ref=f12e47]: 
+              - text: Locations
+          - listitem [ref=f12e48]:
+            - generic [ref=f12e49] [cursor=pointer]:
+              - generic [ref=f12e50]: 
+              - text: Support
+          - listitem [ref=f12e51]:
+            - generic [ref=f12e52] [cursor=pointer]:
+              - generic [ref=f12e53]: 
+              - text: Data
+          - listitem [ref=f12e54]:
+            - generic [ref=f12e55] [cursor=pointer]:
+              - generic [ref=f12e56]: 
+              - text: Custom
+              - generic [ref=f12e57]: 
+        - list [ref=f12e58]:
+          - listitem [ref=f12e59]:
+            - button "Save" [ref=f12e60] [cursor=pointer]
+          - listitem [ref=f12e61]:
+            - button "Save & Preview" [ref=f12e62] [cursor=pointer]
+        - text:          
+    - generic [ref=f12e64]:
+      - generic [ref=f12e66]:
+        - generic [ref=f12e68]:
+          - generic [ref=f12e69] [cursor=pointer]:
+            - generic [ref=f12e70]: 
+            - text: "Watch video tutorial: More Customisations"
+          - generic [ref=f12e72]:
+            - heading [level=3] [ref=f12e73]:
+              - text: Data Collection
+              - generic [aria-hidden] [ref=f12e75]: 
+            - paragraph [ref=f12e76]: Ask your customers to enter their details before installing your card. The fields you select below will appear on your enrollment page.
+            - paragraph [ref=f12e77]:
+              - link "Why collect data and what data should I collect?" [ref=f12e78] [cursor=pointer]:
+                - /url: http://docs.loopyloyalty.com/creating-digital-stamp-cards/collecting-customer-information/what-information-should-i-collect
+            - table [ref=f12e79]:
+              - rowgroup [ref=f12e80]:
+                - row [ref=f12e81]:
+                  - columnheader [ref=f12e82]:
+                    - text: Description
+                    - generic [aria-hidden] [ref=f12e84]: 
+                  - columnheader [ref=f12e85]:
+                    - text: Format
+                    - generic [aria-hidden] [ref=f12e87]: 
+                  - columnheader [ref=f12e88]:
+                    - text: Mandatory
+                    - generic [aria-hidden] [ref=f12e90]: 
+                  - columnheader [ref=f12e91]
+              - rowgroup [ref=f12e92]:
+                - row [ref=f12e93]:
+                  - cell [ref=f12e94]:
+                    - textbox [ref=f12e96]: First Name
+                  - cell [ref=f12e97]:
+                    - combobox [ref=f12e99]:
+                      - option "Text" [selected]
+                      - option "Number"
+                      - option "Date"
+                      - option "Email"
+                      - option "URL"
+                      - option "Mobile/telephone number"
+                  - cell [ref=f12e100]:
+                    - checkbox [checked] [ref=f12e101] [cursor=pointer]
+                  - cell [ref=f12e102]:
+                    - generic [aria-hidden] [ref=f12e104] [cursor=pointer]: 
+                - row [ref=f12e105]:
+                  - cell [ref=f12e106]:
+                    - textbox [ref=f12e108]: Email Address
+                  - cell [ref=f12e109]:
+                    - combobox [ref=f12e111]:
+                      - option "Text"
+                      - option "Number"
+                      - option "Date"
+                      - option "Email" [selected]
+                      - option "URL"
+                      - option "Mobile/telephone number"
+                  - cell [ref=f12e112]:
+                    - checkbox [checked] [ref=f12e113] [cursor=pointer]
+                  - cell [ref=f12e114]:
+                    - generic [aria-hidden] [ref=f12e116] [cursor=pointer]: 
+                - row [ref=f12e117]:
+                  - cell [ref=f12e118]:
+                    - textbox [ref=f12e120]: Mobile Number
+                  - cell [ref=f12e121]:
+                    - combobox [ref=f12e123]:
+                      - option "Text"
+                      - option "Number"
+                      - option "Date"
+                      - option "Email"
+                      - option "URL"
+                      - option "Mobile/telephone number" [selected]
+                  - cell [ref=f12e124]:
+                    - checkbox [checked] [ref=f12e125] [cursor=pointer]
+                  - cell [ref=f12e126]:
+                    - generic [aria-hidden] [ref=f12e128] [cursor=pointer]: 
+            - button [ref=f12e129] [cursor=pointer]:
+              - generic [aria-hidden] [ref=f12e130]: 
+          - generic [ref=f12e133]:
+            - paragraph [ref=f12e134]: Select a default country for phone number field(s)
+            - combobox [ref=f12e135]:
+              - option [selected]
+              - option "Afghanistan"
+              - option "Åland Islands"
+              - option "Albania"
+              - option "Algeria"
+              - option "American Samoa"
+              - option "Andorra"
+              - option "Angola"
+              - option "Anguilla"
+              - option "Antarctica"
+              - option "Antigua and Barbuda"
+              - option "Argentina"
+              - option "Armenia"
+              - option "Aruba"
+              - option "Australia"
+              - option "Austria"
+              - option "Azerbaijan"
+              - option "Bahamas (the)"
+              - option "Bahrain"
+              - option "Bangladesh"
+              - option "Barbados"
+              - option "Belarus"
+              - option "Belgium"
+              - option "Belize"
+              - option "Benin"
+              - option "Bermuda"
+              - option "Bhutan"
+              - option "Bolivia (Plurinational State of)"
+              - option "Bonaire, Sint Eustatius and Saba"
+              - option "Bosnia and Herzegovina"
+              - option "Botswana"
+              - option "Bouvet Island"
+              - option "Brazil"
+              - option "British Indian Ocean Territory (the)"
+              - option "Brunei Darussalam"
+              - option "Bulgaria"
+              - option "Burkina Faso"
+              - option "Burundi"
+              - option "Cabo Verde"
+              - option "Cambodia"
+              - option "Cameroon"
+              - option "Canada"
+              - option "Cayman Islands (the)"
+              - option "Central African Republic (the)"
+              - option "Chad"
+              - option "Chile"
+              - option "China"
+              - option "Christmas Island"
+              - option "Cocos (Keeling) Islands (the)"
+              - option "Colombia"
+              - option "Comoros (the)"
+              - option "Congo (the)"
+              - option "Congo (the Democratic Republic of the)"
+              - option "Cook Islands (the)"
+              - option "Costa Rica"
+              - option "Côte d'Ivoire"
+              - option "Croatia"
+              - option "Cuba"
+              - option "Curaçao"
+              - option "Cyprus"
+              - option "Czech Republic (the)"
+              - option "Denmark"
+              - option "Djibouti"
+              - option "Dominica"
+              - option "Dominican Republic (the)"
+              - option "Ecuador"
+              - option "Egypt"
+              - option "El Salvador"
+              - option "Equatorial Guinea"
+              - option "Eritrea"
+              - option "Estonia"
+              - option "Ethiopia"
+              - option "Falkland Islands (the) [Malvinas]"
+              - option "Faroe Islands (the)"
+              - option "Fiji"
+              - option "Finland"
+              - option "France"
+              - option "French Guiana"
+              - option "French Polynesia"
+              - option "French Southern Territories (the)"
+              - option "Gabon"
+              - option "Gambia (the)"
+              - option "Georgia"
+              - option "Germany"
+              - option "Ghana"
+              - option "Gibraltar"
+              - option "Greece"
+              - option "Greenland"
+              - option "Grenada"
+              - option "Guadeloupe"
+              - option "Guam"
+              - option "Guatemala"
+              - option "Guernsey"
+              - option "Guinea"
+              - option "Guinea-Bissau"
+              - option "Guyana"
+              - option "Haiti"
+              - option "Heard Island and McDonald Islands"
+              - option "Holy See (the)"
+              - option "Honduras"
+              - option "Hong Kong"
+              - option "Hungary"
+              - option "Iceland"
+              - option "India"
+              - option "Indonesia"
+              - option "Iran (Islamic Republic of)"
+              - option "Iraq"
+              - option "Ireland"
+              - option "Isle of Man"
+              - option "Israel"
+              - option "Italy"
+              - option "Jamaica"
+              - option "Japan"
+              - option "Jersey"
+              - option "Jordan"
+              - option "Kazakhstan"
+              - option "Kenya"
+              - option "Kiribati"
+              - option "Korea (the Democratic People's Republic of)"
+              - option "Korea (the Republic of)"
+              - option "Kuwait"
+              - option "Kyrgyzstan"
+              - option "Lao People's Democratic Republic (the)"
+              - option "Latvia"
+              - option "Lebanon"
+              - option "Lesotho"
+              - option "Liberia"
+              - option "Libya"
+              - option "Liechtenstein"
+              - option "Lithuania"
+              - option "Luxembourg"
+              - option "Macao"
+              - option "Macedonia (the former Yugoslav Republic of)"
+              - option "Madagascar"
+              - option "Malawi"
+              - option "Malaysia"
+              - option "Maldives"
+              - option "Mali"
+              - option "Malta"
+              - option "Marshall Islands (the)"
+              - option "Martinique"
+              - option "Mauritania"
+              - option "Mauritius"
+              - option "Mayotte"
+              - option "Mexico"
+              - option "Micronesia (Federated States of)"
+              - option "Moldova (the Republic of)"
+              - option "Monaco"
+              - option "Mongolia"
+              - option "Montenegro"
+              - option "Montserrat"
+              - option "Morocco"
+              - option "Mozambique"
+              - option "Myanmar"
+              - option "Namibia"
+              - option "Nauru"
+              - option "Nepal"
+              - option "Netherlands (the)"
+              - option "New Caledonia"
+              - option "New Zealand"
+              - option "Nicaragua"
+              - option "Niger (the)"
+              - option "Nigeria"
+              - option "Niue"
+              - option "Norfolk Island"
+              - option "Northern Mariana Islands (the)"
+              - option "Norway"
+              - option "Oman"
+              - option "Pakistan"
+              - option "Palau"
+              - option "Palestine, State of"
+              - option "Panama"
+              - option "Papua New Guinea"
+              - option "Paraguay"
+              - option "Peru"
+              - option "Philippines (the)"
+              - option "Pitcairn"
+              - option "Poland"
+              - option "Portugal"
+              - option "Puerto Rico"
+              - option "Qatar"
+              - option "Réunion"
+              - option "Romania"
+              - option "Russian Federation (the)"
+              - option "Rwanda"
+              - option "Saint Barthélemy"
+              - option "Saint Helena, Ascension and Tristan da Cunha"
+              - option "Saint Kitts and Nevis"
+              - option "Saint Lucia"
+              - option "Saint Martin (French part)"
+              - option "Saint Pierre and Miquelon"
+              - option "Saint Vincent and the Grenadines"
+              - option "Samoa"
+              - option "San Marino"
+              - option "Sao Tome and Principe"
+              - option "Saudi Arabia"
+              - option "Senegal"
+              - option "Serbia"
+              - option "Seychelles"
+              - option "Sierra Leone"
+              - option "Singapore"
+              - option "Sint Maarten (Dutch part)"
+              - option "Slovakia"
+              - option "Slovenia"
+              - option "Solomon Islands"
+              - option "Somalia"
+              - option "South Africa"
+              - option "South Georgia and the South Sandwich Islands"
+              - option "South Sudan"
+              - option "Spain"
+              - option "Sri Lanka"
+              - option "Sudan (the)"
+              - option "Suriname"
+              - option "Svalbard and Jan Mayen"
+              - option "Swaziland"
+              - option "Sweden"
+              - option "Switzerland"
+              - option "Syrian Arab Republic"
+              - option "Taiwan (Province of China)"
+              - option "Tajikistan"
+              - option "Tanzania, United Republic of"
+              - option "Thailand"
+              - option "Timor-Leste"
+              - option "Togo"
+              - option "Tokelau"
+              - option "Tonga"
+              - option "Trinidad and Tobago"
+              - option "Tunisia"
+              - option "Turkey"
+              - option "Turkmenistan"
+              - option "Turks and Caicos Islands (the)"
+              - option "Tuvalu"
+              - option "Uganda"
+              - option "Ukraine"
+              - option "United Arab Emirates (the)"
+              - option "United Kingdom of Great Britain and Northern Ireland (the)"
+              - option "United States Minor Outlying Islands (the)"
+              - option "United States of America (the)"
+              - option "Uruguay"
+              - option "Uzbekistan"
+              - option "Vanuatu"
+              - option "Venezuela (Bolivarian Republic of)"
+              - option "Vietnam"
+              - option "Virgin Islands (British)"
+              - option "Virgin Islands (U.S.)"
+              - option "Wallis and Futuna"
+              - option "Western Sahara"
+              - option "Yemen"
+              - option "Zambia"
+              - option "Zimbabwe"
+        - generic [ref=f12e139]:
+          - heading "Unique Customer Enrollments " [level=3] [ref=f12e140]:
+            - text: Unique Customer Enrollments
+            - generic [ref=f12e141]: 
+          - generic [ref=f12e142]:
+            - checkbox [ref=f12e144] [cursor=pointer]
+            - generic [ref=f12e145]: Enable automatic checks against unique customer field(s) to prevent the same customer from enrolling more than once. You can select a maximum of 3 unique fields.
+        - generic [ref=f12e149]:
+          - heading "Data Consent" [level=3] [ref=f12e150]
+          - paragraph [ref=f12e151]: Ask your customers to agree that their personal data may be used for direct marketing purposes.
+          - paragraph [ref=f12e152]:
+            - link "Why ask your customers to agree to sharing their personal data?" [ref=f12e153] [cursor=pointer]:
+              - /url: http://docs.loopyloyalty.com/creating-digital-stamp-cards/collecting-customer-information/enabling-data-consent
+          - generic [ref=f12e154]:
+            - generic [ref=f12e155]:
+              - generic [ref=f12e156]:
+                - generic [ref=f12e157]: Data Consent Landing Page Text
+                - generic [aria-hidden] [ref=f12e159]: 
+              - generic [ref=f12e160]:
+                - generic [ref=f12e161]: Disabled
+                - checkbox [ref=f12e162] [cursor=pointer]
+            - textbox [disabled] [ref=f12e163]: I agree that my personal data can be used and provided for direct marketing purposes in accordance with ___________________
+          - generic [ref=f12e164]:
+            - checkbox [disabled] [ref=f12e166]
+            - paragraph [ref=f12e168]: Have the data consent checkbox on the landing page checked by default.
+      - generic [ref=f12e170]:
+        - paragraph [ref=f12e171]: Your Customers' View
+        - generic [ref=f12e174]:
+          - img "Loopy Safari Header" [ref=f12e175]
+          - generic [ref=f12e176]:
+            - paragraph [ref=f12e181]: Collect stamps for cool rewards!
+            - generic [ref=f12e183]:
+              - paragraph [ref=f12e184]: Please enter your details
+              - generic [ref=f12e185]:
+                - generic [ref=f12e186]:
+                  - generic [ref=f12e187]: First Name*
+                  - textbox [ref=f12e188]
+                - generic [ref=f12e189]:
+                  - generic [ref=f12e190]: Email Address*
+                  - textbox [ref=f12e191]
+                - generic [ref=f12e192]:
+                  - generic [ref=f12e193]: Mobile Number*
+                  - textbox [ref=f12e194]
+                - separator [ref=f12e195]
+                - generic [ref=f12e196]:
+                  - generic [ref=f12e197]: Terms & Conditions
+                  - paragraph [ref=f12e198]: 1. Earn 1 stamp for every _______________ purchased. 2. Collect __ stamps to receive a _______________ upon your next visit. 3. This card, stamps, and rewards are valid until_______________. 4. This card can only be used at _______________ (and _______________). 5. Stamps and rewards cannot be exchanged, refunded, replaced or redeemed for cash. 6. Cards are non-transferrable and cannot be combined with other cards. 7. The Company reserve the right of final decisions in case of any disputes.
+                - generic [ref=f12e200]:
+                  - checkbox "I have read and agree to the terms and conditions." [ref=f12e201]
+                  - text: I have read and agree to the terms and conditions.
+                - button "Join Now!" [ref=f12e203] [cursor=pointer]
+        - button "" [ref=f12e205] [cursor=pointer]
+  - text:     

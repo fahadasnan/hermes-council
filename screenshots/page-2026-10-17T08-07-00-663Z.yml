@@ -1,0 +1,87 @@
+- generic [active] [ref=f9e1]:
+  - generic [ref=f9e191]:
+    - text: 
+    - list [ref=f9e193]:
+      - listitem [ref=f9e194]:
+        - generic: 
+      - listitem [ref=f9e195]:
+        - generic: 
+      - listitem [ref=f9e196]:
+        - generic: 
+      - listitem [ref=f9e197]:
+        - generic: 
+      - listitem [ref=f9e198]:
+        - generic [ref=f9e199] [cursor=pointer]: 
+    - navigation [ref=f9e201]:
+      - alert [ref=f9e202]:
+        - paragraph [ref=f9e203]:
+          - generic [aria-hidden] [ref=f9e204]: 
+          - text: You haven't verified your email address. Resend verification email.
+      - generic [ref=f9e205]:
+        - img [ref=f9e207] [cursor=pointer]
+        - list [ref=f9e208]:
+          - listitem [ref=f9e209]:
+            - generic [ref=f9e210]: 15 days left on trial
+            - link "Upgrade Now" [ref=f9e211] [cursor=pointer]:
+              - /url: /settings
+          - listitem [ref=f9e212]:
+            - generic [ref=f9e213]: "In view: COUNCIL TEST"
+          - listitem [ref=f9e214]:
+            - link [ref=f9e215] [cursor=pointer]:
+              - /url: /manage-my-cards
+              - generic [aria-hidden] [ref=f9e216]: 
+          - listitem [ref=f9e217]:
+            - link [ref=f9e218] [cursor=pointer]:
+              - /url: http://docs.loopyloyalty.com/
+              - generic [aria-hidden] [ref=f9e219]: 
+          - listitem [ref=f9e220]:
+            - link "" [ref=f9e222] [cursor=pointer]:
+              - /url: ""
+    - generic [ref=f9e226]:
+      - navigation [ref=f9e227]:
+        - generic [ref=f9e228]:
+          - list [ref=f9e229]:
+            - listitem [ref=f9e230]:
+              - generic [ref=f9e231] [cursor=pointer]: Profile
+            - listitem [ref=f9e232]:
+              - generic [ref=f9e233] [cursor=pointer]: Send Messages
+            - listitem [ref=f9e234]:
+              - generic [ref=f9e235] [cursor=pointer]: Give Stamps
+            - listitem
+            - listitem [ref=f9e236]:
+              - generic [ref=f9e237] [cursor=pointer]: Delete Customer
+          - list [ref=f9e238]:
+            - listitem [ref=f9e239]:
+              - button "Back" [ref=f9e240] [cursor=pointer]
+      - generic [ref=f9e242]:
+        - text:     ▴  
+        - generic:
+          - generic [ref=f9e358]:
+            - heading "Send a message to this customer" [level=2] [ref=f9e359]
+            - paragraph [ref=f9e360]:
+              - text: These messages will appear on the lock screen and under 'Latest Updates' on your customer's card.
+              - link "Learn more about sending messages to a single customer" [ref=f9e361] [cursor=pointer]:
+                - /url: http://docs.loopyloyalty.com/engaging-with-customers/sending-messages-to-an-individual-customer
+              - text: .
+            - generic [ref=f9e362]:
+              - generic [ref=f9e363]:
+                - textbox "e.g. Happy Birthday Joe! Stop by for a 20% discount today!" [ref=f9e364]
+                - paragraph [ref=f9e365]: "Best practice: Keep your message short and sweet (~ 90 characters)."
+                - emphasis [ref=f9e366]:
+                  - paragraph [ref=f9e367]: "Ideas:"
+                  - list [ref=f9e368]:
+                    - listitem [ref=f9e369]: Wendy, we haven't seen you in a while. Stop by for a cocktail on us!
+                    - listitem [ref=f9e370]: Happy birthday Patrick! Visit us this week and get a free bottle of mayonnaise.
+                    - listitem [ref=f9e371]: Hi Paul, your golf lesson has been cancelled today. See you next week!
+                    - listitem [ref=f9e372]: Nick, your car is ready to be picked up!
+              - button "Send" [disabled] [ref=f9e373]
+          - generic [ref=f9e379]:
+            - generic [ref=f9e380]: ibefehdi
+            - generic [ref=f9e382]:
+              - paragraph
+              - paragraph [ref=f9e383]: Unlock for more
+        - text:      
+    - text:     
+  - generic [ref=f9e355]:
+    - button "×" [ref=f9e356] [cursor=pointer]
+    - generic [ref=f9e357]: Card Successfully Stamped
