@@ -1255,7 +1255,7 @@ sequenceDiagram
     API-->>UI: 200 history rows (empty here)
     Admin->>UI: Pick All customers or build a segment, watch live reach count, write message
     Admin->>UI: Click Send Message (NEVER exercised, safety rule)
-    note over UI,API: the send endpoint was never observed; sent messages would appear in push history as Date, Message, Segment, Reach
+    note over UI,API: the send endpoint was never observed. Sent messages would appear in push history as Date, Message, Segment, Reach
 ```
 
 There is no draft or schedule capability: Send Message is the only button, on both the campaign Messages page and the profile's single-customer Send Messages tab.
