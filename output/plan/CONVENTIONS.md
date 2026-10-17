@@ -193,19 +193,24 @@ Localization: the API returns `message` in the tenant/user language when resolva
 ## 9. Testing standards
 
 Backend (pytest, pytest-django, factory boy):
-- Every model: the tenant-isolation trio — cross-tenant read returns nothing, cross-tenant write rejected, cross-tenant relation attach rejected at the DB level (composite FK). A suite-level test enumerates tenant-owned models and fails on any missing `tenant_id`, manager, or isolation test (ADR-32).
+- Every model: the tenant-isolation trio — cross-tenant read returns nothing, cross-tenant write rejected, cross-tenant relation attach rejected at the DB level (composite FK). A suite-level test enumerates tenant-owned models and fails on any missing `tenant_id`, manager, isolation test, **or intended PK class** (UUID public-facing vs `BigAutoField` internal/join, ADR-33 — round 2 F-verifier-3). The `cross_tenant` AST checker (`scripts/check_cross_tenant.py`, ADR-11) runs in CI with fixtures proving it fails `.cross_tenant` use in a forbidden file and passes the allowlisted ones (round 2 F-verifier-2).
 - Every ledger service action: happy path, idempotent replay, fingerprint conflict, concurrent duplicate (two threads, one key), insufficient balance, voided pass, wrong location scope. Reward auto-issue: threshold, cycle rollover, lifetime counter (ADR-7).
 - A concurrency test proving contextvar tenant isolation under two parallel requests (ADR-11).
-- API tests: auth required, permission per role, tenant isolation (404 not 403), pagination, error codes, OpenAPI example validity.
+- API tests: auth required, permission per role, tenant isolation (404 not 403), pagination, error codes, OpenAPI example validity. Out-of-scope lookup: staff at location A scanning a pass whose events are only at location B gets 404 with no PII, while a two-location staff member can act at either selected location (round 2 F-COV-5).
+- Celery task-routing test: every registered task lands on its declared queue (ADR-50).
 - Signer tests: golden-file `pass.json` per style; 10-location cap; Google class derivation table (ADR-23).
 - The append-only trigger is tested (UPDATE/DELETE raise at the DB level).
 - Coverage gate: 90% statements on `apps/ledger`, `apps/passes`, `apps/tenants`; 80% elsewhere. `makemigrations --check` in CI.
 
 Frontend (Vitest + Testing Library; Playwright e2e):
 - Forms and validators, counter mutation/idempotency logic (same-key retry, timeout path, rollback), and the shared formatters: KWD 3-decimal, a 2-decimal currency, all six Arabic plural forms, location-timezone rendering (ADR-39).
-- Playwright golden journeys: login per role → correct landing; stamp → reward → redeem incl. throttled and offline cases; program create → design → publish; enrollment on a phone viewport in `ar` with RTL snapshot comparison (dashboard **and** enrollment, per verifier); platform-admin provisioning; two-location staff scope switching.
+- Mixed-direction rendering (round 2 F-COV-4): an en/ar component or Playwright case with Arabic names beside Latin phone numbers/digits asserting `dir` handling, bidi isolation, and formatter output; layout uses CSS logical properties throughout.
+- Playwright golden journeys run in **`en` and `ar`** (never one language only — ADR-57): login per role → correct landing; stamp → reward → redeem incl. throttled and offline cases; program create → design → publish; enrollment on a phone viewport in both languages with RTL snapshot comparison (dashboard **and** enrollment, per verifier); platform-admin provisioning; two-location staff scope switching.
+- Evidence screenshots: every user-facing epic's evidence pack includes light and dark screenshots in both `en` and `ar` (four variants, plus a phone viewport where the surface is phone-first), taken via `playwright.evidence.config.ts` (ADR-57).
 - en/ar key-parity check and the stylelint logical-properties rule fail the build.
 - Bundle budgets CI-checked (enrollment ≤150 KB gzip first load; dashboard initial route ≤300 KB gzip).
+
+Evidence pipeline (ADR-57, the GlowDesk rhythm — round 2 F-PIPE-1/F-CONSISTENCY-14/15/16): every phase runs on `plan/evidence/phase-<n>-progress.md` (one row per task — task id, branch, commit SHA, checks run, deviations — written in that task's own commit; after a context reset, reread it first and never redo a finished task). `scripts/phase<n>-check.sh <task-id>` runs the phase's checks with full logs under `/tmp/phase<n>-check/<task>/`, never in the repo. The last task of each epic writes `plan/evidence/<epic>/REVIEW.md` plus numbered artifacts proving the acceptance criteria; the last task of each phase writes `plan/evidence/phase-<n>-gates/` (`GATES.md`, `run-gates.sh`, per-gate results and exit codes). Phase 0 creates the harness.
 
 Performance acceptance (requirements NFR): counter scan→confirm <1.5 s p95 (ledger commit gate; push async); analytics <2 s p95 at 100k events/tenant. Load-test both in Phase 3 and Phase 4 exit criteria.
 
@@ -218,7 +223,7 @@ Performance acceptance (requirements NFR): counter scan→confirm <1.5 s p95 (le
   - [ ] ADRs followed; any deviation has a new/updated ADR in this PR.
   - [ ] Tenant scoping: new models have `tenant_id`, manager, composite FKs; isolation tests included.
   - [ ] Ledger writes go through services; no direct `Balance`/`Pass` mutation; idempotency honored.
-  - [ ] Migrations reviewed by hand (constraint names, no destructive ops without a plan).
+  - [ ] Migrations reviewed by hand (constraint names, no destructive ops without a plan); forward-compatible per ADR-53 (expand/contract; data backfills are management commands, never inside schema migrations; drops need a two-deploy cycle).
   - [ ] Tests: backend trio + service cases; frontend states + formatters; new strings in en **and** ar.
   - [ ] No secrets, no client-trusted tenant/location ids, no physical-direction CSS.
   - [ ] OpenAPI regenerated; frontend DTO/validator mirrors updated or codegen'd.
@@ -227,6 +232,8 @@ Performance acceptance (requirements NFR): counter scan→confirm <1.5 s p95 (le
 ## 11. Definition of done (every task)
 
 A task is done when: code merged to `main` behind no dead flags; migrations applied in staging; tests green in CI including the new ones; en/ar strings complete; OpenAPI + DTO mirrors updated; audit events wired for sensitive actions; docs/runbooks touched if behavior changed; the phase's acceptance criteria still hold (no regressions); and for anything user-visible, the loading/empty/error states render through `<QueryState>`. "Works on my machine" without the CI suite passing is not done.
+
+Evidence (ADR-57): the task's row in `plan/evidence/phase-<n>-progress.md` names the commit SHA, the checks run (`scripts/phase<n>-check.sh`), and any deviation; epics close with `plan/evidence/<epic>/REVIEW.md` plus numbered artifacts, and phases close with `plan/evidence/phase-<n>-gates/GATES.md` and its gate results. A phase without its gate pack is not done.
 
 ## 12. Skills
 
