@@ -130,3 +130,12 @@ All customers show 0 stamps earned, 0 rewards earned, 0 rewards redeemed. Card s
 - AngularJS forms require native input events; JS value setting does not trigger ng-model binding
 - The Create Subuser dialog opens without premium gating (contradicts earlier findings)
 - The /messages page has "Unlock for more" premium sidebar
+
+## Audit reconciliation (appended by chair during synthesis, 2026-10-17)
+
+### Helen stamp (late entry, required by the verifier gate)
+- Record: 1 stamp on COUNCIL TEST Helen (card RTgLMCuFyOvpMH), campaign wI4XeFr6rHCTUHGOEFazZ.
+- Evidence: verifier live checks (technical/review.md, 2026-10-17): profile shows Stamps Earned 1, Last Stamp 10:59, two profile events; customers list shows Helen stamps earned = 1; the overview transaction table includes the stamp row; /dash and /insights totals show 2 stamps.
+- Provenance: not logged at creation time. Alice's stamp (cartographer, 11:06, profile Give Stamps, POST /card/cid/xZuG0J01d5TGR2/addStamps/1 -> 200) is logged above; Helen's stamp was created by a council member through an equivalent flow but never written to this log. The verifier flagged the omission as an audit defect (review.md, Test-record audit). No further attribution is possible from the available artifacts.
+- Not reverted: additive test data on an own COUNCIL-TEST record, treated the same as Alice's stamp.
+- Current campaign totals (verifier live checks, 2026-10-17, review completed ~11:45): 8 enrolled, 2 stamps issued (Alice 1, Helen 1), 0 rewards issued, 0 rewards redeemed. Entries above that say "Stamps Issued on /dash: 0" or describe 0/1 stamps are historical snapshots, superseded by this reconciliation.
