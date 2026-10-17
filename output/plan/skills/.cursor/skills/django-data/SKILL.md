@@ -9,8 +9,8 @@ description: Use when adding a Django model, writing a migration, or designing a
 
 Every tenant-owned model follows these rules:
 
-1. Inherit `TenantOwnedModel` (from `apps/tenants/models.py`): direct `tenant` FK, `objects = TenantScopedManager()`, fenced `cross_tenant` manager.
-2. UUID pk for public-facing tables; bigserial for internal join tables (ADR-33).
+1. Inherit `TenantOwnedModel` (from `apps/tenants/models.py`): direct `tenant` FK, `objects = TenantScopedManager()`, fenced `cross_tenant` manager. The base is abstract and **declares no primary key** (round 2 F-DB-3).
+2. Declare the pk on each concrete model: `id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)` for public-facing tables; `id = models.BigAutoField(primary_key=True)` for internal join tables (ADR-33). Do not inherit a pk.
 3. `created_at` / `updated_at` timestamptz; `created_by` (nullable) where a user acts.
 4. Explicit `Meta.db_table` (snake_case plural) and explicitly named constraints/indexes.
 5. Composite same-tenant foreign keys for every multi-parent relation (ADR-10).
@@ -60,13 +60,15 @@ class TenantScopedManager(models.Manager):
         return super().get_queryset().filter(tenant=tenant)
 
 class TenantOwnedModel(models.Model):
-    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    # No pk here (round 2 F-DB-3): each concrete model declares its own —
+    # UUIDField for public-facing tables, BigAutoField for internal join
+    # tables (ADR-33). An inherited UUID pk would contradict ADR-33.
     tenant = models.ForeignKey("tenants.Tenant", on_delete=models.CASCADE)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
     objects = TenantScopedManager()
-    cross_tenant = models.Manager()   # fenced: platform.py, migrations, reconciliation only
+    cross_tenant = models.Manager()   # fenced: AST checker allowlist only (see rules)
 
     class Meta:
         abstract = True
@@ -77,33 +79,46 @@ Rules:
 - Tenant context is the contextvar, set by `TenantMiddleware` and reset in a `finally`. Never a class attribute or a bare thread-local (a process-global leaks across requests — ADR-11).
 - Services, management commands, and Celery tasks never rely on the contextvar; they call `.for_tenant(tenant)` explicitly. Implicit filtering is defense-in-depth for request paths only.
 - Writes without a tenant raise `TenantNotSupplied` (enforced in `TenantOwnedModel.save()` when `tenant_id` is None).
-- `cross_tenant` may be imported only by `apps/tenants/platform.py`, migrations, and the reconciliation job. A CI grep check fails any other import, and every use writes an `AuditEvent`.
+- `cross_tenant` may be accessed only from `apps/tenants/platform.py`, `apps/passes/tasks.py` and `apps/webhooks/tasks.py` (outbox-driven tasks only, by primary key, each use audited), migrations, and the reconciliation job. The fence is an **attribute-access AST checker** (`scripts/check_cross_tenant.py` in CI), not an import grep — `Model.cross_tenant` is attribute access, nothing is imported, so an import check would catch zero violations (round 2 F-DB-5/F-verifier-2). Every use writes an `AuditEvent`.
 - Parent tables declare `UniqueConstraint(fields=["id", "tenant_id"])` so children can reference the pair.
 
 ## Composite same-tenant relations (ADR-10)
 
-A join row must prove both parents belong to the same tenant, in the database:
+A join row must prove both parents belong to the same tenant, in the database. Django has **no** `models.ForeignKeyConstraint` — `Meta.constraints` accepts only `CheckConstraint`, `UniqueConstraint`, `ExclusionConstraint`, and `DeferrableUniqueConstraint`, and the ORM cannot express a multi-column FK (https://docs.djangoproject.com/en/stable/topics/composite-primary-key/). Declare the FKs with `db_constraint=False` and add the composite FKs with `RunSQL` in the migration (round 2 F-SKILL-1/F-DB-6):
 
 ```python
 class ProgramLocation(TenantOwnedModel):
-    program = models.ForeignKey("programs.Program", on_delete=models.CASCADE)
-    location = models.ForeignKey("tenants.Location", on_delete=models.CASCADE)
-    # tenant_id is inherited; composite FKs pin both parents to it
+    id = models.BigAutoField(primary_key=True)   # internal join table → bigserial (ADR-33)
+    program = models.ForeignKey("programs.Program", on_delete=models.CASCADE,
+                                db_constraint=False)
+    location = models.ForeignKey("tenants.Location", on_delete=models.CASCADE,
+                                 db_constraint=False)
+    # tenant_id is inherited; the composite FKs in the migration pin both parents to it
     class Meta:
         db_table = "program_locations"
         constraints = [
-            models.UniqueConstraint(fields=["program", "location"], name="uq_program_locations_program_location"),
-            models.UniqueConstraint(fields=["id", "tenant_id"], name="uq_program_locations_id_tenant"),
-            models.ForeignKeyConstraint(  # expressed via db constraints in the migration
-                ["program_id", "tenant_id"], ["programs.id", "tenant_id"],
-                name="fk_program_locations_program_tenant"),
-            models.ForeignKeyConstraint(
-                ["location_id", "tenant_id"], ["locations.id", "tenant_id"],
-                name="fk_program_locations_location_tenant"),
+            models.UniqueConstraint(fields=["program", "location"],
+                                    name="uq_program_locations_program_location"),
+            models.UniqueConstraint(fields=["id", "tenant_id"],
+                                    name="uq_program_locations_id_tenant"),
         ]
 ```
 
-(Django needs `ForeignKey(..., db_constraint=False)` plus the explicit `ForeignKeyConstraint`s, or `RunSQL`; the django-data tests include a working template.) An id from tenant B then physically cannot attach to tenant A's program. The same pattern guards `Pass` (customer+tenant, program+tenant), `Balance`, `MembershipLocation`, and `LedgerEntry`.
+```python
+# Same app's migration — the ORM cannot express composite FKs, so RunSQL adds them:
+migrations.RunSQL(
+    "ALTER TABLE program_locations "
+    "ADD CONSTRAINT fk_program_locations_program_tenant "
+    "FOREIGN KEY (program_id, tenant_id) REFERENCES programs (id, tenant_id), "
+    "ADD CONSTRAINT fk_program_locations_location_tenant "
+    "FOREIGN KEY (location_id, tenant_id) REFERENCES locations (id, tenant_id);",
+    reverse_sql="ALTER TABLE program_locations "
+    "DROP CONSTRAINT fk_program_locations_program_tenant, "
+    "DROP CONSTRAINT fk_program_locations_location_tenant;",
+)
+```
+
+Parent-side prerequisite: the parent tables declare `UniqueConstraint(fields=["id", "tenant_id"])` — Postgres requires the referenced `(id, tenant_id)` pair to be backed by a unique constraint on the **parent**. Because the model FKs carry `db_constraint=False`, `makemigrations` emits no plain single-column FK constraint; the composite FKs come only from the `RunSQL`. The isolation test below (`test_cross_tenant_relation_rejected`) proves the RunSQL constraint. An id from tenant B then physically cannot attach to tenant A's program. The same pattern guards `Pass` (customer+tenant, program+tenant), `Balance`, `MembershipLocation`, and `LedgerEntry`.
 
 ## Constraint patterns
 
@@ -112,7 +127,8 @@ class ProgramLocation(TenantOwnedModel):
 - Non-negative balances: `CheckConstraint(check=Q(stamps_current__gte=0), name="ck_balances_stamps_current_nonnegative")` — one per balance column.
 - Balance-event pairing (ADR-5/6): a check constraint tying `event_type IN ('earn','redeem','reward_issued')` to `balance_id/previous_balance/new_balance` all non-null, and all other types to all-null.
 - Append-only ledger: a `RunSQL` migration installs a trigger rejecting UPDATE and DELETE on `ledger_entries`. Test it with raw SQL.
-- `RunSQL` also for `CREATE INDEX CONCURRENTLY` and partial indexes the ORM cannot express.
+- `RunSQL` also for `CREATE INDEX CONCURRENTLY`, partial indexes, and composite same-tenant FKs the ORM cannot express.
+- Search indexes per ADR-46: exact/prefix index on `passes.code` (tenant-scoped); normalized customer identifiers (E.164 mobile, lowercased email) indexed for the customer search; `tsvector` only where tested against real en/ar data.
 
 ## Adding a tenant-scoped model (checklist)
 
@@ -121,7 +137,7 @@ class ProgramLocation(TenantOwnedModel):
 3. Add composite same-tenant FKs for every relation to another tenant-owned row.
 4. Add `Meta`: `db_table`, named constraints, indexes for the real query patterns.
 5. `makemigrations <app>`; read the migration by hand (constraint names, no destructive ops).
-6. Register in admin as read-only if it is ledger-adjacent (`Balance`, `LedgerEntry` are read-only or unregistered).
+6. Do **not** register tenant-owned models in the Django admin by default: under fail-closed tenancy an admin read has no legal queryset, and `cross_tenant` use in `admin.py` violates the AST allowlist (round 2 F-DB-7). Dashboard screens are the operational surface. If a concrete platform-support need exists, register behind an explicit `TenantAdminMixin` whose `get_queryset` calls `.for_tenant(request.tenant)` derived from a selected support session (ADR-19), add `admin.py` to the checker allowlist, and audit every read. `Balance` and `LedgerEntry` stay unregistered (ADR-4/8).
 7. Write the isolation trio test (below) and the cross-tenant relation-attach test.
 8. If serializers/views follow, the tenant field is never in the serializer; it is set from `request.tenant`.
 
@@ -129,6 +145,7 @@ class ProgramLocation(TenantOwnedModel):
 
 - Always name constraints and indexes explicitly.
 - Never add and drop a column's replacement in the same migration; use `SeparateDatabaseAndState` for data migrations.
+- Forward-compatible per ADR-53: expand/contract schema changes; data backfills are batched management commands, never inside schema migrations; drops need a two-deploy cycle and explicit PR approval.
 - `makemigrations --check --dry-run` runs in CI: an uncommitted migration fails the build.
 
 ## Pytest: tenant isolation (required for every model)
@@ -149,7 +166,7 @@ def test_cross_tenant_relation_rejected(db, tenant_a, tenant_b, program_a, locat
                 program=program_a, location=location_b, tenant=tenant_a)
 ```
 
-A suite-level test enumerates all tenant-owned models and fails if any lacks `tenant_id`, the manager, or its isolation test (ADR-32).
+A suite-level test enumerates all tenant-owned models and fails if any lacks `tenant_id`, the manager, its isolation test, **or its intended PK class** (UUID public-facing vs `BigAutoField` internal/join, ADR-33 — round 2 F-verifier-3).
 
 ## Naming
 
@@ -160,6 +177,8 @@ A suite-level test enumerates all tenant-owned models and fails if any lacks `te
 ## Common pitfalls
 
 - Relying on the implicit contextvar filter inside a Celery task (there is no request context): always `.for_tenant(tenant)`.
+- Writing `models.ForeignKeyConstraint` — it does not exist in Django; the composite same-tenant FK is `RunSQL` in the migration with `ForeignKey(..., db_constraint=False)` on the model (round 2 F-SKILL-1/F-DB-6).
+- Putting a pk on the abstract `TenantOwnedModel`, or a UUID pk on an internal join table that ADR-33 says is bigserial (round 2 F-DB-3).
 - Balances updated outside `ledger.services` — never; `Balance` writes happen only inside the entry's transaction (ADR-4).
 - Serializers accepting `tenant_id` from the client — never.
 - A join table with plain FKs and no composite tenant constraint — the DB cannot stop a cross-tenant attach.
@@ -167,5 +186,5 @@ A suite-level test enumerates all tenant-owned models and fails if any lacks `te
 
 ## Additional resources
 
-- Rulings: `decisions.md` ADR-4, 5, 6, 8, 10, 11, 21, 32, 33, 44
+- Rulings: `decisions.md` ADR-4, 5, 6, 8, 10, 11, 21, 32, 33, 44, 46, 53, 57
 - Endpoint/service conventions: django-backend skill; end-to-end recipe: feature-delivery skill

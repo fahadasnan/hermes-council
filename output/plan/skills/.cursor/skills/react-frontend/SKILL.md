@@ -37,7 +37,7 @@ Adding a screen, step by step:
 3. DTO types in `packages/api-types` (mirror the serializer) + a Zod validator if the page has a form.
 4. Keys in `qk`, then `api/useXQuery.ts` / `useXMutation.ts` in the feature's `api/`.
 5. Build from design-skill primitives + `<QueryState>`; messages added to en.json **and** ar.json (CI fails on parity — see i18n-rtl skill).
-6. Tests: colocated `*.test.tsx` (Vitest + Testing Library); a Playwright journey in `dashboard/e2e/` for golden flows.
+6. Tests: colocated `*.test.tsx` (Vitest + Testing Library); Playwright journeys in `dashboard/e2e/` for golden flows, run in `en` **and** `ar` (ADR-57).
 
 Counter mutation skeleton (canonical endpoints):
 
@@ -49,15 +49,32 @@ const earn = useMutation({
       method: 'POST',
       headers: { 'Idempotency-Key': idemKey },
       body: { balance_id: balanceId, quantity: 1, location_id: activeLocationId },
+      timeoutMs: 10_000,                      // 10 s request timeout (ADR-38)
     }),
   onSuccess: () => queryClient.invalidateQueries({ queryKey: qk.ledger.list(customerId) }),
 });
 // button: disabled={earn.isPending}
 // on error: balance rolls back; the retry button re-calls earn.mutate() — SAME idemKey
-// on timeout (10s): mark "sent, unconfirmed", re-query the ledger before offering retry
 ```
 
-Pass-update polling after a confirmed write:
+Timeout protocol (round 2 F-FE-1 — safety-critical, so it is code, not a comment): on timeout the write may or may not have committed. Mark the entry "sent, unconfirmed", re-query the ledger, treat it as success if the entry is found, and offer an explicit retry only if it is absent. Never silently resend.
+
+```ts
+const [unconfirmed, setUnconfirmed] = useState(false);   // set on mutation timeout
+const recheck = useQuery({
+  queryKey: qk.ledger.list(customerId),
+  enabled: unconfirmed,
+  refetchInterval: (q) =>
+    q.state.data?.some((e) => e.idempotency_key === idemKey) ? false : 2000,
+});
+const landed = recheck.data?.some((e) => e.idempotency_key === idemKey);
+// landed → success: clear "sent, unconfirmed", show the new balance
+// not landed after the re-query window → show an explicit "Retry (same key)" action;
+//   the retry reuses idemKey verbatim, so a late commit replays (200 + Idempotent-Replay)
+//   instead of double-crediting. The UI never resends on its own.
+```
+
+Pass-update polling after a confirmed write. No WebSocket or SSE in MVP — pass status uses TanStack Query `refetchInterval` polling only (ADR-36, round 2 F-FE-2):
 
 ```ts
 const status = useQuery({
@@ -89,7 +106,7 @@ Every flow keyboard-operable; visible focus never suppressed; labels on all inpu
 
 ## Testing
 
-Vitest + Testing Library (user-centric queries): forms/validators, the counter mutation protocol (same-key retry, timeout path, rollback), shared formatters (see i18n-rtl). Playwright golden journeys: login per role → landing; stamp → reward → redeem incl. throttled/offline; program create → design → publish; enrollment in `ar` on a phone viewport with RTL snapshot comparison (both apps); tenant provisioning in `/admin`. Type rules: `strict`, `noUncheckedIndexedAccess`, no `any` in app code; DTO boundaries parsed with Zod where input is untrusted.
+Vitest + Testing Library (user-centric queries): forms/validators, the counter mutation protocol (same-key retry, timeout re-query path, rollback), shared formatters (see i18n-rtl). Playwright golden journeys — every journey runs in `en` **and** `ar` (ADR-57, round 2 F-PIPE-2): login per role → landing; stamp → reward → redeem incl. throttled/offline; program create → design → publish; the enrollment journey additionally on a phone viewport with RTL snapshot comparison (both apps); tenant provisioning in `/admin`. Evidence packs for user-facing epics include light and dark screenshots in both languages via `playwright.evidence.config.ts` (ADR-57). Type rules: `strict`, `noUncheckedIndexedAccess`, no `any` in app code; DTO boundaries parsed with Zod where input is untrusted.
 
 ## Additional resources
 

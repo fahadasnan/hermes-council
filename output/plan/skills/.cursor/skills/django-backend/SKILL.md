@@ -69,7 +69,7 @@ class ProgramViewSet(ModelViewSet):
 # signature      = hmac.new(secret, signing_string.encode(), sha256).hexdigest()
 ```
 
-Validate: look up `ApiCredential` by `key_id` (constant-time compare) → reject if timestamp outside ±300 s → reject on signature mismatch → reject if `is_active` false, expired, or tenant suspended → set `request.tenant` from the credential, never the body. Per-credential throttle (default 120/min). Rotation: accept both old and new secret during the grace window (default 24 h).
+Validate: look up `ApiCredential` by exact `key_id` equality (a public identifier — timing leakage is not a concern; round 2 F-SKILL-3) → reject if timestamp outside ±300 s → reject on signature mismatch using the constant-time compare (`hmac.compare_digest`) — constant-time applies to the **signature** only → reject if `is_active` false, expired, or tenant suspended → set `request.tenant` from the credential, never the body. Per-credential throttle (default 120/min). Rotation: accept both old and new secret during the grace window (default 24 h).
 
 ## Idempotency (ADR-13) — every ledger write
 
@@ -93,7 +93,8 @@ def earn(*, tenant, balance_id, quantity, idempotency_key, request_fingerprint,
         if existing:
             return _replay_or_conflict(existing, request_fingerprint)  # 200-replay or raise IdempotencyConflict
 
-        balance = Balance.objects.select_for_update().for_tenant(tenant).get(id=balance_id)
+        balance = Balance.objects.for_tenant(tenant).select_for_update().get(id=balance_id)
+        # manager-only methods (for_tenant) FIRST, queryset methods after (round 2 F-DB-1)
         delta = _signed_delta("earn", quantity)                 # the ONLY place a sign is computed
         previous = balance.stamps_current
         new = previous + delta
@@ -134,7 +135,11 @@ Domain exceptions map to stable codes in one handler: `VALIDATION_ERROR` 400, `N
 ```python
 @app.task(bind=True, max_retries=5, default_retry_delay=5, acks_late=True, queue="pass_push")
 def apple_push_pass(self, pass_update_id):
-    pu = PassUpdate.objects.get(id=pass_update_id)      # explicit; no request context in a task
+    # fenced manager (round 2 F-DB-2): outbox tasks are context-free — the fail-closed
+    # objects manager returns none() here, so .get() would always raise DoesNotExist.
+    # cross_tenant is allowlisted for outbox task files only, by primary key,
+    # and every use writes an AuditEvent (ADR-11).
+    pu = PassUpdate.cross_tenant.get(id=pass_update_id)
     try:
         signer.apple_push(pu.pass_record)               # SignerInterface (ADR-24)
         pu.mark_done()
@@ -145,8 +150,8 @@ def apple_push_pass(self, pass_update_id):
 ```
 
 - Always enqueue via `transaction.on_commit`, by outbox row id — never fire-and-forget a `.delay()` that can be lost between commit and enqueue (ADR-17).
-- Tasks are idempotent: they re-project from current state and mark the outbox row done.
-- Queues: `default`, `pass_push`, `webhooks`. 4xx from Google = do not retry; 5xx/network = retry with backoff; after 5, dead-letter (sweeper sets `Pass.push_status=failed`, visible with a manual repush).
+- Tasks are idempotent: they re-project from current state and mark the outbox row done. Marks/updates go through an approved service or the explicit audited `cross_tenant` path — never an unscoped write.
+- Queues: `default`, `pass_push`, `webhooks`; every task declares its queue explicitly and a routing test asserts it (ADR-50). 4xx from Google = do not retry; 5xx/network = retry with backoff; after 5, dead-letter (sweeper sets `Pass.push_status=failed`, visible with a manual repush).
 - Beat: `sweep_outbox` (60 s), `reconcile` (nightly), `purge_expired_passes`, `expire_credentials`.
 
 ## Wallet signer (ADR-24, 25)
@@ -194,16 +199,18 @@ Never commit `.env`; `.env.example` carries placeholders. Wallet certs live in s
 ## Common pitfalls
 
 - Forgetting `select_for_update` on the `Balance` row → two concurrent earns corrupt the count. Always lock.
+- **Chaining manager-only methods after queryset methods** (`objects.select_for_update().for_tenant(t)`) — manager helpers (`for_tenant`) exist only on the manager; once you call a queryset method you get a plain `QuerySet` and the manager helpers are gone (`AttributeError`), and a naive reorder can silently drop `FOR UPDATE`. Always start with `.for_tenant(tenant)`, then `.select_for_update()` (round 2 F-DB-1).
+- **`Model.objects.get()` inside a Celery task** — the contextvar is unset in workers, the fail-closed manager returns `none()`, and every `.get()` raises `DoesNotExist`. Outbox tasks read their row via `Model.cross_tenant` (allowlisted, by primary key, audited) or an explicit `.for_tenant(tenant_id)` after resolving the tenant from the row (round 2 F-DB-2).
 - Enqueueing before commit → the task sees stale data or a rolled-back row. Always `transaction.on_commit`.
 - A `.delay()` with no outbox row → a lost effect on broker outage. Write the outbox row in the transaction (ADR-17).
 - `serializer.save()` doing business logic → services own logic; serializers validate shape.
 - Reading `tenant_id` from request data → an attacker sends someone else's. Use `request.tenant`.
 - Negative `quantity` or `abs(quantity)` gymnastics → quantity is positive; the sign is `_signed_delta`'s job.
-- Trusting `cross_tenant` outside platform.py → CI fails, and it must audit.
+- Using `cross_tenant` outside the allowlist (platform.py, the outbox task files, migrations, reconciliation) → the AST checker `scripts/check_cross_tenant.py` fails CI, and every legal use must audit (ADR-11).
 
 ## Additional resources
 
-- Rulings: `decisions.md` ADR-1, 4, 5, 6, 13, 14, 17, 24, 25, 44
+- Rulings: `decisions.md` ADR-1, 4, 5, 6, 11, 13, 14, 17, 24, 25, 44, 50
 - Models/migrations: django-data skill. End-to-end recipe: feature-delivery skill.
 - Django 5.2 https://docs.djangoproject.com/en/5.2/ · DRF https://www.django-rest-framework.org/ · Celery https://docs.celeryq.dev/en/stable/
 - Apple PassKit web service https://developer.apple.com/library/archive/documentation/PassKit/Reference/PassKit_WebService/ · Google Wallet https://developers.google.com/wallet/reference/rest

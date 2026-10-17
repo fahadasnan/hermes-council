@@ -60,6 +60,7 @@ Placement decisions that need saying out loud:
 - Loopy's plan-limit gating (1/3/10 cards, 3/10/50 staff) is out of scope for our MVP because there are no plans until P8. We impose no per-tenant feature counts before then; commercial limits arrive with billing.
 - Loopy's Zapier gallery and marketing/consent toggles: Zapier-style third-party automation is P5/P6 (our tenant API + webhooks is the MVP seam); marketing consent capture at enrollment is MVP (privacy).
 - Loopy's Insights economics (operator types a stamp value and reward cost) is kept, simplified: currency is KWD with 3 decimals by default, and reward cost lives on the reward definition.
+- Round 2 scope note (adjudicated — see `review2/adjudication.md`, ADR-58, and `REVISION_LOG.md`): the Loopy names in the "Feature (evidence)" column are evidence terminology only, never product naming (the ADR-44 glossary is the naming authority). Custom front-of-pass fields / label overrides are **deferred** — not part of the MVP and no `labels[]` API payload is promised; if they ever ship they get their own ADR and user story. Tenant account deletion is deferred (ADR-34), customer email verification is deferred (ADR-49: setup-link delivery is the MVP owner activation mechanism), and single-customer messaging is scheduled separately in the Phase 9 backlog.
 
 ### Apple Wallet pass styles and pass capabilities (all five in scope)
 
@@ -102,7 +103,7 @@ Asymmetries: Apple has no transit style (boardingPass covers it); Google has no 
 
 ## 2. Multi-tenant and multi-location requirements
 
-Tenant = business. Model: `tenant`, `location`, `staff_member`, `program`, `customer`, `pass`, `ledger_event`. Every tenant-owned row carries `tenant_id`; a tenant-scoped manager on every model.
+Tenant = business. Model: `Tenant`, `Location`, `Membership` (staff are memberships with role staff), `Program`, `Customer`, `Pass`, `LedgerEntry` (the append-only event log). Every tenant-owned row carries `tenant_id`; a tenant-scoped manager on every model. (Round 2 F-REQ-1: this list is corrected to the ADR-44 canonical names; the earlier `staff_member`/`ledger_event` wording used rejected variants.)
 
 Per tenant vs per location:
 
@@ -119,7 +120,7 @@ Per tenant vs per location:
 | Contact/issuer details | Tenant | Required by Apple (organizationName, issuer contact on the pass) |
 | API credentials | Tenant | One credential per tenant; requests scope to the tenant and may pin a location |
 
-Staff working at two locations: the staff member's scope is the union of their assigned locations. The counter tool asks nothing extra — the earn/redeem event records the location the staff member selects (defaulting to their single location if they have exactly one) and that choice is constrained to their scope. Ledger events always carry `location_id` and `staff_member_id`.
+Staff working at two locations: the staff member's scope is the union of their assigned locations. The counter tool asks nothing extra — the earn/redeem event records the location the staff member selects (defaulting to their single location if they have exactly one) and that choice is constrained to their scope. Ledger events always carry `location_id` and the acting membership (`created_by`).
 
 Customers are shared tenant-wide: a customer belongs to the tenant, not a location or program. One customer can hold passes in several programs. Enrollment at any location yields the same customer record (dedupe on the tenant's configured unique fields, e.g. phone or email). Location-scoped roles (location manager, staff) see only customers with events at their locations — via a location-filtered query over ledger events, never by re-owning the customer row.
 
