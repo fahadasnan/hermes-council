@@ -1,0 +1,96 @@
+- generic [ref=f22e1]:
+  - dialog [active] [ref=f22e75]:
+    - generic [ref=f22e77]:
+      - heading "Create a New Subuser" [level=3] [ref=f22e79]
+      - generic [ref=f22e80]:
+        - generic [ref=f22e83]:
+          - generic [ref=f22e84]:
+            - generic [ref=f22e85]: Username*
+            - generic [aria-hidden] [ref=f22e87]: 
+            - generic [ref=f22e88]:
+              - text: ibefehdi+
+              - textbox "e.g. staff1, john, restaurantA" [ref=f22e89]
+          - generic [ref=f22e90]:
+            - generic [ref=f22e91]: Password*
+            - textbox [ref=f22e92]
+          - generic [ref=f22e93]:
+            - generic [ref=f22e94]: Notes
+            - textbox "Optional" [ref=f22e95]
+          - generic [ref=f22e96]:
+            - generic [ref=f22e97]: Location
+            - generic [aria-hidden] [ref=f22e99]: 
+            - combobox [ref=f22e100]:
+              - option [selected]
+              - option "COUNCIL TEST Location"
+        - generic [ref=f22e101]:
+          - button "Cancel" [ref=f22e102] [cursor=pointer]
+          - button "Create Subuser" [ref=f22e103] [cursor=pointer]
+  - generic [aria-hidden] [ref=f22e2]:
+    - text: 
+    - list [ref=f22e5]:
+      - listitem [ref=f22e6]:
+        - generic [ref=f22e7] [cursor=pointer]: 
+      - listitem [ref=f22e9]:
+        - generic [ref=f22e10] [cursor=pointer]: 
+      - listitem [ref=f22e12]:
+        - generic [ref=f22e13] [cursor=pointer]:
+          - generic [ref=f22e14]: 
+          - generic [ref=f22e15]: 
+      - listitem [ref=f22e16]:
+        - generic [ref=f22e17] [cursor=pointer]: 
+      - listitem [ref=f22e19]:
+        - generic [ref=f22e20] [cursor=pointer]: 
+    - navigation [ref=f22e22]:
+      - alert [ref=f22e23]:
+        - paragraph [ref=f22e24]:
+          - generic [aria-hidden] [ref=f22e25]: 
+          - text: You haven't verified your email address. Resend verification email.
+      - generic [ref=f22e26]:
+        - img [ref=f22e28] [cursor=pointer]
+        - list [ref=f22e29]:
+          - listitem [ref=f22e30]:
+            - generic [ref=f22e31]: 15 days left on trial
+            - link [ref=f22e105] [cursor=pointer]:
+              - /url: /settings
+              - text: Upgrade Now
+          - listitem [ref=f22e33]:
+            - link [ref=f22e34] [cursor=pointer]:
+              - /url: /manage-my-cards
+              - generic [aria-hidden] [ref=f22e35]: 
+          - listitem [ref=f22e36]:
+            - link [ref=f22e37] [cursor=pointer]:
+              - /url: http://docs.loopyloyalty.com/
+              - generic [aria-hidden] [ref=f22e38]: 
+          - listitem [ref=f22e39]:
+            - link [ref=f22e106] [cursor=pointer]:
+              - /url: ""
+              - generic [ref=f22e42]: 
+    - generic [ref=f22e46]:
+      - generic [ref=f22e48]:
+        - generic [ref=f22e49]:
+          - heading [level=1] [ref=f22e107]: Subusers
+          - paragraph [ref=f22e51]: Create subusers to track stamps and rewards issued & redeemed by each staff member. You can create up to 10 subusers with the Growth plan and up to 50 subusers with the Ultimate plan.
+        - button [ref=f22e108] [cursor=pointer]: Create Subuser
+      - generic [ref=f22e56]:
+        - generic [ref=f22e57]:
+          - text: Show
+          - combobox [ref=f22e109]
+          - text: entries
+        - generic [ref=f22e59]:
+          - text: "Search:"
+          - searchbox [ref=f22e110]
+        - table [ref=f22e61]:
+          - rowgroup [ref=f22e62]:
+            - row [ref=f22e111]:
+              - columnheader [ref=f22e112] [cursor=pointer]: ▴Profile
+              - columnheader [ref=f22e113] [cursor=pointer]: Username
+              - columnheader [ref=f22e114] [cursor=pointer]: Created
+              - columnheader [ref=f22e115] [cursor=pointer]: Notes
+              - columnheader [ref=f22e116] [cursor=pointer]: Location
+              - columnheader [ref=f22e117] [cursor=pointer]: Status
+          - rowgroup [ref=f22e70]:
+            - row [ref=f22e118]:
+              - cell [ref=f22e119]: No data available in table
+        - status [ref=f22e73]: Showing 0 to 0 of 0 entries
+        - generic [ref=f22e74]: PreviousNext
+    - text:      

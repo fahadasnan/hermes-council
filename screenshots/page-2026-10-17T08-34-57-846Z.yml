@@ -1,0 +1,13 @@
+- generic [ref=f78e5]:
+  - generic [ref=f78e9]:
+    - paragraph
+  - generic [ref=f78e11]:
+    - separator [ref=f78e12]
+    - paragraph [ref=f78e13]: Please enter your details
+    - generic [ref=f78e14]:
+      - separator [ref=f78e15]
+      - button "Join Now!" [disabled] [ref=f78e17]
+  - paragraph [ref=f78e19]:
+    - text: powered by
+    - link "Loopy Loyalty" [ref=f78e20] [cursor=pointer]:
+      - /url: https://loopyloyalty.com

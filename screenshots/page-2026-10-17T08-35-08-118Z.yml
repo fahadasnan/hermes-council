@@ -1,0 +1,224 @@
+- generic [ref=f3e1]:
+  - dialog [active] [ref=f3e204]:
+    - generic [ref=f3e206]:
+      - heading "Save Card Design" [level=3] [ref=f3e208]
+      - generic [ref=f3e213]:
+        - generic [ref=f3e214]: Name
+        - textbox "Enter a name" [ref=f3e215]
+        - paragraph [ref=f3e216]: "This name is for internal use only. Note: this cannot be changed after you save your card."
+      - generic [ref=f3e217]:
+        - button "Save Card" [ref=f3e218] [cursor=pointer]
+        - button "Cancel" [ref=f3e219] [cursor=pointer]
+  - generic [aria-hidden] [ref=f3e2]:
+    - text: 
+    - list [ref=f3e4]:
+      - listitem [ref=f3e5]:
+        - generic: 
+      - listitem [ref=f3e6]:
+        - generic: 
+      - listitem [ref=f3e7]:
+        - generic: 
+      - listitem [ref=f3e8]:
+        - generic: 
+      - listitem [ref=f3e9]:
+        - generic [ref=f3e10] [cursor=pointer]: 
+    - navigation [ref=f3e12]:
+      - alert [ref=f3e13]:
+        - paragraph [ref=f3e14]:
+          - generic [aria-hidden] [ref=f3e15]: 
+          - text: You haven't verified your email address. Resend verification email.
+      - generic [ref=f3e16]:
+        - img [ref=f3e18] [cursor=pointer]
+        - list [ref=f3e19]:
+          - listitem [ref=f3e20]:
+            - generic [ref=f3e21]: 15 days left on trial
+            - link [ref=f3e221] [cursor=pointer]:
+              - /url: /settings
+              - text: Upgrade Now
+          - listitem [ref=f3e23]:
+            - link [ref=f3e24] [cursor=pointer]:
+              - /url: /manage-my-cards
+              - generic [aria-hidden] [ref=f3e25]: 
+          - listitem [ref=f3e26]:
+            - link [ref=f3e27] [cursor=pointer]:
+              - /url: http://docs.loopyloyalty.com/
+              - generic [aria-hidden] [ref=f3e28]: 
+          - listitem [ref=f3e29]:
+            - link [ref=f3e222] [cursor=pointer]:
+              - /url: ""
+              - generic [ref=f3e32]: 
+    - generic [ref=f3e35]:
+      - navigation [ref=f3e36]:
+        - generic [ref=f3e37]:
+          - list [ref=f3e38]:
+            - listitem [ref=f3e39]:
+              - generic [ref=f3e40] [cursor=pointer]:
+                - generic [ref=f3e41]: 
+                - text: Design
+            - listitem [ref=f3e42]:
+              - generic [ref=f3e43] [cursor=pointer]:
+                - generic [ref=f3e44]: 
+                - text: Details
+            - listitem [ref=f3e45]:
+              - generic [ref=f3e46] [cursor=pointer]:
+                - generic [ref=f3e47]: 
+                - text: Locations
+            - listitem [ref=f3e48]:
+              - generic [ref=f3e49] [cursor=pointer]:
+                - generic [ref=f3e50]: 
+                - text: Support
+            - listitem [ref=f3e51]:
+              - generic [ref=f3e52] [cursor=pointer]:
+                - generic [ref=f3e53]: 
+                - text: Data
+            - listitem [ref=f3e54]:
+              - generic [ref=f3e55] [cursor=pointer]:
+                - generic [ref=f3e56]: 
+                - text: Custom
+                - generic [ref=f3e57]: 
+          - list [ref=f3e58]:
+            - listitem [ref=f3e59]:
+              - button [ref=f3e223] [cursor=pointer]: Save
+            - listitem [ref=f3e61]:
+              - button [ref=f3e224] [cursor=pointer]: Save & Preview
+          - text:          
+      - generic [ref=f3e64]:
+        - generic [ref=f3e65]:
+          - generic [ref=f3e66] [cursor=pointer]:
+            - generic [ref=f3e67]: 
+            - text: "Watch video tutorial: Adding Details"
+          - generic [ref=f3e68]:
+            - generic [ref=f3e70]:
+              - generic [ref=f3e71]:
+                - generic [ref=f3e72]: Card description
+                - generic [aria-hidden] [ref=f3e74]: 
+                - textbox [ref=f3e225]:
+                  - /placeholder: e.g. Collect stamps for cool rewards!
+                  - text: Collect stamps for cool rewards!
+              - generic [ref=f3e76]:
+                - generic [ref=f3e77]: How your customers earn 1 stamp
+                - generic [aria-hidden] [ref=f3e79]: 
+                - textbox [ref=f3e226]:
+                  - /placeholder: e.g. Get 1 stamp for every $5 spent; You will receive 1 chop for every coffee purchased.
+                  - text: Spend $5 to get 1 stamp.
+              - generic [ref=f3e81]:
+                - generic [ref=f3e82]: Business Name
+                - generic [aria-hidden] [ref=f3e84]: 
+                - textbox [ref=f3e227]:
+                  - /placeholder: ibefehdi
+                  - text: ibefehdi
+            - generic [ref=f3e87]:
+              - heading [level=3] [ref=f3e228]: Reward Details
+              - generic [ref=f3e89]:
+                - generic [ref=f3e90]: Reward Name
+                - generic [aria-hidden] [ref=f3e92]: 
+                - textbox [ref=f3e229]:
+                  - /placeholder: e.g. Free box of donuts
+                  - text: Free coffee
+              - generic [ref=f3e94]:
+                - generic [ref=f3e95]: Description
+                - generic [aria-hidden] [ref=f3e97]: 
+                - textbox [ref=f3e230]:
+                  - /placeholder: e.g. You will receive a free box of donuts after collecting 8 stamps; Get 1 free lunch set after collecting all punches; Collect 10 stamps and be rewarded with a free bottle of red wine.
+                  - text: You will get a free coffee after collecting 8 stamps.
+              - generic [ref=f3e99]:
+                - generic [ref=f3e100]: Stamp success message
+                - generic [aria-hidden] [ref=f3e102]: 
+                - textbox [ref=f3e231]:
+                  - /placeholder: "e.g. Only {#} more stamps until your reward!"
+                  - text: "Only {#} more stamps until your reward!"
+                - paragraph [ref=f3e104]: "You must include {#} in your stamp success message. '{#}' is a placeholder for the number of stamps."
+              - generic [ref=f3e105]:
+                - generic [ref=f3e106]: Reward success message
+                - generic [aria-hidden] [ref=f3e108]: 
+                - textbox [ref=f3e232]:
+                  - /placeholder: e.g. Come and get your free coffee today!
+                  - text: Come and get your free coffee today!
+            - generic [ref=f3e112]:
+              - heading [level=3] [ref=f3e233]:
+                - text: Expiry
+                - generic [aria-hidden] [ref=f3e115]: 
+              - generic [ref=f3e117] [cursor=pointer]:
+                - radio [checked] [ref=f3e234]
+                - text: None
+              - generic [ref=f3e120] [cursor=pointer]:
+                - radio [ref=f3e235]
+                - text: Fixed date
+              - generic [ref=f3e123] [cursor=pointer]:
+                - radio [ref=f3e236]
+                - text: Fixed period after signup
+            - generic [ref=f3e126]:
+              - heading [level=3] [ref=f3e237]:
+                - text: Useful Links
+                - generic [aria-hidden] [ref=f3e129]: 
+              - paragraph [ref=f3e130]:
+                - text: "Tip: add a"
+                - link [ref=f3e238] [cursor=pointer]:
+                  - /url: http://docs.loopyloyalty.com/creating-digital-stamp-cards/adding-more-customisations-to-your-stamp-card/how-to-link-your-address-on-your-stamp-card
+                  - text: link to your address
+                - text: and make it easy for customers to find your business.
+              - table [ref=f3e132]:
+                - rowgroup [ref=f3e133]:
+                  - row [ref=f3e239]:
+                    - columnheader [ref=f3e240]:
+                      - text: Text
+                      - generic [aria-hidden] [ref=f3e137]: 
+                    - columnheader [ref=f3e241]:
+                      - text: Link
+                      - generic [aria-hidden] [ref=f3e140]: 
+                    - columnheader [ref=f3e242]:
+                      - text: Type
+                      - generic [aria-hidden] [ref=f3e143]: 
+                - rowgroup [ref=f3e144]:
+                  - row [ref=f3e243]:
+                    - cell [ref=f3e244]:
+                      - textbox [ref=f3e148]: Visit our website
+                    - cell [ref=f3e245]:
+                      - textbox [ref=f3e151]: https://loopyloyalty.com
+                    - cell [ref=f3e246]:
+                      - combobox [ref=f3e154]
+                    - cell [ref=f3e155]:
+                      - generic [aria-hidden] [ref=f3e157] [cursor=pointer]: 
+              - button [ref=f3e158] [cursor=pointer]:
+                - generic [aria-hidden] [ref=f3e159]: 
+        - generic [ref=f3e163]:
+          - paragraph [ref=f3e164]: Your Customers' View
+          - generic [ref=f3e166]:
+            - paragraph [ref=f3e169]: Collect stamps for cool rewards!
+            - generic [ref=f3e171]:
+              - paragraph [ref=f3e172]: LATEST UPDATES
+              - paragraph [ref=f3e173]: Any messages you send will be displayed here.
+            - generic [ref=f3e174]:
+              - paragraph [ref=f3e175]: HOW TO COLLECT STAMPS
+              - paragraph [ref=f3e176]: Spend $5 to get 1 stamp.
+            - generic [ref=f3e177]:
+              - paragraph [ref=f3e178]: REWARD DETAILS
+              - paragraph [ref=f3e179]: You will get a free coffee after collecting 8 stamps.
+            - generic [ref=f3e180]:
+              - paragraph [ref=f3e181]: STAMPS UNTIL NEXT REWARD
+              - paragraph [ref=f3e182]: "8"
+            - generic [ref=f3e183]:
+              - paragraph [ref=f3e184]: REWARDS EARNED
+              - paragraph [ref=f3e185]: "0: Free coffee"
+            - generic [ref=f3e186]:
+              - paragraph [ref=f3e187]: USEFUL LINKS
+              - paragraph [ref=f3e188]:
+                - link [ref=f3e248] [cursor=pointer]:
+                  - /url: https://loopyloyalty.com
+                  - text: Visit our website
+            - generic [ref=f3e190]:
+              - paragraph [ref=f3e191]: TERMS & CONDITIONS
+              - paragraph [ref=f3e192]: 1. Earn 1 stamp for every _______________ purchased. 2. Collect __ stamps to receive a _______________ upon your next visit. 3. This card, stamps, and rewards are valid until_______________. 4. This card can only be used at _______________ (and _______________). 5. Stamps and rewards cannot be exchanged, refunded, replaced or redeemed for cash. 6. Cards are non-transferrable and cannot be combined with other cards. 7. The Company reserve the right of final decisions in case of any disputes.
+            - generic [ref=f3e193]:
+              - paragraph [ref=f3e194]: QUESTIONS ABOUT THIS CARD? CONTACT
+              - paragraph [ref=f3e195]: ibefehdi
+              - paragraph [ref=f3e196]: ibefehdi@gmail.com
+          - text:  
+          - generic [ref=f3e197]:
+            - button [ref=f3e249] [cursor=pointer]:
+              - generic [ref=f3e199]: 
+            - button [ref=f3e250] [cursor=pointer]:
+              - generic [ref=f3e201]: 
+            - button [ref=f3e251] [cursor=pointer]:
+              - generic [ref=f3e203]: 
+    - text:     

@@ -1,0 +1,229 @@
+- generic [active] [ref=f36e1]:
+  - generic [ref=f36e2]:
+    - text: 
+    - list [ref=f36e4]:
+      - listitem [ref=f36e5]:
+        - generic [ref=f36e6] [cursor=pointer]: 
+      - listitem [ref=f36e8]:
+        - generic [ref=f36e9] [cursor=pointer]: 
+      - listitem [ref=f36e11]:
+        - generic [ref=f36e12] [cursor=pointer]:
+          - generic [ref=f36e13]: 
+          - generic [ref=f36e14]: 
+      - listitem [ref=f36e15]:
+        - generic [ref=f36e16] [cursor=pointer]: 
+      - listitem [ref=f36e18]:
+        - generic [ref=f36e19] [cursor=pointer]: 
+    - navigation [ref=f36e21]:
+      - alert [ref=f36e22]:
+        - paragraph [ref=f36e23]:
+          - generic [aria-hidden] [ref=f36e24]: 
+          - text: You haven't verified your email address. Resend verification email.
+      - generic [ref=f36e25]:
+        - img [ref=f36e27] [cursor=pointer]
+        - list [ref=f36e28]:
+          - listitem [ref=f36e29]:
+            - generic [ref=f36e30]: 15 days left on trial
+            - link "Upgrade Now" [ref=f36e31] [cursor=pointer]:
+              - /url: /settings
+          - listitem [ref=f36e32]:
+            - link [ref=f36e33] [cursor=pointer]:
+              - /url: /manage-my-cards
+              - generic [aria-hidden] [ref=f36e34]: 
+          - listitem [ref=f36e35]:
+            - link [ref=f36e36] [cursor=pointer]:
+              - /url: http://docs.loopyloyalty.com/
+              - generic [aria-hidden] [ref=f36e37]: 
+          - listitem [ref=f36e38]:
+            - link "" [ref=f36e40] [cursor=pointer]:
+              - /url: ""
+    - generic [ref=f36e47]:
+      - heading "Settings" [level=1] [ref=f36e48]
+      - generic [ref=f36e49]:
+        - generic [ref=f36e50]:
+          - heading "My Account" [level=2] [ref=f36e51]
+          - generic [ref=f36e53]:
+            - list [ref=f36e54]:
+              - listitem [ref=f36e55]:
+                - link "General" [ref=f36e56]:
+                  - /url: ""
+              - listitem [ref=f36e57]:
+                - link "Business" [ref=f36e58] [cursor=pointer]:
+                  - /url: ""
+              - listitem [ref=f36e59]:
+                - link "Privacy" [ref=f36e60] [cursor=pointer]:
+                  - /url: ""
+              - listitem [ref=f36e61]:
+                - link "Password" [ref=f36e62] [cursor=pointer]:
+                  - /url: ""
+              - listitem [ref=f36e63]:
+                - link "Developer Tools" [ref=f36e64] [cursor=pointer]:
+                  - /url: ""
+              - listitem [ref=f36e65]:
+                - link "Delete" [ref=f36e66] [cursor=pointer]:
+                  - /url: ""
+            - generic [ref=f36e67]:
+              - generic [ref=f36e69]:
+                - generic [ref=f36e70]:
+                  - generic [ref=f36e71]: Username (cannot be changed)
+                  - textbox [disabled] [ref=f36e72]: ibefehdi
+                - generic [ref=f36e73]:
+                  - generic [ref=f36e74]: First Name*
+                  - textbox [ref=f36e75]: Fahad
+                - generic [ref=f36e76]:
+                  - generic [ref=f36e77]: Last Name*
+                  - textbox [ref=f36e78]: Asad
+                - generic [ref=f36e79]:
+                  - generic [ref=f36e80]: Email*
+                  - textbox [ref=f36e81]: ibefehdi@gmail.com
+                - button "Update" [ref=f36e84] [cursor=pointer]
+              - text:  
+        - generic [ref=f36e85]:
+          - heading "Billing" [level=2] [ref=f36e86]
+          - generic [ref=f36e88]:
+            - list [ref=f36e89]:
+              - listitem [ref=f36e90]:
+                - link "Plan" [ref=f36e91]:
+                  - /url: ""
+              - listitem [ref=f36e92]:
+                - link "Credit Card" [ref=f36e93] [cursor=pointer]:
+                  - /url: ""
+              - listitem [ref=f36e94]:
+                - link "Invoices" [ref=f36e95] [cursor=pointer]:
+                  - /url: ""
+            - generic [ref=f36e99]:
+              - paragraph [ref=f36e102]: Try out any plan. No commitment. Cancel anytime.
+              - generic [ref=f36e104]:
+                - generic [ref=f36e106]:
+                  - generic [ref=f36e107]:
+                    - paragraph [ref=f36e108]: US$ 25 /month
+                    - paragraph [ref=f36e110]: Starter
+                    - combobox [ref=f36e112]:
+                      - option "Month-to-Month" [selected]
+                      - option "Billed Annually"
+                    - button "Subscribe to Starter Monthly" [ref=f36e113] [cursor=pointer]
+                  - generic [ref=f36e114]:
+                    - paragraph [ref=f36e115]: "Includes :"
+                    - paragraph [ref=f36e116]: 1 card design
+                    - paragraph [ref=f36e117]: 1 location
+                    - paragraph [ref=f36e118]: 1 beacon
+                    - paragraph [ref=f36e119]: 3 Subusers
+                    - paragraph [ref=f36e120]: Label text customisation
+                    - paragraph [ref=f36e121]: Unique customer enrollments
+                    - paragraph [ref=f36e122]: Data Export
+                - generic [ref=f36e124]:
+                  - generic [ref=f36e125]:
+                    - paragraph [ref=f36e126]: US$ 69 /month
+                    - paragraph [ref=f36e128]: Growth
+                    - combobox [ref=f36e130]:
+                      - option "Month-to-Month" [selected]
+                      - option "Billed Annually"
+                    - button "Subscribe to Growth Monthly" [ref=f36e131] [cursor=pointer]
+                  - generic [ref=f36e132]:
+                    - paragraph [ref=f36e133]: "Includes :"
+                    - paragraph [ref=f36e134]: 3 card designs
+                    - paragraph [ref=f36e135]: 3 locations
+                    - paragraph [ref=f36e136]: 3 beacons
+                    - paragraph [ref=f36e137]: 10 subusers
+                    - paragraph [ref=f36e138]: Label text customisation
+                    - paragraph [ref=f36e139]: Unique customer enrollments
+                    - paragraph [ref=f36e140]: Data Export
+                - generic [ref=f36e142]:
+                  - generic [ref=f36e143]:
+                    - paragraph [ref=f36e144]: US$ 95 /month
+                    - paragraph [ref=f36e146]: Ultimate
+                    - combobox [ref=f36e148]:
+                      - option "Month-to-Month" [selected]
+                      - option "Billed Annually"
+                    - button "Subscribe to Ultimate Monthly" [ref=f36e149] [cursor=pointer]
+                  - generic [ref=f36e150]:
+                    - paragraph [ref=f36e151]: "Includes :"
+                    - paragraph [ref=f36e152]: 10 card designs
+                    - paragraph [ref=f36e153]: 10 locations
+                    - paragraph [ref=f36e154]: 10 beacons
+                    - paragraph [ref=f36e155]: 50 subusers
+                    - paragraph [ref=f36e156]: Label text customisation
+                    - paragraph [ref=f36e157]: Unique customer enrollments
+                    - paragraph [ref=f36e158]: Data Export
+              - paragraph [ref=f36e161]:
+                - emphasis [ref=f36e162]: Please note that unless you are in your free trial, clicking on Subscribe for any plan will immediately charge your credit card for the monthly or annual plan you have selected.
+      - generic [ref=f36e164]:
+        - heading "Locations" [level=2] [ref=f36e165]
+        - generic [ref=f36e167]:
+          - generic [ref=f36e168]:
+            - paragraph [ref=f36e169]: Display lock screen messages when customers are near your location(s).
+            - table [ref=f36e170]:
+              - rowgroup [ref=f36e171]:
+                - row [ref=f36e172]:
+                  - columnheader "Location" [ref=f36e173]
+                  - columnheader "Display Address" [ref=f36e174]
+                  - columnheader [ref=f36e175]
+              - rowgroup [ref=f36e176]:
+                - row [ref=f36e177]:
+                  - cell [ref=f36e178]:
+                    - link "COUNCIL TEST Location" [ref=f36e179] [cursor=pointer]:
+                      - /url: http://maps.google.com/?q=22.287614,114.148313
+                  - cell "221B Baker St, London NW1 6XE" [ref=f36e180]
+                  - cell [ref=f36e181]:
+                    - button [ref=f36e182] [cursor=pointer]:
+                      - generic [aria-hidden] [ref=f36e183]: 
+                    - button [ref=f36e184] [cursor=pointer]:
+                      - generic [aria-hidden] [ref=f36e185]: 
+            - button "Add Location" [ref=f36e187] [cursor=pointer]
+          - generic [ref=f36e193]:
+            - region "Map" [ref=f36e194]
+            - generic [ref=f36e195]:
+              - button [ref=f36e225] [cursor=pointer]
+              - iframe [aria-hidden] [ref=f36e226]
+      - generic [ref=f36e228]:
+        - heading "Beacons" [level=2] [ref=f36e229]
+        - generic [ref=f36e230]:
+          - paragraph [ref=f36e231]: Display lock screen messages when your customers are in proximity to your bluetooth beacon(s). Learn more.
+          - table [ref=f36e232]:
+            - rowgroup [ref=f36e233]:
+              - row [ref=f36e234]:
+                - columnheader "Name" [ref=f36e235]
+                - columnheader "UUID" [ref=f36e236]
+                - columnheader "Major" [ref=f36e237]
+                - columnheader "Minor" [ref=f36e238]
+                - columnheader [ref=f36e239]
+                - columnheader [ref=f36e240]
+            - rowgroup [ref=f36e241]:
+              - row [ref=f36e242]:
+                - cell "COUNCIL TEST Beacon" [ref=f36e243]
+                - cell "F7826DA6-4FA2-4E98-8024-BC5B71E0893E" [ref=f36e244]
+                - cell "1" [ref=f36e245]
+                - cell "1" [ref=f36e246]
+                - cell [ref=f36e247]:
+                  - button [ref=f36e248] [cursor=pointer]:
+                    - generic [aria-hidden] [ref=f36e249]: 
+                  - button [ref=f36e250] [cursor=pointer]:
+                    - generic [aria-hidden] [ref=f36e251]: 
+          - button "Add Beacon" [ref=f36e253] [cursor=pointer]
+      - generic [ref=f36e255]:
+        - heading "Zapier" [level=2] [ref=f36e256]
+        - generic [ref=f36e258]:
+          - generic [ref=f36e264]:
+            - paragraph [ref=f36e265]: Not seeing what you're looking for?
+            - link "Create a workflow from scratch" [ref=f36e266] [cursor=pointer]:
+              - /url: https://zapier.com/webintent/create-zap/?utm_source=partner&utm_medium=embed&utm_campaign=wfe_ade
+              - text: Create from scratch
+            - text: or
+            - link "Learn more about Zapier" [ref=f36e267] [cursor=pointer]:
+              - /url: https://zapier.com/how-it-works/?utm_source=partner&utm_medium=embed&utm_campaign=wfe_ade
+              - text: learn more
+          - generic [ref=f36e270]:
+            - generic [ref=f36e271]: No workflows found.
+            - generic [ref=f36e275]:
+              - paragraph [ref=f36e276]: Not seeing what you're looking for?
+              - link "Create a workflow from scratch" [ref=f36e277] [cursor=pointer]:
+                - /url: https://zapier.com/webintent/create-zap/?utm_source=partner&utm_medium=embed&utm_campaign=wfe_ade
+                - text: Create from scratch
+              - text: or
+              - link "Learn more about Zapier" [ref=f36e278] [cursor=pointer]:
+                - /url: https://zapier.com/how-it-works/?utm_source=partner&utm_medium=embed&utm_campaign=wfe_ade
+                - text: learn more
+    - text:      
+  - generic [ref=f36e279]:
+    - button "×" [ref=f36e280] [cursor=pointer]
+    - generic [ref=f36e281]: "[ll2 Error] Cannot set property isOpen of [object Object] which has only a getter"

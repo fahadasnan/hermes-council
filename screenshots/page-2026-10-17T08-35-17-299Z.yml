@@ -1,0 +1,71 @@
+- generic [ref=f22e2]:
+  - text: 
+  - list [ref=f22e5]:
+    - listitem [ref=f22e6]:
+      - generic [ref=f22e7] [cursor=pointer]: 
+    - listitem [ref=f22e9]:
+      - generic [ref=f22e10] [cursor=pointer]: 
+    - listitem [ref=f22e12]:
+      - generic [ref=f22e13] [cursor=pointer]:
+        - generic [ref=f22e14]: 
+        - generic [ref=f22e15]: 
+    - listitem [ref=f22e16]:
+      - generic [ref=f22e17] [cursor=pointer]: 
+    - listitem [ref=f22e19]:
+      - generic [ref=f22e20] [cursor=pointer]: 
+  - navigation [ref=f22e22]:
+    - alert [ref=f22e23]:
+      - paragraph [ref=f22e24]:
+        - generic [aria-hidden] [ref=f22e25]: 
+        - text: You haven't verified your email address. Resend verification email.
+    - generic [ref=f22e26]:
+      - img [ref=f22e28] [cursor=pointer]
+      - list [ref=f22e29]:
+        - listitem [ref=f22e30]:
+          - generic [ref=f22e31]: 15 days left on trial
+          - link "Upgrade Now" [ref=f22e32] [cursor=pointer]:
+            - /url: /settings
+        - listitem [ref=f22e33]:
+          - link [ref=f22e34] [cursor=pointer]:
+            - /url: /manage-my-cards
+            - generic [aria-hidden] [ref=f22e35]: 
+        - listitem [ref=f22e36]:
+          - link [ref=f22e37] [cursor=pointer]:
+            - /url: http://docs.loopyloyalty.com/
+            - generic [aria-hidden] [ref=f22e38]: 
+        - listitem [ref=f22e39]:
+          - link "" [ref=f22e41] [cursor=pointer]:
+            - /url: ""
+  - generic [ref=f22e46]:
+    - generic [ref=f22e48]:
+      - generic [ref=f22e49]:
+        - heading "Subusers" [level=1] [ref=f22e50]
+        - paragraph [ref=f22e51]: Create subusers to track stamps and rewards issued & redeemed by each staff member. You can create up to 10 subusers with the Growth plan and up to 50 subusers with the Ultimate plan.
+      - button "Create Subuser" [ref=f22e53] [cursor=pointer]
+    - generic [ref=f22e56]:
+      - generic [ref=f22e57]:
+        - text: Show
+        - combobox "Show entries" [ref=f22e58]:
+          - option "10" [selected]
+          - option "25"
+          - option "50"
+          - option "100"
+        - text: entries
+      - generic [ref=f22e59]:
+        - text: "Search:"
+        - searchbox "Search:" [ref=f22e60]
+      - table [ref=f22e61]:
+        - rowgroup [ref=f22e62]:
+          - row [ref=f22e63]:
+            - 'columnheader "Profile: activate to sort column descending" [ref=f22e64] [cursor=pointer]': ▴Profile
+            - 'columnheader "Username: activate to sort column ascending" [ref=f22e65] [cursor=pointer]': Username
+            - 'columnheader "Created: activate to sort column ascending" [ref=f22e66] [cursor=pointer]': Created
+            - 'columnheader "Notes: activate to sort column ascending" [ref=f22e67] [cursor=pointer]': Notes
+            - 'columnheader "Location: activate to sort column ascending" [ref=f22e68] [cursor=pointer]': Location
+            - 'columnheader "Status: activate to sort column ascending" [ref=f22e69] [cursor=pointer]': Status
+        - rowgroup [ref=f22e70]:
+          - row [ref=f22e71]:
+            - cell "No data available in table" [ref=f22e72]
+      - status [ref=f22e73]: Showing 0 to 0 of 0 entries
+      - generic [ref=f22e74]: PreviousNext
+  - text:      

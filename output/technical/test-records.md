@@ -75,3 +75,21 @@ All customers show 0 stamps earned, 0 rewards earned, 0 rewards redeemed. Card s
 - Reverted: yes — set both back to 0 and Submitted again.
 - Verification (cartographer, 2026-10-17 11:05, run 2 of this task): `GET /campaign/id/wI4XeFr6rHCTUHGOEFazZ` returns NO `stampValue` and NO `rewards[].cost` field (zero values are dropped server-side); Insights UI shows Stamp Value "0", Reward Cost empty, Currency "US Dollar: USD". Screenshot: /Users/fahad/council/screenshots/reports-verify-insights.png (also reports-verify-insights.yml snapshot).
 - Note: original values were absent/0 (draft campaign never configured), so revert restored the original state exactly.
+
+## Settings deep pass (cartographer, 2026-10-17 11:36, task t_a237cfa4)
+
+### Account profile (General tab, /settings)
+- Change: firstName "Fahad" -> "COUNCIL-TEST", clicked Update -> PATCH /account 200 (full account object payload captured; only firstName differed).
+- Reverted: yes — set back to "Fahad", Update -> second PATCH /account 200; field value verified "Fahad" post-revert. Original state restored exactly.
+
+### Beacon create attempt (blocked)
+- "COUNCIL-TEST Beacon 2" (major 2, minor 2) via Add Beacon modal -> POST /beacon 400 "Beacon limit reached" (plan limit 1 already used by COUNCIL TEST Beacon). NO record created. Also: duplicate-check GET /beacons/uuid/<name> used the beacon NAME not the UUID; UUID field auto-replaced with a generated UUID on submit.
+
+### Location create attempt (blocked)
+- "COUNCIL-TEST Location 2" (addressOnCard "COUNCIL-TEST Address, London", lat 22.287614 lon 114.148313) via Add Location modal -> POST /location 400 "Location limit reached". NO record created.
+
+### Subuser create attempt (blocked)
+- "ibefehdi+council-test", notes "COUNCIL-TEST subuser created by settings deep pass", location COUNCIL TEST Location, via /subusers Create Subuser modal -> POST /subuser 403 "The trial version does not allow for creating subusers". NO record created, no invite sent.
+
+### Not touched (safety rules)
+- Plan Subscribe buttons, Update Payment Details, Password change, account Delete, Privacy toggle, existing location/beacon edit modals (opened then Cancelled without saving).
