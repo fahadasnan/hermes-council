@@ -10,6 +10,7 @@ Every later document (`IMPLEMENTATION_PLAN.md`, `CONVENTIONS.md`, the skills in 
 
 - ADR-1 to ADR-25 resolve the verifier's required corrections and the cross-report conflicts. These are the load-bearing decisions.
 - ADR-26 to ADR-44 rule on every member proposal (PD-*) and on the gaps the verifier found.
+- ADR-45 to ADR-58 (Part C) are round 2 additions: operational decisions the first audit missed, plus the mandatory evidence pipeline. Existing ADRs keep their numbers; round-2 amendments are marked with a `Revised in round 2:` line naming the finding ids (adjudication in `review2/adjudication.md`).
 - The mapping table at the end shows where each member proposal was ruled.
 
 Statuses: **Accepted** (build it this way), **Accepted with changes** (build it with the stated amendment), **Rejected** (do not build), **Deferred** (decide later, at the stated trigger).
@@ -35,6 +36,7 @@ Statuses: **Accepted** (build it this way), **Accepted with changes** (build it 
 
 ### ADR-1: Tenant API authenticates with HMAC-signed requests, not JWT
 - Status: Accepted (verifier ruling; resolves conflict 1)
+- Revised in round 2: F-DB-8 (repaired the garbled canonical header line)
 - Context: `data-model.md` §2.2 proposed JWT for the tenant API. `backend.md` §3.3/§9.2 and the django-backend skill draft proposed HMAC-signed requests with a per-tenant credential. The two cannot both be right, and the verifier ruled the JWT claim WRONG.
 - Decision: The tenant API (the seam a store's POS/online system calls) authenticates with an `ApiCredential` (key id + secret) and an HMAC-SHA256 signature over a canonical request string. No JWT anywhere in the MVP. The server resolves the tenant from the credential, never from the request body or a token claim.
 - Canonical contract:
@@ -65,10 +67,11 @@ Statuses: **Accepted** (build it this way), **Accepted with changes** (build it 
 
 ### ADR-4: `Balance` is the canonical aggregate; `Pass` holds no balance fields
 - Status: Accepted (resolves conflict 2, verifier rulings on ledger findings)
+- Revised in round 2: F-DB-7 (admin registration removed — the fail-closed manager leaves admin no legal queryset)
 - Context: `backend.md` examples mutated `CustomerProgramBalance`; `data-model.md`'s concrete `Pass` model carried writable `stamps_earned`/`points_balance`. The verifier refused both as written and required one canonical aggregate with the pass as a projection.
 - Decision:
   - `Balance` (table `balances`) is the single cached aggregate per (customer, program) for store-card programs: `tenant`, `customer`, `program`, `stamps_current`, `stamps_lifetime`, `points_balance`, `rewards_earned`, `cycle`, timestamps. Unique on `(customer, program)`. All columns `>= 0` by check constraint.
-  - `Balance` rows are written **only** by `ledger.services` inside the same atomic block as the `LedgerEntry` that justifies them, under `select_for_update()`. No serializer, admin, view, or task may write them. Django admin registers `Balance` read-only.
+  - `Balance` rows are written **only** by `ledger.services` inside the same atomic block as the `LedgerEntry` that justifies them, under `select_for_update()`. No serializer, admin, view, or task may write them. `Balance` is not registered in the Django admin: under fail-closed tenancy an admin read has no legal queryset (round 2 F-DB-7); operational reads go through the reconciliation report and dashboard screens.
   - `Pass` carries **no** balance columns. It is the wallet projection: identifiers (Apple serial/pass type id/auth token, Google class/object id), `code` (the counter-visible pass code), `status`, `pass_data` (style-specific display jsonb), push state. The pass serializer reads balances from `Balance` at projection time.
   - Coupon, generic, event-ticket, and boarding-pass programs have **no** `Balance` row. Their lifecycle is issue/void/check-in events only (ADR-6, ADR-25).
 - Alternatives: `Pass` as the aggregate (rejected: forces coupons and tickets to carry stamp columns, and mixes projection with truth); pure SUM-on-read with no cached column (rejected at the counter's <1.5 s p95 with row locks; PD-scope-2 already chose cached-with-reconciliation).
@@ -114,6 +117,7 @@ Statuses: **Accepted** (build it this way), **Accepted with changes** (build it 
 
 ### ADR-9: Enrollment is one transaction with a deterministic idempotency key
 - Status: Accepted (verifier HIGH finding 6)
+- Revised in round 2: F-DB-4, F-verifier-1 (the `ledger_entries` table and append-only trigger ship in Phase 2 so the `enroll` entry can be written; balances arrive in Phase 3)
 - Context: Enrollment creates a customer, a pass, and an `enroll` ledger event; a double submit or a race between two devices must not create two customers or two passes.
 - Decision: `customers.services.enroll()` runs in one `transaction.atomic()`: dedupe lookup on the tenant's configured unique field(s) (e.g. normalized mobile or email) → get-or-create `Customer` → unique constraint `(customer, program)` on `Enrollment` catches the concurrent duplicate → create `Pass` (unique `(customer, program)`) → append `enroll` `LedgerEntry` with idempotency key `enroll:{enrollment_id}` (server-derived, not client-supplied) → outbox row for the first pass projection (ADR-17). On `IntegrityError`, the transaction retries once and returns the existing pass. The response contains the Apple `.pkpass` URL and the Google "Add to Wallet" JWT link.
 - Alternatives: client-generated key for enrollment (rejected: the public page is anonymous; a server-derived key is deterministic and needs no client trust); advisory locks (unnecessary given the unique constraints).
