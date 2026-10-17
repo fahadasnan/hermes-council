@@ -1,0 +1,26 @@
+- generic [ref=f3e4]:
+  - link [ref=f3e6] [cursor=pointer]:
+    - /url: https://loopyloyalty.com
+    - img "Loopy Loyalty Logo" [ref=f3e7]
+  - generic [ref=f3e8]:
+    - generic [ref=f3e10]:
+      - heading "Log in to Loopy Loyalty" [level=1] [ref=f3e11]
+      - paragraph [ref=f3e12]:
+        - text: Need an account?
+        - link "Create an account for free" [ref=f3e13] [cursor=pointer]:
+          - /url: /signup/get-started
+        - text: .
+      - generic [ref=f3e14]:
+        - generic [ref=f3e15]:
+          - generic [ref=f3e16]: Username or Email address
+          - textbox "Username or Email address" [ref=f3e17]
+        - generic [ref=f3e18]:
+          - generic [ref=f3e19]: Password
+          - generic [ref=f3e20] [cursor=pointer]:
+            - generic [aria-hidden] [ref=f3e21]: 
+            - text: Show
+          - textbox "Password" [ref=f3e22]
+        - button "Log in" [disabled] [ref=f3e23]
+      - link "Forgot Password?" [ref=f3e24] [cursor=pointer]:
+        - /url: /auth/forgot-password
+    - contentinfo [ref=f3e25]: © Copyright 2012-2024 PassKit, Inc. All Rights Reserved.
