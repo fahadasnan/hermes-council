@@ -412,6 +412,100 @@ Statuses: **Accepted** (build it this way), **Accepted with changes** (build it 
 
 ---
 
+# Part C: round 2 operational decisions (added 2026-10-17)
+
+The round 2 adversarial review (`review2/`, adjudicated in `review2/adjudication.md`) found the plan missing the operational decisions a production system needs, and missing the GlowDesk evidence pipeline the product owner mandates. These ADRs are the additions. Existing ADRs keep their numbers; where the adjudication demanded changes to the reviewer-proposed text (provider-neutral wording, configurable values, no unverified claims), the ADR below carries the adjudicated version.
+
+### ADR-45: Database backup and disaster recovery
+- Status: Accepted (round 2 F-MISSING-1, F-GOLIVE-1)
+- Decision: provider-neutral backup policy — continuous WAL archiving with point-in-time recovery (or the hosted provider's equivalent), plus periodic full base backups. Retention, RPO, and RTO are documented per environment (initial production targets RPO ≤5 min, RTO ≤4 h, owner-tunable; "hourly pg_dump" is deliberately not the mandated design). Backup data encrypted at rest; restore access restricted to ops. A quarterly restore drill restores into staging and verifies the application boots, reconciles, and replays the outbox (after a restore the sweeper re-delivers pending rows; the append-only ledger means no balance can be silently lost). Redis is volatile by design — nothing of value lives only in Redis (outbox rows are in Postgres). The asset bucket has versioning on.
+- Consequences: Phase 0 observability epic gains "[Ops] backup + WAL config and a restore-drill runbook"; the go-live checklist requires an actual restore drill into staging in the go-live week (items 8a/9).
+
+### ADR-46: MVP search is indexed Postgres search; external search engines are deferred behind a measured trigger
+- Status: Accepted with changes (round 2 F-MISSING-3)
+- Decision: counter pass-code lookup is exact/prefix match on an indexed `passes.code` (tenant-scoped); customer search runs over normalized identifiers (E.164 mobile, lowercased email, name) with B-tree/trigram indexes appropriate to the actual fields and scale; `tsvector` full-text search is added only where tested against real en/ar data and benchmarked. Every search is tenant-scoped; customer discovery additionally honors `request.location_scope` (ADR-12). An external search service (Meilisearch/Elasticsearch or similar) is deferred until a measured growth trigger — search p95 above budget on representative tenant data, or tenant row counts past the benchmarked scale — and will get its own ADR then.
+- Consequences: Phase 3 database work adds the search indexes; the Phase 3 load test includes a search benchmark as acceptance.
+
+### ADR-47: Feature flags are database-driven for tenants, settings-driven for the platform, audited, and never bypass tenancy or the ledger
+- Status: Accepted with changes (round 2 F-MISSING-4)
+- Decision: two kinds of flags. Platform flags: Django settings/env vars, changed by deploy (e.g. the NFC seam off until Apple approval). Tenant flags: a `tenant_features` table (tenants app) with a typed, documented `gates` jsonb whose defaults live in code; the DB is the source of truth; platform admins override per tenant on an explicit screen. Reads are cached in Redis, tenant-prefixed, 60 s TTL, invalidated on write (ADR-56). Every flag change writes an `AuditEvent`. Rollout = set the flag for a tenant and watch; rollback = unset. Tests: default-off behavior, flag-on behavior, cache-invalidation behavior. Flags gate features only — never tenancy checks, permissions, idempotency, or ledger invariants; code behind a flag is tested like any code (no dead untested merges, CONVENTIONS §11).
+- Consequences: ADR-28's gate keys stay default-unlimited and unread until P8 reads plan config through this mechanism; Phase 8's NFC flag and Phase 13's limit rollout use it.
+
+### ADR-48: Environments — local compose, synthetic staging, production; promotion gates; migration-compatible deploys
+- Status: Accepted with changes (round 2 F-MISSING-5)
+- Decision: three environments. Development: local Docker Compose (Postgres, Redis, console email). Staging: production-like deploy, **synthetic data only**, wallet sandbox credentials — never prod data, never real certificates. Production: real data and certificates. Promotion gate staging→prod: CI green + the phase's gate pack (ADR-57) + smoke tests + wallet sandbox evidence. Secrets come from the secret store per environment (ADR-24), never from the repo. Deployment strategy is chosen for Django migration compatibility, not fashion: rolling deploy with forward-compatible expand/contract migrations (ADR-53), web and worker deployed independently; blue-green is optional and only where ops demonstrates a need. Rollback: redeploy the previous image (which must run on the expanded schema) + forward-fix migration; database rollback = restore point + outbox replay (go-live item 9).
+- Consequences: Phase 0's settings modules and deploy skeletons name the three environments; the staging synthetic seed fixture is a Phase 0 task.
+
+### ADR-49: Transactional email behind a provider abstraction; setup-link delivery is the MVP owner activation mechanism
+- Status: Accepted (round 2 F-MISSING-6; incorporates the F-COV-2 ruling)
+- Decision: all transactional email (owner credential-setup links, staff invitations, export-ready notices, Phase 12 branded mail) goes through one provider abstraction in the app; the concrete provider (Postmark/SendGrid/SES class) is an implementation choice made and documented in Phase 1. Shared sender identity in MVP; per-tenant sender identity arrives with white-label (Phase 12). Bounces/complaints are logged, surfaced in ops views, and suppress repeated sends to hard-bounced addresses. Credential-setup links expire in 24 h with an explicit, rate-limited, audited resend action. Delivery/failure counters feed ADR-55 alerting. Phase 1 acceptance: setup email delivered (console in dev, real provider in staging), expired link rejected, resend works.
+- Ruling (F-COV-2): setup-link delivery **is** the MVP owner activation mechanism; customer email verification is deferred. The brief requires platform-admin-created tenants and owner setup links, not public signup, so no customer activation gate is added. Owner email verification / change-email behavior is added only if the product owner requires verified addresses; the deferral is recorded here and in REVISION_LOG.md.
+- Consequences: Phase 1 email tasks reference this ADR; Phase 12 switches templates and sender identity behind the same abstraction.
+
+### ADR-50: Celery queue routing — default, pass_push, webhooks; explicit routing, defined overload behavior
+- Status: Accepted (round 2 F-MISSING-7)
+- Decision: three queues: `default` (beat jobs: `sweep_outbox`, `reconcile`, `purge_expired_passes`, `expire_credentials`, exports), `pass_push` (APNs pushes, Google Wallet PATCHes — customer-visible latency), `webhooks` (outbound delivery). Every task declares its queue explicitly and a routing test asserts each registered task lands where intended. Workers deploy as a separate pool for `pass_push` (a webhook flood or export batch must never delay a pass update) and a pool for `default`+`webhooks` sized by load. Overload behavior: `pass_push` backlog growth pages (ADR-55); webhook backlog degrades gracefully (at-least-once with retries, dead-letters visible, ADR-17); APNs rate limits are absorbed by chunking/backpressure inside pass_push tasks.
+- Consequences: the dev worker command (`-Q default,pass_push,webhooks`) stays valid locally; production topology per the above; Phase 2/3 test plans include the task-routing test.
+
+### ADR-51: Pass image assets are validated server-side and processed safely, per style
+- Status: Accepted with changes (round 2 F-MISSING-8)
+- Decision: uploads are validated server-side for content type (PNG/JPEG per Apple's spec for the asset role), byte-size cap (default max 1 MB), and dimensions checked against a **per-style requirement table** encoded in one validator. Apple's documented sizes differ per style and asset role; the plan deliberately does not hard-code one universal dimension set here — the validator table is the source of truth, kept current with Apple's docs. Processing runs in a hardened pipeline (vetted library, pixel-count limits, no shell-level image tools on untrusted input): resize to the exact required dimensions when within a tolerance band; reject with `VALIDATION_ERROR` naming the asset, required, and actual dimensions when too far off. Editor thumbnails are generated server-side. Whether the original is retained alongside derivatives is decided per asset role in the upload service documentation — "original never stored" is not asserted blindly; style requirements and retention needs are checked first.
+- Consequences: Phase 2 Epic 2.2's per-style image validator implements the table; client pre-checks mirror it for UX while the server stays authoritative (ADR-20).
+
+### ADR-52: Deterministic customer deduplication
+- Status: Accepted (round 2 F-MISSING-9; agrees with ADR-9)
+- Decision: deduplication is deterministic and configuration-driven. A tenant-level setting `unique_customer_fields` (ordered list, default `["mobile"]`) is owned in tenant settings (owner-editable); a program's `EnrollmentField` with `is_unique=true` adds a program-scoped dedupe field for that program's enrollments. Normalization is fixed: mobile → E.164, email → lowercase/trim. Lookup matches any configured field; a missing value on a configured field simply does not match on it (enrollment proceeds and prompts for required missing data). A match joins the existing customer — never a silent second row. Conflicting matches (field A matches customer X, field B matches customer Y) are rejected with a clear error and surfaced for owner resolution; no auto-merge in MVP. Race behavior: two devices enrolling concurrently converge on one customer via unique constraints on normalized identifiers plus ADR-9's get-or-create and `IntegrityError` retry path. Scope: customers are tenant-wide (one row per tenant); enrollments are per program.
+- Consequences: the customers app and enrollment service implement this; Phase 2's two-device race test extends to conflicting-match and missing-field cases.
+
+### ADR-53: Forward-compatible migration policy (expand/contract)
+- Status: Accepted (round 2 F-MISSING-10)
+- Decision: migrations must be forward-compatible with the previously deployed release: expand/contract for schema changes (add nullable/defaulted → backfill → cut over reads/writes → drop in a later deploy); no data migrations inside schema migrations — backfills are batched, resumable, logged management commands; large-table operations use `CREATE INDEX CONCURRENTLY` and lock-avoidance patterns (`RunSQL`, django-data skill); destructive operations (column/table drops) require a two-deploy cycle and explicit PR approval (CONVENTIONS §10 checklist); every deploy must be runnable against the previous release's schema until cut-over, so a rollback is "redeploy the previous image"; CI runs `makemigrations --check --dry-run`. The append-only ledger trigger (ADR-8) means a migration never UPDATE/DELETEs ledger rows; a legitimate row-touching migration needs its own ADR.
+- Consequences: CONVENTIONS §10 and the django-data skill reference this ADR; ADR-48's deploy strategy relies on it.
+
+### ADR-54: Unified PII classification and privacy handling
+- Status: Accepted with changes (round 2 F-MISSING-11)
+- Decision: one consolidated policy:
+  - Classification: customer PII = name, email, mobile, enrollment field data, device push tokens, wallet identifiers; membership PII = staff name and login email.
+  - Access: role-gated per the requirements §3 matrix; staff see masked PII (first name + last initial; masked email/mobile) as specified in CONVENTIONS §5.
+  - Encryption at rest: an infrastructure-layer responsibility (volume/storage encryption for the Postgres data directory and backups, ADR-45). The plan does **not** claim Postgres TDE is available or configured — field-level encryption exists where already decided (webhook secrets, ADR-18); column-level encryption for customer PII is recorded here as an open infrastructure decision, not a finished one.
+  - Consent: captured at enrollment (program consent text, bilingual), stored per enrollment; withdrawal routes to privacy deletion (ADR-34).
+  - Deletion: soft-delete + PII nulling (ADR-34); device push tokens are deleted on unregister, on Apple `410`, and on the final pass void.
+  - Token lifecycle: push tokens are per-device per-pass secrets — never exposed in list APIs, deleted with their registration.
+  - Exports: CSV exports carry PII only within the requester's scope, access-audited (ADR-29/42).
+  - Retention: customer PII until privacy deletion; audit rows per ADR-42's lifecycle.
+- Consequences: the Phase 3 privacy-deletion service implements deletion and token cleanup; the go-live legal/privacy item (8c) demonstrates request → anonymize → audit to the owner.
+
+### ADR-55: Monitoring, SLOs, and alerting
+- Status: Accepted (round 2 F-MISSING-12; thresholds are tunable config, not universal truth)
+- Decision: structured JSON logs to a central sink (vendor an ops choice, e.g. Loki/ELK). Monitored signals: readiness (`/health/ready/` — DB + Redis + Celery ping), counter earn p95 (SLO <1.5 s), analytics p95 (SLO <2 s at 100k events/tenant), pass-push success rate, outbox dead-letter count, webhook delivery failure rate, reconciliation drift, DB pool saturation, Redis memory, wallet certificate expiry (ADR-24). Initial alert thresholds, all tunable in config: pass-push failure >5% over 5 min → page; dead letters >0 for >30 min → page; reconciliation drift → page (ADR-8); DB pool >80% → warn; cert expiry <30 days → ticket + calendar alert. Phase 0 delivers the observability baseline (logging, health endpoints, error tracking, metric scaffolding); go-live requires alerts verified actually firing from staging (item 8b).
+- Consequences: Epic 0.5 extended; ops runbooks reference alert names; ADR-45/49/50 feed signals in.
+
+### ADR-56: Cache policy — tenant-prefixed keys, best-effort, never the ledger's truth
+- Status: Accepted (round 2 F-MISSING-14)
+- Decision: Redis via the Django cache backend. Every key is tenant-prefixed (`{tenant_id}:…`). Cached: program design for pass projection (60 s), analytics aggregates (60 s), tenant settings (300 s), feature flags (ADR-47), rate-limit counters. **Never** cached: ledger entries, balances, pass push status truth, credentials or secrets. Invalidation: narrowest-key delete on the relevant write, TTL as the backstop. The cache is best-effort: misses fall through to the DB and a total Redis outage degrades performance, never correctness (Redis is volatile, ADR-45).
+- Consequences: Phase 0 cache configuration; analytics and projection services follow; the data-model draft's "cachable for 60 s" note is confirmed.
+
+### ADR-57: The GlowDesk evidence pipeline is the build's spine
+- Status: Accepted (round 2 F-PIPE-1, F-PIPE-2, F-MISSING-15, F-CONSISTENCY-14/15/16, F-verifier-4 — one consolidated blocker; mandated by the product owner)
+- Context: `/Users/fahad/GlowDesk` builds on a durable evidence rhythm (phase progress files with commit SHAs, per-task check scripts logging to `/tmp`, epic REVIEW packs with numbered artifacts, phase gate packs with exit codes, en+ar Playwright). The common brief requires the same rhythm adapted to this stack: Django, pytest, Celery, React. It explicitly does not import Supabase, RLS, pgTAP, Deno, Edge Functions, or Lingui.
+- Decision:
+  1. Every phase runs on `plan/evidence/phase-<n>-progress.md`: one row per task (task id, branch, commit SHA, checks run, deviations), written in that task's own commit. After a context reset the next session rereads this file first and never redoes or skips a task from memory.
+  2. Every phase has `scripts/phase<n>-check.sh <task-id>` running that phase's checks (compose up, migrate, pytest, ruff, `makemigrations --check`, vitest, eslint, stylelint, key parity, the phase's Playwright specs): one PASS/FAIL line per step, full logs under `/tmp/phase<n>-check/<task>/` — never in the repo — non-zero exit if any step fails.
+  3. User-facing work gets Playwright journeys in **both `en` and `ar`**; evidence-pack screenshots are **light and dark in both languages** (four variants: en-light, en-dark, ar-light, ar-dark) plus a phone viewport where the surface is phone-first, taken via `frontend/dashboard/playwright.evidence.config.ts` (workers 1, screenshot project, against a built preview). Vitest covers units and formatters; pytest covers the backend including tenant isolation.
+  4. The last task of every epic writes `plan/evidence/<epic>/REVIEW.md` plus numbered artifacts proving the acceptance criteria (saved pytest/vitest output, Playwright screenshots). The review names what shipped, the commit SHAs, and any deviation from the plan.
+  5. The last task of every phase writes `plan/evidence/phase-<n>-gates/` (`GATES.md`, `run-gates.sh`, per-gate results and exit codes). A phase is not done without its gate pack.
+  6. Phase 0 creates the harness: the `plan/evidence/` tree, `phase-0-progress.md` with the T0 baseline row, `scripts/phase0-check.sh` (the pattern every later script copies), the Playwright evidence config, and the first light/dark en/ar screenshot spec. Later phases only add their own files.
+  7. The workflow is documented in the feature-delivery and react-frontend skills and in CONVENTIONS §9/§11; IMPLEMENTATION_PLAN phase backlogs carry the evidence tasks and phase exits carry the gate-pack requirement.
+- Alternatives: prose-only test plans (rejected: the brief makes their absence a blocker, and the rhythm is what lets a post-reset session continue safely).
+- Consequences: every phase's definition of done includes its evidence artifacts; this ADR is referenced from IMPLEMENTATION_PLAN.md (all phases), CONVENTIONS §9/§11, feature-delivery, react-frontend, and i18n-rtl.
+
+### ADR-58: Round 2 scope rulings — deferred surfaces stay deferred, recorded not silently dropped
+- Status: Accepted (round 2 F-COV-1/2/3, the custom-labels ruling, F-GLOS-1)
+- Decision: surfaces the evidence product has but the MVP brief does not require are explicitly deferred rather than silently omitted or silently added: tenant account deletion (ADR-34's deferral note), customer email verification (ADR-49's ruling), single-customer messaging (scheduled in the Phase 9 backlog as a separate owner-only action, distinct from campaign sends), and custom front-of-pass fields / label overrides (deferred; no `labels[]` API payload is promised anywhere in the MVP — if it ever ships it gets its own ADR and user story). Vendor and content choices (a Zapier-style integration gallery, video tutorial embeds, an in-app support chat widget, a customer-facing setup wizard) are not in scope: the tenant API, signed webhooks, and docs are the integration surface. The Loopy terminology in the requirements §1 comparison table is evidence terminology only (F-GLOS-1) and never product naming; the glossary (ADR-44) stays the naming authority.
+- Consequences: REVISION_LOG.md records these deferrals so later rounds do not re-litigate them as omissions.
+
+---
+
 ## Mapping: every member proposal → ruling
 
 | Proposal | Member | Ruling |
@@ -446,4 +540,4 @@ Statuses: **Accepted** (build it this way), **Accepted with changes** (build it 
 
 Rejected outright: JWT as the tenant-API mechanism (ADR-1); balances on `Pass` / `CustomerProgramBalance` as written (ADR-4); process-global tenant context (ADR-11); single-location membership (ADR-12); plaintext webhook secrets (ADR-18); `DecimalField(12,3)` as the money representation (ADR-21); unguarded `all_tenants()` (ADR-19); short-lived signed enrollment token as the enrollment URL (ADR-3).
 
-Deferred: per-tenant Apple/Google issuer credentials (post-MVP, path documented in ADR-24); billing provider choice (P8 trigger, criteria in ADR-28); OpenAPI→Zod codegen (trigger: API surface stable, ADR-37); materialized analytics views (trigger: tenant event volume, ADR-30); realtime counter push (trigger: evidence, ADR-36); NFC (P3+ seam, requirements catalogue).
+Deferred: per-tenant Apple/Google issuer credentials (post-MVP, path documented in ADR-24 and `docs/wallet/per-tenant-issuance.md`); billing provider choice (P8 trigger, criteria in ADR-28); OpenAPI→Zod codegen (trigger: API surface stable, ADR-37); materialized analytics views (trigger: tenant event volume, ADR-30); realtime counter push (trigger: evidence, ADR-36); NFC (P3+ seam, requirements catalogue). Round 2 deferrals (account deletion, customer email verification, custom labels/front fields, external search) are recorded in ADR-58, ADR-34, ADR-49, and ADR-46.

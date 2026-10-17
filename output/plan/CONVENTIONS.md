@@ -91,7 +91,7 @@ One Django app per domain; cross-app FKs use string references (`"customers.Cust
 - Models: PascalCase singular (`LedgerEntry`, not `LedgerEntries`). Canonical domain names are binding (decisions.md, top table; ADR-44).
 - FK fields: `customer`, `program` (Django adds `_id`). Exception with an ADR behind it: `pass_record` (`db_column="pass_id"`) on `LedgerEntry` (ADR-5).
 - Constraints/indexes named explicitly: `uq_<table>_<fields>`, `ck_<table>_<rule>`, `idx_<table>_<fields>`.
-- Every tenant-owned table: `tenant_id` FK, `created_at`, `updated_at` (timestamptz, UTC), UUID pk unless it is an internal join table (ADR-33).
+- Every tenant-owned table: `tenant_id` FK, `created_at`, `updated_at` (timestamptz, UTC). The PK is declared on each **concrete** model — UUID for public-facing tables, bigserial (`BigAutoField`) for internal join tables (ADR-33); the abstract base declares no pk (round 2 F-DB-3/F-verifier-3).
 
 ### Python
 - Functions/variables snake_case; classes PascalCase; constants UPPER_SNAKE.
@@ -156,10 +156,10 @@ Localization: the API returns `message` in the tenant/user language when resolva
 ## 5. Tenancy rules
 
 1. The server derives the tenant from the authenticated session, the HMAC credential, or the enrollment path — never from a body field, query param, or client-controlled header (ADR-1, ADR-2, ADR-3).
-2. Every tenant-owned model inherits `TenantOwnedModel` (direct `tenant_id`, `TenantScopedManager`, `cross_tenant` escape hatch) — ADR-10, ADR-11.
+2. Every tenant-owned model inherits `TenantOwnedModel` (direct `tenant_id`, `TenantScopedManager`, `cross_tenant` escape hatch); each concrete model declares its own PK: UUID for public-facing tables, `BigAutoField` for internal/join tables per ADR-33 — the abstract base declares no pk — ADR-10, ADR-11, ADR-33.
 3. Tenant context is a contextvar set by middleware and reset in `finally`. Services, management commands, and Celery tasks call `.for_tenant(tenant)` explicitly; implicit filtering is the safety net, not the contract.
 4. No tenant set → reads return `none()`, writes raise `TenantNotSupplied`.
-5. `cross_tenant` is import-restricted (CI grep check) to `apps/tenants/platform.py`, migrations, and the reconciliation job; every use writes an `AuditEvent` (ADR-11, ADR-19).
+5. `cross_tenant` is restricted by an **attribute-access AST checker** (`scripts/check_cross_tenant.py` in the CI backend job), not an import grep — `Model.cross_tenant` is attribute access and cannot be import-checked (round 2 F-DB-5/F-verifier-2). Allowlist: `apps/tenants/platform.py`, `apps/passes/tasks.py` and `apps/webhooks/tasks.py` (outbox-driven tasks only, by primary key, each use audited), migrations, and the reconciliation job. Every use writes an `AuditEvent` (ADR-11, ADR-19).
 6. Multi-parent relations carry composite same-tenant FKs (ADR-10). Adding a relation without one fails the model-suite test (§9).
 7. Location scope: `request.location_scope` (set of location ids, ADR-12) filters customer discovery, ledger writes, analytics, and exports. `?loc=` from the client is a requested filter, validated against that set (ADR-40).
 8. Cross-tenant access attempts return 404, never 403 (data-model §5.3 rule kept).
