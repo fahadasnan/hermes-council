@@ -1,0 +1,223 @@
+- generic [ref=f3e1]:
+  - dialog [active] [ref=f3e639]:
+    - generic [ref=f3e641]:
+      - heading "Save Card Design" [level=3] [ref=f3e643]
+      - generic [ref=f3e648]:
+        - generic [ref=f3e649]: Name
+        - textbox "Enter a name" [ref=f3e650]
+        - paragraph [ref=f3e651]: "This name is for internal use only. Note: this cannot be changed after you save your card."
+      - generic [ref=f3e652]:
+        - button "Save Card" [ref=f3e653] [cursor=pointer]
+        - button "Cancel" [ref=f3e654] [cursor=pointer]
+  - generic [aria-hidden] [ref=f3e407]:
+    - text: 
+    - list [ref=f3e409]:
+      - listitem [ref=f3e410]:
+        - generic: 
+      - listitem [ref=f3e411]:
+        - generic: 
+      - listitem [ref=f3e412]:
+        - generic: 
+      - listitem [ref=f3e413]:
+        - generic: 
+      - listitem [ref=f3e414]:
+        - generic [ref=f3e415] [cursor=pointer]: 
+    - navigation [ref=f3e417]:
+      - alert [ref=f3e418]:
+        - paragraph [ref=f3e419]:
+          - generic [aria-hidden] [ref=f3e420]: 
+          - text: You haven't verified your email address. Resend verification email.
+      - generic [ref=f3e421]:
+        - img [ref=f3e423] [cursor=pointer]
+        - list [ref=f3e424]:
+          - listitem [ref=f3e425]:
+            - generic [ref=f3e426]: 15 days left on trial
+            - link [ref=f3e656] [cursor=pointer]:
+              - /url: /settings
+              - text: Upgrade Now
+          - listitem [ref=f3e428]:
+            - link [ref=f3e429] [cursor=pointer]:
+              - /url: /manage-my-cards
+              - generic [aria-hidden] [ref=f3e430]: 
+          - listitem [ref=f3e431]:
+            - link [ref=f3e432] [cursor=pointer]:
+              - /url: http://docs.loopyloyalty.com/
+              - generic [aria-hidden] [ref=f3e433]: 
+          - listitem [ref=f3e434]:
+            - link [ref=f3e657] [cursor=pointer]:
+              - /url: ""
+              - generic [ref=f3e437]: 
+    - generic [ref=f3e440]:
+      - navigation [ref=f3e441]:
+        - generic [ref=f3e442]:
+          - list [ref=f3e443]:
+            - listitem [ref=f3e444]:
+              - generic [ref=f3e445] [cursor=pointer]:
+                - generic [ref=f3e446]: 
+                - text: Design
+            - listitem [ref=f3e447]:
+              - generic [ref=f3e448] [cursor=pointer]:
+                - generic [ref=f3e449]: 
+                - text: Details
+            - listitem [ref=f3e450]:
+              - generic [ref=f3e451] [cursor=pointer]:
+                - generic [ref=f3e452]: 
+                - text: Locations
+            - listitem [ref=f3e453]:
+              - generic [ref=f3e454] [cursor=pointer]:
+                - generic [ref=f3e455]: 
+                - text: Support
+            - listitem [ref=f3e456]:
+              - generic [ref=f3e457] [cursor=pointer]:
+                - generic [ref=f3e458]: 
+                - text: Data
+            - listitem [ref=f3e459]:
+              - generic [ref=f3e460] [cursor=pointer]:
+                - generic [ref=f3e461]: 
+                - text: Custom
+                - generic [ref=f3e462]: 
+          - list [ref=f3e463]:
+            - listitem [ref=f3e464]:
+              - button [ref=f3e658] [cursor=pointer]: Save
+            - listitem [ref=f3e466]:
+              - button [ref=f3e659] [cursor=pointer]: Save & Preview
+          - text:          
+      - generic [ref=f3e469]:
+        - generic [ref=f3e470]:
+          - generic [ref=f3e471] [cursor=pointer]:
+            - generic [ref=f3e472]: 
+            - text: "Watch video tutorial: Adding Details"
+          - generic [ref=f3e473]:
+            - generic [ref=f3e475]:
+              - generic [ref=f3e476]:
+                - generic [ref=f3e477]: Card description
+                - generic [aria-hidden] [ref=f3e479]: 
+                - textbox [ref=f3e660]:
+                  - /placeholder: e.g. Collect stamps for cool rewards!
+                  - text: COUNCIL-TEST Loyalty Card
+              - generic [ref=f3e481]:
+                - generic [ref=f3e482]: How your customers earn 1 stamp
+                - generic [aria-hidden] [ref=f3e484]: 
+                - textbox [ref=f3e661]:
+                  - /placeholder: e.g. Get 1 stamp for every $5 spent; You will receive 1 chop for every coffee purchased.
+                  - text: Get 1 stamp for each COUNCIL-TEST visit
+              - generic [ref=f3e486]:
+                - generic [ref=f3e487]: Business Name
+                - generic [aria-hidden] [ref=f3e489]: 
+                - textbox [ref=f3e662]:
+                  - /placeholder: ibefehdi
+                  - text: COUNCIL-TEST Business
+            - generic [ref=f3e492]:
+              - heading [level=3] [ref=f3e663]: Reward Details
+              - generic [ref=f3e494]:
+                - generic [ref=f3e495]: Reward Name
+                - generic [aria-hidden] [ref=f3e497]: 
+                - textbox [ref=f3e664]:
+                  - /placeholder: e.g. Free box of donuts
+                  - text: COUNCIL-TEST Free Service
+              - generic [ref=f3e499]:
+                - generic [ref=f3e500]: Description
+                - generic [aria-hidden] [ref=f3e502]: 
+                - textbox [ref=f3e665]:
+                  - /placeholder: e.g. You will receive a free box of donuts after collecting 8 stamps; Get 1 free lunch set after collecting all punches; Collect 10 stamps and be rewarded with a free bottle of red wine.
+                  - text: Collect 3 stamps and get a free service!
+              - generic [ref=f3e504]:
+                - generic [ref=f3e505]: Stamp success message
+                - generic [aria-hidden] [ref=f3e507]: 
+                - textbox [ref=f3e666]:
+                  - /placeholder: "e.g. Only {#} more stamps until your reward!"
+                  - text: "{#} more stamps until your free COUNCIL-TEST service!"
+                - paragraph [ref=f3e509]: "You must include {#} in your stamp success message. '{#}' is a placeholder for the number of stamps."
+              - generic [ref=f3e510]:
+                - generic [ref=f3e511]: Reward success message
+                - generic [aria-hidden] [ref=f3e513]: 
+                - textbox [ref=f3e667]:
+                  - /placeholder: e.g. Come and get your free coffee today!
+                  - text: Congrats! Show this to redeem your free COUNCIL-TEST service.
+            - generic [ref=f3e517]:
+              - heading [level=3] [ref=f3e668]:
+                - text: Expiry
+                - generic [aria-hidden] [ref=f3e520]: 
+              - generic [ref=f3e522] [cursor=pointer]:
+                - radio [checked] [ref=f3e669]
+                - text: None
+              - generic [ref=f3e525] [cursor=pointer]:
+                - radio [ref=f3e670]
+                - text: Fixed date
+              - generic [ref=f3e528] [cursor=pointer]:
+                - radio [ref=f3e671]
+                - text: Fixed period after signup
+            - generic [ref=f3e531]:
+              - heading [level=3] [ref=f3e672]:
+                - text: Useful Links
+                - generic [aria-hidden] [ref=f3e534]: 
+              - paragraph [ref=f3e535]:
+                - text: "Tip: add a"
+                - link [ref=f3e673] [cursor=pointer]:
+                  - /url: http://docs.loopyloyalty.com/creating-digital-stamp-cards/adding-more-customisations-to-your-stamp-card/how-to-link-your-address-on-your-stamp-card
+                  - text: link to your address
+                - text: and make it easy for customers to find your business.
+              - table [ref=f3e537]:
+                - rowgroup [ref=f3e538]:
+                  - row [ref=f3e674]:
+                    - columnheader [ref=f3e675]:
+                      - text: Text
+                      - generic [aria-hidden] [ref=f3e542]: 
+                    - columnheader [ref=f3e676]:
+                      - text: Link
+                      - generic [aria-hidden] [ref=f3e545]: 
+                    - columnheader [ref=f3e677]:
+                      - text: Type
+                      - generic [aria-hidden] [ref=f3e548]: 
+                - rowgroup [ref=f3e549]:
+                  - row [ref=f3e678]:
+                    - cell [ref=f3e679]:
+                      - textbox [ref=f3e553]: Book an appointment by email
+                    - cell [ref=f3e680]:
+                      - textbox [ref=f3e556]: support@yourbusiness.com
+                    - cell [ref=f3e681]:
+                      - combobox [ref=f3e559]
+                    - cell [ref=f3e560]:
+                      - generic [aria-hidden] [ref=f3e562] [cursor=pointer]: 
+                  - row [ref=f3e682]:
+                    - cell [ref=f3e683]:
+                      - textbox [ref=f3e566]: Book an appointment by phone
+                    - cell [ref=f3e684]:
+                      - textbox [ref=f3e569]: "+11234567890"
+                    - cell [ref=f3e685]:
+                      - combobox [ref=f3e572]
+                    - cell [ref=f3e573]:
+                      - generic [aria-hidden] [ref=f3e575] [cursor=pointer]: 
+                  - row [ref=f3e686]:
+                    - cell [ref=f3e687]:
+                      - textbox [ref=f3e579]: Follow us on Facebook
+                    - cell [ref=f3e688]:
+                      - textbox [ref=f3e582]: https://facebook.com/yourbusiness
+                    - cell [ref=f3e689]:
+                      - combobox [ref=f3e585]
+                    - cell [ref=f3e586]:
+                      - generic [aria-hidden] [ref=f3e588] [cursor=pointer]: 
+              - button [ref=f3e589] [cursor=pointer]:
+                - generic [aria-hidden] [ref=f3e590]: 
+        - generic [ref=f3e594]:
+          - paragraph [ref=f3e595]: Your Customers' View
+          - text:    
+          - generic [ref=f3e691]:
+            - generic [ref=f3e693]:
+              - generic [ref=f3e694]: COUNCIL-TEST Business
+              - generic [ref=f3e696]:
+                - paragraph [ref=f3e697]: "{#} more stamps until your free COUNCIL-TEST service!"
+                - paragraph [ref=f3e698]: Unlock for more
+            - generic [ref=f3e700]:
+              - generic [ref=f3e701]: COUNCIL-TEST Business
+              - generic [ref=f3e703]:
+                - paragraph [ref=f3e704]: Congrats! Show this to redeem your free COUNCIL-TEST service.
+                - paragraph [ref=f3e705]: Unlock for more
+          - generic [ref=f3e632]:
+            - button [ref=f3e706] [cursor=pointer]:
+              - generic [ref=f3e634]: 
+            - button [ref=f3e707] [cursor=pointer]:
+              - generic [ref=f3e636]: 
+            - button [ref=f3e708] [cursor=pointer]:
+              - generic [ref=f3e638]: 
+    - text:     

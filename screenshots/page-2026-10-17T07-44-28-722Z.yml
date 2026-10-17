@@ -1,0 +1,35 @@
+- generic [ref=f9e1]:
+  - generic [ref=f9e5]:
+    - paragraph [ref=f9e10]: COUNCIL-TEST card
+    - generic [ref=f9e12]:
+      - separator [ref=f9e13]
+      - paragraph [ref=f9e14]: Please enter your details
+      - generic [ref=f9e15]:
+        - generic [ref=f9e16]:
+          - generic [ref=f9e17]: First Name*
+          - textbox [ref=f9e19]: COUNCIL TEST Alice
+        - generic [ref=f9e20]:
+          - generic [ref=f9e21]: Email Address*
+          - textbox "yourname@example.com" [ref=f9e23]: council-test+alice@example.com
+        - generic [ref=f9e24]:
+          - generic [ref=f9e25]: Mobile Number*
+          - generic [ref=f9e26]:
+            - generic [ref=f9e27]:
+              - 'combobox "United States: +1" [ref=f9e29]'
+              - textbox "(201) 555-0123" [ref=f9e32]: "5550101234"
+            - paragraph [ref=f9e45]: Please enter a valid telephone number
+        - separator [ref=f9e33]
+        - generic [ref=f9e34]:
+          - generic [ref=f9e35]: Terms & Conditions
+          - paragraph [ref=f9e36]: 1. Earn 1 stamp for every _______________ purchased. 2. Collect __ stamps to receive a _______________ upon your next visit. 3. This card, stamps, and rewards are valid until_______________. 4. This card can only be used at _______________ (and _______________). 5. Stamps and rewards cannot be exchanged, refunded, replaced or redeemed for cash. 6. Cards are non-transferrable and cannot be combined with other cards. 7. The Company reserve the right of final decisions in case of any disputes.
+        - generic [ref=f9e38]:
+          - checkbox "I have read and agree to the terms and conditions." [checked] [ref=f9e39]
+          - text: I have read and agree to the terms and conditions.
+        - button "Join Now!" [ref=f9e41] [cursor=pointer]
+    - paragraph [ref=f9e43]:
+      - text: powered by
+      - link "Loopy Loyalty" [ref=f9e44] [cursor=pointer]:
+        - /url: https://loopyloyalty.com
+  - generic [ref=f9e49] [cursor=pointer]:
+    - button "×" [active] [ref=f9e50]
+    - generic [ref=f9e51]: The form is not valid. Please fill in the required fields and/or adjust the incorrect fields and try again.

@@ -1,0 +1,212 @@
+- generic [active] [ref=f3e1]:
+  - generic [ref=f3e407]:
+    - text: 
+    - list [ref=f3e409]:
+      - listitem [ref=f3e410]:
+        - generic: 
+      - listitem [ref=f3e411]:
+        - generic: 
+      - listitem [ref=f3e412]:
+        - generic: 
+      - listitem [ref=f3e413]:
+        - generic: 
+      - listitem [ref=f3e414]:
+        - generic [ref=f3e415] [cursor=pointer]: 
+    - navigation [ref=f3e417]:
+      - alert [ref=f3e418]:
+        - paragraph [ref=f3e419]:
+          - generic [aria-hidden] [ref=f3e420]: 
+          - text: You haven't verified your email address. Resend verification email.
+      - generic [ref=f3e421]:
+        - img [ref=f3e423] [cursor=pointer]
+        - list [ref=f3e424]:
+          - listitem [ref=f3e425]:
+            - generic [ref=f3e426]: 15 days left on trial
+            - link "Upgrade Now" [ref=f3e713] [cursor=pointer]:
+              - /url: /settings
+          - listitem [ref=f3e428]:
+            - link [ref=f3e429] [cursor=pointer]:
+              - /url: /manage-my-cards
+              - generic [aria-hidden] [ref=f3e430]: 
+          - listitem [ref=f3e431]:
+            - link [ref=f3e432] [cursor=pointer]:
+              - /url: http://docs.loopyloyalty.com/
+              - generic [aria-hidden] [ref=f3e433]: 
+          - listitem [ref=f3e434]:
+            - link "" [ref=f3e714] [cursor=pointer]:
+              - /url: ""
+    - generic [ref=f3e440]:
+      - navigation [ref=f3e441]:
+        - generic [ref=f3e442]:
+          - list [ref=f3e443]:
+            - listitem [ref=f3e444]:
+              - generic [ref=f3e445] [cursor=pointer]:
+                - generic [ref=f3e446]: 
+                - text: Design
+            - listitem [ref=f3e447]:
+              - generic [ref=f3e448] [cursor=pointer]:
+                - generic [ref=f3e449]: 
+                - text: Details
+            - listitem [ref=f3e450]:
+              - generic [ref=f3e451] [cursor=pointer]:
+                - generic [ref=f3e452]: 
+                - text: Locations
+            - listitem [ref=f3e453]:
+              - generic [ref=f3e454] [cursor=pointer]:
+                - generic [ref=f3e455]: 
+                - text: Support
+            - listitem [ref=f3e456]:
+              - generic [ref=f3e457] [cursor=pointer]:
+                - generic [ref=f3e458]: 
+                - text: Data
+            - listitem [ref=f3e459]:
+              - generic [ref=f3e460] [cursor=pointer]:
+                - generic [ref=f3e461]: 
+                - text: Custom
+                - generic [ref=f3e462]: 
+          - list [ref=f3e463]:
+            - listitem [ref=f3e464]:
+              - button "Save" [ref=f3e715] [cursor=pointer]
+            - listitem [ref=f3e466]:
+              - button "Save & Preview" [ref=f3e716] [cursor=pointer]
+          - text:          
+      - generic [ref=f3e469]:
+        - generic [ref=f3e470]:
+          - generic [ref=f3e471] [cursor=pointer]:
+            - generic [ref=f3e472]: 
+            - text: "Watch video tutorial: Adding Details"
+          - generic [ref=f3e473]:
+            - generic [ref=f3e475]:
+              - generic [ref=f3e476]:
+                - generic [ref=f3e477]: Card description
+                - generic [aria-hidden] [ref=f3e479]: 
+                - textbox "e.g. Collect stamps for cool rewards!" [ref=f3e717]: COUNCIL-TEST Loyalty Card
+              - generic [ref=f3e481]:
+                - generic [ref=f3e482]: How your customers earn 1 stamp
+                - generic [aria-hidden] [ref=f3e484]: 
+                - textbox "e.g. Get 1 stamp for every $5 spent; You will receive 1 chop for every coffee purchased." [ref=f3e718]: Get 1 stamp for each COUNCIL-TEST visit
+              - generic [ref=f3e486]:
+                - generic [ref=f3e487]: Business Name
+                - generic [aria-hidden] [ref=f3e489]: 
+                - textbox "ibefehdi" [ref=f3e719]: COUNCIL-TEST Business
+            - generic [ref=f3e492]:
+              - heading "Reward Details" [level=3] [ref=f3e720]
+              - generic [ref=f3e494]:
+                - generic [ref=f3e495]: Reward Name
+                - generic [aria-hidden] [ref=f3e497]: 
+                - textbox "e.g. Free box of donuts" [ref=f3e721]: COUNCIL-TEST Free Service
+              - generic [ref=f3e499]:
+                - generic [ref=f3e500]: Description
+                - generic [aria-hidden] [ref=f3e502]: 
+                - textbox "e.g. You will receive a free box of donuts after collecting 8 stamps; Get 1 free lunch set after collecting all punches; Collect 10 stamps and be rewarded with a free bottle of red wine." [ref=f3e722]: Collect 3 stamps and get a free service!
+              - generic [ref=f3e504]:
+                - generic [ref=f3e505]: Stamp success message
+                - generic [aria-hidden] [ref=f3e507]: 
+                - 'textbox "e.g. Only {#} more stamps until your reward!" [ref=f3e723]': "{#} more stamps until your free COUNCIL-TEST service!"
+                - paragraph [ref=f3e509]: "You must include {#} in your stamp success message. '{#}' is a placeholder for the number of stamps."
+              - generic [ref=f3e510]:
+                - generic [ref=f3e511]: Reward success message
+                - generic [aria-hidden] [ref=f3e513]: 
+                - textbox "e.g. Come and get your free coffee today!" [ref=f3e724]: Congrats! Show this to redeem your free COUNCIL-TEST service.
+            - generic [ref=f3e517]:
+              - heading [level=3] [ref=f3e725]:
+                - text: Expiry
+                - generic [aria-hidden] [ref=f3e520]: 
+              - generic [ref=f3e522] [cursor=pointer]:
+                - radio "None" [checked] [ref=f3e726]
+                - text: None
+              - generic [ref=f3e525] [cursor=pointer]:
+                - radio "Fixed date" [ref=f3e727]
+                - text: Fixed date
+              - generic [ref=f3e528] [cursor=pointer]:
+                - radio "Fixed period after signup" [ref=f3e728]
+                - text: Fixed period after signup
+            - generic [ref=f3e531]:
+              - heading [level=3] [ref=f3e729]:
+                - text: Useful Links
+                - generic [aria-hidden] [ref=f3e534]: 
+              - paragraph [ref=f3e535]:
+                - text: "Tip: add a"
+                - link "link to your address" [ref=f3e730] [cursor=pointer]:
+                  - /url: http://docs.loopyloyalty.com/creating-digital-stamp-cards/adding-more-customisations-to-your-stamp-card/how-to-link-your-address-on-your-stamp-card
+                - text: and make it easy for customers to find your business.
+              - table [ref=f3e537]:
+                - rowgroup [ref=f3e538]:
+                  - row [ref=f3e731]:
+                    - columnheader [ref=f3e732]:
+                      - text: Text
+                      - generic [aria-hidden] [ref=f3e542]: 
+                    - columnheader [ref=f3e733]:
+                      - text: Link
+                      - generic [aria-hidden] [ref=f3e545]: 
+                    - columnheader [ref=f3e734]:
+                      - text: Type
+                      - generic [aria-hidden] [ref=f3e548]: 
+                - rowgroup [ref=f3e549]:
+                  - row [ref=f3e735]:
+                    - cell [ref=f3e736]:
+                      - textbox [ref=f3e553]: Book an appointment by email
+                    - cell [ref=f3e737]:
+                      - textbox [ref=f3e556]: support@yourbusiness.com
+                    - cell [ref=f3e738]:
+                      - combobox [ref=f3e559]:
+                        - option "Url"
+                        - option "Phone"
+                        - option "Email" [selected]
+                        - option "Address"
+                    - cell [ref=f3e560]:
+                      - generic [aria-hidden] [ref=f3e562] [cursor=pointer]: 
+                  - row [ref=f3e739]:
+                    - cell [ref=f3e740]:
+                      - textbox [ref=f3e566]: Book an appointment by phone
+                    - cell [ref=f3e741]:
+                      - textbox [ref=f3e569]: "+11234567890"
+                    - cell [ref=f3e742]:
+                      - combobox [ref=f3e572]:
+                        - option "Url"
+                        - option "Phone" [selected]
+                        - option "Email"
+                        - option "Address"
+                    - cell [ref=f3e573]:
+                      - generic [aria-hidden] [ref=f3e575] [cursor=pointer]: 
+                  - row [ref=f3e743]:
+                    - cell [ref=f3e744]:
+                      - textbox [ref=f3e579]: Follow us on Facebook
+                    - cell [ref=f3e745]:
+                      - textbox [ref=f3e582]: https://facebook.com/yourbusiness
+                    - cell [ref=f3e746]:
+                      - combobox [ref=f3e585]:
+                        - option "Url" [selected]
+                        - option "Phone"
+                        - option "Email"
+                        - option "Address"
+                    - cell [ref=f3e586]:
+                      - generic [aria-hidden] [ref=f3e588] [cursor=pointer]: 
+              - button [ref=f3e589] [cursor=pointer]:
+                - generic [aria-hidden] [ref=f3e590]: 
+        - generic [ref=f3e594]:
+          - paragraph [ref=f3e595]: Your Customers' View
+          - text:    
+          - generic [ref=f3e691]:
+            - generic [ref=f3e693]:
+              - generic [ref=f3e694]: COUNCIL-TEST Business
+              - generic [ref=f3e696]:
+                - paragraph [ref=f3e697]: "{#} more stamps until your free COUNCIL-TEST service!"
+                - paragraph [ref=f3e698]: Unlock for more
+            - generic [ref=f3e700]:
+              - generic [ref=f3e701]: COUNCIL-TEST Business
+              - generic [ref=f3e703]:
+                - paragraph [ref=f3e704]: Congrats! Show this to redeem your free COUNCIL-TEST service.
+                - paragraph [ref=f3e705]: Unlock for more
+          - generic [ref=f3e632]:
+            - button "" [ref=f3e747] [cursor=pointer]
+            - button "" [ref=f3e748] [cursor=pointer]
+            - button "" [ref=f3e749] [cursor=pointer]
+    - text:     
+  - generic [ref=f3e750]:
+    - button "×" [ref=f3e751] [cursor=pointer]
+    - generic [ref=f3e752]:
+      - text: "Could not create card. Error: Card limit reached. Would you like to"
+      - link "upgrade" [ref=f3e753] [cursor=pointer]:
+        - /url: https://app.loopyloyalty.com/settings
+      - text: your account to enable more card designs?

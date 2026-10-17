@@ -1,0 +1,41 @@
+- generic [ref=f12e1]:
+  - generic [ref=f12e5]:
+    - paragraph [ref=f12e10]: COUNCIL-TEST card
+    - generic [ref=f12e12]:
+      - separator [ref=f12e13]
+      - paragraph [ref=f12e14]: Please enter your details
+      - generic [ref=f12e15]:
+        - generic [ref=f12e16]:
+          - generic [ref=f12e17]: First Name*
+          - generic [ref=f12e18]:
+            - textbox [ref=f12e19]
+            - paragraph [ref=f12e45]: This field cannot be empty
+        - generic [ref=f12e20]:
+          - generic [ref=f12e21]: Email Address*
+          - generic [ref=f12e22]:
+            - textbox "yourname@example.com" [ref=f12e23]
+            - paragraph [ref=f12e46]: Please enter a valid email address (e.g. yourname@example.com)
+        - generic [ref=f12e24]:
+          - generic [ref=f12e25]: Mobile Number*
+          - generic [ref=f12e26]:
+            - generic [ref=f12e27]:
+              - 'combobox "United States: +1" [ref=f12e29]'
+              - textbox "(201) 555-0123" [ref=f12e32]
+            - paragraph [ref=f12e47]: Please enter a valid telephone number
+        - separator [ref=f12e33]
+        - generic [ref=f12e34]:
+          - generic [ref=f12e35]: Terms & Conditions
+          - paragraph [ref=f12e36]: 1. Earn 1 stamp for every _______________ purchased. 2. Collect __ stamps to receive a _______________ upon your next visit. 3. This card, stamps, and rewards are valid until_______________. 4. This card can only be used at _______________ (and _______________). 5. Stamps and rewards cannot be exchanged, refunded, replaced or redeemed for cash. 6. Cards are non-transferrable and cannot be combined with other cards. 7. The Company reserve the right of final decisions in case of any disputes.
+        - generic [ref=f12e37]:
+          - generic [ref=f12e38]:
+            - checkbox "I have read and agree to the terms and conditions." [checked] [ref=f12e39]
+            - text: I have read and agree to the terms and conditions.
+          - paragraph [ref=f12e48]: You must agree to our terms and conditions to proceed.
+        - button "Join Now!" [active] [ref=f12e41] [cursor=pointer]
+    - paragraph [ref=f12e43]:
+      - text: powered by
+      - link "Loopy Loyalty" [ref=f12e44] [cursor=pointer]:
+        - /url: https://loopyloyalty.com
+  - generic [ref=f12e49]:
+    - button "×" [ref=f12e50] [cursor=pointer]
+    - generic [ref=f12e51]: The form is not valid. Please fill in the required fields and/or adjust the incorrect fields and try again.
