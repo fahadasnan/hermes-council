@@ -1,0 +1,38 @@
+- generic [ref=f38e2]:
+  - text: 
+  - list [ref=f38e5]:
+    - listitem [ref=f38e6]:
+      - generic: 
+    - listitem [ref=f38e7]:
+      - generic: 
+    - listitem [ref=f38e8]:
+      - generic: 
+    - listitem [ref=f38e9]:
+      - generic: 
+    - listitem [ref=f38e10]:
+      - generic [ref=f38e11] [cursor=pointer]: 
+  - navigation [ref=f38e13]:
+    - alert [ref=f38e14]:
+      - paragraph [ref=f38e15]:
+        - generic [aria-hidden] [ref=f38e16]: 
+        - text: You haven't verified your email address. Resend verification email.
+    - generic [ref=f38e17]:
+      - img [ref=f38e19] [cursor=pointer]
+      - list [ref=f38e20]:
+        - listitem [ref=f38e21]:
+          - generic [ref=f38e22]: 15 days left on trial
+          - link "Upgrade Now" [ref=f38e23] [cursor=pointer]:
+            - /url: /settings
+        - listitem [ref=f38e24]:
+          - link [ref=f38e25] [cursor=pointer]:
+            - /url: /manage-my-cards
+            - generic [aria-hidden] [ref=f38e26]: 
+        - listitem [ref=f38e27]:
+          - link [ref=f38e28] [cursor=pointer]:
+            - /url: http://docs.loopyloyalty.com/
+            - generic [aria-hidden] [ref=f38e29]: 
+        - listitem [ref=f38e30]:
+          - link "" [ref=f38e32] [cursor=pointer]:
+            - /url: ""
+  - generic [ref=f38e34]:    ▾   
+  - text:     
