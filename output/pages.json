@@ -1,0 +1,357 @@
+{
+  "app": "Loopy Loyalty",
+  "url": "https://app.loopyloyalty.com",
+  "api_base": "https://api.loopyloyalty.com",
+  "framework": "AngularJS (ui-router)",
+  "surveyed_at": "2026-10-17",
+  "test_campaign": {"name": "COUNCIL TEST", "id": "wI4XeFr6rHCTUHGOEFazZ", "status": "DRAFT"},
+  "notes": [
+    "Session is stored in sessionStorage (jwt, uid, plan, etc.), not cookies — Playwright storageState cannot restore it; login must happen in-browser.",
+    "Card activation requires a verified account email; activation was therefore not completed and the card remains DRAFT.",
+    "Screenshots are in /Users/fahad/council/screenshots/"
+  ],
+  "global_nav": {
+    "sidebar_states": ["My Cards", "Subusers", "Start", "Settings"],
+    "top_nav": ["logo->/manage-my-cards", "trial banner + Upgrade Now->/settings", "Help->docs.loopyloyalty.com", "user dropdown"],
+    "user_dropdown": ["Your Cards list", "Create New Card", "Dashboard", "Help", "Settings", "Logout"],
+    "persistent_alert": "Email verification reminder with Resend link"
+  },
+  "pages": [
+    {
+      "name": "Login", "url": "/auth/login", "public": true,
+      "purpose": "Authenticate merchant accounts",
+      "features": [
+        {"name": "Login form", "type": "form", "fields": ["username-or-email", "password"], "action": "POST /account/login", "writes": "sessionStorage jwt+account fields"},
+        {"name": "Signup link", "type": "link", "to": "/signup/get-started"},
+        {"name": "Forgot password link", "type": "link", "to": "/auth/forgot-password"}
+      ],
+      "api": ["POST /account/login"],
+      "links_to": ["/signup/get-started", "/auth/forgot-password"],
+      "screenshot": "page-2026-10-17T06-50-30-136Z.png"
+    },
+    {
+      "name": "Forgot Password", "url": "/auth/forgot-password", "public": true,
+      "purpose": "Request password reset email",
+      "features": [
+        {"name": "Recovery email form", "type": "form", "fields": ["username-or-email"]},
+        {"name": "Try again / Go to login", "type": "action buttons"}
+      ],
+      "api": [], "links_to": ["/auth/login"],
+      "screenshot": "09-forgot-password.png"
+    },
+    {"name": "Reset Password", "url": "/auth/reset-password/:username/:code", "public": true, "verified": false, "purpose": "Set new password from emailed link", "features": [], "api": [], "links_to": [], "screenshot": null},
+    {"name": "Email Verification", "url": "/auth/verify/:code", "public": true, "verified": false, "purpose": "Verify account email (gates card activation)", "features": [], "api": [], "links_to": [], "screenshot": null},
+    {"name": "Renew Subscription", "url": "/auth/renew-subscription", "verified": false, "purpose": "Renew an expired subscription", "features": [], "api": [], "links_to": [], "screenshot": null},
+    {
+      "name": "Signup / Get Started", "url": "/signup/get-started", "public": true,
+      "purpose": "Create merchant account",
+      "features": [
+        {"name": "Signup form", "type": "form", "fields": ["email", "confirm email", "username (immutable, 5-25 chars)", "password (min 8, 1 number)", "confirm password", "ToS consent", "marketing opt-in"]},
+        {"name": "Get Started!", "type": "action button"}
+      ],
+      "api": ["POST /signup (derived)"], "links_to": ["/auth/login"],
+      "screenshot": "09-signup-get-started.png"
+    },
+    {
+      "name": "Dashboard", "url": "/dash",
+      "nav_path": "sidebar Start / user menu Dashboard",
+      "purpose": "Post-login landing: create a card, tutorials, templates",
+      "features": [
+        {"name": "Create New Card", "type": "action button", "to": "/edit/new/design"},
+        {"name": "Video Academy", "type": "embedded videos (Vimeo)", "items": ["Card Design", "Card Details", "Card Customisations"]},
+        {"name": "Sample templates", "type": "gallery", "items": ["Cafe", "Restaurant", "Retail", "Salon", "Entertainment", "Instructor", "Service"], "action": "start card from template (vm.selectSampleCampaign)"}
+      ],
+      "api": ["GET /account", "GET /campaigns"],
+      "links_to": ["/edit/new/design"],
+      "screenshot": "02-dash.png"
+    },
+    {
+      "name": "Help", "url": "/help",
+      "nav_path": "top navbar Help",
+      "purpose": "Templates + resources hub",
+      "features": [
+        {"name": "Choose a Template", "type": "gallery", "items": ["Cafe (8 stamps)", "Restaurant (10)", "Retail (19)", "Salon (13)", "Entertainment (22)", "Instructor (8)", "Service (3)", "Blank"]},
+        {"name": "Resources", "type": "links", "items": ["Quick Start Guide PDF", "docs.loopyloyalty.com", "Stamper App docs"]}
+      ],
+      "api": ["GET /campaigns", "GET /account"],
+      "links_to": ["/edit/new/design", "http://docs.loopyloyalty.com/"],
+      "screenshot": "08-help.png"
+    },
+    {
+      "name": "My Cards", "url": "/manage-my-cards",
+      "nav_path": "sidebar My Cards; also 404 fallback",
+      "purpose": "Campaign list; manage or delete cards",
+      "features": [
+        {"name": "Card grid", "type": "table/cards", "columns": ["pass preview", "name", "status (DRAFT/LIVE)"], "reads": "campaigns"},
+        {"name": "MANAGE", "type": "action button", "to": "/edit/:id/design (draft)"},
+        {"name": "DELETE", "type": "action button", "modal": "warning modal: customers lose earn/redeem, cards invalidated, data deleted; irreversible"},
+        {"name": "Create New Card", "type": "action button", "to": "/edit/new/design"},
+        {"name": "In-view campaign switcher", "type": "selector"}
+      ],
+      "api": ["GET /campaigns"],
+      "links_to": ["/edit/:campaignId/design", "/edit/new/design"],
+      "screenshot": "05-manage-my-cards.png"
+    },
+    {
+      "name": "Card Editor — Design", "url": "/edit/:campaignId/design",
+      "nav_path": "My Cards MANAGE / Create New Card; wizard tab Design",
+      "purpose": "Design the wallet pass",
+      "features": [
+        {"name": "Type", "type": "radio", "options": ["Single Reward", "Multi Reward"], "writes": "campaign.type"},
+        {"name": "Icon upload", "type": "file upload + library picker", "constraint": "87x87 square, required"},
+        {"name": "Logo upload", "type": "file upload + library picker", "constraint": "480x150"},
+        {"name": "Stamps count", "type": "select", "options": "1-25", "writes": "campaign.baseStripImage.totalStamps"},
+        {"name": "Stamped/Un-stamped image", "type": "library ui-select OR file upload (min 200x200) + sameAsStamp checkbox"},
+        {"name": "Colors", "type": "color inputs", "items": ["Card background/text", "Background", "Stamp Circle", "Stamp"]},
+        {"name": "Live pass preview", "type": "preview", "devices": ["ios", "android", "lockscreen"]},
+        {"name": "Wizard tabs", "type": "tabs", "items": ["Design", "Details", "Locations", "Support", "Data", "Custom"], "behavior": "validate+save before switching"},
+        {"name": "Save / Save & Preview / Activate", "type": "action buttons"}
+      ],
+      "api": ["POST /campaign", "GET /campaign/exists/:name", "GET /campaigns", "GET /campaign/id/:id"],
+      "links_to": ["/edit/:id/{details,locations,support,data,labels}"],
+      "screenshot": "03-edit-design.png"
+    },
+    {
+      "name": "Card Editor — Details", "url": "/edit/:campaignId/details",
+      "purpose": "Card copy, rewards, expiry, links",
+      "features": [
+        {"name": "Card details form", "type": "form", "fields": ["description", "collectValue (earn rule, required)", "organisationName"]},
+        {"name": "Reward details", "type": "form", "fields": ["rewardName", "rewardText (required)", "stampLockscreenMessage (must contain {#})", "rewardLockscreenMessage"], "writes": "campaign.rewards[]"},
+        {"name": "Expiry", "type": "radio", "options": ["None", "Fixed date", "Fixed period after signup"]},
+        {"name": "Useful Links", "type": "editable table", "columns": ["Text", "Link", "Type (Url|Phone|Email|Address)"], "writes": "campaign.links[]"},
+        {"name": "Pass preview (front + back)", "type": "preview", "devices": ["ios", "android", "lockscreen"]},
+        {"name": "Save Card modal", "type": "modal", "fields": ["internal card name (immutable, alnum+spaces)"], "extras": ["QR preview", "Add to wallet"], "action": "POST /campaign"}
+      ],
+      "api": ["POST /campaign", "GET /campaign/exists/:name"],
+      "links_to": ["/edit/:id/* tabs"],
+      "screenshot": "04-edit-details.png"
+    },
+    {
+      "name": "Card Editor — Locations", "url": "/edit/:campaignId/locations",
+      "purpose": "Card locations and beacons for lock-screen messages",
+      "features": [
+        {"name": "Locations table", "type": "table", "columns": ["Location", "Address on Card", "Display", "Message"]},
+        {"name": "Add New Location modal", "type": "modal+form", "fields": ["Location Name", "address map search", "Address to display"], "extras": ["Google Map/Satellite"], "writes": "locations"},
+        {"name": "Beacons table", "type": "table", "columns": ["Beacon", "Message"]},
+        {"name": "Add New Beacon modal", "type": "modal+form", "fields": ["Name", "UUID", "Major", "Minor"], "writes": "beacons"}
+      ],
+      "api": ["GET /locations", "GET /beacons (derived)"],
+      "links_to": [],
+      "screenshot": "04-edit-locations.png"
+    },
+    {
+      "name": "Card Editor — Support", "url": "/edit/:campaignId/support",
+      "purpose": "Terms and issuer contact details",
+      "features": [
+        {"name": "Terms & Conditions", "type": "toggle+textarea", "writes": "campaign.terms"},
+        {"name": "Link to full terms", "type": "url input", "writes": "campaign.linkToTerms"},
+        {"name": "Card Issuer Details", "type": "form", "fields": ["Business Name", "Email", "Phone"], "writes": "campaign.business"}
+      ],
+      "api": [], "links_to": [],
+      "screenshot": "04-edit-support.png"
+    },
+    {
+      "name": "Card Editor — Data", "url": "/edit/:campaignId/data",
+      "purpose": "Enrollment data collection, uniqueness, consent",
+      "features": [
+        {"name": "Data Collection fields", "type": "editable table", "columns": ["Description", "Format (Text|Number|Date|Email|URL|Mobile)", "Mandatory"], "defaults": ["First Name", "Email Address", "Mobile Number"], "writes": "campaign data fields"},
+        {"name": "Default country for phone fields", "type": "select (all countries)"},
+        {"name": "Unique Customer Enrollments", "type": "checkbox", "effect": "block duplicate enrollment via unique fields"},
+        {"name": "Data Consent", "type": "toggle + textarea + default-checked checkbox", "writes": "campaign.consentEnabled/consentText/consentCheckboxEnabled"},
+        {"name": "Landing page preview", "type": "preview", "device": "landing"}
+      ],
+      "api": [], "links_to": [],
+      "screenshot": "04-edit-data.png"
+    },
+    {
+      "name": "Card Editor — Custom (Labels)", "url": "/edit/:campaignId/labels",
+      "purpose": "Custom pass fields and label-text customization (subscription-gated)",
+      "features": [
+        {"name": "Add Custom Fields", "type": "editable table", "columns": ["Label", "Field to Display (Stamps required until next reward|Total stamps collected|First Name|Email Address|Mobile Number)"]},
+        {"name": "Card Labels", "type": "editable table", "columns": ["Original Label Text", "New Label Text"], "rows": "~20 default strings (card, lockscreen, landing page, enrollment, wallet)"}      ],
+      "api": [], "links_to": [],
+      "screenshot": "04-edit-labels.png"
+    },
+    {
+      "name": "Card Overview", "url": "/overview/:campaignId",
+      "purpose": "Live card operations: stats, transactions, share link, QR",
+      "features": [
+        {"name": "Stat tiles", "type": "stats", "items": ["Customers Signed Up", "Stamps Issued", "Rewards Issued", "Rewards Redeemed"], "with_refresh": true},
+        {"name": "Latest Transactions", "type": "table", "columns": ["Date and Time", "Customer", "Event", "User"], "extras": ["page size 10/25/50/100", "search", "pagination"]},
+        {"name": "Export CSV", "type": "action button (gated)"},
+        {"name": "Push Message History", "type": "table", "columns": ["Date", "Message", "Segment", "Reach"]},
+        {"name": "Card URL", "type": "short link (loyalty.is) + copy button + QR code + Add to wallet"}
+      ],
+      "api": ["GET /campaign/id/:id", "POST /events/analytics/transactions/:id", "GET /events/analytics/all/:id", "GET /events/pushHistory/:id"],
+      "links_to": [],
+      "screenshot": "07-overview.png"
+    },
+    {
+      "name": "Insights", "url": "/insights/:campaignId",
+      "purpose": "Revenue / ROI analytics",
+      "features": [
+        {"name": "Revenue summary", "type": "stats", "items": ["revenue driven", "rewards cost (claimed/outstanding)", "break-even status"]},
+        {"name": "All time stats tiles", "type": "stats (same four as overview)"},
+        {"name": "Value config", "type": "form", "fields": ["Currency (large list)", "Stamp Value", "Reward Cost per reward"], "action": "Submit"},
+        {"name": "Activity chart", "type": "chart", "options": ["group by Day", "group by Month"]},
+        {"name": "Stamp Count Histogram", "type": "chart"},
+        {"name": "Transactions table", "type": "table"}
+      ],
+      "api": ["GET /campaign/id/:id", "POST /events/analytics/transactions/:id", "GET /events/analytics/all/:id", "GET /events/analytics/stampTotals/:id", "GET /events/analytics/rewardTotals/:id (derived)"],
+      "links_to": [],
+      "screenshot": "07-insights.png"
+    },
+    {
+      "name": "Messages", "url": "/messages/:campaignId",
+      "purpose": "Push messages to card holders",
+      "features": [
+        {"name": "Audience selector", "type": "radio", "options": ["All of my customers", "A segment of my customers"]},
+        {"name": "Message composer", "type": "textarea (~90 chars best practice, idea samples)"},
+        {"name": "Send Message", "type": "action button (vm.sendPush)"},
+        {"name": "Push Message History", "type": "table", "columns": ["Date", "Message", "Segment", "Reach"]}
+      ],
+      "api": ["POST /card/cid/:id", "GET /events/pushHistory/:id", "/card/push (derived)"],
+      "links_to": [],
+      "screenshot": "07-messages.png"
+    },
+    {
+      "name": "Customers", "url": "/customers/:campaignId",
+      "purpose": "Card-holder list and management",
+      "features": [
+        {"name": "Customers table", "type": "table", "columns": ["First Name", "Email Address", "Mobile Number", "Signup Date (y-m-d)", "Card Status", "Stamps Earned", "Rewards Earned", "Rewards Redeemed"], "extras": ["search", "page size", "pagination"]},
+        {"name": "Export CSV", "type": "action button (gated)"},
+        {"name": "Row click", "type": "link", "to": "/customers/:campaignId/profile/:cardId"},
+        {"name": "Remove customer modal / per-customer push modal", "type": "modals (templates present)"}
+      ],
+      "api": ["POST /card/cid/:id", "GET /campaign/id/:id"],
+      "links_to": ["/customers/:campaignId/profile/:cardId"],
+      "screenshot": "07-customers.png"
+    },
+    {
+      "name": "Customer Profile", "url": "/customers/:campaignId/profile/:cardId", "verified": false,
+      "purpose": "Single customer card: history, issue stamp, redeem reward, message, remove",
+      "features": [], "api": [], "links_to": [], "screenshot": null
+    },
+    {
+      "name": "Subusers", "url": "/subusers",
+      "nav_path": "sidebar Subusers",
+      "purpose": "Staff sub-accounts for stamp/redeem attribution",
+      "features": [
+        {"name": "Create Subuser modal", "type": "modal+form", "fields": ["Username (owner+ prefixed)", "Password (min 6)", "Notes", "Location (select; link to Settings if none)"]},
+        {"name": "Subusers table", "type": "table", "columns": ["Profile", "Username", "Created", "Notes", "Location", "Status"], "extras": ["search", "pagination"]},
+        {"name": "Delete subuser modal", "type": "modal"},
+        {"name": "Row click", "type": "link", "to": "/subuser/:subuserId"}
+      ],
+      "api": ["GET /subusers", "GET /account", "GET /campaigns"],
+      "links_to": ["/subuser/:subuserId", "/settings"],
+      "screenshot": "08-subusers.png"
+    },
+    {
+      "name": "Subuser Profile", "url": "/subuser/:subuserId", "verified": false,
+      "purpose": "Manage one subuser", "features": [], "api": [], "links_to": [], "screenshot": null
+    },
+    {
+      "name": "Settings", "url": "/settings",
+      "nav_path": "sidebar Settings / Upgrade Now banner",
+      "purpose": "Account, billing, locations, beacons, integrations",
+      "features": [
+        {"name": "My Account > General", "type": "form", "fields": ["Username (immutable)", "First Name", "Last Name", "Email"]},
+        {"name": "My Account > Business", "type": "form", "fields": ["Business Name", "Website", "Address Line 1/2", "City", "Region", "Zip", "Country"]},
+        {"name": "My Account > Privacy", "type": "checkbox", "field": "Subscribed (data storage consent)"},
+        {"name": "My Account > Password", "type": "form", "fields": ["Current", "New", "Confirm"], "rules": ["8 chars min", "1 number"]},
+        {"name": "My Account > Developer Tools", "type": "credentials", "fields": ["API Key", "API Secret"], "links": ["https://developer.loopyloyalty.com"]},
+        {"name": "My Account > Delete", "type": "form+confirm", "fields": ["exit survey checkboxes", "other reason", "password"], "effect": "irreversible account + data deletion"},
+        {"name": "Billing > Plan", "type": "pricing cards", "plans": [
+          {"name": "Starter", "price": "US$25/mo", "limits": {"card designs": 1, "locations": 1, "beacons": 1, "subusers": 3, "label customisation": true, "unique enrollments": true, "data export": true}},
+          {"name": "Growth", "price": "US$69/mo", "limits": {"card designs": 3, "locations": 3, "beacons": 3, "subusers": 10}},
+          {"name": "Ultimate", "price": "US$95/mo", "limits": {"card designs": 10, "locations": 10, "beacons": 10, "subusers": 50}}],
+          "options": ["Month-to-Month", "Billed Annually"], "actions": ["Subscribe (confirm modal)", "Cancel", "Downgrade (issues modal)"]},
+        {"name": "Billing > Credit Card", "type": "Stripe card element + billing address form (address, mobile, Tax ID)"},
+        {"name": "Billing > Invoices", "type": "list (empty on trial)"},
+        {"name": "Locations (account-level)", "type": "manager + Google map + Add Location modal"},
+        {"name": "Beacons (account-level)", "type": "manager + Add Beacon modal"},
+        {"name": "Zapier", "type": "integration section"}
+      ],
+      "api": ["GET /account", "GET /locations", "GET /beacons", "GET /campaigns"],
+      "links_to": ["/invoice/:invoiceId"],
+      "screenshot": "08-settings.png"
+    },
+    {
+      "name": "Invoice", "url": "/invoice/:invoiceId", "verified": false,
+      "purpose": "View a billing invoice", "features": [], "api": [], "links_to": [], "screenshot": null
+    },
+    {
+      "name": "CSV Verify", "url": "/csv-verify/:file", "verified": false,
+      "purpose": "Post-export CSV verification step", "features": [], "api": [], "links_to": [], "screenshot": null
+    },
+    {
+      "name": "Customer Landing Page", "url": "/landing-page/:campaignId", "public": true,
+      "purpose": "Public join page for a card",
+      "features": [
+        {"name": "Enrollment form", "type": "form", "fields": ["First Name*", "Email Address*", "Mobile Number* (intl-tel-input)"], "writes": "customer record"},
+        {"name": "Terms & Conditions", "type": "text + agreement checkbox"},
+        {"name": "Join Now!", "type": "action button", "effect": "issues wallet pass"}
+      ],
+      "api": ["POST /campaign/public/... (derived)"],
+      "links_to": ["https://loopyloyalty.com"],
+      "screenshot": "07-landing-page.png"
+    },
+    {
+      "name": "Stamp Page", "url": "/stamp", "public": true,
+      "purpose": "Web stamper: issue a stamp by card ID",
+      "features": [
+        {"name": "Card ID input", "type": "text input"},
+        {"name": "Stamp Card!", "type": "action button"}
+      ],
+      "api": ["stamp endpoints (derived)"], "links_to": [],
+      "screenshot": "08-stamp.png"
+    },
+    {
+      "name": "404", "url": "(otherwise rule)", "purpose": "Unknown routes redirect to /manage-my-cards",
+      "features": [], "api": [], "links_to": ["/manage-my-cards"], "screenshot": null
+    }
+  ],
+  "entity_model": {
+    "account": {"fields": ["username", "name", "email", "business info", "billing", "plan", "API key/secret", "locations", "beacons", "subusers"], "plans": ["Starter", "Growth", "Ultimate"]},
+    "campaign": {"aka": "card", "fields": ["type (single/multi reward)", "design (images, stamps 1-25, colors)", "details (description, earn rule, rewards[], expiry, links[])", "locations[]", "beacons[]", "support (terms, issuer)", "data fields[] + consent + unique-enrollment", "custom fields[] + labels[]"], "status_flow": ["DRAFT", "ACTIVATION (requires verified email)", "LIVE"], "deletable": true},
+    "customer": {"enrolls_via": "/landing-page/:campaignId", "receives": "wallet pass (Apple/Google) via loyalty.is link/QR", "card_has": ["stamps", "rewards earned", "rewards redeemed", "status"]},
+    "stamp": {"issued_by": "owner/subuser via Stamper App or /stamp", "tracked_in": ["Overview transactions", "Insights", "Customer profile"]},
+    "reward": {"defined_in": "campaign.rewards[] (name, text, lockscreen messages, cost)", "earned": "at stamp threshold", "redeemed": "by staff"},
+    "message": {"audience": ["all customers", "segment"], "surfaces": ["lock screen", "Latest Updates on pass"], "history_tracked": true},
+    "location": {"used_for": "lock-screen proximity messages", "managed": "account-level + per-card"},
+    "beacon": {"fields": ["name", "UUID", "major", "minor"], "used_for": "bluetooth proximity messages"}
+  },
+  "api_endpoints": {
+    "observed": [
+      "POST /account/login",
+      "GET /account",
+      "GET /campaigns",
+      "GET /campaign/exists/:name",
+      "POST /campaign",
+      "GET /campaign/id/:id",
+      "POST /events/analytics/transactions/:campaignId",
+      "GET /events/analytics/all/:campaignId",
+      "GET /events/analytics/stampTotals/:campaignId",
+      "GET /events/pushHistory/:campaignId",
+      "POST /card/cid/:campaignId",
+      "GET /subusers",
+      "GET /locations",
+      "GET /beacons"
+    ],
+    "source_derived_unverified": [
+      "GET /events/analytics/rewardTotals/:campaignId",
+      "POST /card/push",
+      "/campaign/public/",
+      "/images/stampTemplates",
+      "/images/stampImage/",
+      "/account/cardIntent/",
+      "/location/",
+      "/beacon/",
+      "/subuser/",
+      "/push",
+      "/intercom/message/",
+      "/api/people"
+    ]
+  },
+  "integrations": ["Stripe (billing)", "Google Maps + Places (locations)", "Intercom (support widget)", "Cloudflare Turnstile", "Google Analytics / GTM", "Facebook Pixel", "Microsoft Clarity", "Tapfiliate", "ProfitWell", "Vimeo (tutorials)", "YouTube (Video Academy)", "Zapier", "PassKit (pass infrastructure)"]
+}
