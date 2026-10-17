@@ -267,83 +267,114 @@ Statuses: **Accepted** (build it this way), **Accepted with changes** (build it 
 
 ### ADR-26: One `Program` model with a pass style, not per-style products
 - Status: Accepted — PD-scope-1 as proposed.
+- Context: five Apple pass styles risk becoming five subsystems, and the brief forbids forcing coupons or tickets through a stamp ledger.
 - Decision: a single `programs` table + per-style config tables (ADR-16) + one signer parameterized by style + one program editor with per-style sections.
+- Alternatives: separate models and pipelines per style (rejected: duplicates signer, editor, and ledger per style, and turns later phases into rework instead of additions).
 - Consequences: later phases add fields and screens; stamp/points are store-card rule sets only; coupons/tickets never touch a stamp ledger (ADR-6).
 - Source: requirements PD-scope-1; verifier unchallenged.
 
 ### ADR-27: Balances are cached, ledger-owned, and reconciled — never independently editable
 - Status: Accepted — PD-scope-2 as proposed, realized by ADR-4/6/8.
+- Context: stamp counters on cards tempt a mutable counter; double-credit and drift are the failure modes the evidence product exhibits.
 - Decision: cached `Balance` columns written only by the ledger service inside the entry's transaction; non-negative check constraints; nightly reconciliation from `SUM(signed deltas)`.
+- Alternatives: pure SUM-on-read with no cached column (rejected: counter p95 latency and lock contention); a freely editable counter (rejected: violates ledger-is-truth).
 - Source: PD-scope-2; verifier AGREE WITH CHANGES (changes adopted in ADR-4/6/8).
 
 ### ADR-28: No plans, limits, or billing before the final phase; billing provider chosen then, against fixed criteria
 - Status: Accepted — PD-scope-4 and PD-BACKEND-6 as proposed.
+- Context: the evidence product gates features by subscription plan; our commercial terms are offline invoices until self-serve, and the brief fixes signup/billing as the last phase.
+- Alternatives: ship internal limit/billing scaffolding in the MVP (rejected: unused machinery for many phases, and gating could creep forward in violation of the brief).
 - Decision: no plan tables, no feature gates, no checkout before P8. Config may carry unlimited-default gate keys but nothing reads them for enforcement. Commercial terms are invoiced offline. When P8 starts, evaluate providers against: Kuwait payment rails (KNET/card), multi-currency incl. 3-decimal KWD, subscription-management API able to drive limits, GCC presence. Candidates noted by backend: Stripe, Tap Payments, MyFatuora. The provisioning service used by platform admin is the same one public signup calls in P8 (requirements US-P8 acceptance).
 - Source: PD-scope-4, PD-BACKEND-6; verifier CONFIRMED ("no signup/billing pulled forward").
 
 ### ADR-29: CSV export is standard from MVP, scoped by role
 - Status: Accepted — PD-scope-5 as proposed.
+- Context: the evidence product gates CSV export to its top plan; GCC businesses demand data portability and the privacy NFR requires export capability.
+- Alternatives: gate export behind a future plan field (rejected: friction we should not copy).
 - Decision: customer and ledger CSV export for owners (tenant-wide) and location managers (their locations only, per ADR-12 scoping). No plan gate, ever. Exports are async (Celery) with a download link, access-audited (ADR-42), and location-scoped exports must not leak other locations' rows (verifier gap item adopted as an acceptance criterion).
 - Source: PD-scope-5; verifier scope finding "location-scoped exports".
 
 ### ADR-30: Analytics carries location and staff filters from day one
 - Status: Accepted — PD-scope-7 as proposed.
+- Context: the evidence product carries location and staff on every event but exposes filters nowhere — a confirmed gap, cheap for us to close because events already carry both dimensions.
+- Alternatives: ship without filters for parity (rejected: the gap is a selling point, not a feature to match).
 - Decision: every analytics view (tenant dashboard, program overview, transaction list) filters by location and staff, server-enforced against the requester's scope. Events already carry `location_id` and `created_by`; aggregates group by both. Performance target: <2 s p95 for a 100k-event tenant (requirements NFR), met with the ledger indexes; materialized daily aggregates deferred until a tenant outgrows plain queries (data-model §7.3).
 - Source: PD-scope-7; requirements US-ANA-1..3.
 
 ### ADR-31: Void authorization — staff may void only as part of their own coupon redemption
 - Status: Accepted — PD-scope-8 as proposed.
+- Context: counter reality — a redeemed single-use coupon must be voidable by the staff member performing the redemption, without manager approval.
+- Alternatives: all voids manager-only (rejected: blocks the counter flow); staff void anything (rejected: abuse risk).
 - Decision: standalone void requires manager or owner (within location scope); staff may void a single-use coupon atomically inside their redemption action at the counter (it *is* the redemption). Every void stores reason + actor; voided is terminal for the pass (state machine: issued → voided | expired; no resurrection — re-enrollment issues a new pass). Coupon one-time-use consumption is atomic: the redeem+void pair commits in one transaction or not at all (verifier gap item adopted).
 - Source: PD-scope-8; verifier scope finding "void authorization and state transitions".
 
 ### ADR-32: One shared Postgres schema with `tenant_id`, enforced in Django, constrained in the DB — no RLS, no schema-per-tenant
 - Status: Accepted with changes — PD-DM-1 / PD-BACKEND-5 as proposed plus the verifier's defense-in-depth conditions.
+- Context: how to isolate tenant data on the fixed PostgreSQL stack shared by every member report.
 - Decision: single shared schema; every tenant-owned row has `tenant_id` (ADR-10); `TenantScopedManager` (ADR-11); DB constraints for the invariants the ORM must not bypass: idempotency uniqueness, non-negative balances, composite same-tenant FKs, the ledger UPDATE/DELETE trigger. Defense-in-depth tests are mandatory per model (cross-tenant read, cross-tenant write, cross-tenant relation attach) and a suite-level test enumerates all tenant-owned models and fails if any lacks `tenant_id`, the manager, or the isolation test.
 - Alternatives: django-tenants schema-per-tenant (rejected: migration and pooling ops cost at SaaS scale); Postgres RLS (rejected: logic splits into SQL, complicates migrations/testing; the fixed stack says enforce in Django; DB constraints carry the hard rules).
 - Source: PD-DM-1, PD-BACKEND-5; verifier AGREE WITH CHANGES.
 
 ### ADR-33: Hybrid IDs — UUIDs for public-facing rows, bigserial for internal joins
 - Status: Accepted — PD-DM-4 as proposed.
+- Context: primary-key strategy balancing enumeration safety against index size on high-volume tables.
+- Alternatives: UUIDs everywhere (rejected: index bloat on large join tables); auto-increment everywhere (rejected: guessable public ids).
 - Decision: `Tenant`, `Location`, `Program`, `Customer`, `Pass`, `Balance`, `LedgerEntry`, `ApiCredential` use UUIDv4 PKs (public URLs, no enumeration). Pure internal/join tables (`MembershipLocation`, `EnrollmentField`, `ProgramLocation`, `UsefulLink`, `CustomField`, `StampImage`, `ProgramSettings`) use bigserial. Serial numbers that appear in third-party systems (Apple serial, Google object id) are generated per their platform rules, namespaced by issuer id.
 - Source: PD-DM-4; unchallenged.
 
 ### ADR-34: Deletion policy — soft-delete customers, archive programs, never delete passes or ledger rows
 - Status: Accepted with changes — PD-DM-5 amended (hard-deleting published programs/passes strands issued wallet passes).
+- Context: deletion must coexist with passes already living in customers' wallets and with privacy erasure requests.
+- Alternatives: hard-delete programs and passes as proposed (rejected: strands issued passes and breaks audit references); soft-delete everything (rejected: configuration detritus with no audit value accumulates).
 - Decision: `Customer`: soft delete (`is_deleted`, `deleted_at`); a privacy deletion request additionally nulls PII (name → anonymous marker, email/mobile/data → null) while keeping anonymized ledger aggregates (requirements privacy NFR). `Program`: drafts may be hard-deleted; once published, a program can only be `paused` or `archived` — never deleted, because issued passes reference it. `Pass`: never hard-deleted while any device registration or Google object exists; `voided` is terminal; a `purge_expired_passes` beat job voids (not deletes) passes past expiry rules. `LedgerEntry`: never (ADR-8).
 - Source: PD-DM-5; chair amendment per verifier pass-projection concerns.
 
 ### ADR-35: pnpm workspace with two Vite apps and shared packages
 - Status: Accepted — PD-FE-1 as proposed.
+- Context: three surfaces share types and translations but have very different bundle, auth, and deploy needs.
+- Alternatives: one app with route-level splitting (rejected: the enrollment bundle ships dashboard weight and import risk); three apps (rejected: the admin area needs no separate deploy).
 - Decision: `frontend/dashboard` (merchant + platform-admin routes), `frontend/enrollment` (public, phone-first), shared `frontend/packages/api-types` and `frontend/packages/messages`. The enrollment app never imports dashboard code (ESLint `no-restricted-imports`); bundle budgets per frontend §9.
 - Source: PD-FE-1; unchallenged.
 
 ### ADR-36: TanStack Query for all server state; polling (not websockets) for pass-push status
 - Status: Accepted — PD-FE-2 as proposed.
+- Context: shared server entities render on several screens, and the counter needs "pass updating" feedback after a committed ledger write.
+- Alternatives: Redux Toolkit Query, SWR, raw fetch + context (rejected: weaker dedup/invalidation story); websockets (rejected: no evidence the counter needs sub-second push — polling suffices because the ledger already committed).
 - Decision: query-key factory `qk`, invalidate-after-mutate, optimistic updates only at the counter (ADR-38), `refetchInterval` polling while `push_status = pending`, cheap `GET /api/v1/passes/{id}/status/` endpoint for it. No realtime infra until evidence demands it.
 - Source: PD-FE-2; unchallenged.
 
 ### ADR-37: React Hook Form + Zod, mirrored validators, OpenAPI codegen as the exit path
 - Status: Accepted — PD-FE-3 as proposed.
+- Context: the same validation rules exist in DRF serializers and browser forms; hand duplication drifts.
+- Alternatives: single-source OpenAPI codegen from day one (deferred: the API surface is not yet stable); client-side validation only (rejected: the server is authoritative in all cases).
 - Decision: one Zod schema per form in `packages/api-types/validators/<entity>.ts`, each with a comment naming the DRF serializer it mirrors; PR review checks drift; when the API stabilizes, generate from the drf-spectacular schema (ADR-14) and delete hand mirrors. Server validation is authoritative in all cases.
 - Source: PD-FE-3; unchallenged.
 
 ### ADR-38: Client-generated `Idempotency-Key` on every ledger mutation; optimistic UI only at the counter
 - Status: Accepted — PD-FE-4 as proposed, conformed to ADR-13's header contract.
+- Context: double-taps and flaky shop networks must not double-credit a customer at the counter.
+- Alternatives: disable-only buttons (rejected: a retry after timeout still duplicates); server-side dedupe by request hash without a client key (rejected: cannot distinguish an intentional second stamp from a replay).
 - Decision: `crypto.randomUUID()` at press time, sent as the `Idempotency-Key` header, reused verbatim on retry (never regenerated), button disabled via mutation `isPending`, visible rollback + "retry (same key)" toast on failure, 10 s timeout → "sent, unconfirmed" → ledger re-query before any resend. Offline queueing in IndexedDB with keys intact is the stretch; the banner + disabled state is the MVP floor.
 - Source: PD-FE-4; verifier AGREE WITH CHANGES (changes = ADR-13).
 
 ### ADR-39: i18next with six-form Arabic plurals; RTL via `dir` + CSS logical properties; `Intl` for all formatting
 - Status: Accepted with changes — PD-FE-5 plus the verifier's test requirements.
+- Context: the market requires full English/Arabic bilingual operation with RTL from day one, KWD 3-decimal money, and per-location timezones.
+- Alternatives: react-intl or LinguiJS (rejected: team velocity with i18next's plural and namespace model); LTR-first with Arabic retrofitted (rejected: violates the brief and costs more later).
 - Decision: as proposed in frontend §5 (shared catalogs, CI key-parity gate, logical properties with a stylelint ban on physical directions, pass previews exempt). Verifier additions adopted as acceptance criteria: Playwright RTL journeys for **both** enrollment and dashboard; unit tests for all six Arabic plural forms of every counted string; KWD 3-decimal formatting tests (and a 2-decimal currency test proving exponent-from-currency); location-timezone formatting tests (same instant renders differently per location zone).
 - Source: PD-FE-5; verifier skill review.
 
 ### ADR-40: Active location is a `?loc=` search param; the server enforces it
 - Status: Accepted — PD-FE-6 as proposed; verifier CONFIRMED.
+- Context: managers deep-link scoped views to each other; the scope must survive refresh and sharing, and must never be client-trusted.
+- Alternatives: location in session state only (rejected: not shareable or deep-linkable); location in the URL path (rejected: complicates every route).
 - Decision: `LocationSwitcher` writes `?loc=`, `useActiveLocation()` reads it, and the API treats it strictly as a requested filter: it re-derives the user's permitted set (`request.location_scope`, ADR-12) and rejects ids outside it with 403, never trusting the param for authorization.
 - Source: PD-FE-6; verifier CONFIRMED.
 
 ### ADR-41: One `<QueryState>` contract over design-skill primitives; visuals come only from the Airbnb design skill
 - Status: Accepted — PD-FE-7 as proposed.
+- Context: the Airbnb design skill owns visuals; features must not restyle primitives or invent their own loading states.
+- Alternatives: per-feature loading/empty/error handling (rejected: inconsistent UX and design-skill drift into feature code).
 - Decision: `shared/ui` re-exports the design skill's primitives with app contracts (loading/empty/error, RTL-safe icons, field wiring). Features compose, never restyle. Colors/typography/spacing are the design skill's property; the only tenant-settable colors are pass content (program design), not dashboard style.
 - Source: PD-FE-7; unchallenged.
 
@@ -351,15 +382,20 @@ Statuses: **Accepted** (build it this way), **Accepted with changes** (build it 
 - Status: Accepted (verifier missing-links item)
 - Context: The verifier required audit events for platform-admin provisioning, credential rotation, impersonation, program publication, void, and data export; requirements already demanded an append-only audit trail for mutations.
 - Decision: `AuditEvent` (table `audit_events`, append-only like the ledger): `tenant` (nullable — platform-level events have none), `actor_user`, `actor_kind` (user|api_credential|system), `action` (enum: tenant.provisioned, tenant.suspended, support_session.started/ended, credential.created/rotated/revoked, webhook.rotated, program.published/paused/archived, pass.voided, export.completed, staff.created/role_changed/deactivated, customer.pii_deleted), `object_type`, `object_id`, `metadata` jsonb, `created_at`. Written inside the same transaction as the action where possible. Owner-visible for their tenant (settings → audit log); platform events visible only to platform admins.
+- Alternatives: reuse the ledger for audit (rejected: audit covers non-ledger actions and platform-level events with no tenant); an external logging service as the only record (rejected: owners need an in-product, queryable view).
 - Source: verifier missing links; requirements §5 audit NFR.
 
 ### ADR-43: Rate limits and enrollment abuse protection are acceptance criteria, not afterthoughts
 - Status: Accepted (verifier missing-links item)
+- Context: the public enrollment endpoint and the tenant API are exposed surfaces; abuse protection was described narratively but never made checkable.
+- Alternatives: a CAPTCHA vendor on enrollment from day one (deferred: third-party dependency; honeypot + form-age + rate limits are the MVP floor, and the vendor seam stays open).
 - Decision: defaults (DRF throttles, per-scope): enrollment POST 20/min/IP and 60/hour/program; ledger earn 60/min/staff-user; tenant API 120/min/credential (per-tenant configurable); everything else 120/min/user. 429 with `RATE_LIMITED` and Retry-After. Enrollment additionally: honeypot field + minimum form-age check (no CAPTCHA vendor in MVP; the seam exists), and per-program enrollment spikes surface in ops logs. Limits live in settings, tunable without deploy.
 - Source: verifier missing links; backend §8.2 numbers adopted.
 
 ### ADR-44: Canonical naming, and the status of the draft model files
 - Status: Accepted (verifier conflict resolutions + skill review)
+- Context: the four reports and five skill drafts each invented slightly different names for the same concepts (`LedgerEvent`/`LedgerEntry`, `CustomerProgramBalance`/`Pass`/`Balance`, `StaffProfile`/`StaffMember`/`Membership`, `TenantManager`/`TenantScopedManager`), and the verifier made consistent naming a synthesis condition.
+- Alternatives: keep each member's local names inside their own area (rejected: two names for one concept is precisely the drift the verifier flagged, and the skills would teach contradictions).
 - Decision: The canonical names table at the top of this file is binding for code, docs, skills, and tests: `LedgerEntry`, `Balance`, `Pass`, `Membership`/`MembershipLocation`, `TenantScopedManager`, `pass_record`/`pass_id`, `ApiCredential`, `WebhookSubscription`, `WebhookDelivery`, `PassUpdate` (outbox), `AuditEvent`. Rejected variants (`LedgerEvent`, `CustomerProgramBalance`, `StaffProfile`, `StaffMember` as a table, `TenantManager`, `ApplePass`/`GooglePass` as separate models) must not appear in new code. The files in `plan/django/*.py` are **illustrative drafts**: they predate these rulings (balances on `Pass`, single-location membership, JWT auth, typos like `Asia/Kuwaitt`, `is_delleted`, `quantityt`, `progam_id`, `quatity`). Phase 0 rewrites them as real Django apps following the django-data skill; nothing copies from them verbatim. The loyalty-domain-glossary skill is corrected to these names (it is the naming authority for domain terms, EN/AR labels, and invariants).
 - Source: verifier model review, conflicts 2/3, skill review.
 
