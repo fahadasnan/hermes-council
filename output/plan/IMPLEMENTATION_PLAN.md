@@ -206,9 +206,9 @@ Week 1 starts 2026-11-02. The first business can go live at the end of Phase 5 (
 
 **Scope.** Tenant dashboard KPIs (enrolled, active passes, earns, redemptions, voids, acquisition trend day/month/year in location tz); program overview (per-program KPIs + transaction table, server-side search/pagination); reward-cost/ROI screen (KWD 3dp strings, zero values persist, ADR-21 formatting); CSV export (customers, ledger; owner tenant-wide, manager location-scoped; async job + download link + audit); audit-log screen completion; location-scoped privacy rules on exports (verifier item).
 
-**Database work.** No new tables; indexes verified for aggregate queries (`ledger_entries (tenant, created_at)`, `(pass_id, created_at)`, `passes (program, status)`, `customers (tenant, created_at)`); export job rows (`export_jobs`: status, scope, requested_by, file key) if needed.
+**Database work.** No new tables; indexes verified for aggregate queries (`ledger_entries (tenant, created_at)`, `(pass_id, created_at)`, `passes (program, status)`, `customers (tenant, created_at)`); export job rows (`export_jobs`: status, scope, requested_by, file key) if needed; audit lifecycle columns (retention/legal-hold flags per ADR-42).
 
-**Django services and API.** `analytics.services` (dashboard, program stats, histogram, trend with tz-aware TruncDate); `GET /api/v1/analytics/dashboard/`, `/analytics/programs/{id}/`, `/analytics/reward-cost/`; `POST /api/v1/exports/` (kind, scope) → job → signed download URL; audit `export.completed`.
+**Django services and API.** `analytics.services` (dashboard, program stats, histogram, trend with tz-aware TruncDate — tenant-wide buckets in the tenant default timezone, location-filtered buckets in the location timezone, UI labels the semantics, ADR-22 amended); `GET /api/v1/analytics/dashboard/`, `/analytics/programs/{id}/`, `/analytics/reward-cost/`; `POST /api/v1/exports/` (kind, scope) → job → signed download URL; audit `export.completed`; audit archive/prune lifecycle service (ADR-42, retention configurable, legal hold respected).
 
 **Celery tasks.** `run_export` (streamed CSV to S3, tenant-prefixed key, expiring URL); analytics cache warm (optional, 60 s cache per data-model §7.1).
 
@@ -216,18 +216,19 @@ Week 1 starts 2026-11-02. The first business can go live at the end of Phase 5 (
 
 **Acceptance criteria.** Every analytics view honors the requester's location scope (manager sees only their locations, staff none); a midnight-boundary Kuwait event buckets into the correct location-local day; analytics <2 s p95 at 100k events (load gate); exports contain exactly the scoped rows (no cross-location leak test); zero-value reward costs persist and render as "0.000 KWD"; charts and tables fully translated en/ar.
 
-**Test plan.** Aggregate correctness vs hand-computed fixtures; tz boundary tests (ADR-22); scope-leak tests per role; export streaming test at 100k rows; Playwright analytics journey with filters; perf gate in CI nightly.
+**Test plan.** Aggregate correctness vs hand-computed fixtures; tz boundary tests (ADR-22) incl. multi-zone fixtures (one tenant, two locations in different zones — round 2 F-MISSING-13); scope-leak tests per role; export streaming test at 100k rows; Playwright analytics journeys with filters in `en` **and** `ar` (evidence: light/dark × en/ar — ADR-57); perf gate in CI nightly.
 
 **Dependencies.** Phase 3 (events to aggregate).
 **Risks.** Aggregate performance drift → indexes + EXPLAIN review in PR checklist for analytics queries; chart library bundle weight → budget-checked, tree-shaken choice.
 **Size.** 10 engineer-weeks (~2.5 weeks).
-**Exit.** The owner can answer "is this program working?" per location and per staff member, and take their data with them.
+**Exit.** The owner can answer "is this program working?" per location and per staff member, and take their data with them. The phase is not done without `plan/evidence/phase-4-gates/` (ADR-57).
 
 **Backlog.**
-- Epic 4.1 Analytics: [API] analytics services + endpoints with tz-aware buckets; [Frontend] dashboard KPIs + trend + shared filter components; [Frontend] program overview + transaction table; [API] perf load gate.
+- Epic 4.1 Analytics: [API] analytics services + endpoints with tz-aware buckets (tenant-default vs location zones per amended ADR-22); [Frontend] dashboard KPIs + trend + shared filter components; [Frontend] program overview + transaction table; [API] perf load gate.
 - Epic 4.2 ROI: [API] reward-cost aggregation (minor units → decimal strings); [Frontend] reward-cost screen (KWD formatting tests).
 - Epic 4.3 Export: [DB] `export_jobs`; [Worker] `run_export` streamed CSV; [API] export endpoints + audit + expiring URLs; [Frontend] export center.
-- Epic 4.4 Audit polish: [Frontend] audit log screen (filter by action/actor); [API] audit list endpoint (owner scope).
+- Epic 4.4 Audit polish: [Frontend] audit log screen (filter by action/actor); [API] audit list endpoint (owner scope); [Worker] audit archive/prune lifecycle task (ADR-42 retention, legal hold).
+- Epic 4.5 Phase evidence (ADR-57): [Ops] evidence `plan/evidence/4.x/` + `REVIEW.md` per epic; [Ops] `plan/evidence/phase-4-gates/` pack.
 
 ## Phase 5 — Tenant API and signed webhooks (MVP complete)
 
@@ -235,7 +236,7 @@ Week 1 starts 2026-11-02. The first business can go live at the end of Phase 5 (
 
 **Scope.** `ApiCredential` management (create → secret shown once, rotate with 24 h grace, revoke; scopes: enroll, earn, redeem, issue, void, read:balance; ADR-18); HMAC auth middleware (ADR-1 canonical string, ±300 s window, constant-time compare, per-credential throttles); tenant API endpoints reusing ledger/enrollment services (`POST /api/v1/ledger/*` already exist — enable credential auth alongside session via `IsStaffOrApiCredential`; `POST /api/v1/enroll/`, `GET /api/v1/balances/` by code or customer); `WebhookSubscription` CRUD (encrypted secret, write-only, rotate); webhook delivery (signed, versioned, at-least-once, retries 2/4/8/16/32 s, dead-letter + tenant-visible delivery log + manual retry); one-page developer guide in `docs/` (backend §9.4 shape, corrected contract); tenant suspension blocks credentials (US-PA-2 completion).
 
-**Database work.** `api_credentials` (tenant FK, `key_id` unique, `secret_hash`, scopes jsonb, is_active, expires_at, last_used_at, grace-period columns); `webhook_subscriptions` (encrypted secret, events jsonb, is_active); `webhook_deliveries` (outbox-style: event id, type, payload, status, attempts, response code/body snippet, next_retry_at).
+**Database work.** `api_credentials` (tenant FK, `key_id` unique, `secret_hash`, scopes jsonb, is_active, expires_at, last_used_at, grace-period columns). No new webhook tables: `webhook_subscriptions` (encrypted secret, events jsonb, is_active) and `webhook_deliveries` (outbox-style: event id, type, payload, status, attempts, response code/body snippet, next_retry_at) were created empty in Phase 3 (round 2 F-DB-4/F-verifier-5); this phase fills and activates them.
 
 **Django services and API.** HMAC authentication class + middleware setting `request.tenant` from the credential; webhook fan-out service (subscriptions × event → delivery rows in the ledger transaction, ADR-17); delivery signer; `GET/POST/DELETE /api/v1/credentials/`, `/api/v1/webhooks/`, `/api/v1/webhooks/{id}/deliveries/`, `POST .../deliveries/{id}/retry/`; audit events for credential/webhook lifecycle.
 
@@ -250,17 +251,20 @@ Week 1 starts 2026-11-02. The first business can go live at the end of Phase 5 (
 **Dependencies.** Phase 3 (services to expose), Phase 4 not strictly required but sequenced for a coherent MVP release.
 **Risks.** Store-side integration friction → the developer guide + a downloadable Postman/curl collection ship with the phase; clock skew at POS terminals → ±300 s window documented, 401 error message names the cause; webhook floods on bulk import → imports emit webhooks batched per job, documented.
 **Size.** 14 engineer-weeks (~3 weeks).
-**Exit — MVP complete.** The first business runs live: provisioned account, published program, customers enrolling from printed QR, staff stamping at the counter, passes updating in both wallets, owner watching analytics, and their POS talking to the tenant API. See the go-live checklist below.
+**Exit — MVP complete.** The first business runs live: provisioned account, published program, customers enrolling from printed QR, staff stamping at the counter, passes updating in both wallets, owner watching analytics, and their POS talking to the tenant API. See the go-live checklist below. The phase is not done without `plan/evidence/phase-5-gates/` (ADR-57).
 
 **Backlog.**
 - Epic 5.1 Credentials: [DB] `api_credentials`; [API] HMAC auth class + middleware + throttles; [API] credential CRUD + rotation grace + audit; [Frontend] `/integrations` credentials tab.
 - Epic 5.2 Tenant API: [API] enable credential auth on ledger/enroll/balance endpoints; [API] `read:balance` endpoint; [API] contract tests + mock POS suite; [Ops] developer guide + curl collection.
-- Epic 5.3 Webhooks: [DB] `webhook_subscriptions` + `webhook_deliveries`; [API] fan-out in ledger transaction + signing; [Worker] `deliver_webhook` + retries + dead-letter; [Frontend] webhooks tab + delivery log + manual retry.
+- Epic 5.3 Webhooks: [API] subscription CRUD + fan-out activation on the Phase 3 schema (round 2 F-DB-4) + signing; [Worker] `deliver_webhook` + retries + dead-letter (audited `cross_tenant` access per ADR-11's allowlist); [Frontend] webhooks tab + delivery log + manual retry.
 - Epic 5.4 Suspension & limits: [API] tenant suspension blocks credentials/logins; [API] per-tenant throttle config; [Worker] `expire_credentials` beat.
+- Epic 5.5 Phase evidence (ADR-57): [Ops] evidence `plan/evidence/5.x/` + `REVIEW.md` per epic (integrations screens: light/dark × en/ar); [Ops] `plan/evidence/phase-5-gates/` pack.
 
 ---
 
 # Post-MVP phases
+
+Two standing rules for every phase below (round 2 F-PLAN-4, F-PIPE-1): each phase **opens** with an epic-splitting task that decomposes its one-line backlog into numbered, one-PR-sized epics and tasks exactly like the MVP phases' backlogs (the roadmap lines below are planning intent, not implementation-ready tasks); each phase **closes** with the ADR-57 evidence pack — per-epic `plan/evidence/<epic>/REVIEW.md` + numbered artifacts, and `plan/evidence/phase-<n>-gates/` — with user-facing journeys Playwright-tested in `en` and `ar` and light/dark evidence in both.
 
 ## Phase 6 — Event ticket (P1)
 
@@ -313,7 +317,7 @@ Week 1 starts 2026-11-02. The first business can go live at the end of Phase 5 (
 **Dependencies.** Phase 3 (events to segment on), Phase 2 (push plumbing). **Risks.** APNs message-field restrictions → content validation before send; spam/abuse → per-tenant daily send caps in settings.
 **Size.** 10 engineer-weeks (~2.5 weeks). **Exit.** "Double stamps Thursday" goes out to everyone within 2 km of a branch — or to everyone who hasn't visited in 30 days.
 
-**Backlog.** [DB] message + delivery tables; [API] segment service + validation; [Worker] `send_campaign` chunked + rate-limited; [Frontend] composer + preview + test-send; [Frontend] results screen; [API] caps + audit.
+**Backlog.** [DB] message + delivery tables; [API] segment service + validation; [Worker] `send_campaign` chunked + rate-limited; [Frontend] composer + preview + test-send; [Frontend] results screen; [API] caps + audit; [API] single-customer message from the customer profile — a separate owner-only action, not covered by campaign segmentation (round 2 F-COV-3, ADR-58).
 
 ## Phase 10 — Automations, referrals, tiers (P5)
 
@@ -358,10 +362,10 @@ Week 1 starts 2026-11-02. The first business can go live at the end of Phase 5 (
 
 **Goal.** The only phase with public signup and money: a business creates its own tenant, picks a plan, pays, and gets plan limits enforced. Nothing before this phase depends on it (ADR-28).
 **Scope.** Public marketing/signup funnel (outside the dashboard bundle; separate app or static site + API); signup creates tenant + owner + first location via the **same** `provision_tenant` service the platform admin uses (requirements US-P8 acceptance); plan catalog (feature/count limits now enforced — the gate keys that defaulted unlimited since MVP, PD-scope-4); subscription billing via the provider chosen against ADR-28 criteria (Kuwait rails, KWD 3dp, subscription API); invoices/receipts; trial policy if chosen commercially; dunning (failed payment → grace → suspend via the existing suspension machinery, which already voids nothing and strands no passes — suspension blocks logins/API, passes keep working read-only until voided per US-PA-2 semantics); plan-change upgrade/downgrade with limit reconciliation.
-**Database work.** `plans`, `subscriptions`, `invoices`, `plan_limit_overrides`; limit-check middleware reading plan config.
+**Database work.** `plans`, `subscriptions`, `invoices`, `plan_limit_overrides`; limit-check middleware reading plan config through the ADR-47 feature-flag mechanism (tenant flags, audited, cached per ADR-56).
 **Celery tasks.** Billing-provider webhook processing (replay-safe, dedupe on provider event id), dunning scheduler (failed payment → grace → suspend via the existing suspension machinery), invoice/receipt generation.
 **Acceptance criteria.** An anonymous business completes signup → owner login → first program without any human from us; a downgraded plan enforces limits at the next check (no retroactive data deletion — limits gate creation, never destroy); failed payments follow the documented dunning path; every money amount respects ADR-21.
-**Test plan.** Signup funnel e2e incl. ar; billing webhook handling (provider callbacks, replay-safe); limit enforcement matrix; dunning state machine; provisioning-service reuse test (admin path and signup path hit identical code).
+**Test plan.** Signup funnel e2e in `en` and `ar`; billing webhook handling (provider callbacks, replay-safe); limit enforcement matrix; dunning state machine; provisioning-service reuse test (admin path and signup path hit identical code).
 **Dependencies.** Everything (by design, it is last). **Risks.** Provider choice slip → criteria fixed since ADR-28, decision gate at phase start; abuse (fake businesses minting tenants) → KYC-lite checks (business fields + phone verification) + rate limits; limit retrofit regressions → the gate keys existed since MVP, enforcement behind flags tested from Phase 10.
 **Size.** 18 engineer-weeks (~4 weeks). **Exit.** The product sells itself: public signup, plans, billing, and limits — the SaaS is commercially autonomous.
 
@@ -381,6 +385,9 @@ Run once per tenant, owned by the platform admin + the tenant's owner. Every ite
 6. **Staff.** All staff accounts created with correct locations and roles; counter training done (scan, search, code entry, earn, redeem, coupon consume, what "pass updating…" means, offline behavior); two-location staff tested the location picker; PIN/password setup confirmed for every account.
 7. **Integrations (if the store has an API).** Credential created, secret handed over securely, HMAC guide + curl collection delivered; sandbox calls for enroll/earn/redeem/void/balance pass; webhook endpoint registered, signature validation confirmed on their side, delivery log green after a test day; rotation procedure agreed.
 8. **Operations.** Analytics baseline visible after day one; export smoke-tested (CSV downloads, scoped correctly); audit log reviewed with the owner; support-session procedure explained to our support; rate limits confirmed for their expected volume.
+8a. **Backups (round 2 F-GOLIVE-1, ADR-45).** Nightly Postgres backups + WAL archiving verified by an actual restore drill into staging this week (restore-point runbook); S3 asset bucket versioning on; Redis treated as volatile (outbox rows are in Postgres).
+8b. **Monitoring (round 2 F-GOLIVE-1, ADR-55).** Sentry/GlitchTip error alerts verified firing from staging; health endpoints watched by the uptime probe; the outbox dead-letter and `reconcile` drift alerts armed and routed to on-call; cert-expiry alert (item 2) confirmed delivered to a human inbox.
+8c. **Legal/privacy (round 2 F-GOLIVE-1, ADR-42/54).** Enrollment consent text and privacy notice reviewed against the tenant's data obligations; the PII deletion procedure demonstrated to the owner end to end (request → anonymize → audit), including audit retention defaults confirmed with counsel.
 9. **Rollback that does not strand passes.** If we must roll back the release or suspend: passes already in wallets keep working (they are signed artifacts; Apple devices re-fetch only on push); a deploy rollback re-runs the outbox sweeper so pending updates deliver after the rollback; suspension blocks dashboard/API but does not void issued passes — voiding is an explicit, audited, per-pass or per-program action (US-PA-2); certificate compromise triggers the key-rotation runbook (re-sign pending updates; issued passes remain valid because the pass certificate's signature is verified against Apple's chain, and a re-keyed Pass Type ID requires re-issuing only on next update). Database rollback = restore point + outbox replay; the append-only ledger means no balance can be silently lost.
 10. **Sign-off.** Owner confirms items 3–7 in writing; we record a `tenant.provisioned` → go-live audit note; first-week daily check-in scheduled.
 

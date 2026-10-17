@@ -9,8 +9,8 @@ description: Use when adding a Django model, writing a migration, or designing a
 
 Every tenant-owned model follows these rules:
 
-1. Inherit `TenantOwnedModel` (from `apps/tenants/models.py`): direct `tenant` FK, `objects = TenantScopedManager()`, fenced `cross_tenant` manager.
-2. UUID pk for public-facing tables; bigserial for internal join tables (ADR-33).
+1. Inherit `TenantOwnedModel` (from `apps/tenants/models.py`): direct `tenant` FK, `objects = TenantScopedManager()`, fenced `cross_tenant` manager. The base is abstract and **declares no primary key** (round 2 F-DB-3).
+2. Declare the pk on each concrete model: `id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)` for public-facing tables; `id = models.BigAutoField(primary_key=True)` for internal join tables (ADR-33). Do not inherit a pk.
 3. `created_at` / `updated_at` timestamptz; `created_by` (nullable) where a user acts.
 4. Explicit `Meta.db_table` (snake_case plural) and explicitly named constraints/indexes.
 5. Composite same-tenant foreign keys for every multi-parent relation (ADR-10).
@@ -60,13 +60,15 @@ class TenantScopedManager(models.Manager):
         return super().get_queryset().filter(tenant=tenant)
 
 class TenantOwnedModel(models.Model):
-    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    # No pk here (round 2 F-DB-3): each concrete model declares its own —
+    # UUIDField for public-facing tables, BigAutoField for internal join
+    # tables (ADR-33). An inherited UUID pk would contradict ADR-33.
     tenant = models.ForeignKey("tenants.Tenant", on_delete=models.CASCADE)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
     objects = TenantScopedManager()
-    cross_tenant = models.Manager()   # fenced: platform.py, migrations, reconciliation only
+    cross_tenant = models.Manager()   # fenced: AST checker allowlist only (see rules)
 
     class Meta:
         abstract = True
@@ -77,7 +79,7 @@ Rules:
 - Tenant context is the contextvar, set by `TenantMiddleware` and reset in a `finally`. Never a class attribute or a bare thread-local (a process-global leaks across requests — ADR-11).
 - Services, management commands, and Celery tasks never rely on the contextvar; they call `.for_tenant(tenant)` explicitly. Implicit filtering is defense-in-depth for request paths only.
 - Writes without a tenant raise `TenantNotSupplied` (enforced in `TenantOwnedModel.save()` when `tenant_id` is None).
-- `cross_tenant` may be imported only by `apps/tenants/platform.py`, migrations, and the reconciliation job. A CI grep check fails any other import, and every use writes an `AuditEvent`.
+- `cross_tenant` may be accessed only from `apps/tenants/platform.py`, `apps/passes/tasks.py` and `apps/webhooks/tasks.py` (outbox-driven tasks only, by primary key, each use audited), migrations, and the reconciliation job. The fence is an **attribute-access AST checker** (`scripts/check_cross_tenant.py` in CI), not an import grep — `Model.cross_tenant` is attribute access, nothing is imported, so an import check would catch zero violations (round 2 F-DB-5/F-verifier-2). Every use writes an `AuditEvent`.
 - Parent tables declare `UniqueConstraint(fields=["id", "tenant_id"])` so children can reference the pair.
 
 ## Composite same-tenant relations (ADR-10)
